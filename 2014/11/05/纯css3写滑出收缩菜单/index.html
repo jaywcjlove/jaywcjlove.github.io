@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>纯css3写滑出收缩菜单 | JSLite.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="这里是css慢慢看样式哦
+*&amp;#123;box-sizing: border-box;&amp;#125;html,body&amp;#123;overflow-x: hidden;&amp;#125;.sidebar &amp;#123;position: fixed; top: 0; bottom: 0; left: -14rem; width: 14rem; visibility: hidden; overflow-y:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="纯css3写滑出收缩菜单">
+<meta property="og:url" content="http://kacperwang.github.io/2014/11/05/纯css3写滑出收缩菜单/index.html">
+<meta property="og:site_name" content="JSLite.io">
+<meta property="og:description" content="这里是css慢慢看样式哦
+*&amp;#123;box-sizing: border-box;&amp;#125;html,body&amp;#123;overflow-x: hidden;&amp;#125;.sidebar &amp;#123;position: fixed; top: 0; bottom: 0; left: -14rem; width: 14rem; visibility: hidden; overflow-y:">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="纯css3写滑出收缩菜单">
+<meta name="twitter:description" content="这里是css慢慢看样式哦
+*&amp;#123;box-sizing: border-box;&amp;#125;html,body&amp;#123;overflow-x: hidden;&amp;#125;.sidebar &amp;#123;position: fixed; top: 0; bottom: 0; left: -14rem; width: 14rem; visibility: hidden; overflow-y:">
+    
+      <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
+    
+    
+      <link rel="icon" href="/css/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+
+</head>
+
+
+
+
+
+
+<header id="header" class="hdpage">
+    
+    <div id="header-outer" class="outer">
+        
+        <div id="header-inner" class="inner">
+          <nav id="main-nav">
+            <a id="main-nav-toggle" class="nav-icon"></a>
+            
+              <a class="main-nav-link" href="/">
+                  
+                  
+
+                
+                  Home
+                </a>
+            
+              <a class="main-nav-link" href="/API">
+                  
+                  
+
+                
+                  API
+                </a>
+            
+              <a class="main-nav-link" href="/tags">
+                  
+                  
+
+                
+                  Tags
+                </a>
+            
+              <a class="main-nav-link" href="/archives">
+                  
+                  
+
+                
+                  Archives
+                </a>
+            
+              <a class="main-nav-link" href="/about">
+                  
+                  
+
+                
+                  About
+                </a>
+            
+              <a class="main-nav-link" href="https://github.com/JSLite/JSLite">
+                  
+                  
+
+                
+                  Github
+                </a>
+            
+          </nav>
+          <nav id="sub-nav">
+            
+              <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+            
+            <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          </nav>
+          <div id="search-form-wrap">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kacperwang.github.io"></form>
+          </div>
+        </div>
+    </div>
+</header>
+
+<div class="outer">
+<!---->
+
+
+    <article id="post-纯css3写滑出收缩菜单" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="article-meta">
+        
+          <header class="article-header">
+            
+  
+    <a href="/2014/11/05/纯css3写滑出收缩菜单/">
+      <h1 class="article-title" itemprop="name">
+        纯css3写滑出收缩菜单
+      </h1>
+    </a>
+  
+
+
+
+          </header>
+        
+
+        <!--<a href="/2014/11/05/纯css3写滑出收缩菜单/" class="article-date">
+  <time datetime="2014-11-04T17:26:09.000Z" itemprop="datePublished">2014-11-05</time>
+</a>-->
+        <!--  -->
+      </div>
+      <div class="article-inner">
+            
+            
+              <!--<header class="article-header">
+                
+  
+    <a href="/2014/11/05/纯css3写滑出收缩菜单/">
+      <h1 class="article-title" itemprop="name">
+        纯css3写滑出收缩菜单
+      </h1>
+    </a>
+  
+
+
+
+              </header>-->
+            
+            <div class="article-entry" itemprop="articleBody">
+              
+                <p>这里是css慢慢看样式哦</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*<span class="rules">&#123;<span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">html</span>,<span class="tag">body</span><span class="rules">&#123;<span class="rule"><span class="attribute">overflow-x</span>:<span class="value"> hidden</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.sidebar</span> <span class="rules">&#123;<span class="rule"><span class="attribute">position</span>:<span class="value"> fixed</span></span>; <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"> -<span class="number">14rem</span></span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">14rem</span></span></span>; <span class="rule"><span class="attribute">visibility</span>:<span class="value"> hidden</span></span>; <span class="rule"><span class="attribute">overflow-y</span>:<span class="value"> auto</span></span>; <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">"PT Sans"</span>, Helvetica, Arial, sans-serif</span></span>; <span class="rule"><span class="attribute">font-size</span>:<span class="value"> .<span class="number">875rem</span></span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">6</span>)</span></span>; <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#ac4142</span></span></span>; <span class="rule"><span class="attribute">-webkit-transition</span>:<span class="value"> all .<span class="number">3s</span> ease-in-out</span></span>; <span class="rule"><span class="attribute">transition</span>:<span class="value"> all .<span class="number">3s</span> ease-in-out</span></span>; <span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.sidebar</span>, <span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.wrap</span>, <span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.sidebar-toggle</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">translateX</span>(<span class="number">14rem</span>)</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-ms-transform</span>:<span class="value"> <span class="function">translateX</span>(<span class="number">14rem</span>)</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translateX</span>(<span class="number">14rem</span>)</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> + <span class="class">.sidebar</span> <span class="rules">&#123;<span class="rule"><span class="attribute">z-index</span>:<span class="value"> <span class="number">10</span></span></span>;<span class="rule"><span class="attribute">visibility</span>:<span class="value"> visible</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.wrap</span>, <span class="class">.sidebar</span>, <span class="class">.sidebar-toggle</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">-webkit-backface-visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-ms-backface-visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">backface-visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.wrap</span>, <span class="class">.sidebar-toggle</span> <span class="rules">&#123;<span class="rule"><span class="attribute">-webkit-transition</span>:<span class="value"> -webkit-transform .<span class="number">3s</span> ease-in-out</span></span>;<span class="rule"><span class="attribute">transition</span>:<span class="value"> transform .<span class="number">3s</span> ease-in-out</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"><span class="class">.sidebar-toggle</span> <span class="rules">&#123;<span class="rule"><span class="attribute">position</span>:<span class="value"> fixed</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">2.25rem</span></span></span>; <span class="rule">&#125;</span></span> </span><br><span class="line"><span class="class">.sidebar-toggle</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">1rem</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">1rem</span></span></span>; <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">2.2rem</span></span></span>; <span class="rule"><span class="attribute">padding</span>:<span class="value"> .<span class="number">5rem</span> .<span class="number">65rem</span></span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#505050</span></span></span>; <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>; <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">4px</span></span></span>; <span class="rule"><span class="attribute">cursor</span>:<span class="value"> pointer</span></span>; <span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.sidebar-toggle</span><span class="pseudo">:before</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">""</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">padding-bottom</span>:<span class="value"> .<span class="number">125rem</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">border-top</span>:<span class="value"> .<span class="number">375rem</span> double</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> .<span class="number">125rem</span> solid</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"><span class="class">.sidebar-toggle</span><span class="pseudo">:active</span>, <span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.sidebar-toggle</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#ac4142</span></span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>; <span class="rule">&#125;</span></span></span><br><span class="line"><span class="class">.sidebar-checkbox</span><span class="rules">&#123;<span class="rule"><span class="attribute">display</span>:<span class="value">none</span></span>;<span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<p>这里全是HTML，注意<code>input</code>的位置很重要哦</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">class</span>=<span class="value">"sidebar-checkbox"</span> <span class="attribute">id</span>=<span class="value">"sidebar-checkbox"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"sidebar"</span> <span class="attribute">id</span>=<span class="value">"sidebar"</span>&gt;</span>这里是菜单<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrap"</span>&gt;</span>这里是内容<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"sidebar-checkbox"</span> <span class="attribute">class</span>=<span class="value">"sidebar-toggle"</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>嵌入js文件点击其他地方收缩回去，不然只能点击按钮哦</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span><span class="params">(document)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> toggle = <span class="built_in">document</span>.querySelector(<span class="string">'.sidebar-toggle'</span>);</span><br><span class="line">    <span class="keyword">var</span> sidebar = <span class="built_in">document</span>.querySelector(<span class="string">'#sidebar'</span>);</span><br><span class="line">    <span class="keyword">var</span> checkbox = <span class="built_in">document</span>.querySelector(<span class="string">'#sidebar-checkbox'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> target = e.target;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(!checkbox.checked ||</span><br><span class="line">         sidebar.contains(target) ||</span><br><span class="line">         (target === checkbox || target === toggle)) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">      checkbox.checked = <span class="literal">false</span>;</span><br><span class="line">    &#125;, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
+              
+            </div>
+            <footer class="article-footer">
+              <a href="/2014/11/05/纯css3写滑出收缩菜单/" class="article-date">
+  <time datetime="2014-11-04T17:26:09.000Z" itemprop="datePublished">2014-11-05</time>
+</a>
+              <a data-url="http://kacperwang.github.io/2014/11/05/纯css3写滑出收缩菜单/" data-id="ci89qrxm8000dgxglp4qi9co8" class="article-share-link">Share</a>
+              
+                <a href="http://kacperwang.github.io/2014/11/05/纯css3写滑出收缩菜单/#disqus_thread" class="article-comment-link">Comments</a>
+              
+              
+
+
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+
+            </footer>
+      </div>
+      
+        
+<nav id="article-nav">
+  
+    <a href="/2014/11/19/四种方法判断浏览器是否支持html5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          四种方法判断浏览器是否支持html5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/10/19/js低版本IE兼容filter/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js低版本IE兼容filter</div>
+    </a>
+  
+</nav>
+
+      
+    </article>
+
+
+
+
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-纯css3写滑出收缩菜单" data-title="纯css3写滑出收缩菜单" data-url="http://kacperwang.github.io/2014/11/05/纯css3写滑出收缩菜单/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'pc175'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+
+
+</div>
+<footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+        <div class="left">
+            &copy; 2015 kacper.wang<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        </div>
+        <div class="right">
+            
+                <a href="https://github.com/jaywcjlove">GitHub</a>
+            
+                <a href="http://weibo.com/pc175">Weibo</a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+

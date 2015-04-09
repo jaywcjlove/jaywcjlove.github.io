@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>chrome 使用技巧 | JSLite.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="ReferenceStyled console logging in the Chrome DevTools (Canary)Chrome Console APIChrome Console Command Line API
+控制台在控制台选择元素$() &amp;amp; $$()$() – document.querySelector()的缩写，返回第一个与之匹配的CSS选择器的元素(例如：$(&amp;#3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="chrome 使用技巧">
+<meta property="og:url" content="http://kacperwang.github.io/2015/04/05/chrome-使用技巧/index.html">
+<meta property="og:site_name" content="JSLite.io">
+<meta property="og:description" content="ReferenceStyled console logging in the Chrome DevTools (Canary)Chrome Console APIChrome Console Command Line API
+控制台在控制台选择元素$() &amp;amp; $$()$() – document.querySelector()的缩写，返回第一个与之匹配的CSS选择器的元素(例如：$(&amp;#3">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="chrome 使用技巧">
+<meta name="twitter:description" content="ReferenceStyled console logging in the Chrome DevTools (Canary)Chrome Console APIChrome Console Command Line API
+控制台在控制台选择元素$() &amp;amp; $$()$() – document.querySelector()的缩写，返回第一个与之匹配的CSS选择器的元素(例如：$(&amp;#3">
+    
+      <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
+    
+    
+      <link rel="icon" href="/css/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+
+</head>
+
+
+
+
+
+
+<header id="header" class="hdpage">
+    
+    <div id="header-outer" class="outer">
+        
+        <div id="header-inner" class="inner">
+          <nav id="main-nav">
+            <a id="main-nav-toggle" class="nav-icon"></a>
+            
+              <a class="main-nav-link" href="/">
+                  
+                  
+
+                
+                  Home
+                </a>
+            
+              <a class="main-nav-link" href="/API">
+                  
+                  
+
+                
+                  API
+                </a>
+            
+              <a class="main-nav-link" href="/tags">
+                  
+                  
+
+                
+                  Tags
+                </a>
+            
+              <a class="main-nav-link" href="/archives">
+                  
+                  
+
+                
+                  Archives
+                </a>
+            
+              <a class="main-nav-link" href="/about">
+                  
+                  
+
+                
+                  About
+                </a>
+            
+              <a class="main-nav-link" href="https://github.com/JSLite/JSLite">
+                  
+                  
+
+                
+                  Github
+                </a>
+            
+          </nav>
+          <nav id="sub-nav">
+            
+              <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+            
+            <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          </nav>
+          <div id="search-form-wrap">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kacperwang.github.io"></form>
+          </div>
+        </div>
+    </div>
+</header>
+
+<div class="outer">
+<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">1.</span> <span class="toc-text">Reference</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制台"><span class="toc-number">2.</span> <span class="toc-text">控制台</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在控制台选择元素"><span class="toc-number">2.1.</span> <span class="toc-text">在控制台选择元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#$()_&_$$()"><span class="toc-number">2.1.1.</span> <span class="toc-text">$() & $$()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#$0_-_$4"><span class="toc-number">2.1.2.</span> <span class="toc-text">$0 - $4</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#console"><span class="toc-number">2.2.</span> <span class="toc-text">console</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#console-time_&_console-timeEnd"><span class="toc-number">2.2.1.</span> <span class="toc-text">console.time & console.timeEnd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#console-profile_&_console-timeLime"><span class="toc-number">2.2.2.</span> <span class="toc-text">console.profile & console.timeLime</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#console-trace"><span class="toc-number">2.2.3.</span> <span class="toc-text">console.trace</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#copy"><span class="toc-number">2.3.</span> <span class="toc-text">copy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#keys_&_values"><span class="toc-number">2.4.</span> <span class="toc-text">keys & values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DevTools"><span class="toc-number">3.</span> <span class="toc-text">DevTools</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#快速文件转换"><span class="toc-number">3.1.</span> <span class="toc-text">快速文件转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在源代码中搜索"><span class="toc-number">3.2.</span> <span class="toc-text">在源代码中搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跳转到特定的行数"><span class="toc-number">3.3.</span> <span class="toc-text">跳转到特定的行数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多个位置同时编辑"><span class="toc-number">3.4.</span> <span class="toc-text">多个位置同时编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择下一个匹配项"><span class="toc-number">3.5.</span> <span class="toc-text">选择下一个匹配项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改变颜色格式"><span class="toc-number">3.6.</span> <span class="toc-text">改变颜色格式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#美化js"><span class="toc-number">4.</span> <span class="toc-text">美化js</span></a></li></ol>-->
+
+
+    <article id="post-chrome-使用技巧" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="article-meta">
+        
+          <header class="article-header">
+            
+  
+    <a href="/2015/04/05/chrome-使用技巧/">
+      <h1 class="article-title" itemprop="name">
+        chrome 使用技巧
+      </h1>
+    </a>
+  
+
+
+
+          </header>
+        
+
+        <!--<a href="/2015/04/05/chrome-使用技巧/" class="article-date">
+  <time datetime="2015-04-05T10:04:11.000Z" itemprop="datePublished">2015-04-05</time>
+</a>-->
+        <!--  -->
+      </div>
+      <div class="article-inner">
+            
+            
+              <!--<header class="article-header">
+                
+  
+    <a href="/2015/04/05/chrome-使用技巧/">
+      <h1 class="article-title" itemprop="name">
+        chrome 使用技巧
+      </h1>
+    </a>
+  
+
+
+
+              </header>-->
+            
+            <div class="article-entry" itemprop="articleBody">
+              
+                <h2 id="Reference">Reference</h2><p><a href="https://plus.google.com/+AddyOsmani/posts/TanDFKEN9Kn" target="_blank" rel="external">Styled console logging in the Chrome DevTools (Canary)</a><br><a href="https://developer.chrome.com/devtools/docs/console-api" target="_blank" rel="external">Chrome Console API</a><br><a href="https://developer.chrome.com/devtools/docs/commandline-api" target="_blank" rel="external">Chrome Console Command Line API</a></p>
+<h2 id="控制台">控制台</h2><h3 id="在控制台选择元素">在控制台选择元素</h3><h4 id="$()_&amp;_$$()">$() &amp; $$()</h4><p><code>$()</code> – <code>document.querySelector()</code>的缩写，返回第一个与之匹配的CSS选择器的元素(例如：<code>$(&#39;div&#39;)</code> 它将返回本页的第一个div元素)。<br><code>$$()</code> - <code>document.querySelectorAll()</code>的缩写，返回一个数组，里面是与之匹配的CSS选择器的元素。  </p>
+<h4 id="$0_-_$4">$0 - $4</h4><p><code>$_</code>命令返回最近一次表达式执行的结果，功能跟按向上的方向键再回车是一样的，但它可以做为一个变量使用在你接下来的表达式中。<code>$_</code>需要领悟其奥义才能使用得当，而 <code>$0~$4</code> 则代表了最近5个你选择过的DOM节点。</p>
+<h3 id="console">console</h3><h4 id="console-time_&amp;_console-timeEnd">console.time &amp; console.timeEnd</h4><p>输出一些调试信息是控制台最常用的功能，当然，它的功能远不止于此。当做一些性能测试时，同样可以在这里很方便地进行。  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">"Array initialize"</span>);</span><br><span class="line"><span class="keyword">var</span> array= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1000000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = array.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    array[i] = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">"Array initialize"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//&gt;&gt;  Array initialize: 1195.575ms</span></span><br></pre></td></tr></table></figure>
+<h4 id="console-profile_&amp;_console-timeLime">console.profile &amp; console.timeLime</h4><p>当想要查看CPU使用相关的信息时，可以使用 <code>console.profile</code> 配合 <code>console.profileEnd</code> 来完成这个需求。<br>这一功能可以通过UI界面来完成，Chrome 开发者工具里面有个 <code>tab</code> 便是 <code>Profile</code> 。  </p>
+<p>与此类似的功能还有 <code>console.timeLine</code> 配合 <code>console.timeLineEnd</code> ,它的作用是开始记录一段时间轴，同样可以通过Chrome开发者工具里的Timeline标签来进行相应操作。  </p>
+<p>所以在我看来这两个方法有点鸡肋，因为都可以通过操作界面来完成。但至少他提供了一种命令行方式的交互，还是多了种姿势供选择吧。  </p>
+<h4 id="console-trace">console.trace</h4><p>堆栈跟踪相关的调试可以使用 <code>console.trace</code>。这个同样可以通过UI界面完成。当代码被打断点后，可以在Call Stack面板中查看相关堆栈信息。  </p>
+<h3 id="copy">copy</h3><p>通过此命令可以将在控制台获取到的内容复制到剪贴板。</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">copy</span><span class="params">(document.body)</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="keys_&amp;_values">keys &amp; values</h3><p>这是一对基友。前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组。具体请看下面的例子：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tboy=&#123;name:<span class="string">'wayou'</span>,gender:<span class="string">'unknown'</span>,hobby:<span class="string">'opposite to the gender'</span>&#125;;</span><br><span class="line">keys(tboy);</span><br><span class="line">values(tboy);</span><br></pre></td></tr></table></figure></p>
+<h2 id="DevTools">DevTools</h2><h3 id="快速文件转换">快速文件转换</h3><p><code>Ctrl + P</code> ( 在Mac上使用 <code>Cmd + P</code> )来快速的寻找和打开你工程中的任意文件。  </p>
+<h3 id="在源代码中搜索">在源代码中搜索</h3><p>按下 <code>Ctrl + Shift + F</code> (在Mac上使用 <code>Cmd + Opt + F</code>)，即可在所有已加载的文件中查找一个特定的字符串。这个搜索的方法也支持正则表达式。  </p>
+<h3 id="跳转到特定的行数">跳转到特定的行数</h3><p>DevTools能够允许你轻松地跳转到代码里的任意一行，Windows 和 Linux用户只需要按下<code>Ctrl + G</code> (在Mac上使用 <code>Cmd + L</code>),然后输入你想查阅的行数即可。<br>另一个跳转的方法是按下Ctrl + O ，输入:和行数，而不用去寻找一个文件。  </p>
+<h3 id="多个位置同时编辑">多个位置同时编辑</h3><p>编辑一个文件的时候你可以通过按住<code>Ctrl</code> (在Mac上为 Cmd) 同时点击你想让光标停留的位置，设置多个光标，这样你就可以同时在多个位置输入同一文本了。  </p>
+<h3 id="选择下一个匹配项">选择下一个匹配项</h3><p>当你在Sources 标签下编辑文件时，如果你按下<code>Ctrl + D</code> (在Mac上使用 <code>Cmd + D</code>)，下一个匹配项也会被选中，这能够帮助你同时编辑他们。  </p>
+<h3 id="改变颜色格式">改变颜色格式</h3><p>在颜色预览中使用<code>Shift + Click</code> ，可以在<code>rgba</code>, <code>hsl</code> 和 <code>hexadecimal</code> 这三种格式中改变。  </p>
+<h2 id="美化js">美化js</h2><p>很多js都被压缩了，在调试工具里面 <code>Sources</code> 选中js文件在下面有个 <code>{}</code> 自动美化  </p>
+
+              
+            </div>
+            <footer class="article-footer">
+              <a href="/2015/04/05/chrome-使用技巧/" class="article-date">
+  <time datetime="2015-04-05T10:04:11.000Z" itemprop="datePublished">2015-04-05</time>
+</a>
+              <a data-url="http://kacperwang.github.io/2015/04/05/chrome-使用技巧/" data-id="ci89qrxn4001sgxgluqwbvf6k" class="article-share-link">Share</a>
+              
+                <a href="http://kacperwang.github.io/2015/04/05/chrome-使用技巧/#disqus_thread" class="article-comment-link">Comments</a>
+              
+              
+
+
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li></ul>
+
+            </footer>
+      </div>
+      
+        
+<nav id="article-nav">
+  
+    <a href="/2015/04/05/hexo模板制作小技巧/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexo模板制作小技巧
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/04/01/CSS编码规范/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS编码规范</div>
+    </a>
+  
+</nav>
+
+      
+    </article>
+
+
+
+
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-chrome-使用技巧" data-title="chrome 使用技巧" data-url="http://kacperwang.github.io/2015/04/05/chrome-使用技巧/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'pc175'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+
+
+</div>
+<footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+        <div class="left">
+            &copy; 2015 kacper.wang<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        </div>
+        <div class="right">
+            
+                <a href="https://github.com/jaywcjlove">GitHub</a>
+            
+                <a href="http://weibo.com/pc175">Weibo</a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+

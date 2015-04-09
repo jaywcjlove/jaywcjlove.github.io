@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>hexo常用命令笔记 | JSLite.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="hexonpm install hexo -g #安装  npm update hexo -g #升级  hexo init blog #初始化，生成文件夹为blogcd blognpm install #安装依赖库hexo server #运行测试
+简写hexo n &amp;quot;我的博客&amp;quot; == hexo new &amp;quot;我的博客&amp;quot; #新建文章hexo p == hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo常用命令笔记">
+<meta property="og:url" content="http://kacperwang.github.io/2015/03/30/hexo常用命令笔记/index.html">
+<meta property="og:site_name" content="JSLite.io">
+<meta property="og:description" content="hexonpm install hexo -g #安装  npm update hexo -g #升级  hexo init blog #初始化，生成文件夹为blogcd blognpm install #安装依赖库hexo server #运行测试
+简写hexo n &amp;quot;我的博客&amp;quot; == hexo new &amp;quot;我的博客&amp;quot; #新建文章hexo p == hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo常用命令笔记">
+<meta name="twitter:description" content="hexonpm install hexo -g #安装  npm update hexo -g #升级  hexo init blog #初始化，生成文件夹为blogcd blognpm install #安装依赖库hexo server #运行测试
+简写hexo n &amp;quot;我的博客&amp;quot; == hexo new &amp;quot;我的博客&amp;quot; #新建文章hexo p == hexo">
+    
+      <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
+    
+    
+      <link rel="icon" href="/css/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+
+</head>
+
+
+
+
+
+
+<header id="header" class="hdpage">
+    
+    <div id="header-outer" class="outer">
+        
+        <div id="header-inner" class="inner">
+          <nav id="main-nav">
+            <a id="main-nav-toggle" class="nav-icon"></a>
+            
+              <a class="main-nav-link" href="/">
+                  
+                  
+
+                
+                  Home
+                </a>
+            
+              <a class="main-nav-link" href="/API">
+                  
+                  
+
+                
+                  API
+                </a>
+            
+              <a class="main-nav-link" href="/tags">
+                  
+                  
+
+                
+                  Tags
+                </a>
+            
+              <a class="main-nav-link" href="/archives">
+                  
+                  
+
+                
+                  Archives
+                </a>
+            
+              <a class="main-nav-link" href="/about">
+                  
+                  
+
+                
+                  About
+                </a>
+            
+              <a class="main-nav-link" href="https://github.com/JSLite/JSLite">
+                  
+                  
+
+                
+                  Github
+                </a>
+            
+          </nav>
+          <nav id="sub-nav">
+            
+              <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+            
+            <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          </nav>
+          <div id="search-form-wrap">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kacperwang.github.io"></form>
+          </div>
+        </div>
+    </div>
+</header>
+
+<div class="outer">
+<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo"><span class="toc-number">1.</span> <span class="toc-text">hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简写"><span class="toc-number">2.</span> <span class="toc-text">简写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器"><span class="toc-number">3.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#监视文件变动"><span class="toc-number">3.1.</span> <span class="toc-text">监视文件变动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完成后部署"><span class="toc-number">3.2.</span> <span class="toc-text">完成后部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#草稿"><span class="toc-number">4.</span> <span class="toc-text">草稿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模版"><span class="toc-number">5.</span> <span class="toc-text">模版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模版（Scaffold）"><span class="toc-number">6.</span> <span class="toc-text">模版（Scaffold）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置文章摘要"><span class="toc-number">7.</span> <span class="toc-text">设置文章摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写作"><span class="toc-number">8.</span> <span class="toc-text">写作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#推送到服务器上"><span class="toc-number">8.1.</span> <span class="toc-text">推送到服务器上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#报错"><span class="toc-number">9.</span> <span class="toc-text">报错</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-找不到git部署"><span class="toc-number">9.1.</span> <span class="toc-text">1.找不到git部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-部署类型设置git"><span class="toc-number">9.2.</span> <span class="toc-text">3.部署类型设置git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-_xcodebuild"><span class="toc-number">9.3.</span> <span class="toc-text">4. xcodebuild</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-_RSS不显示"><span class="toc-number">9.4.</span> <span class="toc-text">5. RSS不显示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装RSS插件"><span class="toc-number">9.4.1.</span> <span class="toc-text">安装RSS插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开启RSS功能"><span class="toc-number">9.4.2.</span> <span class="toc-text">开启RSS功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开启评论"><span class="toc-number">9.4.3.</span> <span class="toc-text">开启评论</span></a></li></ol></li></ol></li></ol>-->
+
+
+    <article id="post-hexo常用命令笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="article-meta">
+        
+          <header class="article-header">
+            
+  
+    <a href="/2015/03/30/hexo常用命令笔记/">
+      <h1 class="article-title" itemprop="name">
+        hexo常用命令笔记
+      </h1>
+    </a>
+  
+
+
+
+          </header>
+        
+
+        <!--<a href="/2015/03/30/hexo常用命令笔记/" class="article-date">
+  <time datetime="2015-03-29T17:56:32.000Z" itemprop="datePublished">2015-03-30</time>
+</a>-->
+        <!--  -->
+      </div>
+      <div class="article-inner">
+            
+            
+              <!--<header class="article-header">
+                
+  
+    <a href="/2015/03/30/hexo常用命令笔记/">
+      <h1 class="article-title" itemprop="name">
+        hexo常用命令笔记
+      </h1>
+    </a>
+  
+
+
+
+              </header>-->
+            
+            <div class="article-entry" itemprop="articleBody">
+              
+                <h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="comment">#安装  </span></span><br><span class="line">npm update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init blog <span class="comment">#初始化，生成文件夹为blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install <span class="comment">#安装依赖库</span></span><br><span class="line">hexo server <span class="comment">#运行测试</span></span><br></pre></td></tr></table></figure>
+<h2 id="简写">简写</h2><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署    </p>
+<h2 id="服务器">服务器</h2><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP  </p>
+<p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令<br><code>hexo g</code> #生成静态网页<br><code>hexo d</code> #开始部署  </p>
+<h3 id="监视文件变动">监视文件变动</h3><p><code>hexo generate</code> #使用 Hexo 生成静态文件快速而且简单<br><code>hexo generate --watch</code> #监视文件变动  </p>
+<h3 id="完成后部署">完成后部署</h3><blockquote>
+<p>两个命令的作用是相同的<br><code>hexo generate --deploy</code><br><code>hexo deploy --generate</code></p>
+</blockquote>
+<p><code>hexo deploy -g</code><br><code>hexo server -g</code>  </p>
+<h2 id="草稿">草稿</h2><p><code>hexo publish [layout] &lt;title&gt;</code> </p>
+<h2 id="模版">模版</h2><p><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub</p>
+<p><code>hexo new [layout] &lt;title&gt;</code><br><code>hexo new photo &quot;My Gallery&quot;</code><br><code>hexo new &quot;Hello World&quot; --lang tw</code></p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件建立日期</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight http"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: <span class="string">使用Hexo搭建个人博客</span></span><br><span class="line"><span class="attribute">layout</span>: <span class="string">post</span></span><br><span class="line"><span class="attribute">date</span>: <span class="string">2014-03-03 19:07:43</span></span><br><span class="line"><span class="attribute">comments</span>: <span class="string">true</span></span><br><span class="line"><span class="attribute">categories</span>: <span class="string">Blog</span></span><br><span class="line"><span class="attribute">tags</span>: <span class="string">[Hexo]</span></span><br><span class="line"><span class="attribute">keywords</span>: <span class="string">Hexo, Blog</span></span><br><span class="line"><span class="attribute">description</span>: <span class="string">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span></span><br></pre></td></tr></table></figure>
+<h2 id="模版（Scaffold）">模版（Scaffold）</h2><p><code>hexo new photo &quot;My Gallery&quot;</code>  </p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件建立日期</td>
+</tr>
+</tbody>
+</table>
+<h2 id="设置文章摘要">设置文章摘要</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">以上是文章摘要 <span class="comment">&lt;!--more--&gt;</span> 以下是余下全文</span><br></pre></td></tr></table></figure>
+<h2 id="写作">写作</h2><p><code>hexo new page &lt;title&gt;</code><br><code>hexo new post &lt;title&gt;</code>  </p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>:year</td>
+<td>建立的年份（4 位数）</td>
+</tr>
+<tr>
+<td>:month</td>
+<td>建立的月份（2 位数）</td>
+</tr>
+<tr>
+<td>:i_month</td>
+<td>建立的月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td>:day</td>
+<td>建立的日期（2 位数）</td>
+</tr>
+<tr>
+<td>:i_day</td>
+<td>建立的日期（去掉开头的零）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="推送到服务器上">推送到服务器上</h3><p><code>hexo n</code> #写文章<br><code>hexo g</code> #生成<br><code>hexo d</code> #部署 #可与<code>hexo g</code>合并为 <code>hexo d -g</code></p>
+<h2 id="报错">报错</h2><h3 id="1-找不到git部署">1.找不到git部署</h3><figure class="highlight monkey"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ERROR</span> Deployer <span class="keyword">not</span> found: git</span><br></pre></td></tr></table></figure>
+<p><strong>解决方法</strong>  </p>
+<p><code>npm install hexo-deployer-git --save</code>  </p>
+<h3 id="3-部署类型设置git">3.部署类型设置git</h3><p>hexo 3.0 部署类型不再是<code>github</code>，<code>_config.yml</code> 中修改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@***.github.com:***/***.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="4-_xcodebuild">4. xcodebuild</h3><p>xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance  </p>
+<p><code>npm install bcrypt</code>  </p>
+<h3 id="5-_RSS不显示">5. RSS不显示</h3><h4 id="安装RSS插件">安装RSS插件</h4><p><code>npm install hexo-generator-feed --save</code>  </p>
+<h4 id="开启RSS功能">开启RSS功能</h4><p>编辑hexo/_config.yml，添加如下代码：  </p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="label">rss:</span> /atom.xml <span class="preprocessor">#rss地址  默认即可</span></span><br></pre></td></tr></table></figure>
+<h4 id="开启评论">开启评论</h4><p>1.我使用多说代替自带的评论，在<a href="http://duoshuo.com" target="_blank" rel="external">多说</a> 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码  里面有 short_name  </p>
+<ol>
+<li><p>在根目录 <code>_config.yml</code> 添加一行  <code>disqus_shortname: jslite</code> 是在多说注册时产生的    </p>
+</li>
+<li><p>复制到 <code>themes\landscape\layout\_partial\article.ejs</code><br>把  </p>
+</li>
+</ol>
+<figure class="highlight erb"><table><tr><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; </span>%&gt;<span class="xml"></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure>
+<p>改为  </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= post.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%= page.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">'&lt;%= config.disqus_shortname %&gt;'</span>&#125;;</span><br><span class="line">      (<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">        ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">        ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span><br><span class="line">        ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] </span><br><span class="line">         || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
+              
+            </div>
+            <footer class="article-footer">
+              <a href="/2015/03/30/hexo常用命令笔记/" class="article-date">
+  <time datetime="2015-03-29T17:56:32.000Z" itemprop="datePublished">2015-03-30</time>
+</a>
+              <a data-url="http://kacperwang.github.io/2015/03/30/hexo常用命令笔记/" data-id="ci89qrxmy001kgxgln8tb7uo6" class="article-share-link">Share</a>
+              
+                <a href="http://kacperwang.github.io/2015/03/30/hexo常用命令笔记/#disqus_thread" class="article-comment-link">Comments</a>
+              
+              
+
+
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+            </footer>
+      </div>
+      
+        
+<nav id="article-nav">
+  
+    <a href="/2015/04/01/git使用笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          git使用笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/03/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+      
+    </article>
+
+
+
+
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-hexo常用命令笔记" data-title="hexo常用命令笔记" data-url="http://kacperwang.github.io/2015/03/30/hexo常用命令笔记/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'pc175'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+
+
+</div>
+<footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+        <div class="left">
+            &copy; 2015 kacper.wang<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        </div>
+        <div class="right">
+            
+                <a href="https://github.com/jaywcjlove">GitHub</a>
+            
+                <a href="http://weibo.com/pc175">Weibo</a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+
