@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MacOS开发APP小笔记 | JSLite.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="状态栏添加图标在系统的菜单栏上添加App的图标
+NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:NSVariableStatusItemLength];&amp;#10;&amp;#10;[_statusItemsetImage:[NSImageimageNamed:@&amp;#34;stopplay&amp;#34;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacOS开发APP小笔记">
+<meta property="og:url" content="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/index.html">
+<meta property="og:site_name" content="JSLite.io">
+<meta property="og:description" content="状态栏添加图标在系统的菜单栏上添加App的图标
+NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:NSVariableStatusItemLength];&amp;#10;&amp;#10;[_statusItemsetImage:[NSImageimageNamed:@&amp;#34;stopplay&amp;#34;">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MacOS开发APP小笔记">
+<meta name="twitter:description" content="状态栏添加图标在系统的菜单栏上添加App的图标
+NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:NSVariableStatusItemLength];&amp;#10;&amp;#10;[_statusItemsetImage:[NSImageimageNamed:@&amp;#34;stopplay&amp;#34;">
+    
+      <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
+    
+    
+      <link rel="icon" href="/css/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+
+</head>
+
+
+
+
+
+
+<header id="header" class="hdpage">
+    
+    <div id="header-outer" class="outer">
+        
+        <div id="header-inner" class="inner">
+          <nav id="main-nav">
+            <a id="main-nav-toggle" class="nav-icon"></a>
+            
+              <a class="main-nav-link" href="/">
+                  
+                  
+
+                
+                  Home
+                </a>
+            
+              <a class="main-nav-link" href="/API">
+                  
+                  
+
+                
+                  API
+                </a>
+            
+              <a class="main-nav-link" href="/tags">
+                  
+                  
+
+                
+                  Tags
+                </a>
+            
+              <a class="main-nav-link" href="/archives">
+                  
+                  
+
+                
+                  Archives
+                </a>
+            
+              <a class="main-nav-link" href="/about">
+                  
+                  
+
+                
+                  About
+                </a>
+            
+              <a class="main-nav-link" href="https://github.com/JSLite/JSLite">
+                  
+                  
+
+                
+                  Github
+                </a>
+            
+          </nav>
+          <nav id="sub-nav">
+            
+              <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+            
+            <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          </nav>
+          <div id="search-form-wrap">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kacperwang.github.io"></form>
+          </div>
+        </div>
+    </div>
+</header>
+
+<div class="outer">
+<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#状态栏添加图标"><span class="toc-number">1.</span> <span class="toc-text">状态栏添加图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UIButton_设置按钮背景图片"><span class="toc-number">2.</span> <span class="toc-text">UIButton 设置按钮背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSView中实现鼠标的相关响应(转)"><span class="toc-number">3.</span> <span class="toc-text">NSView中实现鼠标的相关响应(转)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">3.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">3.2.</span> <span class="toc-text">方法二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置WebView随着window窗口增大缩小"><span class="toc-number">4.</span> <span class="toc-text">设置WebView随着window窗口增大缩小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#没有标题栏的NSWindow如何拖动"><span class="toc-number">5.</span> <span class="toc-text">没有标题栏的NSWindow如何拖动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac应用点击关闭按钮就退出程序的方法"><span class="toc-number">6.</span> <span class="toc-text">Mac应用点击关闭按钮就退出程序的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一："><span class="toc-number">6.1.</span> <span class="toc-text">方法一：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二："><span class="toc-number">6.2.</span> <span class="toc-text">方法二：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSButton生成自定义Button"><span class="toc-number">7.</span> <span class="toc-text">NSButton生成自定义Button</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遍历父视图上的button"><span class="toc-number">8.</span> <span class="toc-text">遍历父视图上的button</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UIColor使用十六进制的宏"><span class="toc-number">9.</span> <span class="toc-text">UIColor使用十六进制的宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#旋转view_设置View横屏"><span class="toc-number">10.</span> <span class="toc-text">旋转view 设置View横屏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSString判断字符是否一样"><span class="toc-number">11.</span> <span class="toc-text">NSString判断字符是否一样</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UIWebView背景透明"><span class="toc-number">12.</span> <span class="toc-text">UIWebView背景透明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隐藏拖拽webview时上下的两个有阴影效果的subview"><span class="toc-number">13.</span> <span class="toc-text">隐藏拖拽webview时上下的两个有阴影效果的subview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#禁用UIWebView拖拽时的反弹效果"><span class="toc-number">14.</span> <span class="toc-text">禁用UIWebView拖拽时的反弹效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#禁用UIWebView拖拽"><span class="toc-number">15.</span> <span class="toc-text">禁用UIWebView拖拽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加载html"><span class="toc-number">16.</span> <span class="toc-text">加载html</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UIWebView加载本地html"><span class="toc-number">16.1.</span> <span class="toc-text">UIWebView加载本地html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加载网络URL:"><span class="toc-number">16.2.</span> <span class="toc-text">加载网络URL:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加载本地html文件"><span class="toc-number">16.3.</span> <span class="toc-text">加载本地html文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件夹中"><span class="toc-number">16.4.</span> <span class="toc-text">文件夹中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Documents文件夹里"><span class="toc-number">16.5.</span> <span class="toc-text">在Documents文件夹里</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webView中打开链接地址"><span class="toc-number">17.</span> <span class="toc-text">webView中打开链接地址</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：-1"><span class="toc-number">17.1.</span> <span class="toc-text">方法一：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：-1"><span class="toc-number">17.2.</span> <span class="toc-text">方法二：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#屏蔽WebView右键菜单方法"><span class="toc-number">18.</span> <span class="toc-text">屏蔽WebView右键菜单方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSTableView_row_响应双击事件和单击事件_setDoubleAction_和_setAction"><span class="toc-number">19.</span> <span class="toc-text">NSTableView row 响应双击事件和单击事件 setDoubleAction 和 setAction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示窗口orderFront、隐藏窗口orderOut"><span class="toc-number">20.</span> <span class="toc-text">显示窗口orderFront、隐藏窗口orderOut</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NStableView_Transparent_NStableView透明设置"><span class="toc-number">21.</span> <span class="toc-text">NStableView Transparent NStableView透明设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSString与int和float的相互转换"><span class="toc-number">22.</span> <span class="toc-text">NSString与int和float的相互转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取tag"><span class="toc-number">23.</span> <span class="toc-text">获取tag</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全屏窗口中响应鼠标事件"><span class="toc-number">24.</span> <span class="toc-text">全屏窗口中响应鼠标事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断双击"><span class="toc-number">25.</span> <span class="toc-text">判断双击</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取当前时间"><span class="toc-number">26.</span> <span class="toc-text">获取当前时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSLog_Format_specifiers_for_data_types数据类型格式规范"><span class="toc-number">27.</span> <span class="toc-text">NSLog Format specifiers for data types数据类型格式规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隐藏window_titlebar"><span class="toc-number">28.</span> <span class="toc-text">隐藏window titlebar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决超链接添加_target=”_blank”之后在WebView中不能打开"><span class="toc-number">29.</span> <span class="toc-text">解决超链接添加 target=”_blank”之后在WebView中不能打开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隐藏和显示最小化时的图标徽章"><span class="toc-number">30.</span> <span class="toc-text">隐藏和显示最小化时的图标徽章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#status_bar"><span class="toc-number">31.</span> <span class="toc-text">status bar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#退出应用程序事件"><span class="toc-number">32.</span> <span class="toc-text">退出应用程序事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给Dock图标加Badge"><span class="toc-number">33.</span> <span class="toc-text">给Dock图标加Badge</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换Dock图标"><span class="toc-number">34.</span> <span class="toc-text">更换Dock图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隐藏状态栏"><span class="toc-number">35.</span> <span class="toc-text">隐藏状态栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加载View"><span class="toc-number">36.</span> <span class="toc-text">加载View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义按钮"><span class="toc-number">37.</span> <span class="toc-text">自定义按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NSArray_切分数组"><span class="toc-number">38.</span> <span class="toc-text">NSArray 切分数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#actionSheet_xcode"><span class="toc-number">39.</span> <span class="toc-text">actionSheet xcode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xcode中代码提示前面得小图标表示这个符号得类型"><span class="toc-number">40.</span> <span class="toc-text">xcode中代码提示前面得小图标表示这个符号得类型</span></a></li></ol>-->
+
+
+    <article id="post-MacOS开发APP小笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="article-meta">
+        
+          <header class="article-header">
+            
+  
+    <a href="/2013/04/19/MacOS开发APP小笔记/">
+      <h1 class="article-title" itemprop="name">
+        MacOS开发APP小笔记
+      </h1>
+    </a>
+  
+
+
+
+          </header>
+        
+
+        <!--<a href="/2013/04/19/MacOS开发APP小笔记/" class="article-date">
+  <time datetime="2013-04-19T07:41:30.000Z" itemprop="datePublished">2013-04-19</time>
+</a>-->
+        <!--  -->
+      </div>
+      <div class="article-inner">
+            
+            
+              <!--<header class="article-header">
+                
+  
+    <a href="/2013/04/19/MacOS开发APP小笔记/">
+      <h1 class="article-title" itemprop="name">
+        MacOS开发APP小笔记
+      </h1>
+    </a>
+  
+
+
+
+              </header>-->
+            
+            <div class="article-entry" itemprop="articleBody">
+              
+                <h2 id="状态栏添加图标">状态栏添加图标</h2><p>在系统的菜单栏上添加App的图标</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:NSVariableStatusItemLength];&#10;&#10;[_statusItemsetImage:[NSImageimageNamed:@&#34;stopplay&#34;]];&#10;[_statusItemsetToolTip:@&#34;&#21543;&#21862;&#21543;&#21862;&#21543;&#21862;&#21543;&#21862;&#21543;&#21862;&#34;];&#10;[_statusItemsetHighlightMode:YES];</span><br></pre></td></tr></table></figure>
+<h2 id="UIButton_设置按钮背景图片">UIButton 设置按钮背景图片</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">// set up start button&#10;UIImage *greenImage = [[UIImage imageNamed:@&#34;green_button.png&#34;] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];&#10;UIImage *redImage = [[UIImage imageNamed:@&#34;red_button.png&#34;] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];&#10;   &#10;[startButton setBackgroundImage:greenImage forState:UIControlStateNormal];&#10;[startButton setBackgroundImage:redImage forState:UIControlStateDisabled];&#10;[startButton setEnabled:YES];</span><br></pre></td></tr></table></figure>
+<h2 id="NSView中实现鼠标的相关响应(转)">NSView中实现鼠标的相关响应(转)</h2><p>在cocoa中的鼠标事件相比ios中的touch事件要显得复杂一些，ios中可以通过重写touchBegin、touchMove、touchEnd等相应方法便可，或是控制相应的响应链。但在cocoa中却引入了一个TrackingArea（跟踪区域）的概念，你需要继承相应的NSResponder对象（如NSView）,在合适的地方添加trackingArea，然后便可以通过重写相应的mouse方法就可以了。<br>下面举例两种方式实现对整个视图的跟踪：</p>
+<h3 id="方法一">方法一</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">- (id)initWithFrame:(NSRect)frameRect&#123;&#10;    self = [super initWithFrame:frameRect];&#10;    if (self)&#10;    &#123;&#10;        [self addTrackingRect:self.bounds owner:self userData:nil assumeInside:YES];&#10;    &#125;&#10;    return self;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法二">方法二</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#20248;&#28857;&#22312;&#20110;&#21487;&#20197;&#23454;&#29616;&#24403;&#35270;&#22270;&#26410;&#28608;&#27963;&#24773;&#20917;&#19979;&#20063;&#33021;&#21709;&#24212;&#65289;&#10;&#10;//&#27492;&#26041;&#27861;&#38656;&#35201;&#22312;&#25913;&#21464;&#30340;&#26102;&#20505;&#25163;&#21160;&#35843;&#29992;&#19968;&#27425;(&#29238;&#31867;&#30340;&#26041;&#27861;)&#10;- (void)updateTrackingAreas&#10;&#123;&#10;    NSArray *trackings = [self trackingAreas];&#10;    for (NSTrackingArea *tracking in trackings)&#10;    &#123;&#10;        [self removeTrackingArea:tracking];&#10;    &#125;&#10;    &#10;    //&#28155;&#21152;NSTrackingActiveAlways&#25513;&#30721;&#21487;&#20197;&#20351;&#35270;&#22270;&#26410;&#22788;&#20110;&#28608;&#27963;&#25110;&#31532;&#19968;&#21709;&#24212;&#32773;&#26102;&#20063;&#33021;&#21709;&#24212;&#30456;&#24212;&#30340;&#26041;&#27861;&#10;    NSTrackingArea *trackingArea = [[NSTrackingArea alloc] initWithRect:[self bounds] options:NSTrackingMouseEnteredAndExited|NSTrackingMouseMoved|NSTrackingActiveAlways owner:self userInfo:nil];&#10;    [self addTrackingArea:trackingArea];&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="设置WebView随着window窗口增大缩小">设置WebView随着window窗口增大缩小</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">//&#35774;&#32622;WebView&#38543;&#30528;window&#31383;&#21475;&#22686;&#22823;&#32553;&#23567;&#10;[iWebView setUIDelegate:self];&#10;[iWebView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];</span><br></pre></td></tr></table></figure>
+<h2 id="没有标题栏的NSWindow如何拖动">没有标题栏的NSWindow如何拖动</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">[[self window] setMovableByWindowBackground:YES];</span><br></pre></td></tr></table></figure>
+<h2 id="Mac应用点击关闭按钮就退出程序的方法">Mac应用点击关闭按钮就退出程序的方法</h2><h3 id="方法一：">方法一：</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender&#123;&#10;    return YES;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法二：">方法二：</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">NSButton *closeButton = &#65339;self window] standardWindowButton:NSWindowCloseButton];&#10;[closeButton setTarget:self];&#10;[closeButton setAction:@selector(closeApplication)];&#10;    &#10;- (void) closeApplication &#123;&#10;    &#65339;NSApplication sharedApplication] terminate:nil];&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="NSButton生成自定义Button">NSButton生成自定义Button</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">NSButton *btnMax =[[NSButton alloc]initWithFrame:CGRectMake(14, 0, 14, 14)];&#10;[btnMax setImage:[NSImage imageNamed:@&#34;max&#34;]];&#10;[btnMax setAlternateImage:[NSImage imageNamed:@&#34;maxDown&#34;]];&#10;[[btnMax cell]setHighlightsBy:NSContentsCellMask];&#10;[btnMax setBordered:NO];&#10;[viewGo addSubview:btnMax];</span><br></pre></td></tr></table></figure>
+<h2 id="遍历父视图上的button">遍历父视图上的button</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">//*** childScroView &#20026;&#29238;&#35270;&#22270;&#10;for (UIView * thebtn in [childScroView subviews]) &#123;&#10;    if ([thebtn isKindOfClass:[UIButton class]]) &#123;&#10;        //***&#25913;&#21464;&#23383;&#20307;&#39068;&#33394;&#10;        [(UIButton *)thebtn setTitleColor:[UIColor redColor]forState:UIControlStateNormal];&#10;        //***&#25913;&#21464;&#32972;&#26223;&#10;        [(UIButton *)thebtn setBackgroundImage:nil forState:UIControlStateNormal];&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="UIColor使用十六进制的宏">UIColor使用十六进制的宏</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue &#38; 0xFF0000) &#62;&#62; 16))/255.0 green:((float)((rgbValue &#38; 0xFF00) &#62;&#62; 8))/255.0 blue:((float)(rgbValue &#38; 0xFF))/255.0 alpha:1.0]&#10;//how to use&#10;UIColor *color=UIColorFromRGB(0xDDEEFF);</span><br></pre></td></tr></table></figure>
+<h2 id="旋转view_设置View横屏">旋转view 设置View横屏</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">self.view.transform = CGAffineTransformIdentity;&#10;self.view.transform = CGAffineTransformMakeRotation(M_PI*1.5);</span><br></pre></td></tr></table></figure>
+<h2 id="NSString判断字符是否一样">NSString判断字符是否一样</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">- (BOOL)hasPrefix:(NSString *)string; &#21028;&#26029;&#21069;&#38754;&#26159;&#21542;&#21253;&#21547;&#23376;&#20018; &#10;- (BOOL)hasSuffix:(NSString *)string; &#21028;&#26029;&#26411;&#23614;&#26159;&#21542;&#21253;&#21547;&#23376;&#20018;&#10;- (NSRange)rangeOfString:(NSString *)string;&#31532;&#19968;&#27425;&#20986;&#29616;b&#21253;&#21547;&#23383;&#31526;&#20018;&#10;   &#10;NSString   [a hasPrefix: ]  [a hasSuffix:]  &#21028;&#26029;&#24320;&#22836;&#21644;&#32467;&#26463;&#26159;&#21542;&#21253;&#21547;&#23376;&#20018;&#10;   &#10;- (void)viewDidLoad&#10;&#123;&#10;    NSMutableString  *a = [[NSMutableString alloc ] initWithString :@&#34;i like long dress&#34;];&#10;   NSLog(@&#34;\n a: %@&#34;,a);&#10;     [a hasPrefix:@&#34;i&#34;] ==YES? NSLog(@&#34;&#20197; i &#24320;&#22836;&#34;): NSLog(@&#34;&#19981;&#20197; i &#24320;&#22836;&#34;);&#10;         [a hasSuffix:@&#34;hat&#34;] ==YES? NSLog(@&#34;&#20197; hat &#32467;&#23614;&#34;): NSLog(@&#34;&#19981;&#20197; hat &#32467;&#23614;&#34;);&#10;     [a release];&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="UIWebView背景透明">UIWebView背景透明</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">// set background transparent, also can set it in nib file&#10;webView_.backgroundColor = [UIColor clearColor];&#10;webView_.opaque = NO;</span><br></pre></td></tr></table></figure>
+<h2 id="隐藏拖拽webview时上下的两个有阴影效果的subview">隐藏拖拽webview时上下的两个有阴影效果的subview</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">// remove shadow view when drag web view&#10;for (UIView *subView in [webView_ subviews]) &#123;&#10;    if ([subView isKindOfClass:[UIScrollView class]]) &#123;&#10;        for (UIView *shadowView in [subView subviews]) &#123;&#10;            if ([shadowView isKindOfClass:[UIImageView class]]) &#123;&#10;                shadowView.hidden = YES;&#10;            &#125;&#10;        &#125;&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="禁用UIWebView拖拽时的反弹效果">禁用UIWebView拖拽时的反弹效果</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">// disable view bounce&#10;[(UIScrollView *)[[webView_ subviews] objectAtIndex:0] setBounces:NO];</span><br></pre></td></tr></table></figure>
+<h2 id="禁用UIWebView拖拽">禁用UIWebView拖拽</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">// disable touch move</span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="built_in">document</span>.ontouchmove = <span class="function"><span class="keyword">function</span><span class="params">(e)</span> </span>&#123;</span><br><span class="line">e.preventDefault();</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="加载html">加载html</h2><h3 id="UIWebView加载本地html">UIWebView加载本地html</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">// get html file path&#10;NSString *path = [[NSBundle mainBundle] pathForResource:@&#34;about&#34; ofType:@&#34;html&#34;];&#10;[webView_ loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];</span><br></pre></td></tr></table></figure>
+<h3 id="加载网络URL:">加载网络URL:</h3><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://localhost:8080/jmDemo/index.html"</span>]; </span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];  </span><br><span class="line">[_webView loadRequest:request];</span><br></pre></td></tr></table></figure>
+<h3 id="加载本地html文件">加载本地html文件</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">NSString *path = [[NSBundle mainBundle] <span class="string">pathForResource:</span>@<span class="string">"indedx"</span> <span class="string">ofType:</span>@<span class="string">"html"</span>];  </span><br><span class="line">NSURLRequest *request = [NSURLRequest <span class="string">requestWithURL:</span>[NSURL <span class="string">fileURLWithPath:</span>path]];  </span><br><span class="line">[_webView <span class="string">loadRequest:</span>request];</span><br></pre></td></tr></table></figure>
+<h3 id="文件夹中">文件夹中</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">NSString *resourcesPath = [[NSBundlemainBundle] resourcePath];</span><br><span class="line">NSString *htmlPath = [resourcesPath <span class="string">stringByAppendingFormat:</span>@<span class="string">"/htdocs/about.html"</span>];</span><br><span class="line">[[webViewmmainFrame] <span class="string">loadRequest:</span>[<span class="string">NSURLRequestrequestWithURL:</span>[<span class="string">NSURLfileURLWithPath:</span>htmlPath]]];</span><br></pre></td></tr></table></figure>
+<h3 id="在Documents文件夹里">在Documents文件夹里</h3><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, <span class="literal">YES</span>);  </span><br><span class="line"><span class="built_in">NSString</span> *documentsDirectory = [paths objectAtIndex:<span class="number">0</span>];  </span><br><span class="line"><span class="built_in">NSString</span> *path = [documentsDirectory stringByAppendingPathComponent:<span class="string">@"index.html"</span>];  </span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> fileURLWithPath:path];  </span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];  </span><br><span class="line">[_webView loadRequest:request];</span><br></pre></td></tr></table></figure>
+<h2 id="webView中打开链接地址">webView中打开链接地址</h2><h3 id="方法一：-1">方法一：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[webViewm <span class="built_in">set</span>MainFrameURL:@<span class="string">"http://www.pc175.com"</span>];</span><br></pre></td></tr></table></figure>
+<h3 id="方法二：-1">方法二：</h3><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">NSString *urlString ＝@<span class="string">"http://www.baidu.com"</span>;</span><br><span class="line"><span class="string">[[webView mainFrame] loadRequest:[NSURLRequestrequestWithURL:[NSURLURLWithString:urlString]]</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="屏蔽WebView右键菜单方法">屏蔽WebView右键菜单方法</h2><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)aNotification</span><br><span class="line">&#123;</span><br><span class="line">    [_webViews setUIDelegate: <span class="keyword">self</span>];</span><br><span class="line">&#125;</span><br><span class="line">     </span><br><span class="line">- (<span class="built_in">NSArray</span> *)webView:(WebView *)sender contextMenuItemsForElement:(<span class="built_in">NSDictionary</span> *)element defaultMenuItems:(<span class="built_in">NSArray</span> *)defaultMenuItems&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="NSTableView_row_响应双击事件和单击事件_setDoubleAction_和_setAction">NSTableView row 响应双击事件和单击事件 setDoubleAction 和 setAction</h2><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">-(<span class="typename">void</span>)awakeFromNib&#123;</span><br><span class="line">    [<span class="keyword">super</span> awakeFromNib];</span><br><span class="line"></span><br><span class="line">    [tableView <span class="string">setTarget:</span>self];</span><br><span class="line">    [tableView <span class="string">setDoubleAction:</span>NSSelectorFromString(@<span class="string">"doubleClick:"</span>)];</span><br><span class="line">    <span class="comment">//setDoubleAction双击选择事件</span></span><br><span class="line">    [tableView <span class="string">setAction:</span>NSSelectorFromString(@<span class="string">"doubleClick:"</span>)];<span class="comment">//setAction单击选择事件</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">- (<span class="typename">void</span>) <span class="string">doubleClick:</span> (id)sender </span><br><span class="line">&#123; </span><br><span class="line">    NSInteger rowNumber = [tableViewclickedRow];</span><br><span class="line">    NSLog(@<span class="string">"Double Clicked.%ld "</span>,rowNumber); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="显示窗口orderFront、隐藏窗口orderOut">显示窗口orderFront、隐藏窗口orderOut</h2><figure class="highlight erlang"><table><tr><td class="code"><pre><span class="line"><span class="pp">- <span class="params">(<span class="variable">IBAction</span>)</span>hideWindow:<span class="params">(id)</span>sender&#123;</span><br><span class="line">    [theWindow orderOut:sender];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- <span class="params">(<span class="variable">IBAction</span>)</span>hideWindow:<span class="params">(id)</span>sender&#123;</span><br><span class="line">    if <span class="params">([the<span class="variable">Window</span> is<span class="variable">Visible</span>])</span> </span><br><span class="line">    [theWindow orderOut:sender];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- <span class="params">(<span class="variable">IBAction</span>)</span>showWindow:<span class="params">(id)</span>sender&#123;</span><br><span class="line">    [theWindow orderFront:sender];</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="NStableView_Transparent_NStableView透明设置">NStableView Transparent NStableView透明设置</h2><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attr_selector">[[tableView enclosingScrollView]</span> <span class="tag">setDrawsBackground</span><span class="pseudo">:NO</span>];</span><br><span class="line"><span class="attr_selector">[tableView setBackgroundColor:[NSColor clearColor]</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="NSString与int和float的相互转换">NSString与int和float的相互转换</h2><ol>
+<li>字符串拼接<br><code>NSString *newString = [NSString stringWithFormat:@&quot;%@%@&quot;,tempA,tempB];</code>   </li>
+<li>字符转int<br><code>int intString = [newString intValue];</code>  </li>
+<li>int转字符<br><code>NSString *stringInt = [NSString stringWithFormat:@&quot;%d&quot;,intString];</code>  </li>
+<li>字符转float<br><code>float floatString = [newString floatValue];</code>  </li>
+<li>float转字符<br><code>NSString *stringFloat = [NSString stringWithFormat:@&quot;%f&quot;,intString];</code>  </li>
+</ol>
+<h2 id="获取tag">获取tag</h2><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">NSString *<span class="keyword">tags</span> = [NSStringstringWithForma<span class="variable">t:</span>@<span class="string">"%i"</span>,[sender <span class="keyword">tag</span>]];</span><br><span class="line">NSLog(@<span class="string">"%@"</span>,<span class="keyword">tags</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="全屏窗口中响应鼠标事件">全屏窗口中响应鼠标事件</h2><p>如果想要全屏窗口中响应鼠标事件，必须重写一下- (BOOL)canBecomeKeyWindow，使其总是返回YES<br><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)canBecomeKeyWindow&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="判断双击">判断双击</h2><p><code>[theEvent clickCount] == 2</code>  </p>
+<figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>([theEvent clickCount] == <span class="number">1</span>)&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"111"</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>([theEvent clickCount] == <span class="number">2</span>)&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"222"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="获取当前时间">获取当前时间</h2><figure class="highlight processing"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取当前日期</span></span><br><span class="line">NSDate *nows =[NSDatedate];</span><br><span class="line">NSCalendar *gregorian = [[NSCalendaralloc] initWithCalendarIdentifier:NSGregorianCalendar];</span><br><span class="line">NSDateComponents *dateComponents = [gregorian components:(NSHourCalendarUnit  | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:nows];</span><br><span class="line">NSInteger <span class="built_in">hour</span> = [dateComponents <span class="built_in">hour</span>];</span><br><span class="line">NSInteger <span class="built_in">minute</span> = [dateComponents <span class="built_in">minute</span>];</span><br><span class="line">NSInteger <span class="built_in">second</span> = [dateComponents <span class="built_in">second</span>];</span><br><span class="line">NSInteger <span class="built_in">month</span>=[dateComponents <span class="built_in">month</span>];</span><br><span class="line">NSInteger <span class="built_in">day</span>=[dateComponents <span class="built_in">day</span>];</span><br><span class="line">NSLog(@<span class="string">"%@"</span>,[NSStringstringWithFormat: @<span class="string">"status%lu"</span>,<span class="built_in">day</span>]);</span><br></pre></td></tr></table></figure>
+<h2 id="NSLog_Format_specifiers_for_data_types数据类型格式规范">NSLog Format specifiers for data types数据类型格式规范</h2><figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line">Type</span><br><span class="line">Format specifier</span><br><span class="line">Considerations</span><br><span class="line">NSInteger</span><br><span class="line">%ld <span class="keyword">or</span> %lx</span><br><span class="line">Cast the value <span class="keyword">to</span> <span class="built_in">long</span></span><br><span class="line">NSUInteger</span><br><span class="line">%lu <span class="keyword">or</span> %lx</span><br><span class="line">Cast the value <span class="keyword">to</span> unsigned <span class="built_in">long</span></span><br><span class="line">CGFloat</span><br><span class="line">%f <span class="keyword">or</span> %g</span><br><span class="line">%f works <span class="keyword">for</span> floats <span class="keyword">and</span> doubles <span class="keyword">when</span> formatting; but see below warning <span class="keyword">when</span> scanning</span><br><span class="line">CFIndex</span><br><span class="line">%ld <span class="keyword">or</span> %lx</span><br><span class="line">The same <span class="keyword">as</span> NSInteger</span><br><span class="line">pointer</span><br><span class="line">%p</span><br><span class="line">%p adds <span class="number">0</span>x <span class="keyword">to</span> the beginning <span class="keyword">of</span> the output. <span class="keyword">If</span> you don<span class="comment">'t want that, use %lx and cast to long.</span></span><br><span class="line"><span class="built_in">long</span> <span class="built_in">long</span></span><br><span class="line">%lld <span class="keyword">or</span> %llx</span><br><span class="line"><span class="built_in">long</span> <span class="built_in">long</span> <span class="keyword">is</span> <span class="number">64</span>-bit <span class="keyword">on</span> both <span class="number">32</span>- <span class="keyword">and</span> <span class="number">64</span>-bit platforms</span><br><span class="line">unsigned <span class="built_in">long</span> <span class="built_in">long</span></span><br><span class="line">%llu <span class="keyword">or</span> %llx</span><br><span class="line">unsigned <span class="built_in">long</span> <span class="built_in">long</span> <span class="keyword">is</span> <span class="number">64</span>-bit <span class="keyword">on</span> both <span class="number">32</span>- <span class="keyword">and</span> <span class="number">64</span>-bit platforms</span><br></pre></td></tr></table></figure>
+<h2 id="隐藏window_titlebar">隐藏window titlebar</h2><figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="title">[_windowsetStyleMask:NSBorderlessWindowMask]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h2 id="解决超链接添加_target=”_blank”之后在WebView中不能打开">解决超链接添加 target=”_blank”之后在WebView中不能打开</h2><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">- (<span class="typename">void</span>)<span class="string">applicationDidFinishLaunching:</span>(NSNotification *)aNotification&#123;</span><br><span class="line">    [<span class="string">webViewsetUIDelegate:</span>self];</span><br><span class="line">&#125;</span><br><span class="line">- (WebView *)<span class="string">webView:</span>(WebView *)sender <span class="string">createWebViewWithRequest:</span>(NSURLRequest *)request&#123;</span><br><span class="line">    NSLog(@<span class="string">"sss%@"</span>,sender);</span><br><span class="line">    NSUInteger windowStyleMask =    NSClosableWindowMask | </span><br><span class="line">    NSMiniaturizableWindowMask |</span><br><span class="line">    NSResizableWindowMask |</span><br><span class="line">    NSTitledWindowMask;</span><br><span class="line">    NSWindow * webWindow = [[NSWindow alloc] <span class="string">initWithContentRect:</span>NSMakeRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">800</span>, <span class="number">600</span>) <span class="string">styleMask:</span>windowStyleMask <span class="string">backing:</span><span class="string">NSBackingStoreBuffereddefer:</span>NO];</span><br><span class="line">    WebView * newWebView = [[WebView alloc] <span class="string">initWithFrame:</span>[webWindow <span class="string">contentRectForFrameRect:</span>webWindow.frame]];</span><br><span class="line">    [newWebView <span class="string">setAutoresizingMask:</span>NSViewWidthSizable | NSViewHeightSizable];</span><br><span class="line">    [webWindow <span class="string">setContentView:</span>newWebView];</span><br><span class="line">    [webWindow center];</span><br><span class="line">    [webWindow <span class="string">makeKeyAndOrderFront:</span>self];</span><br><span class="line">    [[newWebView mainFrame] <span class="string">loadRequest:</span>request];</span><br><span class="line">    <span class="keyword">return</span> newWebView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="隐藏和显示最小化时的图标徽章">隐藏和显示最小化时的图标徽章</h2><p>OSX的窗口在最小化的时候，在缩略图的右下角会显示一个程序图标徽章。我们可以通过程序来显示和隐藏最小化图标的徽章。方法很简单如下：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Show minimize icon badge</span></span><br><span class="line"><span class="tag">-</span> (IBAction)<span class="tag">showMinimizeBadge</span>:(id)<span class="tag">sender</span> &#123;</span><br><span class="line">    <span class="attr_selector">[[self.windowdockTile]</span> <span class="tag">setShowsApplicationBadge</span><span class="pseudo">:YES</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Remove minimize icon badge</span></span><br><span class="line"><span class="tag">-</span> (IBAction)<span class="tag">removeMinimizeBadge</span>:(id)<span class="tag">sender</span> &#123;</span><br><span class="line">    <span class="attr_selector">[[self.windowdockTile]</span> <span class="tag">setShowsApplicationBadge</span><span class="pseudo">:NO</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="status_bar">status bar</h2><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">NSDictionary*titleAttributes =[NSDictionary <span class="string">dictionaryWithObject:</span>[NSColor blueColor] <span class="string">forKey:</span>NSForegroundColorAttributeName];</span><br><span class="line">NSAttributedString* blueTitle =[[NSAttributedString alloc] <span class="string">initWithString:</span>@<span class="string">"myTitle"</span> <span class="string">attributes:</span>titleAttributes];</span><br><span class="line"></span><br><span class="line">statusItem =[[[NSStatusBar systemStatusBar] <span class="string">statusItemWithLength:</span>NSSquareStatusItemLength] retain];</span><br><span class="line">[statusItem <span class="string">setAttributedTitle:</span>blueTitle];</span><br><span class="line">[blueTitle release];</span><br></pre></td></tr></table></figure>
+<h2 id="退出应用程序事件">退出应用程序事件</h2><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="tag">-</span>(IBAction)<span class="tag">quitAction</span>:(id)<span class="tag">sender</span>&#123;</span><br><span class="line">    <span class="attr_selector">[NSApp terminate:sender]</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="给Dock图标加Badge">给Dock图标加Badge</h2><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Add badge</span></span><br><span class="line"><span class="tag">-</span> (IBAction)<span class="tag">addBadge</span>:(id)<span class="tag">sender</span> &#123;</span><br><span class="line">    <span class="attr_selector">[[NSAppdockTile]</span> <span class="tag">setBadgeLabel</span>:<span class="attr_selector">[NSStringstringWithFormat:@"%d", random() % 11]</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Remove badge</span></span><br><span class="line"><span class="tag">-</span> (IBAction)<span class="tag">removeBadge</span>:(id)<span class="tag">sender</span>  &#123;</span><br><span class="line">    <span class="attr_selector">[[NSAppdockTile]</span> <span class="tag">setBadgeLabel</span><span class="pseudo">:nil</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>加<code>Badge</code>是用<code>NSDockTile</code>类的<code>-setBadgeLabel:</code>方法；移除<code>Badge</code>是把<code>badgeLabel</code>的内容设置为<code>nil</code>。这个方法在10.5以上都可以使用，除非需要兼容10.4以下的<code>OSX</code>－－现在似乎已经没有很大的必要了，或者是有其他特别的理由，否则真的很难拒绝使用<code>Cocoa</code>的这个简单的API调用。 :)</p>
+<h2 id="更换Dock图标">更换Dock图标</h2><p>有很多程序能够动态的修改程序图标，如，Adium和iCal。我们通过代码，我们可以在程序运行的时候动态设置Dock图标。修改图标有两种方法，一种是直接指定一个NSImage对象设置应用程序的图标；另一种是用一个自定义的View，来显示为Dock图标。</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Customize Dock Icon</span></span><br><span class="line">- (IBAction)<span class="string">changeDockIcon:</span>(id)sender &#123;</span><br><span class="line">    [<span class="string">NSAppsetApplicationIconImage:</span>[<span class="string">NSImageimageNamed:</span>@<span class="string">"Icon"</span>]];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Restore Dock Icon</span></span><br><span class="line">- (IBAction)<span class="string">restoreDockIcon:</span>(id)sender &#123;</span><br><span class="line">    [<span class="string">NSAppsetApplicationIconImage:</span>nil];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Draw Dock Icon with Custom View</span></span><br><span class="line">- (IBAction)<span class="string">changeDockIconWithCustomView:</span>(id)sender &#123;</span><br><span class="line">    DockIconView *dockView = [[[DockIconView alloc] init] autorelease];</span><br><span class="line">    [[NSApp dockTile] <span class="string">setContentView:</span> dockView];</span><br><span class="line">    [[NSAppdockTile] display];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用自定义View做图标不能自动刷新，所以如果Dock图标有所改变－－如加Badge时，可能需要手动通过-display方法刷新。<br>上面介绍的两种方法修改的程序图标会在程序退出之后还原为在Info.plist里指定的应用程序图标。要永久的改变程序图标（也就是退出程序的时候也能显示修改后的图标）的方法是创建Dock图标的插件。因为这个话题涉及Bundle相关的内容，在这里就不详述了，详情可以参<a href="https://developer.apple.com/library/mac/documentation/Carbon/Conceptual/customizing_docktile/CreatingaDockTilePlug-in/CreatingaDockTilePlug-in.html#//apple_ref/doc/uid/TP30000986-CH4-SW1" target="_blank" rel="external">考苹果的文档</a>，以后有机会我会专门写文章介绍Dock图标插件的话题。</p>
+<h2 id="隐藏状态栏">隐藏状态栏</h2><ol>
+<li>In Xcode, double-click the Info.plist file in the left window.</li>
+<li>Add a key named UIStatusBarHidden to Info.plist.</li>
+<li>Right-click the value field and set the type to Boolean, and then check True.</li>
+</ol>
+<h2 id="加载View">加载View</h2><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="constant">YellowViewController </span>*yellowController=[[<span class="constant">YellowViewControlleralloc]</span> <span class="symbol">initWithNibName:</span>@<span class="string">"YellowView"</span><span class="symbol">bundle:</span><span class="keyword">nil</span>];</span><br><span class="line"><span class="keyword">self</span>.yellowViewController =yellowController;</span><br><span class="line">[yellowController release];</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="setting">blueViewController =<span class="value">[[BlueViewControlleralloc]init];</span></span></span><br><span class="line"><span class="title">[yellowViewController.viewremoveFromSuperview]</span><span class="comment">;</span></span><br><span class="line"><span class="title">[self.viewinsertSubview:blueViewController.viewatIndex:0]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h2 id="自定义按钮">自定义按钮</h2><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">UIImage *buttonImageNormal = [UIImage <span class="string">imageNamed:</span>@<span class="string">"whiteButton.png"</span>];</span><br><span class="line">UIImage *stretchableButtonImageNormal = [buttonImageNormal <span class="string">stretchableImageWithLeftCapWidth:</span><span class="number">12</span> <span class="string">topCapHeight:</span><span class="number">0</span>];</span><br><span class="line">[doSomethingButton <span class="string">setBackgroundImage:</span>stretchableButtonImageNormal</span><br><span class="line"><span class="string">forState:</span>UIControlStateNormal];</span><br><span class="line">UIImage *buttonImagePressed = [UIImage <span class="string">imageNamed:</span>@<span class="string">"blueButton.png"</span>];</span><br><span class="line">UIImage *stretchableButtonImagePressed = [buttonImagePressed</span><br><span class="line"><span class="string">stretchableImageWithLeftCapWidth:</span><span class="number">12</span> <span class="string">topCapHeight:</span><span class="number">0</span>];</span><br><span class="line">[doSomethingButton <span class="string">setBackgroundImage:</span>stretchableButtonImagePressed</span><br><span class="line"><span class="string">forState:</span>UIControlStateHighlighted];</span><br></pre></td></tr></table></figure>
+<h2 id="NSArray_切分数组">NSArray 切分数组</h2><figure class="highlight protobuf"><table><tr><td class="code"><pre><span class="line"><span class="constant">NSString *string</span>=@<span class="string">"oop:ack:bork:greeble:ponies"</span>;</span><br><span class="line"><span class="constant">NSArray *chunks</span>=[<span class="built_in">string</span> componentsSeparatedByString:<span class="built_in">string</span>];</span><br><span class="line"><span class="built_in">string</span>=[chunks componentsJoinedByString:@<span class="string">":-)"</span>];</span><br><span class="line"><span class="comment">//上面得代码行将会创建一个内容为oop:-)ack:-)bork:-)greeble:-)ponies 得NSString字符串</span></span><br></pre></td></tr></table></figure>
+<h2 id="actionSheet_xcode">actionSheet xcode</h2><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">UIActionSheet *actionSheet=[[UIActionSheetalloc] <span class="string">initWithTitle:</span>@<span class="string">"Are you sure"</span><span class="string">delegate:</span><span class="string">selfcancelButtonTitle:</span>@<span class="string">"now way"</span><span class="string">destructiveButtonTitle:</span>@<span class="string">"yes,I'm sure!"</span><span class="string">otherButtonTitles:</span>nil, nil];</span><br><span class="line">[actionSheet <span class="string">showInView:</span>self.view];</span><br><span class="line">[actionSheet release];</span><br></pre></td></tr></table></figure>
+<h2 id="xcode中代码提示前面得小图标表示这个符号得类型">xcode中代码提示前面得小图标表示这个符号得类型</h2><p>摁<code>ESC</code>键出代码提示<br><code>E</code>表示枚举符号<br><code>f</code>表示函数<br><code>#</code>表示<code>#define</code>指令<br><code>m</code>表示方法<br><code>c</code>表示类</p>
+
+              
+            </div>
+            <footer class="article-footer">
+              <a href="/2013/04/19/MacOS开发APP小笔记/" class="article-date">
+  <time datetime="2013-04-19T07:41:30.000Z" itemprop="datePublished">2013-04-19</time>
+</a>
+              <a data-url="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/" data-id="ci8a7evsx0026o6globcdbjol" class="article-share-link">Share</a>
+              
+                <a href="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/#disqus_thread" class="article-comment-link">Comments</a>
+              
+              
+
+
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocoa/">cocoa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objective-c/">objective-c</a></li></ul>
+
+            </footer>
+      </div>
+      
+        
+<nav id="article-nav">
+  
+    <a href="/2013/05/02/JS添加事件绑定/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JS添加事件绑定
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+      
+    </article>
+
+
+
+
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-MacOS开发APP小笔记" data-title="MacOS开发APP小笔记" data-url="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'pc175'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+
+
+</div>
+<footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+        <div class="left">
+            &copy; 2015 kacper.wang<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        </div>
+        <div class="right">
+            
+                <a href="https://github.com/jaywcjlove">GitHub</a>
+            
+                <a href="http://weibo.com/pc175">Weibo</a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+
