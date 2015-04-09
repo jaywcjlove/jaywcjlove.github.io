@@ -186,23 +186,24 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </ol>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"JSLite.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="核心">核心</h2><h3 id="$()">$()</h3><blockquote>
-<p>选择器使用的是浏览器自带的方法的 <code>document.querySelectorAll</code> 接口，支持标准的 CSS 选择器，没有使用jQuery作者John Resig开发的DOM选择器引擎(Dom Selector Engine) <code>Sizzle</code> 。目前 IE8/9及Firefox/Chrome/Safari/Opera 的最新版已经支持 <code>querySelectorAll</code> 。<br>$(selector)                 //⇒ 选择节点<br>$(“<dom nodes="">“)            //⇒ 生成节点<br>$(“htmlString”)             //⇒ 生成<br>JSLite(function($){ … })  //⇒ 相当于ready</dom></p>
+<p>选择器使用的是浏览器自带的方法的 <code>document.querySelectorAll</code> 接口，支持标准的 CSS 选择器，没有使用jQuery作者John Resig开发的DOM选择器引擎(Dom Selector Engine) <code>Sizzle</code> 。<br>目前 IE8/9及Firefox/Chrome/Safari/Opera 的最新版已经支持 <code>querySelectorAll</code> 。  </p>
+<p><code>$(selector)</code>                 //⇒ 选择节点<br><code>$(&quot;&lt;DOM nodes&gt;&quot;)</code>           //⇒ 生成节点<br><code>$(&quot;htmlString&quot;)</code>             //⇒ 生成<br><code>JSLite(function($){ ... })</code>  //⇒ 相当于ready</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>) <span class="comment">//⇒ 返回节点数组  //⇒ [&lt;div&gt;​…​&lt;/div&gt;​]</span></span><br><span class="line">$(<span class="string">"&lt;div&gt;&lt;/div&gt;"</span>) <span class="comment">//⇒ 生成div节点</span></span><br><span class="line"><span class="comment">//JSLite(func) 相当于ready</span></span><br><span class="line">JSLite(<span class="function"><span class="keyword">function</span><span class="params">($)</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"在节点加载完成之后执行"</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//$(func) 相当于ready</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span><span class="params">($)</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"在节点加载完成之后执行"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="JSLite()">JSLite()</h3><blockquote>
-<p>与$()相同。</p>
+<p>与<code>$()</code>相同。</p>
 </blockquote>
-<h3 id="noConflict">noConflict</h3><p>noConflict() 方法让渡变量 $ 的 JSLite 控制权，解决俩库之间的$冲突。<br>该方法释放 JSLite 对 $ 变量的控制。<br>该方法也可用于为 JSLite 变量规定新的自定义名称。  </p>
+<h3 id="noConflict">noConflict</h3><p><code>noConflict()</code> 方法让渡变量 $ 的 <code>JSLite</code> 控制权，解决俩库之间的$冲突。<br>该方法释放 <code>JSLite</code> 对 <code>$</code> 变量的控制。<br>该方法也可用于为 <code>JSLite</code> 变量规定新的自定义名称。  </p>
 <h5 id="实例一">实例一</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.noConflict();</span><br><span class="line">JSLite(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span><span class="params">($)</span> </span>&#123;</span><br><span class="line"><span class="comment">// 使用 JSLite $ 的代码</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 使用其他库的 $ 的代码</span></span><br></pre></td></tr></table></figure>
-<h5 id="实例二">实例二</h5><p>将 $ 引用的对象映射回原始的对象：</p>
+<h5 id="实例二">实例二</h5><p>将 <code>$</code> 引用的对象映射回原始的对象：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">JSLite.noConflict();</span><br><span class="line">JSLite(<span class="string">"div p"</span>).hide(); <span class="comment">// 使用 JSLite</span></span><br><span class="line">$(<span class="string">"content"</span>).style.display = <span class="string">"none"</span>;    <span class="comment">// 使用其他库的 $()</span></span><br></pre></td></tr></table></figure>
-<h5 id="实例三">实例三</h5><p>恢复使用别名 $，然后创建并执行一个函数，在这个函数的作用域中仍然将 $ 作为 JSLite 的别名来使用。在这个函数中，原来的 $ 对象是无效的。这个函数对于大多数不依赖于其他库的插件都十分有效：</p>
+<h5 id="实例三">实例三</h5><p>恢复使用别名 <code>$</code>，然后创建并执行一个函数，在这个函数的作用域中仍然将 <code>$</code> 作为 <code>JSLite</code> 的别名来使用。在这个函数中，原来的 <code>$</code> 对象是无效的。这个函数对于大多数不依赖于其他库的插件都十分有效：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">JSLite.noConflict();</span><br><span class="line">(<span class="function"><span class="keyword">function</span><span class="params">($)</span> </span>&#123; </span><br><span class="line">  $(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用 $ 作为 JSLite 别名的代码</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)(JSLite);</span><br><span class="line"></span><br><span class="line">... <span class="comment">// 其他用 $ 作为别名的库的代码</span></span><br></pre></td></tr></table></figure>
-<h5 id="实例四">实例四</h5><p>可以将 JSLite.noConflict() 与简写的 ready 结合，使代码更紧凑</p>
+<h5 id="实例四">实例四</h5><p>可以将 <code>JSLite.noConflict()</code> 与简写的 <code>ready</code> 结合，使代码更紧凑</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">JSLite.noConflict()(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 使用 JSLite 的代码</span></span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="string">'div'</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h5 id="实例五">实例五</h5><p>创建一个新的别名用以在接下来的库中使用 JSLite 对象：</p>
+<h5 id="实例五">实例五</h5><p>创建一个新的别名用以在接下来的库中使用 <code>JSLite</code> 对象：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> j = JSLite.noConflict();</span><br><span class="line">j(<span class="string">"#box"</span>).hide();  <span class="comment">// 基于 JSLite 的代码</span></span><br><span class="line">$(<span class="string">"content"</span>).style.display = <span class="string">"none"</span>;    <span class="comment">// 基于其他库的 $() 代码</span></span><br></pre></td></tr></table></figure>
-<h5 id="实例六">实例六</h5><p>完全将 JSLite 移到一个新的命名空间：</p>
+<h5 id="实例六">实例六</h5><p>完全将 <code>JSLite</code> 移到一个新的命名空间：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dom = &#123;&#125;;</span><br><span class="line">dom.jslite = JSLite.noConflict(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
 <p>结果:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">dom.jslite(<span class="string">"div p"</span>).hide();  <span class="comment">// 新 JSLite 的代码</span></span><br><span class="line">$(<span class="string">"content"</span>).style.display = <span class="string">"none"</span>;    <span class="comment">// 另一个库 $() 的代码</span></span><br><span class="line">JSLite(<span class="string">"div &gt; p"</span>).hide();   <span class="comment">// 另一个版本 JSLite 的代码</span></span><br></pre></td></tr></table></figure>
@@ -230,7 +231,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//[URL] = http://blog.pc175.com/?param=2</span></span><br><span class="line">$.getUrlParam(<span class="string">"param"</span>) <span class="comment">//⇒ 2</span></span><br></pre></td></tr></table></figure>
 <h3 id="$-param">$.param</h3><blockquote>
-<p>将表单元素数组或者对象序列化。如果shallow设置为true，嵌套对象不会被序列化，嵌套数组的值不会使用放括号在他们的key上。<br>$.param(object, [shallow])   ⇒ string<br>$.param(array)   ⇒ string  </p>
+<p>将表单元素数组或者对象序列化。如果shallow设置为true，嵌套对象不会被序列化，嵌套数组的值不会使用放括号在他们的key上。<br><code>$.param(object, [shallow])   ⇒ string</code><br><code>$.param(array)   ⇒ string</code>  </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.param(&#123;</span><br><span class="line">    foo: &#123;one: <span class="number">1</span>,two: <span class="number">2</span> &#125;</span><br><span class="line">&#125;)  <span class="comment">//⇒ "foo[one]=1&amp;foo[two]=2"</span></span><br><span class="line"></span><br><span class="line">$.param(&#123;</span><br><span class="line">    ids:[<span class="string">"a1"</span>,<span class="string">"b2"</span>,<span class="string">"c3"</span>],</span><br><span class="line">    c:&#123;g:<span class="number">23</span>,e:[<span class="number">567</span>]&#125;,</span><br><span class="line">    a:<span class="number">3</span></span><br><span class="line">&#125;,<span class="literal">true</span>) <span class="comment">//⇒ ids=a1&amp;&amp;ids=b2&amp;&amp;ids=c3&amp;&amp;c=[object Object]&amp;a=3</span></span><br><span class="line"></span><br><span class="line">$.param(&#123;</span><br><span class="line">    ids:[<span class="string">"a1"</span>,<span class="string">"b2"</span>,<span class="string">"c3"</span>],</span><br><span class="line">    c:&#123;g:<span class="number">23</span>,e:[<span class="number">567</span>]&#125;,</span><br><span class="line">    a:<span class="number">3</span></span><br><span class="line">&#125;) <span class="comment">//⇒ ids[]=a1&amp;&amp;ids[]=b2&amp;&amp;ids[]=c3&amp;&amp;c[g]=23&amp;&amp;c[e]=567&amp;&amp;a=3</span></span><br><span class="line"></span><br><span class="line">$.param([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">//⇒ 0=1&amp;&amp;1=2&amp;&amp;2=3</span></span><br><span class="line"></span><br><span class="line">$.param(&#123;</span><br><span class="line">    ids:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] </span><br><span class="line">&#125;)  <span class="comment">//=&gt; "ids[]=1&amp;ids[]=2&amp;ids[]=3"</span></span><br></pre></td></tr></table></figure>
 <hr>
@@ -287,7 +288,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.isObject(&#123;&#125;)  <span class="comment">//⇒ true</span></span><br></pre></td></tr></table></figure>
 <h3 id="$-isPlainObject">$.isPlainObject</h3><blockquote>
-<p>$.isPlainObject(object)   ⇒ boolean<br>如果通过 “{}” 或者 “new Object” 创建的则返回true。判断对象是否是纯粹的对象。</p>
+<p><code>$.isPlainObject(object)   ⇒ boolean</code><br>如果通过 “{}” 或者 “new Object” 创建的则返回true。判断对象是否是纯粹的对象。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.isPlainObject(&#123;&#125;)         <span class="comment">// =&gt; true</span></span><br><span class="line">$.isPlainObject(<span class="keyword">new</span> <span class="built_in">Object</span>) <span class="comment">// =&gt; true</span></span><br><span class="line">$.isPlainObject(<span class="keyword">new</span> <span class="built_in">Date</span>)   <span class="comment">// =&gt; false</span></span><br><span class="line">$.isPlainObject(<span class="built_in">window</span>)     <span class="comment">// =&gt; false</span></span><br></pre></td></tr></table></figure>
 <h3 id="$-isArray">$.isArray</h3><blockquote>
@@ -299,7 +300,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.isJson(&#123;&#125;)  <span class="comment">//⇒ true</span></span><br></pre></td></tr></table></figure>
 <h3 id="$-contains">$.contains</h3><blockquote>
-<p>$.contains(parent, node)   ⇒ boolean<br>parent是否包含node节点对象。</p>
+<p><code>$.contains(parent, node)   ⇒ boolean</code><br><code>parent</code>是否包含<code>node</code>节点对象。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.contains($(<span class="string">"#box"</span>)[<span class="number">0</span>],$(<span class="string">".boxss"</span>)[<span class="number">0</span>]) <span class="comment">//⇒ parent是否包含node节点对象</span></span><br></pre></td></tr></table></figure>
 <h3 id="$-likeArray">$.likeArray</h3><blockquote>
@@ -311,7 +312,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.type(<span class="literal">true</span>)  <span class="comment">//⇒ Boolean</span></span><br><span class="line">$.type(<span class="string">"div"</span>) <span class="comment">//⇒ String</span></span><br></pre></td></tr></table></figure>
 <h3 id="$-matches">$.matches</h3><blockquote>
-<p>如果当前节点能被指定的css选择器查找到，则返回<code>true</code>，否则返回<code>false</code>。<br>$.matches(element,selector)  ⇒ boolean</p>
+<p>如果当前节点能被指定的css选择器查找到，则返回<code>true</code>，否则返回<code>false</code>。<br><code>$.matches(element,selector)  ⇒ boolean</code></p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.matches($(<span class="string">"#box"</span>)[<span class="number">0</span>], <span class="string">"#box"</span>)<span class="comment">//⇒ true</span></span><br></pre></td></tr></table></figure>
 <h3 id="is">is</h3><blockquote>
@@ -320,7 +321,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#box'</span>).is(<span class="string">'div'</span>);  <span class="comment">//⇒ true  </span></span><br><span class="line">$(<span class="string">'#box'</span>).is(<span class="string">'#box'</span>);  <span class="comment">//⇒ true  </span></span><br><span class="line">$(<span class="string">'#box'</span>).is(<span class="string">'#boxsss'</span>);  <span class="comment">//⇒ false  </span></span><br><span class="line">$(<span class="string">'div'</span>).is($(<span class="string">'#box'</span>)[<span class="number">0</span>]) <span class="comment">//⇒ true  节点是否在 $('#box')[0] 是否再集合中</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="对象访问">对象访问</h2><h3 id="each">each</h3><blockquote>
-<p>遍历一个 JSLite 集合对象，为每一个匹配元素执行一个函数。this关键字指向当前item(作为函数的第二个参数传递)。如果函数返回 false，遍历结束。</p>
+<p>遍历一个 <code>JSLite</code> 集合对象，为每一个匹配元素执行一个函数。this关键字指向当前item(作为函数的第二个参数传递)。如果函数返回 false，遍历结束。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"img"</span>).each(<span class="function"><span class="keyword">function</span><span class="params">(i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.src = <span class="string">"test"</span> + i + <span class="string">".jpg"</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//⇒ 找到所有的img对象给设置src  </span></span><br><span class="line"><span class="comment">//⇒ 返回 [ &lt;img src="test0.jpg" /&gt;, &lt;img src="test1.jpg" /&gt; ]</span></span><br></pre></td></tr></table></figure>
 <h3 id="map">map</h3><blockquote>
@@ -456,7 +457,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).children()</span><br><span class="line"><span class="comment">//下面这种方法也可以的 CSS3 节点选择器 -_+</span></span><br><span class="line">$(<span class="string">"#box *"</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="contents">contents</h3><blockquote>
-<p>contents()   ⇒ collection<br>获得每个匹配元素集合元素的子元素，包括文字和注释节点。</p>
+<p>获得每个匹配元素集合元素的子元素，包括文字和注释节点。<br><code>contents()   ⇒ collection</code></p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).contents()</span><br></pre></td></tr></table></figure>
 <h3 id="parent">parent</h3><blockquote>
@@ -464,11 +465,11 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).parent()</span><br></pre></td></tr></table></figure>
 <h3 id="parents">parents</h3><blockquote>
-<p>获取对象集合每个元素所有的祖先元素（不包含根元素）。<br>parents([selector])  ⇒ collection</p>
+<p>获取对象集合每个元素所有的祖先元素（不包含根元素）。<br><code>parents([selector])  ⇒ collection</code></p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).parents()</span><br><span class="line"></span><br><span class="line">$(<span class="string">"#boxWhy"</span>).parents(<span class="string">".boxss"</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="closest">closest</h3><blockquote>
-<p>从元素本身开始，逐级向上级元素匹配，并返回最先匹配<code>selector</code>的祖先元素。如果context节点参数存在。那么直考虑该节点的后代。这个方法与 <code>parents(selector)</code>有点相像，但他只返回最先匹配的祖先元素。</p>
+<p>从元素本身开始，逐级向上级元素匹配，并返回最先匹配<code>selector</code>的祖先元素。如果<code>context</code>节点参数存在。那么直考虑该节点的后代。这个方法与 <code>parents(selector)</code>有点相像，但他只返回最先匹配的祖先元素。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).closest(<span class="string">'div'</span>)</span><br><span class="line"></span><br><span class="line">$(<span class="built_in">document</span>).bind(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target)<span class="comment">//当前点击的对象</span></span><br><span class="line">    $(e.target).closest(<span class="string">"li"</span>).css(<span class="string">'background'</span>,<span class="string">'red'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(<span class="string">"#boxWhy"</span>).closest(<span class="string">'.boxss'</span>,$(<span class="string">'#box'</span>)[<span class="number">0</span>])<span class="comment">//#boxWhy节点的父节点为："$('#box')[0]"的子节点".boxss"</span></span><br></pre></td></tr></table></figure>
 <h3 id="prev">prev</h3><blockquote>
@@ -492,40 +493,40 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).siblings()</span><br></pre></td></tr></table></figure>
 <h3 id="add">add</h3><blockquote>
-<p>添加元素到匹配的JSLite对象集合</p>
+<p>添加元素到匹配的<code>JSLite</code>对象集合</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).siblings()</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="插入节点方法">插入节点方法</h2><h3 id="prepend">prepend</h3><blockquote>
-<p>插入到标签开始标记之后（里面的第一个）。<br>prepend(content)  ⇒ self<br>prepend(Function)  ⇒ self  </p>
+<p>插入到标签开始标记之后（里面的第一个）。<br><code>prepend(content)  ⇒ self</code><br><code>prepend(Function)  ⇒ self</code>  </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).prepend(<span class="string">"dd"</span>) <span class="comment">//⇒ self</span></span><br><span class="line">$(<span class="string">"#box"</span>).prepend(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"asdfasdf"</span></span><br><span class="line">&#125;) <span class="comment">//⇒ self</span></span><br></pre></td></tr></table></figure>
 <h3 id="prependTo">prependTo</h3><blockquote>
-<p>将生成的内容插入到匹配的节点标签开始标记之后。这有点像prepend，但是是相反的方式。<br>prependTo(selector)   ⇒ self  </p>
+<p>将生成的内容插入到匹配的节点标签开始标记之后。这有点像prepend，但是是相反的方式。<br><code>prependTo(selector)   ⇒ self</code></p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'&lt;div&gt;test&lt;/div&gt;'</span>).prependTo(<span class="string">'#box'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="append">append</h3><blockquote>
-<p>插入到标签结束标记前（里面的结尾）。<br>append(content)  ⇒ self<br>append(Function)  ⇒ self</p>
+<p>插入到标签结束标记前（里面的结尾）。<br><code>append(content)  ⇒ self</code><br><code>append(Function)  ⇒ self</code></p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).append(<span class="string">"dd"</span>) <span class="comment">//⇒ self</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">"#box"</span>).append(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"asdfasdf"</span></span><br><span class="line">&#125;) <span class="comment">//⇒ self</span></span><br></pre></td></tr></table></figure>
 <h3 id="appendTo">appendTo</h3><blockquote>
-<p>appendTo(selector)   ⇒ self<br>将生成的内容插入到匹配的元素标签结束标记前（里面的最后）。这个有点像append，但是插入的目标与其相反。</p>
+<p>将生成的内容插入到匹配的元素标签结束标记前（里面的最后）。这个有点像append，但是插入的目标与其相反。<br><code>appendTo(selector)   ⇒ self</code></p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'&lt;div&gt;test&lt;/div&gt;'</span>).appendTo(<span class="string">'#box'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="after">after</h3><blockquote>
-<p>插入到标签结束标记后。（兄弟节点的下面）<br>after(content)  ⇒ self<br>after(Function)  ⇒ self  </p>
+<p>插入到标签结束标记后。（兄弟节点的下面）<br><code>after(content)  ⇒ self</code><br><code>after(Function)  ⇒ self</code> </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).after(<span class="string">"dd"</span>) <span class="comment">//⇒ self</span></span><br><span class="line">$(<span class="string">"#box"</span>).after(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"asdfasdf"</span></span><br><span class="line">&#125;) <span class="comment">//⇒ self</span></span><br></pre></td></tr></table></figure>
 <h3 id="insertAfter">insertAfter</h3><blockquote>
-<p>插入的对象集合中的元素到指定的每个元素后面的dom中。这个有点像 after，但是使用方式相反。<br>insertAfter(selector)   ⇒ self  </p>
+<p>插入的对象集合中的元素到指定的每个元素后面的dom中。这个有点像 <code>after</code> ，但是使用方式相反。<br><code>insertAfter(selector)   ⇒ self</code>  </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'&lt;p&gt;test&lt;/p&gt;'</span>).insertAfter(<span class="string">'#box'</span>) <span class="comment">//⇒ self</span></span><br><span class="line">$(<span class="string">'#input'</span>).insertAfter(<span class="string">'#box'</span>)        <span class="comment">//⇒ self  $('#input')</span></span><br></pre></td></tr></table></figure>
 <h3 id="before">before</h3><blockquote>
-<p>插入到标签开始前。<br>after(content)  ⇒ self<br>after(Function)  ⇒ self  </p>
+<p>插入到标签开始前。<br><code>after(content)  ⇒ self</code><br><code>after(Function)  ⇒ self</code>  </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).before($(<span class="string">'input'</span>)) <span class="comment">//⇒ self</span></span><br><span class="line">$(<span class="string">"#box"</span>).before(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"asdfasdf"</span></span><br><span class="line">&#125;) <span class="comment">//⇒ self</span></span><br></pre></td></tr></table></figure>
 <h3 id="insertBefore">insertBefore</h3><blockquote>
-<p>insertBefore(selector)   ⇒ self<br>将生成的内容插入 selector 匹配的节点标签开始前。这个有点像 before，但是使用方式相反。</p>
+<p>将生成的内容插入 <code>selector</code> 匹配的节点标签开始前。这个有点像 <code>before</code>，但是使用方式相反。<br><code>insertBefore(selector)   ⇒ self</code>  </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'&lt;p&gt;test&lt;/p&gt;'</span>).insertBefore(<span class="string">'#box'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="clone">clone</h3><blockquote>
@@ -604,7 +605,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
               <a href="/API/index.html" class="article-date">
   <time datetime="2015-04-04T21:37:40.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
-              <a data-url="http://kacperwang.github.io/API/index.html" data-id="ci89qvqmw003qhoglexi6saww" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/API/index.html" data-id="ci8a1ljkb003t2kglp6ihwnm5" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/API/index.html#disqus_thread" class="article-comment-link">Comments</a>
               
