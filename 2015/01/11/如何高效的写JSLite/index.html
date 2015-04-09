@@ -31,11 +31,10 @@
     
 
 </head>
-
-
-
-
-
+<body>
+<div id="container"> 
+    <div id="wrap">
+	
 
 <header id="header" class="hdpage">
     
@@ -107,8 +106,8 @@
     </div>
 </header>
 
-<div class="outer">
-<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存变量"><span class="toc-number">1.</span> <span class="toc-text">缓存变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免全局变量"><span class="toc-number">2.</span> <span class="toc-text">避免全局变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用匈牙利命名法"><span class="toc-number">3.</span> <span class="toc-text">使用匈牙利命名法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_var_链（单_var_模式）"><span class="toc-number">4.</span> <span class="toc-text">使用 var 链（单 var 模式）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#请使用_on"><span class="toc-number">5.</span> <span class="toc-text">请使用 on</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#精简javascript"><span class="toc-number">6.</span> <span class="toc-text">精简javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式操作"><span class="toc-number">7.</span> <span class="toc-text">链式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维持代码的可读性"><span class="toc-number">8.</span> <span class="toc-text">维持代码的可读性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择短路求值"><span class="toc-number">9.</span> <span class="toc-text">选择短路求值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择捷径"><span class="toc-number">10.</span> <span class="toc-text">选择捷径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#繁重的操作中分离元素"><span class="toc-number">11.</span> <span class="toc-text">繁重的操作中分离元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#熟记技巧"><span class="toc-number">12.</span> <span class="toc-text">熟记技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用子查询缓存的父元素"><span class="toc-number">13.</span> <span class="toc-text">使用子查询缓存的父元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免通用选择符"><span class="toc-number">14.</span> <span class="toc-text">避免通用选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免隐式通用选择符"><span class="toc-number">15.</span> <span class="toc-text">避免隐式通用选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化选择符"><span class="toc-number">16.</span> <span class="toc-text">优化选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免多个ID选择符"><span class="toc-number">17.</span> <span class="toc-text">避免多个ID选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#坚持最新版本"><span class="toc-number">18.</span> <span class="toc-text">坚持最新版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#必要时组合JSLite和javascript原生代码"><span class="toc-number">19.</span> <span class="toc-text">必要时组合JSLite和javascript原生代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后忠告"><span class="toc-number">20.</span> <span class="toc-text">最后忠告</span></a></li></ol>-->
+		<div class="outer">
+		<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存变量"><span class="toc-number">1.</span> <span class="toc-text">缓存变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免全局变量"><span class="toc-number">2.</span> <span class="toc-text">避免全局变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用匈牙利命名法"><span class="toc-number">3.</span> <span class="toc-text">使用匈牙利命名法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_var_链（单_var_模式）"><span class="toc-number">4.</span> <span class="toc-text">使用 var 链（单 var 模式）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#请使用_on"><span class="toc-number">5.</span> <span class="toc-text">请使用 on</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#精简javascript"><span class="toc-number">6.</span> <span class="toc-text">精简javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式操作"><span class="toc-number">7.</span> <span class="toc-text">链式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维持代码的可读性"><span class="toc-number">8.</span> <span class="toc-text">维持代码的可读性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择短路求值"><span class="toc-number">9.</span> <span class="toc-text">选择短路求值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择捷径"><span class="toc-number">10.</span> <span class="toc-text">选择捷径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#繁重的操作中分离元素"><span class="toc-number">11.</span> <span class="toc-text">繁重的操作中分离元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#熟记技巧"><span class="toc-number">12.</span> <span class="toc-text">熟记技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用子查询缓存的父元素"><span class="toc-number">13.</span> <span class="toc-text">使用子查询缓存的父元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免通用选择符"><span class="toc-number">14.</span> <span class="toc-text">避免通用选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免隐式通用选择符"><span class="toc-number">15.</span> <span class="toc-text">避免隐式通用选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化选择符"><span class="toc-number">16.</span> <span class="toc-text">优化选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免多个ID选择符"><span class="toc-number">17.</span> <span class="toc-text">避免多个ID选择符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#坚持最新版本"><span class="toc-number">18.</span> <span class="toc-text">坚持最新版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#必要时组合JSLite和javascript原生代码"><span class="toc-number">19.</span> <span class="toc-text">必要时组合JSLite和javascript原生代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后忠告"><span class="toc-number">20.</span> <span class="toc-text">最后忠告</span></a></li></ol>-->
 
 
     <article id="post-如何高效的写JSLite" class="article article-type-post" itemscope itemprop="blogPost">
@@ -217,7 +216,7 @@
               <a href="/2015/01/11/如何高效的写JSLite/" class="article-date">
   <time datetime="2015-01-11T06:21:14.000Z" itemprop="datePublished">2015-01-11</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/01/11/如何高效的写JSLite/" data-id="ci8a7evru000jo6glp8pwektl" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/01/11/如何高效的写JSLite/" data-id="ci8ahw7c1000jpkglnfvgx6cb" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2015/01/11/如何高效的写JSLite/#disqus_thread" class="article-comment-link">Comments</a>
               
@@ -280,8 +279,8 @@
 
 
 
-</div>
-<footer id="footer">
+		</div>
+		<footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -308,7 +307,23 @@
 
 <script src="/js/script.js" type="text/javascript"></script>
 
-
+  	</div>
+	<nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/API" class="mobile-nav-link">API</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="https://github.com/JSLite/JSLite" class="mobile-nav-link">Github</a>
+  
+</nav>
+</div>
 </body>
 </html>
 

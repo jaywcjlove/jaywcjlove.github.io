@@ -143,6 +143,11 @@ a {
 .outer:after {
   clear: both;
 }
+@media screen and (max-width: 479px) {
+  .outer {
+    padding: 0 10px;
+  }
+}
 .inner {
   display: inline;
   float: left;
@@ -180,7 +185,7 @@ a {
   background: #eee;
 }
 .mobile-nav-on #wrap {
-  left: 280px;
+  left: 130px;
 }
 .article-date,
 .article-category-link,
@@ -312,6 +317,11 @@ header.hdpage {
   height: 70px;
   background: #333;
 }
+@media screen and (max-width: 479px) {
+  header.hdpage {
+    height: 50px;
+  }
+}
 #header-outer {
   height: 100%;
   position: relative;
@@ -425,6 +435,11 @@ header.hdpage {
   padding: 20px 15px;
   position: relative;
   cursor: pointer;
+}
+@media screen and (max-width: 479px) {
+  .nav-icon {
+    padding: 12px 15px;
+  }
 }
 .main-nav-link {
   letter-spacing: 1px;
@@ -1043,13 +1058,18 @@ a.article-title:hover {
 }
 #comments {
   background: #fff;
-  padding: 20px;
+  padding: 5px 20px 20px 20px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   margin: 20px 0;
 }
 #comments a {
   color: #258fb8;
+}
+#comments #ds-thread #ds-reset .ds-login-buttons .ds-social-links {
+  float: left;
+  width: inherit;
+  overflow: hidden;
 }
 .archives-wrap {
   margin: 20px 0;
@@ -1531,7 +1551,7 @@ table tr:nth-child(2n) td {
     position: absolute;
     top: 0;
     left: 0;
-    width: 280px;
+    width: 130px;
     height: 100%;
     background: #191919;
     border-right: 1px solid #fff;
