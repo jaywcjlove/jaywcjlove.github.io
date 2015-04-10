@@ -128,11 +128,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[js获取时间并实现字符串和时间戳之间的转换]]></title>
+    <title><![CDATA[JS获取时间并实现字符串和时间戳之间的转换]]></title>
     <link href="http://kacperwang.github.io/2015/04/09/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E5%B9%B6%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/"/>
     <id>http://kacperwang.github.io/2015/04/09/js获取时间并实现字符串和时间戳之间的转换/</id>
     <published>2015-04-08T17:31:27.000Z</published>
-    <updated>2015-04-08T17:31:52.000Z</updated>
+    <updated>2015-04-10T19:09:48.000Z</updated>
     <content type="html"><![CDATA[<h2 id="获取当前时间：">获取当前时间：</h2><h3 id="时间">时间</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDate = <span class="keyword">new</span> <span class="built_in">Date</span>();          <span class="comment">//当前时间</span></span><br></pre></td></tr></table></figure>
 <h3 id="年份">年份</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> year = myDate.getFullYear();</span><br></pre></td></tr></table></figure>
 <h3 id="月份">月份</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> month = myDate.getMonth() + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
@@ -500,7 +500,7 @@
     <link href="http://kacperwang.github.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://kacperwang.github.io/2015/04/01/git使用笔记/</id>
     <published>2015-03-31T17:42:45.000Z</published>
-    <updated>2015-04-09T04:30:17.000Z</updated>
+    <updated>2015-04-10T05:50:41.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。</p>
 <ul>
 <li><a href="http://git-scm.com/" target="_blank" rel="external">Git官网</a></li>
@@ -519,6 +519,7 @@
 <li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰的Git教程</a></li>
 <li><a href="http://www.worldhello.net/gotgithub/" target="_blank" rel="external">蒋鑫老师将带你入github的大门</a></li>
 <li><a href="http://www.open-open.com/lib/view/open1328069609436.html" target="_blank" rel="external">git详解</a></li>
+<li><a href="http://git.oschina.net/progit/" target="_blank" rel="external">oschina教程</a></li>
 </ul>
 <h2 id="配置">配置</h2><p>首先是配置帐号信息<br><code>ssh -T git@github.com</code> #登陆github</p>
 <h2 id="修改项目中的个人信息">修改项目中的个人信息</h2><p><code>$ git config --global user.name &quot;wirelessqa&quot;</code><br><code>$ git config --global user.email wirelessqa.me@gmail.com</code>  </p>

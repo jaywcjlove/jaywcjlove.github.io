@@ -201,7 +201,6 @@ a {
 }
 .article-inner,
 .archive-article-inner {
-  background: #fff;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
@@ -1084,6 +1083,7 @@ a.article-title:hover {
 }
 .archive-year-wrap {
   margin-bottom: 1em;
+  padding-left: 10px;
 }
 .archives {
   -webkit-column-gap: 10px;
@@ -1111,8 +1111,26 @@ a.article-title:hover {
   break-inside: avoid-column;
 }
 .archive-article-inner {
-  padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+}
+.archive-article-inner a {
+  display: block;
+  padding: 3px 3px 3px 6px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+}
+.archive-article-inner a:hover {
+  background: #e4e4e4;
+  color: #000bff;
+}
+.archive-article-inner a:active {
+  background: #7d7d7d;
+  color: #fff;
+}
+.archive-article-inner a time {
+  font-size: 12px;
+  color: #c5c5c5;
 }
 .archive-article-title {
   text-decoration: none;
