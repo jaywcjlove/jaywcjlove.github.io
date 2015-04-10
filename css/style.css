@@ -541,6 +541,7 @@ header.hdpage {
 }
 .article-inner {
   overflow: hidden;
+  background: #fff;
 }
 .article-meta:before,
 .article-meta:after {
