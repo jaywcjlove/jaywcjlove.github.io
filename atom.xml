@@ -500,7 +500,7 @@
     <link href="http://kacperwang.github.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://kacperwang.github.io/2015/04/01/git使用笔记/</id>
     <published>2015-03-31T17:42:45.000Z</published>
-    <updated>2015-04-11T17:13:17.000Z</updated>
+    <updated>2015-04-11T17:19:22.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。</p>
 <ul>
 <li><a href="http://git-scm.com/" target="_blank" rel="external">Git官网</a></li>
@@ -535,7 +535,12 @@
 <h2 id="Git推向3个库">Git推向3个库</h2><h3 id="增加3个远程库地址">增加3个远程库地址</h3><p><code>git remote add origin https://github.com/JSLite/JSLite.git</code><br><code>git remote set-url --add origin https://gitlab.com/wang/JSLite.js.git</code><br><code>git remote set-url --add origin https://oschina.net/wang/JSLite.js.git</code>  </p>
 <h3 id="删除其中一个_set-url_地址">删除其中一个 set-url 地址</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">usage: git remote set-url [--push] &#60;name&#62; &#60;newurl&#62; [&#60;oldurl&#62;]&#10;   or: git remote set-url --add &#60;name&#62; &#60;newurl&#62;&#10;   or: git remote set-url --delete &#60;name&#62; &#60;url&#62;</span><br></pre></td></tr></table></figure>
 <p><code>git remote set-url --delete origin https://oschina.net/wang/JSLite.js.git</code></p>
-<h3 id="push">push</h3><p><code>git push origin master</code><br><code>git push -f origin master</code>  #强制推送 -f, —force  </p>
+<h3 id="push">push</h3><p><code>git push origin master</code><br><code>git push -f origin master</code>  #强制推送</p>
+<ol>
+<li>缩写 -f  </li>
+<li>全写—force  </li>
+<li>注：强制推送文件没有了哦</li>
+</ol>
 <h3 id="pull">pull</h3><p>只能拉取 <code>origin</code> 里的一个url地址，这个fetch-url<br>默认为你添加的到 <code>origin</code>的第一个地址  </p>
 <p><code>git pull origin master</code> </p>
 <h3 id="更改pull">更改pull</h3><p>只需要更改config文件里，那三个url的顺序即可，fetch-url会直接对应排行第一的那个utl连接。    </p>
@@ -656,7 +661,7 @@
     <link href="http://kacperwang.github.io/2015/03/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
     <id>http://kacperwang.github.io/2015/03/30/hexo常用命令笔记/</id>
     <published>2015-03-29T17:56:32.000Z</published>
-    <updated>2015-04-10T20:30:12.000Z</updated>
+    <updated>2015-04-11T17:30:31.000Z</updated>
     <content type="html"><![CDATA[<h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="comment">#安装  </span></span><br><span class="line">npm update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init blog <span class="comment">#初始化，生成文件夹为blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install <span class="comment">#安装依赖库</span></span><br><span class="line">hexo server <span class="comment">#运行测试</span></span><br></pre></td></tr></table></figure>
 <h2 id="简写">简写</h2><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署    </p>
 <h2 id="服务器">服务器</h2><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP  </p>
@@ -758,6 +763,7 @@
 <h3 id="部署类型设置git">部署类型设置git</h3><p>hexo 3.0 部署类型不再是<code>github</code>，<code>_config.yml</code> 中修改</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@***.github.com:***/***.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <h3 id="xcodebuild">xcodebuild</h3><p>xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance  </p>
+<p><code>sudo xcode-select --switch /Applications/Xcode\ 5.1.app/Contents/Developer/</code>  </p>
 <p><code>npm install bcrypt</code>  </p>
 <h3 id="RSS不显示">RSS不显示</h3><h4 id="安装RSS插件">安装RSS插件</h4><p><code>npm install hexo-generator-feed --save</code>  </p>
 <h4 id="开启RSS功能">开启RSS功能</h4><p>编辑hexo/_config.yml，添加如下代码：  </p>
