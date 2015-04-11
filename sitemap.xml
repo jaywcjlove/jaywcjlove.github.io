@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://kacperwang.github.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2015-04-11T17:11:31.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kacperwang.github.io/API/index.html</loc>
     <lastmod>2015-04-10T21:16:09.000Z</lastmod>
   </url>
@@ -34,11 +39,6 @@
   <url>
     <loc>http://kacperwang.github.io/2014/01/09/%E7%94%A8js-%E6%A8%A1%E4%BB%BF%E5%BE%AE%E4%BF%A1%E7%9A%84%E6%91%87%E4%B8%80%E6%91%87%E5%8A%9F%E8%83%BDDeviceMotionEvent/</loc>
     <lastmod>2015-04-10T19:09:30.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kacperwang.github.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2015-04-10T05:50:41.000Z</lastmod>
   </url>
   
   <url>

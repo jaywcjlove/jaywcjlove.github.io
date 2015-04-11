@@ -230,7 +230,7 @@ learnGitBranching 在线学习工具
 <h2 id="Git推向3个库">Git推向3个库</h2><h3 id="增加3个远程库地址">增加3个远程库地址</h3><p><code>git remote add origin https://github.com/JSLite/JSLite.git</code><br><code>git remote set-url --add origin https://gitlab.com/wang/JSLite.js.git</code><br><code>git remote set-url --add origin https://oschina.net/wang/JSLite.js.git</code>  </p>
 <h3 id="删除其中一个_set-url_地址">删除其中一个 set-url 地址</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">usage: git remote set-url [--push] &#60;name&#62; &#60;newurl&#62; [&#60;oldurl&#62;]&#10;   or: git remote set-url --add &#60;name&#62; &#60;newurl&#62;&#10;   or: git remote set-url --delete &#60;name&#62; &#60;url&#62;</span><br></pre></td></tr></table></figure>
 <p><code>git remote set-url --delete origin https://oschina.net/wang/JSLite.js.git</code></p>
-<h3 id="push">push</h3><p><code>git push origin master</code>  </p>
+<h3 id="push">push</h3><p><code>git push origin master</code><br><code>git push -f origin master</code>  # -f, —force  </p>
 <h3 id="pull">pull</h3><p>只能拉取 <code>origin</code> 里的一个url地址，这个fetch-url<br>默认为你添加的到 <code>origin</code>的第一个地址  </p>
 <p><code>git pull origin master</code> </p>
 <h3 id="更改pull">更改pull</h3><p>只需要更改config文件里，那三个url的顺序即可，fetch-url会直接对应排行第一的那个utl连接。    </p>
@@ -342,7 +342,7 @@ learnGitBranching 在线学习工具
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/04/01/git使用笔记/" data-id="ci8cvbqxd001o7pglucvtvlxz" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/04/01/git使用笔记/" data-id="ci8da5qqw001o2fgletd4v7v6" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
