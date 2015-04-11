@@ -101,8 +101,7 @@
 </header>
 
 		<div class="outer">
-		<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML中设置"><span class="toc-number">1.</span> <span class="toc-text">HTML中设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS设置"><span class="toc-number">2.</span> <span class="toc-text">CSS设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#让网页变灰色"><span class="toc-number">3.</span> <span class="toc-text">让网页变灰色</span></a></li></ol>-->
-
+		
 
     <article id="post-CSS-firefox中设置图片灰度方法" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -145,6 +144,9 @@
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML中设置"><span class="toc-number">1.</span> <span class="toc-text">HTML中设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS设置"><span class="toc-number">2.</span> <span class="toc-text">CSS设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#让网页变灰色"><span class="toc-number">3.</span> <span class="toc-text">让网页变灰色</span></a></li></ol>
+              </div>
               
                 <h2 id="HTML中设置">HTML中设置</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">svg</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/2000/svg"</span> <span class="attribute">id</span>=<span class="value">"img3"</span> <span class="attribute">viewBox</span>=<span class="value">"0 0 66 84"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">filter</span> <span class="attribute">id</span>=<span class="value">"grayscale"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">feColorMatrix</span> <span class="attribute">type</span>=<span class="value">"matrix"</span> <span class="attribute">values</span>=<span class="value">"0.2126 0.7152 0.0722 0 0</span><br><span class="line">                   0.2126 0.7152 0.0722 0 0</span><br><span class="line">                   0.2126 0.7152 0.0722 0 0</span><br><span class="line">                   0 0 0 1 0"</span>&gt;</span><span class="tag">&lt;/<span class="title">feColorMatrix</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">image</span> <span class="attribute">xlink:href</span>=<span class="value">"http://www.baidu.com/img/bd_logo.png"</span> <span class="attribute">filter</span>=<span class="value">"url(#grayscale)"</span> <span class="attribute">width</span>=<span class="value">"66px"</span> <span class="attribute">height</span>=<span class="value">"84px"</span>&gt;</span><span class="tag">&lt;/<span class="title">image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="CSS设置">CSS设置</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-filter</span>:<span class="value"> <span class="function">grayscale</span>(<span class="number">100%</span>)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-filter</span>:<span class="value"> <span class="function">grayscale</span>(<span class="number">100%</span>)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-o-filter</span>:<span class="value"> <span class="function">grayscale</span>(<span class="number">100%</span>)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-ms-filter</span>:<span class="value"> <span class="function">grayscale</span>(<span class="number">100%</span>)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">grayscale</span>(<span class="number">100%</span>)</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
@@ -157,13 +159,11 @@
               <a href="/2014/08/19/CSS-firefox中设置图片灰度方法/" class="article-date">
   <time datetime="2014-08-19T08:38:00.000Z" itemprop="datePublished">2014-08-19</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/08/19/CSS-firefox中设置图片灰度方法/" data-id="ci8c0nhaa003tf7glaw7ce8sj" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/08/19/CSS-firefox中设置图片灰度方法/" data-id="ci8cqhiij003tkmgl6wktfyjc" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2014/08/19/CSS-firefox中设置图片灰度方法/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefox/">firefox</a></li></ul>
 
             </footer>
@@ -217,6 +217,12 @@
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

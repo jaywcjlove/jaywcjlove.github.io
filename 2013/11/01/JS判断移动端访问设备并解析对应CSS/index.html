@@ -104,8 +104,7 @@
 </header>
 
 		<div class="outer">
-		<!---->
-
+		
 
     <article id="post-JS判断移动端访问设备并解析对应CSS" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -148,6 +147,9 @@
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                
+              </div>
               
                 <p>判断不同web访问环境，主要针对移动设备，提供相对应的解析方案（判断设备代码直接copy腾讯网的）</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 判断是否为移动端运行环境</span></span><br><span class="line"><span class="comment">// wukong.name 20130716</span></span><br><span class="line"><span class="keyword">if</span>(<span class="regexp">/AppleWebKit.*Mobile/i</span>.test(navigator.userAgent) || (<span class="regexp">/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/</span>.test(navigator.userAgent)))&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">window</span>.location.href.indexOf(<span class="string">"?mobile"</span>)&lt;<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(<span class="regexp">/Android|webOS|iPhone|iPod|BlackBerry/i</span>.test(navigator.userAgent))&#123;</span><br><span class="line">        <span class="comment">// 判断访问环境是 Android|webOS|iPhone|iPod|BlackBerry 则加载以下样式</span></span><br><span class="line">        setActiveStyleSheet(<span class="string">"style_mobile_a.css"</span>);</span><br><span class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="regexp">/iPad/i</span>.test(navigator.userAgent))&#123;</span><br><span class="line">        <span class="comment">// 判断访问环境是 iPad 则加载以下样式</span></span><br><span class="line">        setActiveStyleSheet(<span class="string">"style_mobile_iPad.css"</span>);</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">// 判断访问环境是 其他移动设备 则加载以下样式</span></span><br><span class="line">        setActiveStyleSheet(<span class="string">"style_mobile_other.css"</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="comment">// 如果以上都不是，则加载以下样式</span></span><br><span class="line">  setActiveStyleSheet(<span class="string">"style_mobile_no.css"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 判断完毕后加载样式</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setActiveStyleSheet</span><span class="params">(filename)</span></span>&#123;</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"&lt;link href="</span>+filename+<span class="string">" rel=stylesheet&gt;"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -158,13 +160,11 @@
               <a href="/2013/11/01/JS判断移动端访问设备并解析对应CSS/" class="article-date">
   <time datetime="2013-10-31T17:09:10.000Z" itemprop="datePublished">2013-11-01</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/11/01/JS判断移动端访问设备并解析对应CSS/" data-id="ci8c0nh9o002qf7glihffhuo2" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/11/01/JS判断移动端访问设备并解析对应CSS/" data-id="ci8cqhihx002qkmglkcukc41r" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2013/11/01/JS判断移动端访问设备并解析对应CSS/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
             </footer>
@@ -218,6 +218,12 @@
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

@@ -104,8 +104,7 @@
 </header>
 
 		<div class="outer">
-		<!---->
-
+		
 
     <article id="post-JS添加事件绑定" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -148,6 +147,9 @@
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                
+              </div>
               
                 <p>IE 的事件绑定函数是 <code>attachEvent</code>；而 <code>Firefox</code>, <code>Safari</code> 是 <code>addEventListener</code> ；Opera 则两种都支持。使用jQuery就可以使用简单的bind()，或者$().click()之类的函数解决，而如果不使用JavaScript框架的时候，大家可是使用下面的封装 <code>bind()</code> 函数。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/************************************</span><br><span class="line">* 添加事件绑定</span><br><span class="line">* @param obj : 要绑定事件的元素</span><br><span class="line">* @param type : 事件名称。不加 “on”. 如 : “click” 而不是 “onclick”.</span><br><span class="line">* @param fn : 事件处理函数</span><br><span class="line">************************************/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span><span class="params">(obj, type, fn )</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( obj.attachEvent ) &#123;</span><br><span class="line">        obj[<span class="string">'e'</span>+type+fn] = fn;</span><br><span class="line">        obj[type+fn] = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;obj[<span class="string">'e'</span>+type+fn]( <span class="built_in">window</span>.event );&#125;</span><br><span class="line">        obj.attachEvent(<span class="string">'on'</span>+type, obj[type+fn] );</span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">    obj.addEventListener( type, fn, <span class="literal">false</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//bind(window,'deviceorientation',handleOrientation);</span></span><br><span class="line">bind(<span class="built_in">document</span>, <span class="string">"click"</span>, test);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    alert(<span class="string">"11"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/************************************</span><br><span class="line">* 删除事件绑定</span><br><span class="line">* @param obj : 要删除事件的元素</span><br><span class="line">* @param type : 事件名称。不加 “on”. 如 : “click” 而不是 “onclick”</span><br><span class="line">* @param fn : 事件处理函数</span><br><span class="line">************************************/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unbind</span><span class="params">( obj, type, fn )</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( obj.detachEvent ) &#123;</span><br><span class="line">        obj.detachEvent(<span class="string">'on'</span>+type, obj[type+fn] );</span><br><span class="line">        obj[type+fn] = <span class="literal">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">    obj.removeEventListener( type, fn, <span class="literal">false</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//例如删除第一个绑定的document点击事件：</span></span><br><span class="line">unbind(<span class="built_in">document</span>,<span class="string">'click'</span>,test);</span><br></pre></td></tr></table></figure>
@@ -158,13 +160,11 @@
               <a href="/2013/05/02/JS添加事件绑定/" class="article-date">
   <time datetime="2013-05-01T16:38:40.000Z" itemprop="datePublished">2013-05-02</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/05/02/JS添加事件绑定/" data-id="ci8c0nh9f002if7glaqo29u9v" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/05/02/JS添加事件绑定/" data-id="ci8cqhihq002ikmglg1hraqik" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2013/05/02/JS添加事件绑定/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
             </footer>
@@ -218,6 +218,12 @@
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

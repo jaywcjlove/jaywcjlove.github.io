@@ -276,7 +276,7 @@ a {
 .widget ol,
 .article-entry dl,
 .widget dl {
-  margin: 0 20px;
+  margin: 0 15px;
   line-height: 1.6em;
 }
 .article-entry ul ul,
@@ -536,6 +536,37 @@ header.hdpage {
 .search-form-submit:focus {
   color: #777;
 }
+.page-toc {
+  position: relative;
+  float: right;
+  margin: 20px 0 0 20px;
+  background: #f4f4f4;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  max-width: 180px;
+  display: block;
+  overflow: hidden;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .page-toc {
+    display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .page-toc {
+    display: none;
+  }
+}
+.page-toc ul,
+.page-toc ol,
+.page-toc dl,
+.page-toc li {
+  list-style: none;
+}
+ol.toc {
+  margin: 0;
+}
 .article {
   margin: 20px 0;
 }
@@ -626,12 +657,6 @@ a.article-title:hover {
 }
 .article-entry a:hover {
   text-decoration: underline;
-}
-.article-entry ul,
-.article-entry ol,
-.article-entry dl {
-  margin-top: 1.6em;
-  margin-bottom: 1.6em;
 }
 .article-entry img,
 .article-entry video {
@@ -1235,6 +1260,18 @@ a.article-title:hover {
 .category-list .tag-list {
   padding: 0 0 30px 0;
 }
+.category-list .tag-list a {
+  border: 1px dashed #afafaf;
+  background: #ddd;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0px 0 2px 4px;
+  margin: 4px 0 0 0;
+  display: inline-block;
+}
+.category-list .tag-list a:hover {
+  background: #ccc;
+}
 .category-list .tag_name {
   font-weight: bold;
 }
@@ -1244,7 +1281,7 @@ a.article-title:hover {
 .category-list article {
   border-left: 2px solid #d6d6d6;
   padding: 6px 0 6px 8px;
-  margin: 0 0 0 10px;
+  margin: 0 10px 0 10px;
   line-height: 23px;
 }
 .category-list article a {

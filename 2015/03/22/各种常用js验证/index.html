@@ -107,8 +107,7 @@ js的类型检测方式/**** js的类型检测方式-&amp;gt;typeof、constuctor
 </header>
 
 		<div class="outer">
-		<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js的类型检测方式"><span class="toc-number">1.</span> <span class="toc-text">js的类型检测方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单词首字母大写"><span class="toc-number">2.</span> <span class="toc-text">单词首字母大写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL参数验证"><span class="toc-number">3.</span> <span class="toc-text">URL参数验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮编地址验证"><span class="toc-number">4.</span> <span class="toc-text">邮编地址验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ号码验证"><span class="toc-number">5.</span> <span class="toc-text">QQ号码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手机号码验证"><span class="toc-number">6.</span> <span class="toc-text">手机号码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#固定电话号码验证"><span class="toc-number">7.</span> <span class="toc-text">固定电话号码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标准的邮箱验证"><span class="toc-number">8.</span> <span class="toc-text">标准的邮箱验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断传入的参数的长度是否在给定的有效范围内"><span class="toc-number">9.</span> <span class="toc-text">判断传入的参数的长度是否在给定的有效范围内</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断输入的参数是否为空"><span class="toc-number">10.</span> <span class="toc-text">判断输入的参数是否为空</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试给定的参数是否全部为中文字符"><span class="toc-number">11.</span> <span class="toc-text">测试给定的参数是否全部为中文字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数字类型验证"><span class="toc-number">12.</span> <span class="toc-text">数字类型验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对String类型去除空格的拓展"><span class="toc-number">13.</span> <span class="toc-text">对String类型去除空格的拓展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对字符串进行截取，包括普通字符和中文字符"><span class="toc-number">14.</span> <span class="toc-text">对字符串进行截取，包括普通字符和中文字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成随机的字符串"><span class="toc-number">15.</span> <span class="toc-text">生成随机的字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过a标签解析url标签"><span class="toc-number">16.</span> <span class="toc-text">通过a标签解析url标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#身份证号码验证"><span class="toc-number">17.</span> <span class="toc-text">身份证号码验证</span></a></li></ol>-->
-
+		
 
     <article id="post-各种常用js验证" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -151,6 +150,9 @@ js的类型检测方式/**** js的类型检测方式-&amp;gt;typeof、constuctor
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js的类型检测方式"><span class="toc-number">1.</span> <span class="toc-text">js的类型检测方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单词首字母大写"><span class="toc-number">2.</span> <span class="toc-text">单词首字母大写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL参数验证"><span class="toc-number">3.</span> <span class="toc-text">URL参数验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮编地址验证"><span class="toc-number">4.</span> <span class="toc-text">邮编地址验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ号码验证"><span class="toc-number">5.</span> <span class="toc-text">QQ号码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手机号码验证"><span class="toc-number">6.</span> <span class="toc-text">手机号码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#固定电话号码验证"><span class="toc-number">7.</span> <span class="toc-text">固定电话号码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标准的邮箱验证"><span class="toc-number">8.</span> <span class="toc-text">标准的邮箱验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断传入的参数的长度是否在给定的有效范围内"><span class="toc-number">9.</span> <span class="toc-text">判断传入的参数的长度是否在给定的有效范围内</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断输入的参数是否为空"><span class="toc-number">10.</span> <span class="toc-text">判断输入的参数是否为空</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试给定的参数是否全部为中文字符"><span class="toc-number">11.</span> <span class="toc-text">测试给定的参数是否全部为中文字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数字类型验证"><span class="toc-number">12.</span> <span class="toc-text">数字类型验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对String类型去除空格的拓展"><span class="toc-number">13.</span> <span class="toc-text">对String类型去除空格的拓展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对字符串进行截取，包括普通字符和中文字符"><span class="toc-number">14.</span> <span class="toc-text">对字符串进行截取，包括普通字符和中文字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成随机的字符串"><span class="toc-number">15.</span> <span class="toc-text">生成随机的字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过a标签解析url标签"><span class="toc-number">16.</span> <span class="toc-text">通过a标签解析url标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#身份证号码验证"><span class="toc-number">17.</span> <span class="toc-text">身份证号码验证</span></a></li></ol>
+              </div>
               
                 <p>js 正则验证相关以及其他</p>
 <p>转自 <a href="https://github.com/iamyang/hehongwei44/blob/master/all.js" target="_blank" rel="external">感谢 hehongwei44</a></p>
@@ -177,13 +179,11 @@ js的类型检测方式/**** js的类型检测方式-&amp;gt;typeof、constuctor
               <a href="/2015/03/22/各种常用js验证/" class="article-date">
   <time datetime="2015-03-22T01:48:52.000Z" itemprop="datePublished">2015-03-22</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/03/22/各种常用js验证/" data-id="ci8c0nh70000pf7glxj1k60ll" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/03/22/各种常用js验证/" data-id="ci8cqhifh000pkmglq3ffabdp" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2015/03/22/各种常用js验证/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则/">正则</a></li></ul>
 
             </footer>
@@ -237,6 +237,12 @@ js的类型检测方式/**** js的类型检测方式-&amp;gt;typeof、constuctor
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

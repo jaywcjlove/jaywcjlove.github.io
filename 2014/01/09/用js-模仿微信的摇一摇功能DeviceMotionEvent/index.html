@@ -104,8 +104,7 @@ var color = new Array(&apos;#fff&apos;, &apos;#ff0&apos;, &apos;#f00&apos;, &apo
 </header>
 
 		<div class="outer">
-		<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DeviceMotionEvent"><span class="toc-number">1.</span> <span class="toc-text">DeviceMotionEvent</span></a></li></ol>-->
-
+		
 
     <article id="post-用js-模仿微信的摇一摇功能DeviceMotionEvent" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -148,6 +147,9 @@ var color = new Array(&apos;#fff&apos;, &apos;#ff0&apos;, &apos;#f00&apos;, &apo
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DeviceMotionEvent"><span class="toc-number">1.</span> <span class="toc-text">DeviceMotionEvent</span></a></li></ol>
+              </div>
               
                 <h2 id="DeviceMotionEvent">DeviceMotionEvent</h2><p>DeviceMotionEvent <a href="https://developer.apple.com/library/safari/documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html" target="_blank" rel="external">apple参考文档</a>会在设备发生有意义的摆动(或运动)时产生。事件对象封装有产生的间距值，旋转率，和设备加速度。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> color = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">'#fff'</span>, <span class="string">'#ff0'</span>, <span class="string">'#f00'</span>, <span class="string">'#000'</span>, <span class="string">'#00f'</span>, <span class="string">'#0ff'</span>);</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.DeviceMotionEvent) &#123;</span><br><span class="line">    <span class="keyword">var</span> speed = <span class="number">105</span>;</span><br><span class="line">    <span class="keyword">var</span> x = y = z = lastX = lastY = lastZ = <span class="number">0</span>;</span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">    <span class="keyword">var</span> ys=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'devicemotion'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">var</span> acceleration =event.accelerationIncludingGravity;</span><br><span class="line">        x = acceleration.x;</span><br><span class="line">        y = acceleration.y;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(x-lastX) &gt; speed || <span class="built_in">Math</span>.abs(y-lastY) &gt; speed) &#123;</span><br><span class="line">            ys+=<span class="number">1</span>;</span><br><span class="line">            alert(<span class="string">"你摇一摇换了桌面哦"</span>)</span><br><span class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"text"</span>).innerHTML+=ys+<span class="string">"&lt;br /&gt;"</span>;</span><br><span class="line">            <span class="built_in">document</span>.body.style.backgroundColor = color[<span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*<span class="number">10</span>)%<span class="number">6</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        lastX = x;</span><br><span class="line">        lastY = y;</span><br><span class="line">    &#125;, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -158,13 +160,11 @@ var color = new Array(&apos;#fff&apos;, &apos;#ff0&apos;, &apos;#f00&apos;, &apo
               <a href="/2014/01/09/用js-模仿微信的摇一摇功能DeviceMotionEvent/" class="article-date">
   <time datetime="2014-01-09T06:16:24.000Z" itemprop="datePublished">2014-01-09</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/01/09/用js-模仿微信的摇一摇功能DeviceMotionEvent/" data-id="ci8c0nh6s000gf7glg70djw7r" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/01/09/用js-模仿微信的摇一摇功能DeviceMotionEvent/" data-id="ci8cqhifa000gkmglriqf98dt" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2014/01/09/用js-模仿微信的摇一摇功能DeviceMotionEvent/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
             </footer>
@@ -218,6 +218,12 @@ var color = new Array(&apos;#fff&apos;, &apos;#ff0&apos;, &apos;#f00&apos;, &apo
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

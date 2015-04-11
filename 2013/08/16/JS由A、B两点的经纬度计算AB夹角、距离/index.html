@@ -104,8 +104,7 @@
 </header>
 
 		<div class="outer">
-		<!---->
-
+		
 
     <article id="post-JS由A、B两点的经纬度计算AB夹角、距离" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -148,6 +147,9 @@
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                
+              </div>
               
                 <p>已知两个经纬度，计算其夹角，距离</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*==== 由A、B两点的经纬度计算AB夹角、距离 Start====*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getAngle</span><span class="params">(mLong,mLat)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//var dLong         = 114.104223;//已知点A经度香港</span></span><br><span class="line">    <span class="comment">//var dLat        = 22.439718;//已知点A纬度   -144</span></span><br><span class="line">    <span class="keyword">var</span> kRadius = <span class="number">6378137</span>;<span class="comment">//地球半径</span></span><br><span class="line">    <span class="keyword">var</span> dx = (dLong*<span class="built_in">Math</span>.PI/<span class="number">180</span>  - mLong * <span class="built_in">Math</span>.PI/<span class="number">180</span>)*(kRadius*<span class="built_in">Math</span>.cos(mLat*<span class="built_in">Math</span>.PI/<span class="number">180</span>));</span><br><span class="line">    <span class="keyword">var</span> dy = (dLat*<span class="built_in">Math</span>.PI/<span class="number">180</span> - mLat * <span class="built_in">Math</span>.PI/<span class="number">180</span>)*kRadius</span><br><span class="line">    jiajiao=<span class="number">0</span>;</span><br><span class="line">    jiajiao = <span class="built_in">Math</span>.atan2(dx, dy)*<span class="number">180.0</span>/<span class="built_in">Math</span>.PI;</span><br><span class="line">    <span class="keyword">var</span> juli = <span class="built_in">Math</span>.sqrt(dx*dx + dy*dy)</span><br><span class="line">    <span class="keyword">return</span> [jiajiao,juli];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*==== 由A、B两点的经纬度计算AB夹角、距离 End====*/</span></span><br></pre></td></tr></table></figure>
@@ -158,13 +160,11 @@
               <a href="/2013/08/16/JS由A、B两点的经纬度计算AB夹角、距离/" class="article-date">
   <time datetime="2013-08-15T16:58:39.000Z" itemprop="datePublished">2013-08-16</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/08/16/JS由A、B两点的经纬度计算AB夹角、距离/" data-id="ci8c0nh9d002gf7glx6pzoj50" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/08/16/JS由A、B两点的经纬度计算AB夹角、距离/" data-id="ci8cqhiho002gkmgl8ev5uie1" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2013/08/16/JS由A、B两点的经纬度计算AB夹角、距离/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
             </footer>
@@ -218,6 +218,12 @@
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

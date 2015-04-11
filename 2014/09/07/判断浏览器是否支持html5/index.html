@@ -104,8 +104,7 @@
 </header>
 
 		<div class="outer">
-		<!--<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法1"><span class="toc-number">1.</span> <span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法2"><span class="toc-number">2.</span> <span class="toc-text">方法2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法3"><span class="toc-number">3.</span> <span class="toc-text">方法3</span></a></li></ol>-->
-
+		
 
     <article id="post-判断浏览器是否支持html5" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -148,6 +147,9 @@
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法1"><span class="toc-number">1.</span> <span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法2"><span class="toc-number">2.</span> <span class="toc-text">方法2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法3"><span class="toc-number">3.</span> <span class="toc-text">方法3</span></a></li></ol>
+              </div>
               
                 <h3 id="方法1">方法1</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkhHtml5</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span>(Worker) !== <span class="string">"undefined"</span>)&#123;</span><br><span class="line">        alert(<span class="string">"支持HTML5"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        alert(<span class="string">"不支持HTML5"</span>);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="方法2">方法2</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">canvas</span> <span class="attribute">id</span>=<span class="value">"Canvas"</span> &gt;</span><span class="tag">&lt;/<span class="title">canvas</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">  </span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">document</span>.getElementById(<span class="string">"Canvas"</span>).getContext)&#123;</span><br><span class="line">        alert(<span class="string">"不支持html5"</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;  </span><br><span class="line">        alert(<span class="string">"支持html5"</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -159,13 +161,11 @@
               <a href="/2014/09/07/判断浏览器是否支持html5/" class="article-date">
   <time datetime="2014-09-06T17:17:08.000Z" itemprop="datePublished">2014-09-07</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/09/07/判断浏览器是否支持html5/" data-id="ci8c0nh73000tf7gl2rdpxhzt" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/09/07/判断浏览器是否支持html5/" data-id="ci8cqhifk000tkmglrql813c1" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2014/09/07/判断浏览器是否支持html5/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
             </footer>
@@ -219,6 +219,12 @@
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

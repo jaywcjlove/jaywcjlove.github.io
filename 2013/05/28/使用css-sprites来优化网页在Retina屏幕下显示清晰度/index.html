@@ -101,8 +101,7 @@
 </header>
 
 		<div class="outer">
-		<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#优化高分辨的屏幕"><span class="toc-number">1.</span> <span class="toc-text">优化高分辨的屏幕</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>-->
-
+		
 
     <article id="post-使用css-sprites来优化网页在Retina屏幕下显示清晰度" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -145,6 +144,9 @@
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#优化高分辨的屏幕"><span class="toc-number">1.</span> <span class="toc-text">优化高分辨的屏幕</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
+              </div>
               
                 <p>CSS srites(CSS图片精灵)已经存在很久了。CSS Sprites为一些大型的网站节约了带宽，让提高了用户的加载速度和用户体验，不需要加载更多的图片。<br><a id="more"></a> </p>
 <h2 id="优化高分辨的屏幕">优化高分辨的屏幕</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">media</span> only screen and (-o-min-device-pixel-ratio: <span class="number">2</span>/<span class="number">1</span>),</span><br><span class="line">       only screen and (min--moz-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (min-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (-webkit-min-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (min-resolution: <span class="number">240dpi</span>),</span><br><span class="line">       only screen and (min-resolution: <span class="number">2dppx</span>)</span>&#123;</span><br><span class="line"><span class="class">.icon</span><span class="rules">&#123;<span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(../img/sprite@<span class="number">2</span>x.png)</span></span>;<span class="rule"><span class="attribute">background-size</span>:<span class="value"> <span class="number">144px</span> <span class="number">95px</span></span></span>;<span class="rule">&#125;</span></span></span><br><span class="line">  <span class="class">.UserInfo</span> <span class="class">.status</span> <span class="tag">span</span>,<span class="class">.notifyBox</span> <span class="tag">h1</span><span class="class">.tit</span> <span class="tag">span</span><span class="rules">&#123;<span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(../img/sprite@<span class="number">2</span>x.png)</span></span>;<span class="rule"><span class="attribute">background-size</span>:<span class="value"> <span class="number">71px</span> <span class="number">204px</span></span></span>;<span class="rule">&#125;</span></span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -162,13 +164,11 @@
               <a href="/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/" class="article-date">
   <time datetime="2013-05-28T07:01:04.000Z" itemprop="datePublished">2013-05-28</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/" data-id="ci8c0nh75000xf7glvthn2trm" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/" data-id="ci8cqhifm000xkmgllfw9yaft" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
 
             </footer>
@@ -222,6 +222,12 @@
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 

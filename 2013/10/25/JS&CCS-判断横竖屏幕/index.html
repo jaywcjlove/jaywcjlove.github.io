@@ -104,8 +104,7 @@ window.addEventListen">
 </header>
 
 		<div class="outer">
-		<!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#orientation_&_orientationchange"><span class="toc-number">1.</span> <span class="toc-text">orientation & orientationchange</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#resize"><span class="toc-number">2.</span> <span class="toc-text">resize</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">3.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#matchMedia"><span class="toc-number">4.</span> <span class="toc-text">matchMedia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容不支持orientation"><span class="toc-number">5.</span> <span class="toc-text">兼容不支持orientation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合并_定时器和orientationchange_方法"><span class="toc-number">6.</span> <span class="toc-text">合并 定时器和orientationchange 方法</span></a></li></ol>-->
-
+		
 
     <article id="post-JS&amp;CCS-判断横竖屏幕" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
@@ -148,6 +147,9 @@ window.addEventListen">
               </header>-->
             
             <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#orientation_&_orientationchange"><span class="toc-number">1.</span> <span class="toc-text">orientation & orientationchange</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#resize"><span class="toc-number">2.</span> <span class="toc-text">resize</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">3.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#matchMedia"><span class="toc-number">4.</span> <span class="toc-text">matchMedia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容不支持orientation"><span class="toc-number">5.</span> <span class="toc-text">兼容不支持orientation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合并_定时器和orientationchange_方法"><span class="toc-number">6.</span> <span class="toc-text">合并 定时器和orientationchange 方法</span></a></li></ol>
+              </div>
               
                 <h2 id="orientation_&amp;_orientationchange">orientation &amp; orientationchange</h2><p>用触发手机的横屏和竖屏之间的切换的事件<br><code>window.orientation</code>:这个属性给出了当前设备的屏幕方向，0表示竖屏，正负90表示横屏（向左与向右）模式<br><code>onorientationchange</code> : 在每次屏幕方向在横竖屏间切换后，就会触发这个window事件，用法与传统的事件类似  </p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"orientationchange"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">// 宣布新方向的数值</span></span><br><span class="line">alert(<span class="built_in">window</span>.orientation);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
@@ -168,13 +170,11 @@ window.addEventListen">
               <a href="/2013/10/25/JS&CCS-判断横竖屏幕/" class="article-date">
   <time datetime="2013-10-25T07:50:00.000Z" itemprop="datePublished">2013-10-25</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/10/25/JS&CCS-判断横竖屏幕/" data-id="ci8c0nh9w0033f7gleaicskuj" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/10/25/JS&CCS-判断横竖屏幕/" data-id="ci8cqhii50033kmgl00gjmvbo" class="article-share-link">Share</a>
               
                 <a href="http://kacperwang.github.io/2013/10/25/JS&CCS-判断横竖屏幕/#disqus_thread" class="article-comment-link">Comments</a>
               
               
-
-
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
             </footer>
@@ -228,6 +228,12 @@ window.addEventListen">
   </section>
 
 
+
+<script type="text/javascript">
+  
+
+
+</script>
 
 
 
