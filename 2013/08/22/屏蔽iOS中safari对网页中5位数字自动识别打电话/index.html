@@ -165,7 +165,7 @@ button我们可以用一个比较龌龊的办法来解决。比如">
               <a href="/2013/08/22/屏蔽iOS中safari对网页中5位数字自动识别打电话/" class="article-date">
   <time datetime="2013-08-21T17:01:00.000Z" itemprop="datePublished">2013-08-22</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/08/22/屏蔽iOS中safari对网页中5位数字自动识别打电话/" data-id="ci8dftx5g000ivqglgpl1ccfs" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/08/22/屏蔽iOS中safari对网页中5位数字自动识别打电话/" data-id="ci8i7fm6s000i90glr9pnfx7s" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -254,8 +254,14 @@ button我们可以用一个比较龌龊的办法来解决。比如">
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var $link = $('.article-entry img').css({
+      "display":"inline-block"
+    }).parent()
+
+    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+
+  </script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>

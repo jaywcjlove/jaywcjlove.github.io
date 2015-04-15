@@ -170,7 +170,7 @@ window.addEventListen">
               <a href="/2013/10/25/JS&CCS-判断横竖屏幕/" class="article-date">
   <time datetime="2013-10-25T07:50:00.000Z" itemprop="datePublished">2013-10-25</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/10/25/JS&CCS-判断横竖屏幕/" data-id="ci8dftx890032vqgl8g8tqhw7" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/10/25/JS&CCS-判断横竖屏幕/" data-id="ci8i7fm9l003290glmabcrrup" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -259,8 +259,14 @@ window.addEventListen">
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var $link = $('.article-entry img').css({
+      "display":"inline-block"
+    }).parent()
+
+    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+
+  </script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>
