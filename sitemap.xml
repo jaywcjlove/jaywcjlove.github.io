@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://kacperwang.github.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2015-04-15T15:14:42.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kacperwang.github.io/API/index.html</loc>
     <lastmod>2015-04-15T10:33:42.000Z</lastmod>
   </url>
@@ -64,11 +69,6 @@
   <url>
     <loc>http://kacperwang.github.io/2015/04/09/date-js-%E5%AF%B9%E6%97%B6%E9%97%B4%E7%9A%84%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2015-04-09T06:44:30.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kacperwang.github.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2015-04-09T05:49:08.000Z</lastmod>
   </url>
   
   <url>
