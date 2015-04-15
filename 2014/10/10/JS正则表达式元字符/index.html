@@ -444,7 +444,7 @@
               <a href="/2014/10/10/JS正则表达式元字符/" class="article-date">
   <time datetime="2014-10-09T17:22:42.000Z" itemprop="datePublished">2014-10-10</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/10/10/JS正则表达式元字符/" data-id="ci8iaqnqk002jr8glj12vak2d" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/10/10/JS正则表达式元字符/" data-id="ci8ibc0ta002jwbgldcxc9hgf" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -534,11 +534,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

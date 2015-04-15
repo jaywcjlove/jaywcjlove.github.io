@@ -197,7 +197,7 @@ arrayObject.slice(start,end)
               <a href="/2013/10/11/JS获取随机颜色/" class="article-date">
   <time datetime="2013-10-10T17:03:26.000Z" itemprop="datePublished">2013-10-11</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/10/11/JS获取随机颜色/" data-id="ci8iaqnqd0029r8gliyuvw8nk" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/10/11/JS获取随机颜色/" data-id="ci8ibc0t30029wbgl18i878pq" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -287,11 +287,16 @@ arrayObject.slice(start,end)
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

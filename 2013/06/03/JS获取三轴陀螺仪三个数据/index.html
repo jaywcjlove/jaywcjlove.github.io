@@ -160,7 +160,7 @@ function orientationIOS(event)&amp;#123;    var x = event.beta;  // In degree in
               <a href="/2013/06/03/JS获取三轴陀螺仪三个数据/" class="article-date">
   <time datetime="2013-06-02T16:43:14.000Z" itemprop="datePublished">2013-06-03</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/06/03/JS获取三轴陀螺仪三个数据/" data-id="ci8iaqnqf002br8gl0vb6439y" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/06/03/JS获取三轴陀螺仪三个数据/" data-id="ci8ibc0t4002bwbglplx6ok3j" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -250,11 +250,16 @@ function orientationIOS(event)&amp;#123;    var x = event.beta;  // In degree in
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

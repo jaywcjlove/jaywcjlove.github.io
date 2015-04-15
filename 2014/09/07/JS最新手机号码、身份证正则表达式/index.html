@@ -173,7 +173,7 @@ var">
               <a href="/2014/09/07/JS最新手机号码、身份证正则表达式/" class="article-date">
   <time datetime="2014-09-07T10:41:55.000Z" itemprop="datePublished">2014-09-07</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/09/07/JS最新手机号码、身份证正则表达式/" data-id="ci8iaqnqn002mr8glm53xntvi" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/09/07/JS最新手机号码、身份证正则表达式/" data-id="ci8ibc0te002mwbgl3rks5gbg" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -263,11 +263,16 @@ var">
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

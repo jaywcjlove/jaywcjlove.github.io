@@ -163,7 +163,7 @@
               <a href="/2014/11/05/纯css3写滑出收缩菜单/" class="article-date">
   <time datetime="2014-11-04T17:26:09.000Z" itemprop="datePublished">2014-11-05</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/11/05/纯css3写滑出收缩菜单/" data-id="ci8iaqnmz000cr8glw05rqt4b" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/11/05/纯css3写滑出收缩菜单/" data-id="ci8ibc0pb000cwbglia4fb6zs" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -253,11 +253,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

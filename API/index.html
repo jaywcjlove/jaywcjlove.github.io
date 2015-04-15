@@ -618,7 +618,7 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
               <a href="/API/index.html" class="article-date">
   <time datetime="2015-04-04T21:37:40.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
-              <a data-url="http://kacperwang.github.io/API/index.html" data-id="ci8iaqnrb003wr8glp3h1p89q" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/API/index.html" data-id="ci8ibc0u4003wwbgl4jtb7pcu" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -687,11 +687,16 @@ jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代�
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

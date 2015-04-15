@@ -160,7 +160,7 @@
               <a href="/2013/05/02/JS添加事件绑定/" class="article-date">
   <time datetime="2013-05-01T16:38:40.000Z" itemprop="datePublished">2013-05-02</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/05/02/JS添加事件绑定/" data-id="ci8iaqnqi002hr8glmxxt3y9h" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/05/02/JS添加事件绑定/" data-id="ci8ibc0t7002hwbglfvcbh1s3" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -250,11 +250,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

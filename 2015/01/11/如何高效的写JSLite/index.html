@@ -218,7 +218,7 @@
               <a href="/2015/01/11/如何高效的写JSLite/" class="article-date">
   <time datetime="2015-01-11T06:21:14.000Z" itemprop="datePublished">2015-01-11</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/01/11/如何高效的写JSLite/" data-id="ci8iaqnoc000kr8gl503s5zs0" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/01/11/如何高效的写JSLite/" data-id="ci8ibc0qt000kwbgljmsy0mi2" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -308,11 +308,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

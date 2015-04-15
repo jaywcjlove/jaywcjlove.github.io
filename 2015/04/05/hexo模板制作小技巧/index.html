@@ -183,7 +183,7 @@ page = &amp;#123;    path:archives/index.html    base:archives/    total:2">
               <a href="/2015/04/05/hexo模板制作小技巧/" class="article-date">
   <time datetime="2015-04-05T11:05:25.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/04/05/hexo模板制作小技巧/" data-id="ci8iaqnov001ir8gl2jcbm05z" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/04/05/hexo模板制作小技巧/" data-id="ci8ibc0rh001iwbgldr7myw09" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -273,11 +273,16 @@ page = &amp;#123;    path:archives/index.html    base:archives/    total:2">
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

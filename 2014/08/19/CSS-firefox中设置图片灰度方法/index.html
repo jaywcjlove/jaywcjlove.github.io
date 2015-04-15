@@ -159,7 +159,7 @@
               <a href="/2014/08/19/CSS-firefox中设置图片灰度方法/" class="article-date">
   <time datetime="2014-08-19T08:38:00.000Z" itemprop="datePublished">2014-08-19</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/08/19/CSS-firefox中设置图片灰度方法/" data-id="ci8iaqnr9003sr8glpnlwykd1" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/08/19/CSS-firefox中设置图片灰度方法/" data-id="ci8ibc0u2003swbglvmpa52nr" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -249,11 +249,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

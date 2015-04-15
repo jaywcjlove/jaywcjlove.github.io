@@ -163,7 +163,7 @@
               <a href="/2013/07/08/JS-json转string/" class="article-date">
   <time datetime="2013-07-08T11:40:39.000Z" itemprop="datePublished">2013-07-08</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/07/08/JS-json转string/" data-id="ci8iaqnqu002yr8glhheioq4j" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/07/08/JS-json转string/" data-id="ci8ibc0tm002ywbglzng57axw" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -253,11 +253,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

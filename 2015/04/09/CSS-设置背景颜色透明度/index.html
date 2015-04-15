@@ -159,7 +159,7 @@
               <a href="/2015/04/09/CSS-设置背景颜色透明度/" class="article-date">
   <time datetime="2015-04-08T17:05:26.000Z" itemprop="datePublished">2015-04-09</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/04/09/CSS-设置背景颜色透明度/" data-id="ci8iaqnr8003qr8glrqzzl131" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/04/09/CSS-设置背景颜色透明度/" data-id="ci8ibc0u0003qwbglnta6pndl" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -249,11 +249,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

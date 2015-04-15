@@ -162,7 +162,7 @@
               <a href="/2014/11/19/四种方法判断浏览器是否支持html5/" class="article-date">
   <time datetime="2014-11-18T17:27:24.000Z" itemprop="datePublished">2014-11-19</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/11/19/四种方法判断浏览器是否支持html5/" data-id="ci8iaqnoe000nr8gl6jba44jl" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/11/19/四种方法判断浏览器是否支持html5/" data-id="ci8ibc0qw000nwbgllsbp77gh" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -250,11 +250,16 @@
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 

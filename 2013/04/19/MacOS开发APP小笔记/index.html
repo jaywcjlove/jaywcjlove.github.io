@@ -223,7 +223,7 @@ NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:N
               <a href="/2013/04/19/MacOS开发APP小笔记/" class="article-date">
   <time datetime="2013-04-19T07:41:30.000Z" itemprop="datePublished">2013-04-19</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/" data-id="ci8iaqnqb0024r8glw08vqqng" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/" data-id="ci8ibc0t10024wbglvwuzwyve" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -308,11 +308,16 @@ NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:N
 
 
   <script type="text/javascript">
-    var $link = $('.article-entry img').css({
-      "display":"inline-block"
-    }).parent()
+    var $img = $('.article-entry img'),
+        $link = $img.css({
+          "display":"inline-block"
+        }).parent()
 
-    if($link.parent().is("a"))$link.attr('href',$link.parent().attr('href'))
+    if($link.parent().is("a")){
+        $img.each(function(idx,item) {
+        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+      })
+    }
 
   </script>
 
