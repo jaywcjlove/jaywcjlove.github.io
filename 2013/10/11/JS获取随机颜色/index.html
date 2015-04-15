@@ -197,7 +197,7 @@ arrayObject.slice(start,end)
               <a href="/2013/10/11/JS获取随机颜色/" class="article-date">
   <time datetime="2013-10-10T17:03:26.000Z" itemprop="datePublished">2013-10-11</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/10/11/JS获取随机颜色/" data-id="ci8ibc0t30029wbgl18i878pq" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/10/11/JS获取随机颜色/" data-id="ci8ic38wt0029yhgl9j2gh7dq" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -286,19 +286,20 @@ arrayObject.slice(start,end)
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script type="text/javascript">
-    var $img = $('.article-entry img'),
-        $link = $img.css({
-          "display":"inline-block"
-        }).parent()
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
 
-    if($link.parent().is("a")){
-        $img.each(function(idx,item) {
-        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
-      })
-    }
-
-  </script>
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>

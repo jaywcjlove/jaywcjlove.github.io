@@ -162,7 +162,7 @@
               <a href="/2014/11/19/四种方法判断浏览器是否支持html5/" class="article-date">
   <time datetime="2014-11-18T17:27:24.000Z" itemprop="datePublished">2014-11-19</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/11/19/四种方法判断浏览器是否支持html5/" data-id="ci8ibc0qw000nwbgllsbp77gh" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/11/19/四种方法判断浏览器是否支持html5/" data-id="ci8ic38uk000nyhglv5ehej61" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -249,19 +249,20 @@
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script type="text/javascript">
-    var $img = $('.article-entry img'),
-        $link = $img.css({
-          "display":"inline-block"
-        }).parent()
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
 
-    if($link.parent().is("a")){
-        $img.each(function(idx,item) {
-        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
-      })
-    }
-
-  </script>
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>

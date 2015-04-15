@@ -179,7 +179,7 @@ js的类型检测方式/**** js的类型检测方式-&amp;gt;typeof、constuctor
               <a href="/2015/03/22/各种常用js验证/" class="article-date">
   <time datetime="2015-03-22T01:48:52.000Z" itemprop="datePublished">2015-03-22</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/03/22/各种常用js验证/" data-id="ci8ibc0qy000owbglail0zd47" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/03/22/各种常用js验证/" data-id="ci8ic38um000oyhglzwpag7s3" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -268,19 +268,20 @@ js的类型检测方式/**** js的类型检测方式-&amp;gt;typeof、constuctor
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script type="text/javascript">
-    var $img = $('.article-entry img'),
-        $link = $img.css({
-          "display":"inline-block"
-        }).parent()
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
 
-    if($link.parent().is("a")){
-        $img.each(function(idx,item) {
-        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
-      })
-    }
-
-  </script>
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>

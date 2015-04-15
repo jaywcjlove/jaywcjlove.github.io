@@ -206,7 +206,7 @@ JSLite">
               <a href="/2015/01/07/JSLite-01-介绍/" class="article-date">
   <time datetime="2015-01-06T17:29:28.000Z" itemprop="datePublished">2015-01-07</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/01/07/JSLite-01-介绍/" data-id="ci8ibc0tk002uwbglb3lnxihq" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/01/07/JSLite-01-介绍/" data-id="ci8ic38x8002uyhglto7zyfkb" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -295,19 +295,20 @@ JSLite">
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script type="text/javascript">
-    var $img = $('.article-entry img'),
-        $link = $img.css({
-          "display":"inline-block"
-        }).parent()
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
 
-    if($link.parent().is("a")){
-        $img.each(function(idx,item) {
-        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
-      })
-    }
-
-  </script>
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>

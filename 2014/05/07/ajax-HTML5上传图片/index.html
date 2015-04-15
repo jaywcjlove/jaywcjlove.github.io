@@ -173,7 +173,7 @@ HTML&amp;lt;form enctype=&quot;multipart/form-data&quot; method=&quot;post&quot;
               <a href="/2014/05/07/ajax-HTML5上传图片/" class="article-date">
   <time datetime="2014-05-06T17:13:09.000Z" itemprop="datePublished">2014-05-07</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2014/05/07/ajax-HTML5上传图片/" data-id="ci8ibc0sx0021wbglxrexdarz" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2014/05/07/ajax-HTML5上传图片/" data-id="ci8ic38wl0021yhglc8fqgtef" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -262,19 +262,20 @@ HTML&amp;lt;form enctype=&quot;multipart/form-data&quot; method=&quot;post&quot;
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script type="text/javascript">
-    var $img = $('.article-entry img'),
-        $link = $img.css({
-          "display":"inline-block"
-        }).parent()
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
 
-    if($link.parent().is("a")){
-        $img.each(function(idx,item) {
-        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
-      })
-    }
-
-  </script>
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>

@@ -172,7 +172,7 @@ legend {
               <a href="/2013/08/16/input-为空的时候现实灰色提示placeholder/" class="article-date">
   <time datetime="2013-08-15T16:44:47.000Z" itemprop="datePublished">2013-08-16</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/08/16/input-为空的时候现实灰色提示placeholder/" data-id="ci8ibc0rg001gwbglpjrjwwvp" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/08/16/input-为空的时候现实灰色提示placeholder/" data-id="ci8ic38v0001gyhglw57ektxb" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -261,19 +261,20 @@ legend {
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script type="text/javascript">
-    var $img = $('.article-entry img'),
-        $link = $img.css({
-          "display":"inline-block"
-        }).parent()
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
 
-    if($link.parent().is("a")){
-        $img.each(function(idx,item) {
-        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
-      })
-    }
-
-  </script>
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>

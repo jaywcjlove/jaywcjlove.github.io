@@ -223,7 +223,7 @@ NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:N
               <a href="/2013/04/19/MacOS开发APP小笔记/" class="article-date">
   <time datetime="2013-04-19T07:41:30.000Z" itemprop="datePublished">2013-04-19</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/" data-id="ci8ibc0t10024wbglvwuzwyve" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2013/04/19/MacOS开发APP小笔记/" data-id="ci8ic38wq0024yhglx16bmhmd" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -307,19 +307,20 @@ NSStatusItem *_statusItem = [[NSStatusBarsystemStatusBar] statusItemWithLength:N
 <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script type="text/javascript">
-    var $img = $('.article-entry img'),
-        $link = $img.css({
-          "display":"inline-block"
-        }).parent()
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
 
-    if($link.parent().is("a")){
-        $img.each(function(idx,item) {
-        $(this).parent().attr('href',$(this).parent().parent().attr('href'))
-      })
-    }
-
-  </script>
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
 
 
 <script src="/js/script.js" type="text/javascript"></script>
