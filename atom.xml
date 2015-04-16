@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-09T06:44:30.000Z</updated>
+  <updated>2015-04-16T04:56:50.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -15,12 +15,90 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[本地存储localStorage的封装]]></title>
+    <link href="http://kacperwang.github.io/2015/04/16/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8localStorage%E7%9A%84%E5%B0%81%E8%A3%85/"/>
+    <id>http://kacperwang.github.io/2015/04/16/本地存储localStorage的封装/</id>
+    <published>2015-04-16T04:24:58.000Z</published>
+    <updated>2015-04-16T04:56:50.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/store.js.svg" alt=""></a>  </p>
+<p><a href="https://github.com/jaywcjlove/store.js" target="_blank" rel="external">store.js</a> 是一个实现了浏览器的本地存储的 JavaScript 封装 API，不是通过 Cookie 和 Flash 技术实现，而是使用 localStorage。小弟我主要是用于chrome，Safari，手机Web等先进浏览器里面跑。so….大家可以做兼容哦….</p>
+<p>比较诡异的是居然所有支持的浏览器目前都采用的5MB，尽管有一些浏览器可以让用户设置，但对于网页制作者来说，目前的形势就5MB来考虑是比较妥当的。</p>
+<p><a href="https://github.com/jaywcjlove/store.js" target="_blank" rel="external">Github地址</a></p>
+<h2 id="本地存储APIs">本地存储APIs</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store(key, data);                 <span class="comment">//单个存储字符串数据</span></span><br><span class="line">store(&#123;key: data, key2: data2&#125;);  <span class="comment">//批量存储多个字符串数据</span></span><br><span class="line">store(key);                       <span class="comment">//获取key的字符串数据</span></span><br><span class="line">store();                          <span class="comment">//获取所有key/data</span></span><br><span class="line">store(<span class="literal">false</span>);                     <span class="comment">//清空所有key/data</span></span><br><span class="line">store(key,<span class="literal">false</span>);                 <span class="comment">//删除key包括key的字符串数据</span></span><br><span class="line"></span><br><span class="line">store.set(key, data[, overwrite]);<span class="comment">//=== store(key, data);</span></span><br><span class="line">store.setAll(data[, overwrite]);  <span class="comment">//=== store(&#123;key: data, key2: data&#125;);</span></span><br><span class="line">store.get(key[, alt]);            <span class="comment">//=== store(key);</span></span><br><span class="line">store.getAll();                   <span class="comment">//=== store();</span></span><br><span class="line">store.clear();                    <span class="comment">//=== store(false);</span></span><br><span class="line">store.remove(key);                <span class="comment">//===store(key,false)</span></span><br><span class="line">store.keys();                     <span class="comment">//返回所有key的数组</span></span><br><span class="line">store.forEach(callback);          <span class="comment">//循环遍历，返回false结束遍历</span></span><br><span class="line"></span><br><span class="line">store.has(key);         <span class="comment">//⇒判断是否存在返回true/false</span></span><br></pre></td></tr></table></figure>
+<h3 id="set">set</h3><p>单个存储或删除字符串数据<br><br><code>store.set(key, data[, overwrite]);</code><br><br>效果相同<code>store(key, data);</code><br></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.set(<span class="string">"wcj"</span>,<span class="string">"1"</span>)   <span class="comment">//⇒  1</span></span><br><span class="line">store.set(<span class="string">"wcj"</span>)       <span class="comment">//⇒  删除wcj及字符串数据</span></span><br></pre></td></tr></table></figure>
+<h3 id="setAll">setAll</h3><p>批量存储多个字符串数据<br><br><code>store.setAll(data[, overwrite])</code><br><br>效果相同<code>store({key: data, key2: data});</code><br></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.setAll(&#123;</span><br><span class="line">    <span class="string">"wcj1"</span>:<span class="number">123</span>,</span><br><span class="line">    <span class="string">"wcj2"</span>:<span class="number">345</span></span><br><span class="line">&#125;) <span class="comment">//存储两条字符串数据</span></span><br><span class="line"></span><br><span class="line">store.setAll([<span class="string">"w1"</span>,<span class="string">"w2"</span>,<span class="string">"w3"</span>]) </span><br><span class="line"><span class="comment">//存储三条字符串数据 </span></span><br><span class="line"><span class="comment">//  0⇒ "w1"</span></span><br><span class="line"><span class="comment">//  1⇒ "w2"</span></span><br><span class="line"><span class="comment">//  2⇒ "w3"</span></span><br></pre></td></tr></table></figure>
+<h3 id="get">get</h3><p>获取key的字符串数据<br><code>store.get(key[, alt])</code><br>效果相同<code>store(key)</code>   </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.get(<span class="string">"wcj1"</span>) <span class="comment">//获取wcj1的字符串数据</span></span><br><span class="line">store(<span class="string">"wcj1"</span>) <span class="comment">//功能同上</span></span><br></pre></td></tr></table></figure>
+<h3 id="getAll">getAll</h3><p>获取所有key/data<br><code>store.getAll()</code><br>效果相同<code>store()</code>  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.getAll() <span class="comment">//⇒JSON</span></span><br><span class="line">store() <span class="comment">//功能同上</span></span><br></pre></td></tr></table></figure>
+<h3 id="clear">clear</h3><p>清空所有key/data<br><code>store.clear()</code><br>效果相同<code>store(false)</code>   </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.clear() <span class="comment">//</span></span><br><span class="line">store(<span class="literal">false</span>)  <span class="comment">//功能同上</span></span><br></pre></td></tr></table></figure>
+<h3 id="keys">keys</h3><p>返回所有key的数组<br><code>store.keys()</code>  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.keys() <span class="comment">//⇒["w1", "w2", "w3"]</span></span><br></pre></td></tr></table></figure>
+<h3 id="has">has</h3><p>判断是否存在返回true/false<br><code>store.has(key)</code>  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.has(<span class="string">"w1"</span>); <span class="comment">//⇒true</span></span><br></pre></td></tr></table></figure>
+<h3 id="remove">remove</h3><p>删除key包括key的字符串数据<br><code>store.remove(key)</code>  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.remove(<span class="string">"w1"</span>); <span class="comment">//删除w1 返回 w1的value</span></span><br><span class="line"></span><br><span class="line">store(<span class="string">"w1"</span>,<span class="literal">false</span>) <span class="comment">//这样也是 删除w1</span></span><br></pre></td></tr></table></figure>
+<h3 id="forEach">forEach</h3><p>循环遍历，返回false结束遍历</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.forEach(<span class="function"><span class="keyword">function</span><span class="params">(k,d)</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(k,d)</span><br><span class="line">    <span class="keyword">if</span> (k== <span class="number">3</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="定时清除">定时清除</h3><p>(做个笔记，未来将定时清除封装起来，有思路)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (+<span class="keyword">new</span> <span class="built_in">Date</span>() &gt; +<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2014</span>, <span class="number">11</span>, <span class="number">30</span>)) &#123;</span><br><span class="line">    localStorage.removeItem(<span class="string">"c"</span>);    <span class="comment">//清除c的值</span></span><br><span class="line">    <span class="comment">// or localStorage.clear();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="storage事件">storage事件</h2><p>HTML5的本地存储，还提供了一个storage事件，可以对键值对的改变进行监听，使用方法如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.addEventListener)&#123;</span><br><span class="line">     <span class="built_in">window</span>.addEventListener(<span class="string">"storage"</span>,handle_storage,<span class="literal">false</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.attachEvent)&#123;</span><br><span class="line">    <span class="built_in">window</span>.attachEvent(<span class="string">"onstorage"</span>,handle_storage);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle_storage</span><span class="params">(e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!e)&#123;e=<span class="built_in">window</span>.event;&#125;</span><br><span class="line">    <span class="comment">//showStorage();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于事件变量e，是一个StorageEvent对象，提供了一些实用的属性，可以很好的观察键值对的变化，如下表：<br>| Property|Type|Description|<br>|—|—|—|<br>|key|String|The named key that was added, removed, or moddified|<br>|oldValue|Any|The previous value(now overwritten), or null if a new item was added|<br>|newValue|Any|The new value, or null if an item was added|<br>|url/uri|String|The page that called the method that triggered this change|</p>
+<h2 id="本地存储大小">本地存储大小</h2><p><code>JSON.stringify(localStorage).length</code> 当前占用多大容量  </p>
+<p><a href="https://arty.name/localstorage.html" target="_blank" rel="external">检测localstore容量上限</a>  </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jay]]>
+    </summary>
+    
+      <category term="js" scheme="http://kacperwang.github.io/tags/js/"/>
+    
+      <category term="localStorage" scheme="http://kacperwang.github.io/tags/localStorage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[在Mac下安装GraphicsMagick]]></title>
+    <link href="http://kacperwang.github.io/2015/04/16/%E5%9C%A8Mac%E4%B8%8B%E5%AE%89%E8%A3%85GraphicsMagick/"/>
+    <id>http://kacperwang.github.io/2015/04/16/在Mac下安装GraphicsMagick/</id>
+    <published>2015-04-16T02:47:53.000Z</published>
+    <updated>2015-04-16T04:16:51.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="下载依赖">下载依赖</h2><p>GraphicsMagic根据使用功能的不同，依赖不同的组件，我需要的只是对jpeg和png进行简单的图片处理（缩放、裁剪啊什么的，不过它的功能可以更加强大），主要依赖了两个组件:</p>
+<h3 id="libjpeg">libjpeg</h3><p><a href="ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/delegates/libjpeg-6b.tar.gz" target="_blank" rel="external">libjpeg-6b.tar.gz</a>  </p>
+<h3 id="libpng">libpng</h3><p><a href="http://sourceforge.net/projects/libpng/files/libpng14/1.4.7/libpng-1.4.7.tar.gz/download" target="_blank" rel="external">libpng-1.4.7.tar.gz</a>  </p>
+<h3 id="GraphicsMagic">GraphicsMagic</h3><p><a href="http://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/" target="_blank" rel="external">GraphicsMagic</a><br><a href="http://www.graphicsmagick.org/" target="_blank" rel="external">GraphicsMagic 官网</a></p>
+<h2 id="安装">安装</h2><h3 id="解压">解压</h3><p>进入下载目录解压。例如我下载的是<code>libpng-1.6.17.tar.xz</code> 就是下面的方法解压</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">tar jxvf libpng-1.6.17.tar.xz</span><br></pre></td></tr></table></figure>
+<h3 id="运行">运行</h3><p>进入解压的目录，运行三条命令，然后就安装好了。</p>
+<ol>
+<li><code>./configure</code></li>
+<li><code>make</code></li>
+<li><code>sudo make install</code></li>
+</ol>
+<h2 id="然后">然后</h2><p>然后按照上面步骤安装 <code>GraphicsMagic</code>  </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="下载依赖">下载依赖</h2><p>GraphicsMagic根据使用功能的不同，依赖不同的组件，我需要的只是对jpeg和png进行简单的图片处理（缩放、裁剪啊什么的，不过它的功能可以更加强大），主要依赖了两个组件:</p>
+<h3 id="libjpeg">li]]>
+    </summary>
+    
+      <category term="Mac" scheme="http://kacperwang.github.io/tags/Mac/"/>
+    
+      <category term="软件安装" scheme="http://kacperwang.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[date.js 对时间的操作]]></title>
     <link href="http://kacperwang.github.io/2015/04/09/date-js-%E5%AF%B9%E6%97%B6%E9%97%B4%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
     <id>http://kacperwang.github.io/2015/04/09/date-js-对时间的操作/</id>
     <published>2015-04-09T06:40:37.000Z</published>
-    <updated>2015-04-09T06:44:30.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/date.js" target="_blank" rel="external">Github date.js</a></p>
+    <updated>2015-04-16T04:54:38.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/date.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/date.js.svg" alt=""></a></p>
+<p><a href="https://github.com/jaywcjlove/date.js" target="_blank" rel="external">Github date.js</a></p>
 <h2 id="format">format</h2><blockquote>
 <p>格式化时间</p>
 </blockquote>
@@ -31,8 +109,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1421313395359</span>).ago(<span class="number">1411430400000</span>)</span><br><span class="line"><span class="comment">//=&gt; "3个月前"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1421313395359</span>).ago(<span class="string">'1987-04-03'</span>)</span><br><span class="line"><span class="comment">//=&gt; "28年前"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2010-02-02'</span>).ago(<span class="string">'1987-04-03'</span>)</span><br><span class="line"><span class="comment">//=&gt; "23年前"</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><a href="https://github.com/jaywcjlove/date.js" target="_blank" rel="external">Github date.js</a></p>
-<h2 id="format">format</h2><blockqu]]>
+    <![CDATA[<p><a href="https://github.com/jaywcjlove/date.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jayw]]>
     </summary>
     
   </entry>
@@ -227,7 +304,7 @@
     <link href="http://kacperwang.github.io/2015/04/05/hexo%E6%A8%A1%E6%9D%BF%E5%88%B6%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>http://kacperwang.github.io/2015/04/05/hexo模板制作小技巧/</id>
     <published>2015-04-05T11:05:25.000Z</published>
-    <updated>2015-04-08T14:21:56.000Z</updated>
+    <updated>2015-04-16T05:01:31.000Z</updated>
     <content type="html"><![CDATA[<h2 id="读取config-yml配置文件">读取config.yml配置文件</h2><p>有两个 <code>config</code> 文件：  </p>
 <ol>
 <li>在 <code>themes/模板/_config.yml</code> ，模板中读取 <code>theme.social</code></li>
@@ -238,7 +315,8 @@
 <h3 id="详细页面">详细页面</h3><p>page </p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">path:<span class="string">"about/index.html"</span></span><br><span class="line">title:<span class="string">"关于我啦"</span></span><br><span class="line">date:<span class="string">"Thu Apr 02 2015 01:36:59 GMT+0800"</span></span><br><span class="line">description:<span class="string">"关于我啦"</span></span><br><span class="line">type:<span class="string">"about"</span></span><br><span class="line">_content: <span class="string">"前端开发工程师。敏捷实践者。目前就职于hotpu，生活在上海。 &lt;!--more--&gt; ### 我熟悉 - javascript - HTML5 - CSS3 ### 我略知 - Node.js - iOS开发 - PHP ### 爱好 - 旅游 - 看电视 ### 联系我 OS X: `echo d293b2hvb0BxcS5jb20K | base64 -D` Linux: `echo d293b2hvb0BxcS5jb20K | base64 -d` "</span></span><br><span class="line">source:<span class="string">"about/index.md"</span></span><br><span class="line">raw:<span class="string">'title: "关于我啦"date: 2015-04-02 01:36:59 description: "关于我啦"type: "about"--- 前端开发工程师。敏捷实践者。目前就职于hotpu，生活在上海。 &lt;!--more--&gt; ### 我熟悉 - javascript - HTML5 - CSS3 ### 我略知 - Node.js - iOS开发 - PHP ### 爱好 - 旅游 - 看电视 ### 联系我 OS X: `echo d293b2hvb0BxcS5jb20K | base64 -D` Linux: `echo d293b2hvb0BxcS5jb20K | base64 -d`'</span></span><br><span class="line">updated:<span class="string">'Sun Apr 05 2015 06:38:56 GMT+0800'</span></span><br><span class="line">_id:<span class="string">"ci83azhas0001j7glyolhyet0"</span></span><br><span class="line">comments:<span class="literal">true</span></span><br><span class="line">layout:<span class="string">"page"</span></span><br><span class="line">content:<span class="string">"&lt;p&gt;前端开发工程师。敏捷实践者。目前就职于hotpu，生活在上海。&lt;/p&gt;"</span> </span><br><span class="line">permalink:<span class="string">"http://kacperwang.github.io/about/index.html"</span></span><br><span class="line">full_source:<span class="string">"/Applications/XAMPP/xamppfiles/htdocs/git/github.com/kacperwang.github.io/source/about/index.md"</span></span><br><span class="line">lang:<span class="string">"zh-CN"</span></span><br><span class="line">canonical_path:<span class="string">"about/index.html"</span></span><br></pre></td></tr></table></figure>
 <h2 id="页面数据读取">页面数据读取</h2><p><code>post.type</code>  </p>
-]]></content>
+<h2 id="图片显示">图片显示</h2><p>把图片放到 source/images 目录下</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line">!<span class="attr_selector">[]</span>(images/xxx.jpg)</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[<h2 id="读取config-yml配置文件">读取config.yml配置文件</h2><p>有两个 <code>config</code> 文件：  </p>
 <ol>
@@ -672,7 +750,7 @@
     <link href="http://kacperwang.github.io/2015/03/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
     <id>http://kacperwang.github.io/2015/03/30/hexo常用命令笔记/</id>
     <published>2015-03-29T17:56:32.000Z</published>
-    <updated>2015-04-11T17:30:31.000Z</updated>
+    <updated>2015-04-16T04:59:55.000Z</updated>
     <content type="html"><![CDATA[<h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="comment">#安装  </span></span><br><span class="line">npm update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init blog <span class="comment">#初始化，生成文件夹为blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install <span class="comment">#安装依赖库</span></span><br><span class="line">hexo server <span class="comment">#运行测试</span></span><br></pre></td></tr></table></figure>
 <h2 id="简写">简写</h2><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署    </p>
 <h2 id="服务器">服务器</h2><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP  </p>
@@ -682,7 +760,7 @@
 <p>两个命令的作用是相同的<br><code>hexo generate --deploy</code><br><code>hexo deploy --generate</code></p>
 </blockquote>
 <p><code>hexo deploy -g</code><br><code>hexo server -g</code>  </p>
-<h2 id="草稿">草稿</h2><p><code>hexo publish [layout] &lt;title&gt;</code> </p>
+<h2 id="草稿">草稿</h2><p><code>hexo new draft &quot;new draft&quot;</code> 新建草稿<br><code>hexo publish [layout] &lt;title&gt;</code> 变成正式文章  </p>
 <h2 id="模版">模版</h2><p><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub</p>
 <p><code>hexo new [layout] &lt;title&gt;</code><br><code>hexo new photo &quot;My Gallery&quot;</code><br><code>hexo new &quot;Hello World&quot; --lang tw</code></p>
 <table>
@@ -1409,44 +1487,6 @@
     </summary>
     
       <category term="JSLite" scheme="http://kacperwang.github.io/tags/JSLite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[四种方法判断浏览器是否支持html5]]></title>
-    <link href="http://kacperwang.github.io/2014/11/19/%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95%E5%88%A4%E6%96%AD%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81html5/"/>
-    <id>http://kacperwang.github.io/2014/11/19/四种方法判断浏览器是否支持html5/</id>
-    <published>2014-11-18T17:27:24.000Z</published>
-    <updated>2015-04-08T17:28:02.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="方法1">方法1</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkhHtml5</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span>(Worker) !== <span class="string">"undefined"</span>)&#123;   </span><br><span class="line">        alert(<span class="string">"支持HTML5"</span>);   </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;   </span><br><span class="line">        alert(<span class="string">"不支持HTML5"</span>);   </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="方法2">方法2</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">canvas</span> <span class="attribute">id</span>=<span class="value">"Canvas"</span> &gt;</span><span class="tag">&lt;/<span class="title">canvas</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">document</span>.getElementById(<span class="string">"Canvas"</span>).getContext)&#123;          </span><br><span class="line">    alert(<span class="string">"不支持html5"</span>);      </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;  </span><br><span class="line">    alert(<span class="string">"支持html5"</span>);  </span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="方法3">方法3</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(! (<span class="string">'getContext'</span> <span class="keyword">in</span> <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>)))&#123;</span><br><span class="line">    alert(<span class="string">"不支持HTML5"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="方法4">方法4</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.applicationCache) &#123;</span><br><span class="line">    alert(<span class="string">"你的浏览器支持HTML5"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    alert(<span class="string">"你的浏览器不支持HTML5"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="方法1">方法1</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="ke]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[纯css3写滑出收缩菜单]]></title>
-    <link href="http://kacperwang.github.io/2014/11/05/%E7%BA%AFcss3%E5%86%99%E6%BB%91%E5%87%BA%E6%94%B6%E7%BC%A9%E8%8F%9C%E5%8D%95/"/>
-    <id>http://kacperwang.github.io/2014/11/05/纯css3写滑出收缩菜单/</id>
-    <published>2014-11-04T17:26:09.000Z</published>
-    <updated>2015-04-08T17:26:37.000Z</updated>
-    <content type="html"><![CDATA[<p>这里是css慢慢看样式哦</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*<span class="rules">&#123;<span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">html</span>,<span class="tag">body</span><span class="rules">&#123;<span class="rule"><span class="attribute">overflow-x</span>:<span class="value"> hidden</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.sidebar</span> <span class="rules">&#123;<span class="rule"><span class="attribute">position</span>:<span class="value"> fixed</span></span>; <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"> -<span class="number">14rem</span></span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">14rem</span></span></span>; <span class="rule"><span class="attribute">visibility</span>:<span class="value"> hidden</span></span>; <span class="rule"><span class="attribute">overflow-y</span>:<span class="value"> auto</span></span>; <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">"PT Sans"</span>, Helvetica, Arial, sans-serif</span></span>; <span class="rule"><span class="attribute">font-size</span>:<span class="value"> .<span class="number">875rem</span></span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">6</span>)</span></span>; <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#ac4142</span></span></span>; <span class="rule"><span class="attribute">-webkit-transition</span>:<span class="value"> all .<span class="number">3s</span> ease-in-out</span></span>; <span class="rule"><span class="attribute">transition</span>:<span class="value"> all .<span class="number">3s</span> ease-in-out</span></span>; <span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.sidebar</span>, <span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.wrap</span>, <span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.sidebar-toggle</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">translateX</span>(<span class="number">14rem</span>)</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-ms-transform</span>:<span class="value"> <span class="function">translateX</span>(<span class="number">14rem</span>)</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translateX</span>(<span class="number">14rem</span>)</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> + <span class="class">.sidebar</span> <span class="rules">&#123;<span class="rule"><span class="attribute">z-index</span>:<span class="value"> <span class="number">10</span></span></span>;<span class="rule"><span class="attribute">visibility</span>:<span class="value"> visible</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.wrap</span>, <span class="class">.sidebar</span>, <span class="class">.sidebar-toggle</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">-webkit-backface-visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-ms-backface-visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">backface-visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.wrap</span>, <span class="class">.sidebar-toggle</span> <span class="rules">&#123;<span class="rule"><span class="attribute">-webkit-transition</span>:<span class="value"> -webkit-transform .<span class="number">3s</span> ease-in-out</span></span>;<span class="rule"><span class="attribute">transition</span>:<span class="value"> transform .<span class="number">3s</span> ease-in-out</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"><span class="class">.sidebar-toggle</span> <span class="rules">&#123;<span class="rule"><span class="attribute">position</span>:<span class="value"> fixed</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">2.25rem</span></span></span>; <span class="rule">&#125;</span></span> </span><br><span class="line"><span class="class">.sidebar-toggle</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">1rem</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">1rem</span></span></span>; <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">2.2rem</span></span></span>; <span class="rule"><span class="attribute">padding</span>:<span class="value"> .<span class="number">5rem</span> .<span class="number">65rem</span></span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#505050</span></span></span>; <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>; <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">4px</span></span></span>; <span class="rule"><span class="attribute">cursor</span>:<span class="value"> pointer</span></span>; <span class="rule">&#125;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class">.sidebar-toggle</span><span class="pseudo">:before</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">""</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">padding-bottom</span>:<span class="value"> .<span class="number">125rem</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">border-top</span>:<span class="value"> .<span class="number">375rem</span> double</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> .<span class="number">125rem</span> solid</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;<span class="rule">&#125;</span></span></span><br><span class="line"><span class="class">.sidebar-toggle</span><span class="pseudo">:active</span>, <span class="id">#sidebar-checkbox</span><span class="pseudo">:checked</span> ~ <span class="class">.sidebar-toggle</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#ac4142</span></span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>; <span class="rule">&#125;</span></span></span><br><span class="line"><span class="class">.sidebar-checkbox</span><span class="rules">&#123;<span class="rule"><span class="attribute">display</span>:<span class="value">none</span></span>;<span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
-<p>这里全是HTML，注意<code>input</code>的位置很重要哦</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">class</span>=<span class="value">"sidebar-checkbox"</span> <span class="attribute">id</span>=<span class="value">"sidebar-checkbox"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"sidebar"</span> <span class="attribute">id</span>=<span class="value">"sidebar"</span>&gt;</span>这里是菜单<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrap"</span>&gt;</span>这里是内容<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"sidebar-checkbox"</span> <span class="attribute">class</span>=<span class="value">"sidebar-toggle"</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>嵌入js文件点击其他地方收缩回去，不然只能点击按钮哦</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span><span class="params">(document)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> toggle = <span class="built_in">document</span>.querySelector(<span class="string">'.sidebar-toggle'</span>);</span><br><span class="line">    <span class="keyword">var</span> sidebar = <span class="built_in">document</span>.querySelector(<span class="string">'#sidebar'</span>);</span><br><span class="line">    <span class="keyword">var</span> checkbox = <span class="built_in">document</span>.querySelector(<span class="string">'#sidebar-checkbox'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> target = e.target;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(!checkbox.checked ||</span><br><span class="line">         sidebar.contains(target) ||</span><br><span class="line">         (target === checkbox || target === toggle)) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">      checkbox.checked = <span class="literal">false</span>;</span><br><span class="line">    &#125;, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>]]></content>
-    <summary type="html">
-    <![CDATA[<p>这里是css慢慢看样式哦</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*<span class="rules">&#123;<span class]]>
-    </summary>
-    
-      <category term="css3" scheme="http://kacperwang.github.io/tags/css3/"/>
     
   </entry>
   
