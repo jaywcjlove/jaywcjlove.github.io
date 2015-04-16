@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-16T04:56:50.000Z</updated>
+  <updated>2015-04-16T11:33:30.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://kacperwang.github.io/2015/04/16/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8localStorage%E7%9A%84%E5%B0%81%E8%A3%85/"/>
     <id>http://kacperwang.github.io/2015/04/16/本地存储localStorage的封装/</id>
     <published>2015-04-16T04:24:58.000Z</published>
-    <updated>2015-04-16T04:56:50.000Z</updated>
+    <updated>2015-04-16T11:33:30.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/store.js.svg" alt=""></a>  </p>
 <p><a href="https://github.com/jaywcjlove/store.js" target="_blank" rel="external">store.js</a> 是一个实现了浏览器的本地存储的 JavaScript 封装 API，不是通过 Cookie 和 Flash 技术实现，而是使用 localStorage。小弟我主要是用于chrome，Safari，手机Web等先进浏览器里面跑。so….大家可以做兼容哦….</p>
 <p>比较诡异的是居然所有支持的浏览器目前都采用的5MB，尽管有一些浏览器可以让用户设置，但对于网页制作者来说，目前的形势就5MB来考虑是比较妥当的。</p>
@@ -46,7 +46,7 @@
 <h3 id="定时清除">定时清除</h3><p>(做个笔记，未来将定时清除封装起来，有思路)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (+<span class="keyword">new</span> <span class="built_in">Date</span>() &gt; +<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2014</span>, <span class="number">11</span>, <span class="number">30</span>)) &#123;</span><br><span class="line">    localStorage.removeItem(<span class="string">"c"</span>);    <span class="comment">//清除c的值</span></span><br><span class="line">    <span class="comment">// or localStorage.clear();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="storage事件">storage事件</h2><p>HTML5的本地存储，还提供了一个storage事件，可以对键值对的改变进行监听，使用方法如下：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.addEventListener)&#123;</span><br><span class="line">     <span class="built_in">window</span>.addEventListener(<span class="string">"storage"</span>,handle_storage,<span class="literal">false</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.attachEvent)&#123;</span><br><span class="line">    <span class="built_in">window</span>.attachEvent(<span class="string">"onstorage"</span>,handle_storage);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle_storage</span><span class="params">(e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!e)&#123;e=<span class="built_in">window</span>.event;&#125;</span><br><span class="line">    <span class="comment">//showStorage();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对于事件变量e，是一个StorageEvent对象，提供了一些实用的属性，可以很好的观察键值对的变化，如下表：<br>| Property|Type|Description|<br>|—|—|—|<br>|key|String|The named key that was added, removed, or moddified|<br>|oldValue|Any|The previous value(now overwritten), or null if a new item was added|<br>|newValue|Any|The new value, or null if an item was added|<br>|url/uri|String|The page that called the method that triggered this change|</p>
+<p>对于事件变量e，是一个StorageEvent对象，提供了一些实用的属性，可以很好的观察键值对的变化，如下表：<br>| Property | Type | Description |<br>| —— | —— | —— |<br>|key|String|The named key that was added, removed, or moddified|<br>|oldValue|Any|The previous value(now overwritten), or null if a new item was added|<br>|newValue|Any|The new value, or null if an item was added|<br>|url/uri|String|The page that called the method that triggered this change|</p>
 <h2 id="本地存储大小">本地存储大小</h2><p><code>JSON.stringify(localStorage).length</code> 当前占用多大容量  </p>
 <p><a href="https://arty.name/localstorage.html" target="_blank" rel="external">检测localstore容量上限</a>  </p>
 ]]></content>
@@ -96,7 +96,7 @@
     <link href="http://kacperwang.github.io/2015/04/09/date-js-%E5%AF%B9%E6%97%B6%E9%97%B4%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
     <id>http://kacperwang.github.io/2015/04/09/date-js-对时间的操作/</id>
     <published>2015-04-09T06:40:37.000Z</published>
-    <updated>2015-04-16T04:54:38.000Z</updated>
+    <updated>2015-04-16T06:04:21.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/date.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/date.js.svg" alt=""></a></p>
 <p><a href="https://github.com/jaywcjlove/date.js" target="_blank" rel="external">Github date.js</a></p>
 <h2 id="format">format</h2><blockquote>
@@ -107,6 +107,10 @@
 <p>多少小时前、多少分钟前、多少秒前</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1421313395359</span>).ago(<span class="number">1411430400000</span>)</span><br><span class="line"><span class="comment">//=&gt; "3个月前"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1421313395359</span>).ago(<span class="string">'1987-04-03'</span>)</span><br><span class="line"><span class="comment">//=&gt; "28年前"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2010-02-02'</span>).ago(<span class="string">'1987-04-03'</span>)</span><br><span class="line"><span class="comment">//=&gt; "23年前"</span></span><br></pre></td></tr></table></figure>
+<h3 id="toHHMMSS">toHHMMSS</h3><blockquote>
+<p>时间转换,倒计时  ‘毫秒’.toHHMMSS(输出格式)</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"123112"</span>.toHHMMSS(<span class="string">'hh时mm分ss秒'</span>) <span class="comment">//=&gt; 34时11分52秒</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><a href="https://github.com/jaywcjlove/date.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jayw]]>

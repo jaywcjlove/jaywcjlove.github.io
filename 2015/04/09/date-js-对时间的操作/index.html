@@ -161,7 +161,7 @@ new Date(&apos;2015-10-12 23:01:11&apos;).format(&quot;yyyy年MM月dd日 hh:mm:s
             
             <div class="article-entry" itemprop="articleBody">
               <div class="page-toc">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#format"><span class="toc-number">1.</span> <span class="toc-text">format</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ago"><span class="toc-number">1.1.</span> <span class="toc-text">ago</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#format"><span class="toc-number">1.</span> <span class="toc-text">format</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ago"><span class="toc-number">1.1.</span> <span class="toc-text">ago</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toHHMMSS"><span class="toc-number">1.2.</span> <span class="toc-text">toHHMMSS</span></a></li></ol></li></ol>
               </div>
               
                 <p><a href="https://github.com/jaywcjlove/date.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/date.js.svg" alt=""></a></p>
@@ -174,6 +174,10 @@ new Date(&apos;2015-10-12 23:01:11&apos;).format(&quot;yyyy年MM月dd日 hh:mm:s
 <p>多少小时前、多少分钟前、多少秒前</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1421313395359</span>).ago(<span class="number">1411430400000</span>)</span><br><span class="line"><span class="comment">//=&gt; "3个月前"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1421313395359</span>).ago(<span class="string">'1987-04-03'</span>)</span><br><span class="line"><span class="comment">//=&gt; "28年前"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2010-02-02'</span>).ago(<span class="string">'1987-04-03'</span>)</span><br><span class="line"><span class="comment">//=&gt; "23年前"</span></span><br></pre></td></tr></table></figure>
+<h3 id="toHHMMSS">toHHMMSS</h3><blockquote>
+<p>时间转换,倒计时  ‘毫秒’.toHHMMSS(输出格式)</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"123112"</span>.toHHMMSS(<span class="string">'hh时mm分ss秒'</span>) <span class="comment">//=&gt; 34时11分52秒</span></span><br></pre></td></tr></table></figure>
 
               
             </div>
@@ -181,7 +185,7 @@ new Date(&apos;2015-10-12 23:01:11&apos;).format(&quot;yyyy年MM月dd日 hh:mm:s
               <a href="/2015/04/09/date-js-对时间的操作/" class="article-date">
   <time datetime="2015-04-09T06:40:37.000Z" itemprop="datePublished">2015-04-09</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/04/09/date-js-对时间的操作/" data-id="ci8jpb2dh0021etgli7gl71dn" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/04/09/date-js-对时间的操作/" data-id="ci8jv9mqx0021x2gli2tvwtgy" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
