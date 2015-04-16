@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-16T11:35:16.000Z</updated>
+  <updated>2015-04-16T16:56:30.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -13,6 +13,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[本地存储cookie的封装]]></title>
+    <link href="http://kacperwang.github.io/2015/04/17/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8cookie%E7%9A%84%E5%B0%81%E8%A3%85/"/>
+    <id>http://kacperwang.github.io/2015/04/17/本地存储cookie的封装/</id>
+    <published>2015-04-16T16:54:41.000Z</published>
+    <updated>2015-04-16T16:56:30.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/cookie.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/cookie.js.svg" alt=""></a></p>
+<p>本地存储cookie的封装，提供简单的AIP，没有对IE做兼容处理，因为俺主要用于chrome，Safari，Firefox、<strong>移动端</strong>等先进浏览器里面跑。如果您有需求，可以自行解决，共享出来。目前俺用不上，所以不想兼容IE。。。</p>
+<p><strong><a href="https://github.com/jaywcjlove/cookie.js" target="_blank" rel="external">Github下载地址</a></strong></p>
+<h2 id="cookie_APIs">cookie APIs</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie(<span class="string">"test"</span>,<span class="string">"tank"</span>,<span class="number">1800</span>)  <span class="comment">//设置 cookie 的值，生存时间半个小时</span></span><br><span class="line">cookie(<span class="string">"test"</span>)              <span class="comment">//获取 cookie 的值，显示tank</span></span><br><span class="line">cookie(<span class="string">"test"</span>,<span class="literal">null</span>)         <span class="comment">//删除cookie test</span></span><br><span class="line">cookie()                    <span class="comment">//清空cookie</span></span><br><span class="line"></span><br><span class="line">cookie.set(<span class="string">"test"</span>,<span class="string">"tank"</span>,<span class="number">1800</span>)  <span class="comment">//====cookie("test","tank",1800)</span></span><br><span class="line">cookie.get(<span class="string">"test"</span>)              <span class="comment">//====cookie("test")</span></span><br><span class="line">cookie.remove(<span class="string">"test"</span>)           <span class="comment">//====cookie("test",null)</span></span><br><span class="line">cookie.clear()                  <span class="comment">//====cookie()</span></span><br><span class="line"></span><br><span class="line">cookie.all()                    <span class="comment">//获取所有 cookie</span></span><br></pre></td></tr></table></figure>
+<h3 id="批量设置cookie的值">批量设置cookie的值</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie.set(&#123;</span><br><span class="line">   name1: <span class="string">'value1'</span>,</span><br><span class="line">   name2: <span class="string">'value2'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="expires过期时间、_path路径、_domain域、以及_secure安全。">expires过期时间、 path路径、 domain域、以及 secure安全。</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie(<span class="string">"test"</span>,<span class="string">"123"</span>,&#123;</span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">"path"</span>: <span class="string">'/'</span>,</span><br><span class="line">    <span class="string">"domain"</span>:<span class="string">""</span></span><br><span class="line">&#125;);</span><br><span class="line">cookie(&#123;<span class="string">"test"</span>:<span class="string">"123"</span>&#125;,&#123;</span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">"path"</span>: <span class="string">'/'</span>,</span><br><span class="line">    <span class="string">"domain"</span>:<span class="string">""</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">key</th>
+<th style="text-align:left">value</th>
+<th style="text-align:left">default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>expires</code></td>
+<td style="text-align:left">过期时间(天)。指定cookie的生命期。具体是值是过期日期。如果想让cookie的存在期限超过当前浏览器会话时间，就必须使用这个属性。当过了到期日期时，浏览器就可以删除cookie文件，没有任何影响。</td>
+<td style="text-align:left">浏览器关闭过期</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>domain</code></td>
+<td style="text-align:left">域。指定关联的WEB服务器或域。值是域名，比如pc175.com。这是对path路径属性的一个延伸。如果我们想让 catalog.pc175.com 能够访问shoppingcart.pc175.com设置的cookies，该怎么办? 我们可以把domain属性设置成“pc175.com”，并把path属性设置成“/”。tag：不能把cookies域属性设置成与设置它的服务器的所在域不同的值。</td>
+<td style="text-align:left">默认本域</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>path</code></td>
+<td style="text-align:left">路径。指定与cookie关联的WEB页。值可以是一个目录，或者是一个路径。如果<a href="http://www.pc175.com/devhead/index.html" target="_blank" rel="external">http://www.pc175.com/devhead/index.html</a> 建立了一个cookie，那么在<a href="http://www.pc175.com/devhead/目录里的所有页面，以及该目录下面任何子目录里的页面都可以访问这个cookie。这就是说，在http://www.pc175.com/devhead/stories/articles" target="_blank" rel="external">http://www.pc175.com/devhead/目录里的所有页面，以及该目录下面任何子目录里的页面都可以访问这个cookie。这就是说，在http://www.pc175.com/devhead/stories/articles</a> 里的任何页面都可以访问<a href="http://www.pc175.com/devhead/index.html建立的cookie。但是，如果http://www.pc175.com/zdnn/" target="_blank" rel="external">http://www.pc175.com/devhead/index.html建立的cookie。但是，如果http://www.pc175.com/zdnn/</a> 需要访问<a href="http://www.pc175.com/devhead/index.html设置的cookes，该怎么办？这时，我们要把cookies" target="_blank" rel="external">http://www.pc175.com/devhead/index.html设置的cookes，该怎么办？这时，我们要把cookies</a> 的path属性设置成“/”。在指定路径的时候，凡是来自同一服务器，URL里有相同路径的所有WEB页面都可以共享cookies。现在看另一个例子：如果想让 <a href="http://www.pc175.com/devhead/filters/" target="_blank" rel="external">http://www.pc175.com/devhead/filters/</a> 和<a href="http://www.pc175.com/devhead/stories/共享cookies，就要把path设成“/devhead”。" target="_blank" rel="external">http://www.pc175.com/devhead/stories/共享cookies，就要把path设成“/devhead”。</a></td>
+<td style="text-align:left">默认 <code>/</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>secure</code></td>
+<td style="text-align:left">安全。指定cookie的值通过网络如何在用户和WEB服务器之间传递。这个属性的值或者是“secure”，或者为空。缺省情况下，该属性为空，也就是使用不安全的HTTP连接传递数据。如果一个 cookie 标记为secure，那么，它与WEB服务器之间就通过HTTPS或者其它安全协议传递数据。不过，设置了secure属性不代表其他人不能看到你机器本地保存的cookie。换句话说，把cookie设置为secure，只保证cookie与WEB服务器之间的数据传输过程加密，而保存在本地的cookie文件并不加密。如果想让本地cookie也加密，得自己加密数据。</td>
+<td style="text-align:left"><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="set">set</h3><p>设置 cookie 的值，设置时间</p>
+<p><code>cookie.set(name,value,options)</code><br>效果相同<code>cookie(name,value,options)</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie(<span class="string">"test"</span>,<span class="string">"tank"</span>,<span class="number">30</span>)    <span class="comment">//设置cookie，并设置过期时间30天</span></span><br><span class="line"></span><br><span class="line">cookie(<span class="string">"test"</span>,<span class="string">"123"</span>,&#123;       <span class="comment">//设置cookie，并设置过期时间7天，路径、域</span></span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">"path"</span>: <span class="string">'/'</span>,</span><br><span class="line">    <span class="string">"domain"</span>:<span class="string">""</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">cookie(&#123;<span class="string">"test"</span>:<span class="string">"123"</span>,<span class="string">"test2"</span>:<span class="string">"456"</span>&#125;,&#123;  <span class="comment">//批量设置</span></span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">"path"</span>: <span class="string">'/'</span>,</span><br><span class="line">    <span class="string">"domain"</span>:<span class="string">""</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="get">get</h3><p>获取 cookie 的值</p>
+<p><code>cookie.get(name)</code><br>效果相同<code>cookie(name)</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.get(<span class="string">"wcj1"</span>) <span class="comment">//获取wcj1的字符串数据</span></span><br><span class="line">store(<span class="string">"wcj1"</span>) <span class="comment">//功能同上</span></span><br></pre></td></tr></table></figure>
+<h3 id="clear">clear</h3><p>清空cookie</p>
+<p><code>cookie.clear()</code><br>效果相同<code>cookie()</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie()</span><br><span class="line">cookie.clear(</span><br></pre></td></tr></table></figure>
+<h3 id="remove">remove</h3><p>删除cookie</p>
+<p><code>cookie.remove(name)</code><br>效果相同<code>cookie(name,null)</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie.remove(<span class="string">"test"</span>) <span class="comment">//删除cookie test</span></span><br><span class="line">cookie(<span class="string">"test"</span>,<span class="literal">null</span>) <span class="comment">//这样也是 删除cookie test</span></span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://github.com/jaywcjlove/cookie.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/ja]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[本地存储localStorage的封装]]></title>
@@ -988,8 +1049,9 @@
     <link href="http://kacperwang.github.io/2015/02/17/JS-%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E7%BD%91%E7%BB%9C%E6%96%AD%E4%BA%86/"/>
     <id>http://kacperwang.github.io/2015/02/17/JS-判断是否网络断了/</id>
     <published>2015-02-17T02:15:58.000Z</published>
-    <updated>2015-04-08T14:24:17.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="最佳方法：">最佳方法：</h2><blockquote>
+    <updated>2015-04-16T17:02:39.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/onlinenetwork/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/onlinenetwork.svg" alt="GitHub issues"></a> <a href="https://github.com/jaywcjlove/onlinenetwork/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/onlinenetwork.svg" alt="GitHub forks"></a> <a href="https://github.com/jaywcjlove/onlinenetwork/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/onlinenetwork.svg" alt="GitHub stars"></a> <a href="https://raw.githubusercontent.com/jaywcjlove/onlinenetwork/master/MIT-LICENSE" target="_blank" rel="external"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a> </p>
+<h2 id="最佳方法：">最佳方法：</h2><blockquote>
 <p>结合下面的方法混合使用</p>
 <p>在<code>IE</code>和<code>Firefox</code>上使用Ajax轮询检查网络是否断了，其他浏览器上使用 <code>online</code> 和<code>offline</code>事件 侦听网络。</p>
 </blockquote>
@@ -1012,9 +1074,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $img = $(<span class="string">'&lt;img src="http://jslite.io/blank.gif?'</span>+(<span class="keyword">new</span> <span class="built_in">Date</span>())+<span class="string">'"&gt;'</span>)</span><br><span class="line">    $img.appendTo(<span class="string">'body'</span>).css(<span class="string">"display"</span>,<span class="string">"none"</span>).load(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"连接成功！"</span>)</span><br><span class="line">        $(<span class="keyword">this</span>).remove()</span><br><span class="line">    &#125;).error(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"断网了！"</span>)</span><br><span class="line">        $(<span class="keyword">this</span>).remove()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,<span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="最佳方法：">最佳方法：</h2><blockquote>
-<p>结合下面的方法混合使用</p>
-<p>在<code>IE</code>和<code>Firefox</code>上使用Ajax轮询检查网络是否断了，其他浏览器上使用 <code>online</co]]>
+    <![CDATA[<p><a href="https://github.com/jaywcjlove/onlinenetwork/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issue]]>
     </summary>
     
       <category term="js" scheme="http://kacperwang.github.io/tags/js/"/>
@@ -1057,7 +1117,7 @@
     <link href="http://kacperwang.github.io/2015/01/15/CSS%E9%80%89%E6%8B%A9%E5%99%A8/"/>
     <id>http://kacperwang.github.io/2015/01/15/CSS选择器/</id>
     <published>2015-01-15T02:19:35.000Z</published>
-    <updated>2015-04-08T17:07:22.000Z</updated>
+    <updated>2015-04-16T13:07:59.000Z</updated>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -1088,7 +1148,8 @@
 </tr>
 <tr>
 <td>element</td>
-<td><code>p</code>   选择所有 <code>&lt;p&gt;</code> 元素。</td>
+<td><code>p</code></td>
+<td>选择所有 <code>&lt;p&gt;</code> 元素。</td>
 <td>1</td>
 </tr>
 <tr>
@@ -1470,55 +1531,6 @@
 <li>JSLite 是一个 JavaScript 库。  </li>
 <li>JSLite 极大地简化了 JavaScript 编程。  </li>
 <li>JSLite 只针对先进浏览器支持(HTML5]]>
-    </summary>
-    
-      <category term="JSLite" scheme="http://kacperwang.github.io/tags/JSLite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[JSLite 02 基本语法]]></title>
-    <link href="http://kacperwang.github.io/2015/01/03/JSLite-02-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
-    <id>http://kacperwang.github.io/2015/01/03/JSLite-02-基本语法/</id>
-    <published>2015-01-03T06:19:53.000Z</published>
-    <updated>2015-04-09T05:45:16.000Z</updated>
-    <content type="html"><![CDATA[<p>学习 JSLite 之前需要你有下面几个方面的基本知识</p>
-<blockquote>
-<p>HTML<br>CSS<br>JavaScript</p>
-</blockquote>
-<p>JSLite 既然是模仿jQuery 的API自然语法是一模一样的。只是方法的差别，和代码实现不一样。</p>
-<h2 id="JSLite_语法实例">JSLite 语法实例</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="keyword">this</span>).hide()</span><br></pre></td></tr></table></figure>
-<p>演示 <code>JSLite</code> hide() 函数，隐藏当前的 <code>HTML</code> 元素。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#test"</span>).hide()</span><br></pre></td></tr></table></figure>
-<p>演示 <code>JSLite</code> hide() 函数，隐藏 <code>id=&quot;test&quot;</code> 的元素。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).hide()</span><br></pre></td></tr></table></figure>
-<p>演示 <code>JSLite</code> <code>hide()</code> 函数，隐藏所有 <code>&lt;p&gt;</code> 元素。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">".test"</span>).hide()</span><br></pre></td></tr></table></figure>
-<p>演示 <code>JSLite</code> <code>hide()</code> 函数，隐藏所有 <code>class=&quot;test&quot;</code> 的元素。</p>
-<h2 id="JSLite_的基本语法">JSLite 的基本语法</h2><p>JSLite 语法是为 HTML 元素的选取编制的，可以对元素执行某些操作。<br>基础语法是：$(selector).action()<br>美元符号定义 JSLite  </p>
-<p>选择符 (selector) 用来选择某个HTML元素，其语法和CSS的selector语法一样。<br>action() 定义操作该HTML元素的方法。</p>
-<h3 id="示例">示例</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="keyword">this</span>).hide() <span class="comment">//- 隐藏当前元素</span></span><br><span class="line">$(<span class="string">"p"</span>).hide() <span class="comment">//- 隐藏所有段落</span></span><br><span class="line">$(<span class="string">".test"</span>).hide() <span class="comment">//- 隐藏所有 class="test" 的所有元素</span></span><br><span class="line">$(<span class="string">"#test"</span>).hide() <span class="comment">//- 隐藏所有 id="test" 的元素</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>提示：JSLite 使用的语法是 XPath 与 CSS 选择器语法的组合。在本教程接下来的章节，您将学习到更多有关选择器的语法。</p>
-</blockquote>
-<h2 id="Ready事件处理">Ready事件处理</h2><p>JSLite 如下的代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;  </span><br><span class="line">  <span class="comment">// JSLite methods go here...   </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line"> <span class="comment">// JSLite methods go here...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>这为Document  Ready事件处理器以防止JSLite在页面没有完成载入前就执行。从而可以避免下面类似情况发生：  </p>
-<blockquote>
-<p>试图隐藏尚未创建好的元素<br>试图获取尚未载入的图片的大小</p>
-</blockquote>
-<p>这个方法也可以使用下面简化的方法：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;  </span><br><span class="line">  <span class="comment">// JSLite methods go here...   </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line"> <span class="comment">// JSLite methods go here...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>你可以选择你喜欢的方式，但通常还是采用$(document).ready(function(){}的方式以便于代码的阅读，但是不建议这样使用。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>学习 JSLite 之前需要你有下面几个方面的基本知识</p>
-<blockquote>
-<p>HTML<br>CSS<br>JavaScript</p>
-</blockquote>
-<p>JSLite 既然是模仿jQuery 的API自然语法是一模一样的。只是方法的差别，]]>
     </summary>
     
       <category term="JSLite" scheme="http://kacperwang.github.io/tags/JSLite/"/>
