@@ -1246,8 +1246,8 @@
     <link href="http://kacperwang.github.io/2015/02/17/JS-%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E7%BD%91%E7%BB%9C%E6%96%AD%E4%BA%86/"/>
     <id>http://kacperwang.github.io/2015/02/17/JS-判断是否网络断了/</id>
     <published>2015-02-17T02:15:58.000Z</published>
-    <updated>2015-04-16T17:02:39.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/onlinenetwork/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/onlinenetwork.svg" alt="GitHub issues"></a> <a href="https://github.com/jaywcjlove/onlinenetwork/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/onlinenetwork.svg" alt="GitHub forks"></a> <a href="https://github.com/jaywcjlove/onlinenetwork/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/onlinenetwork.svg" alt="GitHub stars"></a> <a href="https://raw.githubusercontent.com/jaywcjlove/onlinenetwork/master/MIT-LICENSE" target="_blank" rel="external"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a> </p>
+    <updated>2015-04-19T04:51:12.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/onlinenetwork/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/onlinenetwork.svg" alt=""></a> <a href="https://github.com/jaywcjlove/onlinenetwork/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/onlinenetwork.svg" alt=""></a> <a href="https://github.com/jaywcjlove/onlinenetwork/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/onlinenetwork.svg" alt=""></a> <a href="https://raw.githubusercontent.com/jaywcjlove/onlinenetwork/master/MIT-LICENSE" target="_blank" rel="external"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt=""></a> </p>
 <h2 id="最佳方法：">最佳方法：</h2><blockquote>
 <p>结合下面的方法混合使用</p>
 <p>在<code>IE</code>和<code>Firefox</code>上使用Ajax轮询检查网络是否断了，其他浏览器上使用 <code>online</code> 和<code>offline</code>事件 侦听网络。</p>
