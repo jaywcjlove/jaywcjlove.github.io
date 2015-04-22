@@ -4,17 +4,29 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>关于我 | JSLite.io</title>
+    <title>js获取来源的URL代码 | JSLite.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="关于我">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://kacperwang.github.io/about/index.html">
+    <meta name="description" content="referrer正常取来源网页的URL只要用
+document.referrer
+opener如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用
+opener.location.href
+合并var ref = &apos;&apos;; if (document.referrer.length &amp;gt; 0) &amp;#123;     ref = document.referrer; &amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js获取来源的URL代码">
+<meta property="og:url" content="http://kacperwang.github.io/2015/04/22/js获取来源的URL代码/index.html">
 <meta property="og:site_name" content="JSLite.io">
-<meta property="og:description" content="关于我">
+<meta property="og:description" content="referrer正常取来源网页的URL只要用
+document.referrer
+opener如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用
+opener.location.href
+合并var ref = &apos;&apos;; if (document.referrer.length &amp;gt; 0) &amp;#123;     ref = document.referrer; &amp;#125;">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="关于我">
+<meta name="twitter:title" content="js获取来源的URL代码">
+<meta name="twitter:description" content="referrer正常取来源网页的URL只要用
+document.referrer
+opener如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用
+opener.location.href
+合并var ref = &apos;&apos;; if (document.referrer.length &amp;gt; 0) &amp;#123;     ref = document.referrer; &amp;#125;">
     
       <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
     
@@ -103,15 +115,15 @@
 		<div class="outer">
 		
 
-    <article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+    <article id="post-js获取来源的URL代码" class="article article-type-post" itemscope itemprop="blogPost">
       <div class="article-meta">
         
           <header class="article-header">
             
   
-    <a href="/about/index.html">
+    <a href="/2015/04/22/js获取来源的URL代码/">
       <h1 class="article-title" itemprop="name">
-        关于我
+        js获取来源的URL代码
       </h1>
     </a>
   
@@ -121,8 +133,8 @@
           </header>
         
 
-        <!--<a href="/about/index.html" class="article-date">
-  <time datetime="2015-04-01T17:36:59.000Z" itemprop="datePublished">2015-04-02</time>
+        <!--<a href="/2015/04/22/js获取来源的URL代码/" class="article-date">
+  <time datetime="2015-04-22T06:56:04.000Z" itemprop="datePublished">2015-04-22</time>
 </a>-->
         <!--  -->
       </div>
@@ -132,9 +144,9 @@
               <!--<header class="article-header">
                 
   
-    <a href="/about/index.html">
+    <a href="/2015/04/22/js获取来源的URL代码/">
       <h1 class="article-title" itemprop="name">
-        关于我
+        js获取来源的URL代码
       </h1>
     </a>
   
@@ -145,41 +157,24 @@
             
             <div class="article-entry" itemprop="articleBody">
               <div class="page-toc">
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#我熟悉"><span class="toc-number">1.</span> <span class="toc-text">我熟悉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我略知"><span class="toc-number">2.</span> <span class="toc-text">我略知</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#爱好"><span class="toc-number">3.</span> <span class="toc-text">爱好</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#联系我"><span class="toc-number">4.</span> <span class="toc-text">联系我</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我常去这里逛逛"><span class="toc-number">5.</span> <span class="toc-text">我常去这里逛逛</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#referrer"><span class="toc-number">1.</span> <span class="toc-text">referrer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#opener"><span class="toc-number">2.</span> <span class="toc-text">opener</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合并"><span class="toc-number">3.</span> <span class="toc-text">合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它"><span class="toc-number">4.</span> <span class="toc-text">其它</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取域名后面的"><span class="toc-number">4.1.</span> <span class="toc-text">获取域名后面的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取URL"><span class="toc-number">4.2.</span> <span class="toc-text">获取URL</span></a></li></ol></li></ol>
               </div>
               
-                <p>前端开发工程师。敏捷实践者。目前就职于hotpu，生活在上海。</p>
-<a id="more"></a> 
-<h3 id="我熟悉">我熟悉</h3><ul>
-<li>JSLite</li>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>Git / Svn</li>
-<li>jQuery</li>
-</ul>
-<h3 id="我略知">我略知</h3><ul>
-<li>Node.js</li>
-<li>iOS开发</li>
-<li>PHP</li>
-</ul>
-<h3 id="爱好">爱好</h3><ul>
-<li>旅游</li>
-<li>看电视</li>
-</ul>
-<h3 id="联系我">联系我</h3><p>OS X: <code>echo d293b2hvb0BxcS5jb20K | base64 -D</code><br>Linux: <code>echo d293b2hvb0BxcS5jb20K | base64 -d</code>  </p>
-<h3 id="我常去这里逛逛">我常去这里逛逛</h3><ul>
-<li><a href="https://developer.mozilla.org" target="_blank" rel="external">mozilla</a></li>
-<li><a href="http://segmentfault.com" target="_blank" rel="external">segmentfault</a></li>
-<li><a href="http://html-js.com/" target="_blank" rel="external">前端乱炖</a></li>
-</ul>
+                <h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.referrer</span><br></pre></td></tr></table></figure>
+<h2 id="opener">opener</h2><p>如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">opener.location.href</span><br></pre></td></tr></table></figure>
+<h2 id="合并">合并</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ref = <span class="string">''</span>; </span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.referrer.length &gt; <span class="number">0</span>) &#123; </span><br><span class="line">    ref = <span class="built_in">document</span>.referrer; </span><br><span class="line">&#125;<span class="keyword">try</span> &#123; </span><br><span class="line">    <span class="keyword">if</span> (ref.length == <span class="number">0</span> &amp;&amp; opener.location.href.length &gt; <span class="number">0</span>) &#123; </span><br><span class="line">        ref = opener.location.href; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="其它">其它</h2><h3 id="获取域名后面的">获取域名后面的</h3><p><code>window.location.pathname</code>  </p>
+<h3 id="获取URL">获取URL</h3><p><code>window.location.href</code>  </p>
 
               
             </div>
             <footer class="article-footer">
-              <a href="/about/index.html" class="article-date">
-  <time datetime="2015-04-01T17:36:59.000Z" itemprop="datePublished">2015-04-02</time>
+              <a href="/2015/04/22/js获取来源的URL代码/" class="article-date">
+  <time datetime="2015-04-22T06:56:04.000Z" itemprop="datePublished">2015-04-22</time>
 </a>
-              <a data-url="http://kacperwang.github.io/about/index.html" data-id="ci8secr0i0003ibglzh5uwl6k" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/04/22/js获取来源的URL代码/" data-id="ci8secraq001pibglmy8bsfp6" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -188,6 +183,16 @@
       </div>
       
         
+<nav id="article-nav">
+  
+  
+    <a href="/2015/04/17/前端博客相关网站搜集/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">前端博客相关网站搜集</div>
+    </a>
+  
+</nav>
+
       
     </article>
 
@@ -198,7 +203,7 @@
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="about/index.html" data-title="关于我" data-url="http://kacperwang.github.io/about/index.html"></div>
+    <div class="ds-thread" data-thread-key="2015/04/22/js获取来源的URL代码/" data-title="js获取来源的URL代码" data-url="http://kacperwang.github.io/2015/04/22/js获取来源的URL代码/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">

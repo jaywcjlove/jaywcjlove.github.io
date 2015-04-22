@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-17T13:15:59.000Z</updated>
+  <updated>2015-04-22T07:05:58.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -13,6 +13,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[js获取来源的URL代码]]></title>
+    <link href="http://kacperwang.github.io/2015/04/22/js%E8%8E%B7%E5%8F%96%E6%9D%A5%E6%BA%90%E7%9A%84URL%E4%BB%A3%E7%A0%81/"/>
+    <id>http://kacperwang.github.io/2015/04/22/js获取来源的URL代码/</id>
+    <published>2015-04-22T06:56:04.000Z</published>
+    <updated>2015-04-22T07:05:58.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.referrer</span><br></pre></td></tr></table></figure>
+<h2 id="opener">opener</h2><p>如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">opener.location.href</span><br></pre></td></tr></table></figure>
+<h2 id="合并">合并</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ref = <span class="string">''</span>; </span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.referrer.length &gt; <span class="number">0</span>) &#123; </span><br><span class="line">    ref = <span class="built_in">document</span>.referrer; </span><br><span class="line">&#125;<span class="keyword">try</span> &#123; </span><br><span class="line">    <span class="keyword">if</span> (ref.length == <span class="number">0</span> &amp;&amp; opener.location.href.length &gt; <span class="number">0</span>) &#123; </span><br><span class="line">        ref = opener.location.href; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="其它">其它</h2><h3 id="获取域名后面的">获取域名后面的</h3><p><code>window.location.pathname</code>  </p>
+<h3 id="获取URL">获取URL</h3><p><code>window.location.href</code>  </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span ]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[前端博客相关网站搜集]]></title>
@@ -1609,79 +1630,6 @@
     </summary>
     
       <category term="css" scheme="http://kacperwang.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何高效的写JSLite]]></title>
-    <link href="http://kacperwang.github.io/2015/01/11/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E7%9A%84%E5%86%99JSLite/"/>
-    <id>http://kacperwang.github.io/2015/01/11/如何高效的写JSLite/</id>
-    <published>2015-01-11T06:21:14.000Z</published>
-    <updated>2015-04-08T07:35:52.000Z</updated>
-    <content type="html"><![CDATA[<p>讨论jQuery和javascript性能的文章并不罕见。然而，我计划根据他人对jQuery总结的一些速度方面的技巧和一些建议，来教你提升你的JSLite和javascript代码。好的代码会带来速度的提升。快速渲染和响应意味着更好的用户体验。</p>
-<p>首先，在脑子里牢牢记住JSLite就是javascript。这意味着我们应该采取相同的编码惯例，风格指南和最佳实践。</p>
-<p>首先，如果你是一个javascript新手，没有用过jQuery我建议您阅读最好先阅读官方文档的语法介绍，这是一篇高质量的javascript教程，表示您已经会jQuery用过一段时间了。</p>
-<p>当你准备使用JSLite,我强烈建议你遵循下面这些指南:</p>
-<h2 id="缓存变量">缓存变量</h2><p>DOM遍历是昂贵的，所以尽量将会重用的元素缓存。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">h = $(<span class="string">'#element'</span>).height();</span><br><span class="line">$(<span class="string">'#element'</span>).css(<span class="string">'height'</span>,h-<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$element = $(<span class="string">'#element'</span>);</span><br><span class="line">h = $element.height();</span><br><span class="line">$element.css(<span class="string">'height'</span>,h-<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="避免全局变量">避免全局变量</h2><p>JSLite与javascript一样，一般来说,最好确保你的变量在函数作用域内。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$element = $(<span class="string">'#element'</span>);</span><br><span class="line">h = $element.height();</span><br><span class="line">$element.css(<span class="string">'height'</span>,h-<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line"><span class="keyword">var</span> $element = $(<span class="string">'#element'</span>);</span><br><span class="line"><span class="keyword">var</span> h = $element.height();</span><br><span class="line">$element.css(<span class="string">'height'</span>,h-<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="使用匈牙利命名法">使用匈牙利命名法</h2><p>在变量前加$前缀，便于识别出JSLite对象。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line"><span class="keyword">var</span> first = $(<span class="string">'#first'</span>);</span><br><span class="line"><span class="keyword">var</span> second = $(<span class="string">'#second'</span>);</span><br><span class="line"><span class="keyword">var</span> value = $first.val();</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议 - 在JSLite对象前加$前缀</span></span><br><span class="line"><span class="keyword">var</span> $first = $(<span class="string">'#first'</span>);</span><br><span class="line"><span class="keyword">var</span> $second = $(<span class="string">'#second'</span>),</span><br><span class="line"><span class="keyword">var</span> value = $first.val();</span><br></pre></td></tr></table></figure>
-<h2 id="使用_var_链（单_var_模式）">使用 <code>var</code> 链（单 <code>var</code> 模式）</h2><p>将多条var语句合并为一条语句，我建议将未赋值的变量放到后面。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> $first = $(<span class="string">'#first'</span>),</span><br><span class="line">    $second = $(<span class="string">'#second'</span>),</span><br><span class="line">    value = $first.val(),</span><br><span class="line">    k = <span class="number">3</span>,</span><br><span class="line">    cookiestring = <span class="string">'SOMECOOKIESPLEASE'</span>,</span><br><span class="line">    i,</span><br><span class="line">    j,</span><br><span class="line">    myArray = &#123;&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="请使用_on">请使用 <code>on</code></h2><p>在新版JSLite中，更短的 <code>on(&quot;click&quot;)</code> 用来取代类似 <code>click()</code> 这样的函数。在之前的版本中 <code>on()</code> 就是 <code>bind()</code> 。 <code>on()</code>附加事件处理程序的首选方法。然而，出于一致性考虑，你可以简单的全部使用 <code>on()</code> 方法。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$first.click(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    $first.css(<span class="string">'border'</span>,<span class="string">'1px solid red'</span>);</span><br><span class="line">    $first.css(<span class="string">'color'</span>,<span class="string">'blue'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$first.hover(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    $first.css(<span class="string">'border'</span>,<span class="string">'1px solid red'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$first.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    $first.css(<span class="string">'border'</span>,<span class="string">'1px solid red'</span>);</span><br><span class="line">    $first.css(<span class="string">'color'</span>,<span class="string">'blue'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">$first.on(<span class="string">'hover'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    $first.css(<span class="string">'border'</span>,<span class="string">'1px solid red'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="精简javascript">精简javascript</h2><p>一般来说,最好尽可能合并函数。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$first.click(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    $first.css(<span class="string">'border'</span>,<span class="string">'1px solid red'</span>);</span><br><span class="line">    $first.css(<span class="string">'color'</span>,<span class="string">'blue'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$first.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    $first.css(&#123;</span><br><span class="line">        <span class="string">'border'</span>:<span class="string">'1px solid red'</span>,</span><br><span class="line">        <span class="string">'color'</span>:<span class="string">'blue'</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="链式操作">链式操作</h2><p>JSLite实现方法的链式操作是非常容易的。下面利用这一点。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$second.html(value);</span><br><span class="line">$second.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    alert(<span class="string">'hello everybody'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$second.fadeIn(<span class="string">'slow'</span>);</span><br><span class="line">$second.animate(&#123;height:<span class="string">'120px'</span>&#125;,<span class="number">500</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$second.html(value);</span><br><span class="line">$second.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    alert(<span class="string">'hello everybody'</span>);</span><br><span class="line">&#125;).fadeIn(<span class="string">'slow'</span>).animate(&#123;height:<span class="string">'120px'</span>&#125;,<span class="number">500</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="维持代码的可读性">维持代码的可读性</h2><p>伴随着精简代码和使用链式的同时，可能带来代码的难以阅读。添加缩紧和换行能起到很好的效果。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$second.html(value);</span><br><span class="line">$second.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    alert(<span class="string">'hello everybody'</span>);</span><br><span class="line">&#125;).fadeIn(<span class="string">'slow'</span>).animate(&#123;height:<span class="string">'120px'</span>&#125;,<span class="number">500</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$second.html(value);</span><br><span class="line">$second</span><br><span class="line">    .on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123; alert(<span class="string">'hello everybody'</span>);&#125;)</span><br><span class="line">    .fadeIn(<span class="string">'slow'</span>)</span><br><span class="line">    .animate(&#123;height:<span class="string">'120px'</span>&#125;,<span class="number">500</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="选择短路求值">选择短路求值</h2><p>短路求值是一个从左到右求值的表达式，用 &amp;&amp;（逻辑与）或 || （逻辑或）操作符。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVar</span><span class="params">($myVar)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!$myVar) &#123;</span><br><span class="line">        $myVar = $(<span class="string">'#selector'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initVar</span><span class="params">($myVar)</span> </span>&#123;</span><br><span class="line">    $myVar = $myVar || $(<span class="string">'#selector'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="选择捷径">选择捷径</h2><p>精简代码的其中一种方式是利用编码捷径。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line"><span class="keyword">if</span>(collection.length &gt; <span class="number">0</span>)&#123;..&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line"><span class="keyword">if</span>(collection.length)&#123;..&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="繁重的操作中分离元素">繁重的操作中分离元素</h2><p>如果你打算对DOM元素做大量操作（连续设置多个属性或css样式），建议首先分离元素然后在添加。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line"><span class="keyword">var</span> </span><br><span class="line">    $container = $(<span class="string">"#container"</span>),</span><br><span class="line">    $containerLi = $(<span class="string">"#container li"</span>),</span><br><span class="line">    $element = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">$element = $containerLi.first(); </span><br><span class="line"><span class="comment">//... 许多复杂的操作</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// better</span></span><br><span class="line"><span class="keyword">var</span> </span><br><span class="line">    $container = $(<span class="string">"#container"</span>),</span><br><span class="line">    $containerLi = $container.find(<span class="string">"li"</span>),</span><br><span class="line">    $element = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">$element = $containerLi.first().detach(); </span><br><span class="line"><span class="comment">//... 许多复杂的操作</span></span><br><span class="line">$container.append($element);</span><br></pre></td></tr></table></figure>
-<h2 id="熟记技巧">熟记技巧</h2><p>你可能对使用JSLite中的方法缺少经验,一定要查看的文档，可能会有一个更好或更快的方法来使用它。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$(<span class="string">'#id'</span>).data(key,value);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议 (高效)</span></span><br><span class="line">$.data(<span class="string">'#id'</span>,key,value);</span><br></pre></td></tr></table></figure>
-<h2 id="使用子查询缓存的父元素">使用子查询缓存的父元素</h2><p>正如前面所提到的，DOM遍历是一项昂贵的操作。典型做法是缓存父元素并在选择子元素时重用这些缓存元素。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line"><span class="keyword">var</span> </span><br><span class="line">    $container = $(<span class="string">'#container'</span>),</span><br><span class="line">    $containerLi = $(<span class="string">'#container li'</span>),</span><br><span class="line">    $containerLiSpan = $(<span class="string">'#container li span'</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议 (高效)</span></span><br><span class="line"><span class="keyword">var</span> </span><br><span class="line">    $container = $(<span class="string">'#container '</span>),</span><br><span class="line">    $containerLi = $container.find(<span class="string">'li'</span>),</span><br><span class="line">    $containerLiSpan= $containerLi.find(<span class="string">'span'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="避免通用选择符">避免通用选择符</h2><p>将通用选择符放到后代选择符中，性能非常糟糕。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$(<span class="string">'.container &gt; *'</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$(<span class="string">'.container'</span>).children();</span><br></pre></td></tr></table></figure>
-<h2 id="避免隐式通用选择符">避免隐式通用选择符</h2><p>通用选择符有时是隐式的，不容易发现。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$(<span class="string">'.someclass :radio'</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$(<span class="string">'.someclass input:radio'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="优化选择符">优化选择符</h2><p>例如，Id选择符应该是唯一的，所以没有必要添加额外的选择符。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$(<span class="string">'div#myid'</span>); </span><br><span class="line">$(<span class="string">'div#footer a.myLink'</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$(<span class="string">'#myid'</span>);</span><br><span class="line">$(<span class="string">'#footer .myLink'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="避免多个ID选择符">避免多个ID选择符</h2><p>在此强调，ID 选择符应该是唯一的，不需要添加额外的选择符，更不需要多个后代ID选择符。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 糟糕</span></span><br><span class="line">$(<span class="string">'#outer #inner'</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 建议</span></span><br><span class="line">$(<span class="string">'#inner'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="坚持最新版本">坚持最新版本</h2><p>新版本通常更好：更轻量级，更高效，方法更多，更全面的覆盖jQuery方法。显然，你需要考虑你要支持的代码的兼容性。例如，项目是否跑在良好的支持  HTML5/CSS3</p>
-<h2 id="必要时组合JSLite和javascript原生代码">必要时组合JSLite和javascript原生代码</h2><p>如上所述，JSLite就是javascript，这意味着用JSLite能做的事情，同样可以用原生代码来做。原生代码的可读性和可维护性可能不如JSLite，而且代码更长。但也意味着更高效（通常更接近底层代码可读性越差，性能越高，例如：汇编，当然需要更强大的人才可以）。牢记没有任何框架能比原生代码更小，更轻，更高效（注：测试链接已失效，可上网搜索测试代码）。</p>
-<h2 id="最后忠告">最后忠告</h2><p>最后，我记录这篇文章的目的是提高JSLite的性能和其他一些好的建议。如果你想深入的研究对这个话题你会发现很多乐趣。记住，JSLite并非不可或缺，仅是一种选择。思考为什么要使用它。DOM操作？ajax？模版？css动画？还是选择器？jQuery重度开发者？</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>讨论jQuery和javascript性能的文章并不罕见。然而，我计划根据他人对jQuery总结的一些速度方面的技巧和一些建议，来教你提升你的JSLite和javascript代码。好的代码会带来速度的提升。快速渲染和响应意味着更好的用户体验。</p>
-<p>首先，在脑子里]]>
-    </summary>
-    
-      <category term="JSLite" scheme="http://kacperwang.github.io/tags/JSLite/"/>
     
   </entry>
   
