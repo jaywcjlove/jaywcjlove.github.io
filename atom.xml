@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-22T07:05:58.000Z</updated>
+  <updated>2015-04-26T18:33:48.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -13,6 +13,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[stylus 菜鸟入门使用方法]]></title>
+    <link href="http://kacperwang.github.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>http://kacperwang.github.io/2015/04/27/stylus菜鸟入门使用方法/</id>
+    <published>2015-04-26T17:17:02.000Z</published>
+    <updated>2015-04-26T18:33:48.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="stylus介绍">stylus介绍</h2><p>是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，<code>LESS</code>， <code>SASS</code>都在这方面做了一些贡献。  </p>
+<p><code>Stylus</code> 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 <code>Stylus</code> 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 <code>SASS</code>/<code>LESS</code> 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。  </p>
+<p><code>Stylus</code>默认使用 <code>.styl</code> 的作为文件扩展名，支持多样性的CSS语法。</p>
+<p><code>Stylus</code>功能上更为强壮，和js联系更加紧密。所以我选择 <code>Stylus</code>，<code>SASS</code> 玩儿过一段时间，主要是这玩意依赖ruby运行，所以我放弃使用了。</p>
+<h2 id="官方文档">官方文档</h2><p><a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">Stylus API</a><br><a href="http://www.zhangxinxu.com/jq/stylus/" target="_blank" rel="external">张鑫旭中文翻译</a><br><a href="http://learnboost.github.io/stylus/try.html" target="_blank" rel="external">Try Stylus!</a>  </p>
+<h2 id="Stylus安装">Stylus安装</h2><p>全局安装，安装之前你需要你安装 <code>nodejs</code> 这个怎么安装搜去哦。</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g stylus</span><br></pre></td></tr></table></figure>
+<p>这样就算是安装完Stylus了，也可以正常使用Stylus。</p>
+<h2 id="生成CSS">生成CSS</h2><h3 id="命令行中">命令行中</h3><p>建立一个<code>stylusExample/</code>，再在里面建立 <code>src</code> 目录专门存放 <code>stylus</code> 文件，在里面建立 <code>example.styl</code> 文件。然后在 <code>stylusExample</code> 目录下面执行下面命令</p>
+<p><code>stylus --compress  src/</code>  </p>
+<p>输出<code>compiled src/example.css</code> ，这个时候表示你生成成功了，带上<code>--compress</code>参数表示你生成压缩的CSS文件。  </p>
+<h3 id="grunt生成">grunt生成</h3><p>grunt生成 就比较爽歪歪了，具体grunt怎么玩儿，俺写了个教程<a href="http://jslite.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/" target="_blank" rel="external">Grunt教程-前端自动化</a> 可以学习以下。  </p>
+<p>stylusExample 目录下创建两个文件，这两个文件是grunt必备文件。</p>
+<blockquote>
+<p>package.json：用于保存项目元数据。<br>Gruntfile.js：用于配置或定义任务、加载 Grunt 插件。  </p>
+</blockquote>
+<p>package.json 内容</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"test"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"1.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">description</span>": <span class="value"><span class="string">"测试的例子"</span></span>,</span><br><span class="line">  "<span class="attribute">repository</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">type</span>": <span class="value"><span class="string">"git"</span></span>,</span><br><span class="line">    "<span class="attribute">url</span>": <span class="value"><span class="string">""</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>然后安装必备插件，这些插件让stylus文件变更了自动生成，生成到相对应的文件目录中。如果报错你需要在命令行前面加上sudo，给它最大的执行权限。  </p>
+<p><code>npm install grunt --save-dev</code><br><code>npm install grunt-contrib-watch --save-dev</code> ：监视文件变动，做出相应动作。<a href="https://www.npmjs.com/package/grunt-contrib-watch" target="_blank" rel="external">npm&gt;&gt;</a><br><code>npm install grunt-contrib-stylus --save-dev</code> ：stylus编写styl输出css <a href="https://www.npmjs.com/package/grunt-contrib-stylus" target="_blank" rel="external">npm&gt;&gt;</a>   </p>
+<p>安装出现这样的警告 <code>npm WARN package.json test@1.0.0 No README data</code> 可以不理会，如果你看着不舒服，你需要在stylusExample目录下面建立一个 README.md 文件并输入内容。也可命令执行 <code>echo &quot;#stylus 学习&quot; &gt;&gt; README.md</code>  </p>
+<p>插件执行完毕之后 <code>package.json</code> 文件变成了这样样子滴。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"test"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"1.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">description</span>": <span class="value"><span class="string">"测试的例子"</span></span>,</span><br><span class="line">  "<span class="attribute">repository</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">type</span>": <span class="value"><span class="string">"git"</span></span>,</span><br><span class="line">    "<span class="attribute">url</span>": <span class="value"><span class="string">""</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">devDependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">grunt</span>": <span class="value"><span class="string">"^0.4.5"</span></span>,</span><br><span class="line">    "<span class="attribute">grunt-contrib-stylus</span>": <span class="value"><span class="string">"^0.21.0"</span></span>,</span><br><span class="line">    "<span class="attribute">grunt-contrib-watch</span>": <span class="value"><span class="string">"^0.6.1"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这个时候你需要使用这些插件儿完成你的任务需要在<code>Gruntfile.js</code>里面写你的执行任务。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/// 包装函数</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span><span class="params">(grunt)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 任务配置,所有插件的配置信息</span></span><br><span class="line">    grunt.initConfig(&#123;</span><br><span class="line">        pkg: grunt.file.readJSON(<span class="string">'package.json'</span>),</span><br><span class="line">        stylus:&#123;</span><br><span class="line">            build: &#123;</span><br><span class="line">                options: &#123;</span><br><span class="line">                    linenos: <span class="literal">false</span>,</span><br><span class="line">                    compress: <span class="literal">true</span></span><br><span class="line">                &#125;,</span><br><span class="line">                files: [&#123;</span><br><span class="line">                    <span class="string">'css/index.css'</span>: [<span class="string">'src/index.styl'</span>]</span><br><span class="line">                &#125;]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// watch插件的配置信息</span></span><br><span class="line">        watch: &#123;</span><br><span class="line">            another: &#123;</span><br><span class="line">                files: [<span class="string">'css/*'</span>,<span class="string">'src/*.styl'</span>],</span><br><span class="line">                tasks: [<span class="string">'stylus'</span>],</span><br><span class="line">                options: &#123;</span><br><span class="line">                    livereload: <span class="number">1337</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 告诉grunt我们将使用插件</span></span><br><span class="line">    grunt.loadNpmTasks(<span class="string">'grunt-contrib-watch'</span>);</span><br><span class="line">    grunt.loadNpmTasks(<span class="string">'grunt-contrib-stylus'</span>);</span><br><span class="line">    <span class="comment">// 告诉grunt当我们在终端中输入grunt时需要做些什么</span></span><br><span class="line">    grunt.registerTask(<span class="string">'default'</span>, [<span class="string">'watch'</span>]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>注意读懂上面的哦，目录高对哦，这些没有必要提醒哦，😄 ，这个时候你可以好好耍一下stylus  </p>
+<h2 id="Stylus应用">Stylus应用</h2><p>这个时候真正的开始玩耍了哦。</p>
+<h3 id="Try_Stylus!">Try Stylus!</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span>,<span class="tag">html</span></span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span></span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span>,</span><br><span class="line"><span class="tag">html</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Nesting(嵌套)">Nesting(嵌套)</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">header</span></span><br><span class="line">    <span class="id">#logo</span></span><br><span class="line">        <span class="attribute">border</span>:<span class="number">1px</span> solid red</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">header</span> <span class="id">#logo</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#f00</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Flexible_syntax(灵活的用法)">Flexible syntax(灵活的用法)</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span></span><br><span class="line">    <span class="attribute">font</span> <span class="number">14px</span>/<span class="number">1.5</span> Helvetica, arial, sans-serif</span><br><span class="line">    <span class="tag">button</span></span><br><span class="line">    <span class="tag">button</span><span class="class">.button</span></span><br><span class="line">    <span class="tag">input</span>[type=<span class="string">'button'</span>]</span><br><span class="line">    <span class="tag">input</span>[type=<span class="string">'submit'</span>]</span><br><span class="line">        <span class="attribute">border-radius</span> <span class="number">5px</span></span><br><span class="line">        </span><br><span class="line"><span class="tag">header</span> </span><br><span class="line">    <span class="id">#logo</span>,<span class="tag">div</span></span><br><span class="line">        <span class="attribute">font-size</span>:<span class="number">14px</span></span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">14px</span>/<span class="number">1.5</span> Helvetica, arial, sans-serif</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">body</span> <span class="tag">button</span>,</span><br><span class="line"><span class="tag">body</span> <span class="tag">button</span><span class="class">.button</span>,</span><br><span class="line"><span class="tag">body</span> <span class="tag">input</span><span class="attr_selector">[type='button']</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">header</span> <span class="id">#logo</span>,</span><br><span class="line"><span class="tag">header</span> <span class="tag">div</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">14px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Flexible_&amp;(灵活&amp;)">Flexible &amp;(灵活&amp;)</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">ul</span></span><br><span class="line">    <span class="tag">li</span> <span class="tag">a</span></span><br><span class="line">        <span class="attribute">display</span>: block</span><br><span class="line">        <span class="attribute">color</span>: blue</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">5px</span></span><br><span class="line">        <span class="tag">html</span><span class="class">.ie</span> &amp;</span><br><span class="line">            <span class="attribute">padding</span>: <span class="number">6px</span></span><br><span class="line">        <span class="pseudo">&amp;:hover</span><br><span class="line"></span>            <span class="attribute">color</span>: red</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">ul</span> <span class="tag">li</span> <span class="tag">a</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#00f</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">html</span><span class="class">.ie</span> <span class="tag">ul</span> <span class="tag">li</span> <span class="tag">a</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">6px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">ul</span> <span class="tag">li</span> <span class="tag">a</span><span class="pseudo">:hover</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#f00</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Mixins_(混合书写)">Mixins (混合书写)</h3><p>stylus </p>
+<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line">border-radius(<span class="function"><span class="keyword">val</span>)</span><br><span class="line"></span>    -webkit-border-radius: <span class="function"><span class="keyword">val</span></span><br><span class="line"></span>    -moz-border-radius: <span class="function"><span class="keyword">val</span></span><br><span class="line"></span>    border-radius: <span class="function"><span class="keyword">val</span></span><br><span class="line"></span></span><br><span class="line">button </span><br><span class="line">    border-radius(<span class="number">5</span>px);</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Transparent_mixins">Transparent mixins</h3><p>不带参数</p>
+<p>stylus  </p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">border-radius()</span><br><span class="line">    -webkit-border-<span class="string">radius:</span> arguments</span><br><span class="line">    -moz-border-<span class="string">radius:</span> arguments</span><br><span class="line">    border-<span class="string">radius:</span> arguments</span><br><span class="line"></span><br><span class="line">button </span><br><span class="line">    border-<span class="string">radius:</span> <span class="number">5</span>px <span class="number">10</span>px;</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Variables(变量)">Variables(变量)</h3><ol>
+<li>常用方法<br>stylus  </li>
+</ol>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-size</span> = <span class="number">14px</span></span><br><span class="line"></span><br><span class="line"><span class="tag">body</span></span><br><span class="line">    <span class="attribute">font</span> <span class="attribute">font-size</span> Arial, sans-seri</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">14px</span> Arial, sans-seri</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>变量放在属性中<br>stylus  </li>
+</ol>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span></span><br><span class="line">    <span class="attribute">position</span>: absolute</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">150px</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span></span><br><span class="line">    <span class="attribute">width</span>: w = <span class="number">200px</span></span><br><span class="line">    <span class="attribute">margin-left</span>: -(w / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">150px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">100px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>块属性访问引用   </li>
+</ol>
+<p>stylus  </p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span></span><br><span class="line">    <span class="tag">position</span>: <span class="tag">absolute</span></span><br><span class="line">    <span class="tag">width</span>: <span class="tag">200px</span></span><br><span class="line">    <span class="tag">margin-left</span>: <span class="tag">-</span>(<span class="variable">@width</span> / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">100px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<p>….</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="stylus介绍">stylus介绍</h2><p>是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，<code>LESS</code>， <code>SASS</code>都在这方面做了一些贡献。  </p>
+<p><cod]]>
+    </summary>
+    
+      <category term="css" scheme="http://kacperwang.github.io/tags/css/"/>
+    
+      <category term="stylus" scheme="http://kacperwang.github.io/tags/stylus/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[js获取来源的URL代码]]></title>
@@ -1065,7 +1155,7 @@
     <link href="http://kacperwang.github.io/2015/03/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
     <id>http://kacperwang.github.io/2015/03/30/hexo常用命令笔记/</id>
     <published>2015-03-29T17:56:32.000Z</published>
-    <updated>2015-04-16T04:59:55.000Z</updated>
+    <updated>2015-04-23T17:46:45.000Z</updated>
     <content type="html"><![CDATA[<h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="comment">#安装  </span></span><br><span class="line">npm update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init blog <span class="comment">#初始化，生成文件夹为blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install <span class="comment">#安装依赖库</span></span><br><span class="line">hexo server <span class="comment">#运行测试</span></span><br></pre></td></tr></table></figure>
 <h2 id="简写">简写</h2><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署    </p>
 <h2 id="服务器">服务器</h2><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP  </p>
@@ -1160,6 +1250,10 @@
 </tr>
 </tbody>
 </table>
+<h3 id="图片显示">图片显示</h3><p>把图片放到 source/images 目录下</p>
+<p><code>![](images/xxx.jpg)</code></p>
+<h3 id="添加小图标">添加小图标</h3><p>将 <code>favicon.ico</code> 文件放在 source 目录下<br>配置 hexoThemekacper 主题里的 <code>_config.yml</code></p>
+<p><code>favicon: /favicon.ico</code></p>
 <h3 id="推送到服务器上">推送到服务器上</h3><p><code>hexo n</code> #写文章<br><code>hexo g</code> #生成<br><code>hexo d</code> #部署 #可与<code>hexo g</code>合并为 <code>hexo d -g</code></p>
 <h2 id="报错">报错</h2><h3 id="1-找不到git部署">1.找不到git部署</h3><figure class="highlight monkey"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ERROR</span> Deployer <span class="keyword">not</span> found: git</span><br></pre></td></tr></table></figure>
 <p><strong>解决方法</strong>  </p>
@@ -1328,309 +1422,6 @@
       <category term="shell" scheme="http://kacperwang.github.io/categories/shell/"/>
     
       <category term="命令行" scheme="http://kacperwang.github.io/categories/shell/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CSS选择器]]></title>
-    <link href="http://kacperwang.github.io/2015/01/15/CSS%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-    <id>http://kacperwang.github.io/2015/01/15/CSS选择器/</id>
-    <published>2015-01-15T02:19:35.000Z</published>
-    <updated>2015-04-16T13:07:59.000Z</updated>
-    <content type="html"><![CDATA[<table>
-<thead>
-<tr>
-<th>选择器</th>
-<th>例子</th>
-<th>例子描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.class</td>
-<td><code>.intro</code></td>
-<td>选择 class=”intro” 的所有元素。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>#id</td>
-<td><code>#firstname</code></td>
-<td>选择 id=”firstname” 的所有元素。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>*</td>
-<td><code>*</code></td>
-<td>选择所有元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>element</td>
-<td><code>p</code></td>
-<td>选择所有 <code>&lt;p&gt;</code> 元素。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>element,element</td>
-<td><code>div,p</code></td>
-<td>选择所有 <code>&lt;div&gt;</code> 元素和所有 <code>&lt;p&gt;</code> 元素。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>element element</td>
-<td><code>div p</code></td>
-<td>选择 <code>&lt;div&gt;</code> 元素内部的所有 <code>&lt;p&gt;</code> 元素。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>element&gt;element</td>
-<td><code>div&gt;p</code></td>
-<td>选择父元素为 <code>&lt;div&gt;</code> 元素的所有 <code>&lt;p&gt;</code> 元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>element+element</td>
-<td><code>div+p</code></td>
-<td>选择紧接在 <code>&lt;div&gt;</code> 元素之后的所有 <code>&lt;p&gt;</code> 元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>[attribute]</td>
-<td><code>[target]</code></td>
-<td>选择带有 <code>target</code> 属性所有元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>[attribute=value]</td>
-<td><code>[target=_blank]</code></td>
-<td>选择 <code>target=&quot;_blank&quot;</code> 的所有元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>[attribute~=value]</td>
-<td><code>[title~=flower]</code></td>
-<td>选择 <code>title</code> 属性包含单词 “flower” 的所有元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>[attribute｜=value]</td>
-<td><code>[lang｜=en]</code></td>
-<td>选择 <code>lang</code> 属性值以 “en” 开头的所有元素。<code>注：竖线英文竖线哦</code></td>
-<td>2</td>
-</tr>
-<tr>
-<td>:link</td>
-<td><code>a:link</code></td>
-<td>选择所有未被访问的链接。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>:visited</td>
-<td><code>a:visited</code></td>
-<td>选择所有已被访问的链接。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>:active</td>
-<td><code>a:active</code></td>
-<td>选择活动链接。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>:hover</td>
-<td><code>a:hover</code></td>
-<td>选择鼠标指针位于其上的链接。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>:focus</td>
-<td><code>input:focus</code></td>
-<td>选择获得焦点的 input 元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>:first-letter</td>
-<td><code>p:first-letter</code></td>
-<td>选择每个 <code>&lt;p&gt;</code> 元素的首字母。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>:first-line</td>
-<td><code>p:first-line</code></td>
-<td>选择每个 <code>&lt;p&gt;</code> 元素的首行。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>:first-child</td>
-<td><code>p:first-child</code></td>
-<td>选择属于父元素的第一个子元素的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>:before</td>
-<td><code>p:before</code></td>
-<td>在每个 <code>&lt;p&gt;</code> 元素的内容之前插入内容。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>:after</td>
-<td><code>p:after</code></td>
-<td>在每个 <code>&lt;p&gt;</code> 元素的内容之后插入内容。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>:lang(language)</td>
-<td><code>p:lang(it)</code></td>
-<td>选择带有以 “it” 开头的 lang 属性值的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>element1~element2</td>
-<td><code>p~ul</code></td>
-<td>选择前面有 <code>&lt;p&gt;</code> 元素的每个 <code>&lt;ul&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>[attribute^=value]</td>
-<td><code>a[src^=&quot;https&quot;]</code></td>
-<td>选择其 src 属性值以 <code>https</code> 开头的每个 <code>&lt;a&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>[attribute$=value]</td>
-<td><code>a[src$=&quot;.pdf&quot;]</code></td>
-<td>选择其 src 属性以 <code>.pdf</code> 结尾的所有 <code>&lt;a&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>[attribute*=value]</td>
-<td><code>a[src*=&quot;abc&quot;]</code></td>
-<td>选择其 src 属性中包含 “abc” 子串的每个 <code>&lt;a&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:first-of-type</td>
-<td><code>p:first-of-type</code></td>
-<td>选择属于其父元素的首个 <code>&lt;p&gt;</code> 元素的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:last-of-type</td>
-<td><code>p:last-of-type</code></td>
-<td>选择属于其父元素的最后 <code>&lt;p&gt;</code> 元素的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:only-of-type</td>
-<td><code>p:only-of-type</code></td>
-<td>选择属于其父元素唯一的 <code>&lt;p&gt;</code> 元素的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:only-child</td>
-<td><code>p:only-child</code></td>
-<td>选择属于其父元素的唯一子元素的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:nth-child(n)</td>
-<td><code>p:nth-child(2)</code></td>
-<td>选择属于其父元素的第二个子元素的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:nth-last-child(n)</td>
-<td><code>p:nth-last-child(2)</code></td>
-<td>同上，从最后一个子元素开始计数。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:nth-of-type(n)</td>
-<td><code>p:nth-of-type(2)</code></td>
-<td>选择属于其父元素第二个 <code>&lt;p&gt;</code> 元素的每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:nth-last-of-type(n)</td>
-<td><code>p:nth-last-of-type(2)</code></td>
-<td>同上，但是从最后一个子元素开始计数。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:last-child</td>
-<td><code>p:last-child</code></td>
-<td>选择属于其父元素最后一个子元素每个 <code>&lt;p&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:root</td>
-<td><code>:root</code></td>
-<td>选择文档的根元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:empty</td>
-<td><code>p:empty</code></td>
-<td>选择没有子元素的每个 <code>&lt;p&gt;</code> 元素（包括文本节点）。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:target</td>
-<td><code>#news:target</code></td>
-<td>选择当前活动的 #news 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:enabled</td>
-<td><code>input:enabled</code></td>
-<td>选择每个启用的 <code>&lt;input&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:disabled</td>
-<td><code>input:disabled</code></td>
-<td>选择每个禁用的 <code>&lt;input&gt;</code> 元素</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:checked</td>
-<td><code>input:checked</code></td>
-<td>选择每个被选中的 <code>&lt;input&gt;</code> 元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>:not(selector)</td>
-<td><code>:not(p)</code></td>
-<td>选择非 <code>&lt;p&gt;</code> 元素的每个元素。</td>
-<td>3</td>
-</tr>
-<tr>
-<td>::selection</td>
-<td><code>::selection</code></td>
-<td>选择被用户选取的元素部分。</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    <summary type="html">
-    <![CDATA[<table>
-<thead>
-<tr>
-<th>选择器</th>
-<th>例子</th>
-<th>例子描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.class</td>
-<td><code>.intro</code>]]>
-    </summary>
-    
-      <category term="css" scheme="http://kacperwang.github.io/tags/css/"/>
     
   </entry>
   

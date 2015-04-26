@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>stylus 菜鸟入门使用方法 | JSLite.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="stylus介绍是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，LESS， SASS都在这方面做了一些贡献。  
+Stylus 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 Stylus 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 SASS/L">
+<meta property="og:type" content="article">
+<meta property="og:title" content="stylus 菜鸟入门使用方法">
+<meta property="og:url" content="http://kacperwang.github.io/2015/04/27/stylus菜鸟入门使用方法/index.html">
+<meta property="og:site_name" content="JSLite.io">
+<meta property="og:description" content="stylus介绍是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，LESS， SASS都在这方面做了一些贡献。  
+Stylus 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 Stylus 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 SASS/L">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="stylus 菜鸟入门使用方法">
+<meta name="twitter:description" content="stylus介绍是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，LESS， SASS都在这方面做了一些贡献。  
+Stylus 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 Stylus 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 SASS/L">
+    
+      <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
+    
+    
+      <link rel="icon" href="/css/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+<!-- Baidu Analytics -->
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?fe2c7555911b8560db5e56121c5d5960";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End Baidu Analytics -->
+
+
+
+
+</head>
+<body>
+<div id="container"> 
+    <div id="wrap">
+	
+
+<header id="header" class="hdpage">
+    
+    <div id="header-outer" class="outer">
+        
+        <div id="header-inner" class="inner">
+          <nav id="main-nav">
+            <a id="main-nav-toggle" class="nav-icon"></a>
+            
+              <a class="main-nav-link" href="/">
+                  
+                  
+
+                
+                  Home
+                </a>
+            
+              <a class="main-nav-link" href="/API">
+                  
+                  
+
+                
+                  API
+                </a>
+            
+              <a class="main-nav-link" href="/tags">
+                  
+                  
+
+                
+                  Tags
+                </a>
+            
+              <a class="main-nav-link" href="/archives">
+                  
+                  
+
+                
+                  Archives
+                </a>
+            
+              <a class="main-nav-link" href="/about">
+                  
+                  
+
+                
+                  About
+                </a>
+            
+              <a class="main-nav-link" href="https://github.com/JSLite/JSLite">
+                  
+                  
+
+                
+                  Github
+                </a>
+            
+          </nav>
+          <nav id="sub-nav">
+            
+              <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+            
+            <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          </nav>
+          <div id="search-form-wrap">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kacperwang.github.io"></form>
+          </div>
+        </div>
+    </div>
+</header>
+
+		<div class="outer">
+		
+
+    <article id="post-stylus菜鸟入门使用方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="article-meta">
+        
+          <header class="article-header">
+            
+  
+    <a href="/2015/04/27/stylus菜鸟入门使用方法/">
+      <h1 class="article-title" itemprop="name">
+        stylus 菜鸟入门使用方法
+      </h1>
+    </a>
+  
+
+
+
+          </header>
+        
+
+        <!--<a href="/2015/04/27/stylus菜鸟入门使用方法/" class="article-date">
+  <time datetime="2015-04-26T17:17:02.000Z" itemprop="datePublished">2015-04-27</time>
+</a>-->
+        <!--  -->
+      </div>
+      <div class="article-inner">
+            
+            
+              <!--<header class="article-header">
+                
+  
+    <a href="/2015/04/27/stylus菜鸟入门使用方法/">
+      <h1 class="article-title" itemprop="name">
+        stylus 菜鸟入门使用方法
+      </h1>
+    </a>
+  
+
+
+
+              </header>-->
+            
+            <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#stylus介绍"><span class="toc-number">1.</span> <span class="toc-text">stylus介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#官方文档"><span class="toc-number">2.</span> <span class="toc-text">官方文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stylus安装"><span class="toc-number">3.</span> <span class="toc-text">Stylus安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成CSS"><span class="toc-number">4.</span> <span class="toc-text">生成CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行中"><span class="toc-number">4.1.</span> <span class="toc-text">命令行中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grunt生成"><span class="toc-number">4.2.</span> <span class="toc-text">grunt生成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stylus应用"><span class="toc-number">5.</span> <span class="toc-text">Stylus应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Try_Stylus!"><span class="toc-number">5.1.</span> <span class="toc-text">Try Stylus!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting(嵌套)"><span class="toc-number">5.2.</span> <span class="toc-text">Nesting(嵌套)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flexible_syntax(灵活的用法)"><span class="toc-number">5.3.</span> <span class="toc-text">Flexible syntax(灵活的用法)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flexible_&(灵活&)"><span class="toc-number">5.4.</span> <span class="toc-text">Flexible &(灵活&)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins_(混合书写)"><span class="toc-number">5.5.</span> <span class="toc-text">Mixins (混合书写)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transparent_mixins"><span class="toc-number">5.6.</span> <span class="toc-text">Transparent mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables(变量)"><span class="toc-number">5.7.</span> <span class="toc-text">Variables(变量)</span></a></li></ol></li></ol>
+              </div>
+              
+                <h2 id="stylus介绍">stylus介绍</h2><p>是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，<code>LESS</code>， <code>SASS</code>都在这方面做了一些贡献。  </p>
+<p><code>Stylus</code> 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 <code>Stylus</code> 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 <code>SASS</code>/<code>LESS</code> 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。  </p>
+<p><code>Stylus</code>默认使用 <code>.styl</code> 的作为文件扩展名，支持多样性的CSS语法。</p>
+<p><code>Stylus</code>功能上更为强壮，和js联系更加紧密。所以我选择 <code>Stylus</code>，<code>SASS</code> 玩儿过一段时间，主要是这玩意依赖ruby运行，所以我放弃使用了。</p>
+<h2 id="官方文档">官方文档</h2><p><a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">Stylus API</a><br><a href="http://www.zhangxinxu.com/jq/stylus/" target="_blank" rel="external">张鑫旭中文翻译</a><br><a href="http://learnboost.github.io/stylus/try.html" target="_blank" rel="external">Try Stylus!</a>  </p>
+<h2 id="Stylus安装">Stylus安装</h2><p>全局安装，安装之前你需要你安装 <code>nodejs</code> 这个怎么安装搜去哦。</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g stylus</span><br></pre></td></tr></table></figure>
+<p>这样就算是安装完Stylus了，也可以正常使用Stylus。</p>
+<h2 id="生成CSS">生成CSS</h2><h3 id="命令行中">命令行中</h3><p>建立一个<code>stylusExample/</code>，再在里面建立 <code>src</code> 目录专门存放 <code>stylus</code> 文件，在里面建立 <code>example.styl</code> 文件。然后在 <code>stylusExample</code> 目录下面执行下面命令</p>
+<p><code>stylus --compress  src/</code>  </p>
+<p>输出<code>compiled src/example.css</code> ，这个时候表示你生成成功了，带上<code>--compress</code>参数表示你生成压缩的CSS文件。  </p>
+<h3 id="grunt生成">grunt生成</h3><p>grunt生成 就比较爽歪歪了，具体grunt怎么玩儿，俺写了个教程<a href="http://jslite.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/" target="_blank" rel="external">Grunt教程-前端自动化</a> 可以学习以下。  </p>
+<p>stylusExample 目录下创建两个文件，这两个文件是grunt必备文件。</p>
+<blockquote>
+<p>package.json：用于保存项目元数据。<br>Gruntfile.js：用于配置或定义任务、加载 Grunt 插件。  </p>
+</blockquote>
+<p>package.json 内容</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"test"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"1.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">description</span>": <span class="value"><span class="string">"测试的例子"</span></span>,</span><br><span class="line">  "<span class="attribute">repository</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">type</span>": <span class="value"><span class="string">"git"</span></span>,</span><br><span class="line">    "<span class="attribute">url</span>": <span class="value"><span class="string">""</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>然后安装必备插件，这些插件让stylus文件变更了自动生成，生成到相对应的文件目录中。如果报错你需要在命令行前面加上sudo，给它最大的执行权限。  </p>
+<p><code>npm install grunt --save-dev</code><br><code>npm install grunt-contrib-watch --save-dev</code> ：监视文件变动，做出相应动作。<a href="https://www.npmjs.com/package/grunt-contrib-watch" target="_blank" rel="external">npm&gt;&gt;</a><br><code>npm install grunt-contrib-stylus --save-dev</code> ：stylus编写styl输出css <a href="https://www.npmjs.com/package/grunt-contrib-stylus" target="_blank" rel="external">npm&gt;&gt;</a>   </p>
+<p>安装出现这样的警告 <code>npm WARN package.json test@1.0.0 No README data</code> 可以不理会，如果你看着不舒服，你需要在stylusExample目录下面建立一个 README.md 文件并输入内容。也可命令执行 <code>echo &quot;#stylus 学习&quot; &gt;&gt; README.md</code>  </p>
+<p>插件执行完毕之后 <code>package.json</code> 文件变成了这样样子滴。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"test"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"1.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">description</span>": <span class="value"><span class="string">"测试的例子"</span></span>,</span><br><span class="line">  "<span class="attribute">repository</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">type</span>": <span class="value"><span class="string">"git"</span></span>,</span><br><span class="line">    "<span class="attribute">url</span>": <span class="value"><span class="string">""</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">devDependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">grunt</span>": <span class="value"><span class="string">"^0.4.5"</span></span>,</span><br><span class="line">    "<span class="attribute">grunt-contrib-stylus</span>": <span class="value"><span class="string">"^0.21.0"</span></span>,</span><br><span class="line">    "<span class="attribute">grunt-contrib-watch</span>": <span class="value"><span class="string">"^0.6.1"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这个时候你需要使用这些插件儿完成你的任务需要在<code>Gruntfile.js</code>里面写你的执行任务。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/// 包装函数</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span><span class="params">(grunt)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 任务配置,所有插件的配置信息</span></span><br><span class="line">    grunt.initConfig(&#123;</span><br><span class="line">        pkg: grunt.file.readJSON(<span class="string">'package.json'</span>),</span><br><span class="line">        stylus:&#123;</span><br><span class="line">            build: &#123;</span><br><span class="line">                options: &#123;</span><br><span class="line">                    linenos: <span class="literal">false</span>,</span><br><span class="line">                    compress: <span class="literal">true</span></span><br><span class="line">                &#125;,</span><br><span class="line">                files: [&#123;</span><br><span class="line">                    <span class="string">'css/index.css'</span>: [<span class="string">'src/index.styl'</span>]</span><br><span class="line">                &#125;]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// watch插件的配置信息</span></span><br><span class="line">        watch: &#123;</span><br><span class="line">            another: &#123;</span><br><span class="line">                files: [<span class="string">'css/*'</span>,<span class="string">'src/*.styl'</span>],</span><br><span class="line">                tasks: [<span class="string">'stylus'</span>],</span><br><span class="line">                options: &#123;</span><br><span class="line">                    livereload: <span class="number">1337</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 告诉grunt我们将使用插件</span></span><br><span class="line">    grunt.loadNpmTasks(<span class="string">'grunt-contrib-watch'</span>);</span><br><span class="line">    grunt.loadNpmTasks(<span class="string">'grunt-contrib-stylus'</span>);</span><br><span class="line">    <span class="comment">// 告诉grunt当我们在终端中输入grunt时需要做些什么</span></span><br><span class="line">    grunt.registerTask(<span class="string">'default'</span>, [<span class="string">'watch'</span>]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>注意读懂上面的哦，目录高对哦，这些没有必要提醒哦，😄 ，这个时候你可以好好耍一下stylus  </p>
+<h2 id="Stylus应用">Stylus应用</h2><p>这个时候真正的开始玩耍了哦。</p>
+<h3 id="Try_Stylus!">Try Stylus!</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span>,<span class="tag">html</span></span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span></span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span>,</span><br><span class="line"><span class="tag">html</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Nesting(嵌套)">Nesting(嵌套)</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">header</span></span><br><span class="line">    <span class="id">#logo</span></span><br><span class="line">        <span class="attribute">border</span>:<span class="number">1px</span> solid red</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">header</span> <span class="id">#logo</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#f00</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Flexible_syntax(灵活的用法)">Flexible syntax(灵活的用法)</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span></span><br><span class="line">    <span class="attribute">font</span> <span class="number">14px</span>/<span class="number">1.5</span> Helvetica, arial, sans-serif</span><br><span class="line">    <span class="tag">button</span></span><br><span class="line">    <span class="tag">button</span><span class="class">.button</span></span><br><span class="line">    <span class="tag">input</span>[type=<span class="string">'button'</span>]</span><br><span class="line">    <span class="tag">input</span>[type=<span class="string">'submit'</span>]</span><br><span class="line">        <span class="attribute">border-radius</span> <span class="number">5px</span></span><br><span class="line">        </span><br><span class="line"><span class="tag">header</span> </span><br><span class="line">    <span class="id">#logo</span>,<span class="tag">div</span></span><br><span class="line">        <span class="attribute">font-size</span>:<span class="number">14px</span></span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">14px</span>/<span class="number">1.5</span> Helvetica, arial, sans-serif</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">body</span> <span class="tag">button</span>,</span><br><span class="line"><span class="tag">body</span> <span class="tag">button</span><span class="class">.button</span>,</span><br><span class="line"><span class="tag">body</span> <span class="tag">input</span><span class="attr_selector">[type='button']</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">header</span> <span class="id">#logo</span>,</span><br><span class="line"><span class="tag">header</span> <span class="tag">div</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">14px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Flexible_&amp;(灵活&amp;)">Flexible &amp;(灵活&amp;)</h3><p>stylus </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="tag">ul</span></span><br><span class="line">    <span class="tag">li</span> <span class="tag">a</span></span><br><span class="line">        <span class="attribute">display</span>: block</span><br><span class="line">        <span class="attribute">color</span>: blue</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">5px</span></span><br><span class="line">        <span class="tag">html</span><span class="class">.ie</span> &amp;</span><br><span class="line">            <span class="attribute">padding</span>: <span class="number">6px</span></span><br><span class="line">        <span class="pseudo">&amp;:hover</span><br><span class="line"></span>            <span class="attribute">color</span>: red</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">ul</span> <span class="tag">li</span> <span class="tag">a</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#00f</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">html</span><span class="class">.ie</span> <span class="tag">ul</span> <span class="tag">li</span> <span class="tag">a</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">6px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">ul</span> <span class="tag">li</span> <span class="tag">a</span><span class="pseudo">:hover</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#f00</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Mixins_(混合书写)">Mixins (混合书写)</h3><p>stylus </p>
+<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line">border-radius(<span class="function"><span class="keyword">val</span>)</span><br><span class="line"></span>    -webkit-border-radius: <span class="function"><span class="keyword">val</span></span><br><span class="line"></span>    -moz-border-radius: <span class="function"><span class="keyword">val</span></span><br><span class="line"></span>    border-radius: <span class="function"><span class="keyword">val</span></span><br><span class="line"></span></span><br><span class="line">button </span><br><span class="line">    border-radius(<span class="number">5</span>px);</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Transparent_mixins">Transparent mixins</h3><p>不带参数</p>
+<p>stylus  </p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">border-radius()</span><br><span class="line">    -webkit-border-<span class="string">radius:</span> arguments</span><br><span class="line">    -moz-border-<span class="string">radius:</span> arguments</span><br><span class="line">    border-<span class="string">radius:</span> arguments</span><br><span class="line"></span><br><span class="line">button </span><br><span class="line">    border-<span class="string">radius:</span> <span class="number">5</span>px <span class="number">10</span>px;</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Variables(变量)">Variables(变量)</h3><ol>
+<li>常用方法<br>stylus  </li>
+</ol>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-size</span> = <span class="number">14px</span></span><br><span class="line"></span><br><span class="line"><span class="tag">body</span></span><br><span class="line">    <span class="attribute">font</span> <span class="attribute">font-size</span> Arial, sans-seri</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">14px</span> Arial, sans-seri</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>变量放在属性中<br>stylus  </li>
+</ol>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span></span><br><span class="line">    <span class="attribute">position</span>: absolute</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">150px</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span></span><br><span class="line">    <span class="attribute">width</span>: w = <span class="number">200px</span></span><br><span class="line">    <span class="attribute">margin-left</span>: -(w / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">150px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">100px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>块属性访问引用   </li>
+</ol>
+<p>stylus  </p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span></span><br><span class="line">    <span class="tag">position</span>: <span class="tag">absolute</span></span><br><span class="line">    <span class="tag">width</span>: <span class="tag">200px</span></span><br><span class="line">    <span class="tag">margin-left</span>: <span class="tag">-</span>(<span class="variable">@width</span> / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>编译成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">100px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<p>….</p>
+
+              
+            </div>
+            <footer class="article-footer">
+              <a href="/2015/04/27/stylus菜鸟入门使用方法/" class="article-date">
+  <time datetime="2015-04-26T17:17:02.000Z" itemprop="datePublished">2015-04-27</time>
+</a>
+              <a data-url="http://kacperwang.github.io/2015/04/27/stylus菜鸟入门使用方法/" data-id="ci8ysoq9v001iipgldxt3bdkd" class="article-share-link">Share</a>
+              
+                <a href="#comments" class="article-comment-link">Comments</a>
+              
+              
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li></ul>
+
+            </footer>
+      </div>
+      
+        
+<nav id="article-nav">
+  
+  
+    <a href="/2015/04/22/js获取来源的URL代码/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js获取来源的URL代码</div>
+    </a>
+  
+</nav>
+
+      
+    </article>
+
+
+
+
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/04/27/stylus菜鸟入门使用方法/" data-title="stylus 菜鸟入门使用方法" data-url="http://kacperwang.github.io/2015/04/27/stylus菜鸟入门使用方法/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'pc175'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+		</div>
+		<footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+        <div class="left">
+            &copy; 2015 kacper.wang<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        </div>
+        <div class="right">
+            
+                <a href="https://github.com/jaywcjlove">GitHub</a>
+            
+                <a href="http://weibo.com/pc175">Weibo</a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
+
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  	</div>
+	<nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/API" class="mobile-nav-link">API</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="https://github.com/JSLite/JSLite" class="mobile-nav-link">Github</a>
+  
+</nav>
+</div>
+</body>
+</html>
+
