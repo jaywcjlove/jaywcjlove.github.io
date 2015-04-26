@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-26T18:33:48.000Z</updated>
+  <updated>2015-04-26T18:36:42.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -19,12 +19,12 @@
     <link href="http://kacperwang.github.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <id>http://kacperwang.github.io/2015/04/27/stylus菜鸟入门使用方法/</id>
     <published>2015-04-26T17:17:02.000Z</published>
-    <updated>2015-04-26T18:33:48.000Z</updated>
+    <updated>2015-04-26T18:36:42.000Z</updated>
     <content type="html"><![CDATA[<h2 id="stylus介绍">stylus介绍</h2><p>是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，<code>LESS</code>， <code>SASS</code>都在这方面做了一些贡献。  </p>
 <p><code>Stylus</code> 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 <code>Stylus</code> 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 <code>SASS</code>/<code>LESS</code> 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。  </p>
 <p><code>Stylus</code>默认使用 <code>.styl</code> 的作为文件扩展名，支持多样性的CSS语法。</p>
 <p><code>Stylus</code>功能上更为强壮，和js联系更加紧密。所以我选择 <code>Stylus</code>，<code>SASS</code> 玩儿过一段时间，主要是这玩意依赖ruby运行，所以我放弃使用了。</p>
-<h2 id="官方文档">官方文档</h2><p><a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">Stylus API</a><br><a href="http://www.zhangxinxu.com/jq/stylus/" target="_blank" rel="external">张鑫旭中文翻译</a><br><a href="http://learnboost.github.io/stylus/try.html" target="_blank" rel="external">Try Stylus!</a>  </p>
+<h2 id="文档参考">文档参考</h2><p><a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">官方Stylus API</a><br><a href="http://www.zhangxinxu.com/jq/stylus/" target="_blank" rel="external">张鑫旭中文翻译</a><br><a href="http://learnboost.github.io/stylus/try.html" target="_blank" rel="external">Try Stylus!</a>  </p>
 <h2 id="Stylus安装">Stylus安装</h2><p>全局安装，安装之前你需要你安装 <code>nodejs</code> 这个怎么安装搜去哦。</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g stylus</span><br></pre></td></tr></table></figure>
 <p>这样就算是安装完Stylus了，也可以正常使用Stylus。</p>
@@ -72,22 +72,15 @@
 <figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">border-radius()</span><br><span class="line">    -webkit-border-<span class="string">radius:</span> arguments</span><br><span class="line">    -moz-border-<span class="string">radius:</span> arguments</span><br><span class="line">    border-<span class="string">radius:</span> arguments</span><br><span class="line"></span><br><span class="line">button </span><br><span class="line">    border-<span class="string">radius:</span> <span class="number">5</span>px <span class="number">10</span>px;</span><br></pre></td></tr></table></figure>
 <p>编译成</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span> <span class="number">10px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="Variables(变量)">Variables(变量)</h3><ol>
-<li>常用方法<br>stylus  </li>
-</ol>
+<h3 id="Variables(变量)">Variables(变量)</h3><h4 id="常用方法">常用方法</h4><p>stylus  </p>
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-size</span> = <span class="number">14px</span></span><br><span class="line"></span><br><span class="line"><span class="tag">body</span></span><br><span class="line">    <span class="attribute">font</span> <span class="attribute">font-size</span> Arial, sans-seri</span><br></pre></td></tr></table></figure>
 <p>编译成</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">14px</span> Arial, sans-seri</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>变量放在属性中<br>stylus  </li>
-</ol>
+<h4 id="变量放在属性中">变量放在属性中</h4><p>stylus  </p>
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span></span><br><span class="line">    <span class="attribute">position</span>: absolute</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">150px</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span></span><br><span class="line">    <span class="attribute">width</span>: w = <span class="number">200px</span></span><br><span class="line">    <span class="attribute">margin-left</span>: -(w / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <p>编译成</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">150px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">100px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>块属性访问引用   </li>
-</ol>
-<p>stylus  </p>
+<h4 id="块属性访问引用">块属性访问引用</h4><p>stylus  </p>
 <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span></span><br><span class="line">    <span class="tag">position</span>: <span class="tag">absolute</span></span><br><span class="line">    <span class="tag">width</span>: <span class="tag">200px</span></span><br><span class="line">    <span class="tag">margin-left</span>: <span class="tag">-</span>(<span class="variable">@width</span> / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <p>编译成</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="id">#prompt</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">100px</span></span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
