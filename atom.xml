@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-26T18:36:42.000Z</updated>
+  <updated>2015-04-26T18:38:40.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -19,14 +19,14 @@
     <link href="http://kacperwang.github.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <id>http://kacperwang.github.io/2015/04/27/stylus菜鸟入门使用方法/</id>
     <published>2015-04-26T17:17:02.000Z</published>
-    <updated>2015-04-26T18:36:42.000Z</updated>
+    <updated>2015-04-26T18:38:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="stylus介绍">stylus介绍</h2><p>是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，<code>LESS</code>， <code>SASS</code>都在这方面做了一些贡献。  </p>
 <p><code>Stylus</code> 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 <code>Stylus</code> 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 <code>SASS</code>/<code>LESS</code> 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。  </p>
 <p><code>Stylus</code>默认使用 <code>.styl</code> 的作为文件扩展名，支持多样性的CSS语法。</p>
 <p><code>Stylus</code>功能上更为强壮，和js联系更加紧密。所以我选择 <code>Stylus</code>，<code>SASS</code> 玩儿过一段时间，主要是这玩意依赖ruby运行，所以我放弃使用了。</p>
 <h2 id="文档参考">文档参考</h2><p><a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">官方Stylus API</a><br><a href="http://www.zhangxinxu.com/jq/stylus/" target="_blank" rel="external">张鑫旭中文翻译</a><br><a href="http://learnboost.github.io/stylus/try.html" target="_blank" rel="external">Try Stylus!</a>  </p>
 <h2 id="Stylus安装">Stylus安装</h2><p>全局安装，安装之前你需要你安装 <code>nodejs</code> 这个怎么安装搜去哦。</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g stylus</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> stylus -g</span><br></pre></td></tr></table></figure>
 <p>这样就算是安装完Stylus了，也可以正常使用Stylus。</p>
 <h2 id="生成CSS">生成CSS</h2><h3 id="命令行中">命令行中</h3><p>建立一个<code>stylusExample/</code>，再在里面建立 <code>src</code> 目录专门存放 <code>stylus</code> 文件，在里面建立 <code>example.styl</code> 文件。然后在 <code>stylusExample</code> 目录下面执行下面命令</p>
 <p><code>stylus --compress  src/</code>  </p>
