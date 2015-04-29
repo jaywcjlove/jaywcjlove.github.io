@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-29T08:46:46.000Z</updated>
+  <updated>2015-04-29T08:50:50.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[常见移动设备的 CSS3 Media Query 整理]]></title>
-    <link href="http://kacperwang.github.io/2015/04/29/%E5%B8%B8%E8%A7%81%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E7%9A%84-CSS3-Media-Query-%E6%95%B4%E7%90%86/"/>
-    <id>http://kacperwang.github.io/2015/04/29/常见移动设备的-CSS3-Media-Query-整理/</id>
+    <title><![CDATA[各种设备的CSS3MediaQuery整理及爽歪歪写法]]></title>
+    <link href="http://kacperwang.github.io/2015/04/29/%E5%90%84%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%9A%84CSS3MediaQuery%E6%95%B4%E7%90%86%E5%8F%8A%E7%88%BD%E6%AD%AA%E6%AD%AA%E5%86%99%E6%B3%95/"/>
+    <id>http://kacperwang.github.io/2015/04/29/各种设备的CSS3MediaQuery整理及爽歪歪写法/</id>
     <published>2015-04-29T08:20:54.000Z</published>
-    <updated>2015-04-29T08:46:46.000Z</updated>
+    <updated>2015-04-29T08:50:50.000Z</updated>
     <content type="html"><![CDATA[<h2 id="响应式布局">响应式布局</h2><p>响应式布局麻烦之处就是每个尺寸的都要进行css定义，这个真的不是一般的蛋疼，下面有搜集到的各种尺寸css Media Query内容，搜集来源：<a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank" rel="external">media-queries-for-standard-devices</a>。  </p>
 <p>看了之后是不是非常之蛋疼呢，那么只有使用工具来写这些玩意儿了，俺用得最爽的就是 <code>stylus</code> ，真的爽yy了，如果 <code>stylus</code> 不会玩耍请看这里 <a href="http://jslite.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_blank" rel="external">stylus入门使用方法</a></p>
 <p>stylus </p>
@@ -185,7 +185,7 @@
     <link href="http://kacperwang.github.io/2015/04/22/js%E8%8E%B7%E5%8F%96%E6%9D%A5%E6%BA%90%E7%9A%84URL%E4%BB%A3%E7%A0%81/"/>
     <id>http://kacperwang.github.io/2015/04/22/js获取来源的URL代码/</id>
     <published>2015-04-22T06:56:04.000Z</published>
-    <updated>2015-04-22T07:05:58.000Z</updated>
+    <updated>2015-04-29T15:55:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.referrer</span><br></pre></td></tr></table></figure>
 <h2 id="opener">opener</h2><p>如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用</p>
@@ -193,6 +193,7 @@
 <h2 id="合并">合并</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ref = <span class="string">''</span>; </span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.referrer.length &gt; <span class="number">0</span>) &#123; </span><br><span class="line">    ref = <span class="built_in">document</span>.referrer; </span><br><span class="line">&#125;<span class="keyword">try</span> &#123; </span><br><span class="line">    <span class="keyword">if</span> (ref.length == <span class="number">0</span> &amp;&amp; opener.location.href.length &gt; <span class="number">0</span>) &#123; </span><br><span class="line">        ref = opener.location.href; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="其它">其它</h2><h3 id="获取域名后面的">获取域名后面的</h3><p><code>window.location.pathname</code>  </p>
 <h3 id="获取URL">获取URL</h3><p><code>window.location.href</code>  </p>
+<h3 id="获取URL参数">获取URL参数</h3><p><code>location.search</code>               //=&gt;  “?hello=1&amp;wcj=2”<br><code>location.search.substr(1)</code>     //=&gt;  “hello=1&amp;wcj=2”<br><code>location.search.substr(1).split(&#39;&amp;&#39;)</code>   //=&gt;  [“hello=1”, “wcj=2”]</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
