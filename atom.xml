@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-30T18:17:47.000Z</updated>
+  <updated>2015-04-30T18:50:15.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://kacperwang.github.io/2015/04/30/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     <id>http://kacperwang.github.io/2015/04/30/js面向对象编程/</id>
     <published>2015-04-30T02:47:55.000Z</published>
-    <updated>2015-04-30T18:17:47.000Z</updated>
+    <updated>2015-04-30T18:50:15.000Z</updated>
     <content type="html"><![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>
 <a id="more"></a> 
 <h1 id="转载原地址">转载原地址</h1><p>阮一峰  </p>
@@ -125,7 +125,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Chinese = &#123;</span><br><span class="line">    nation:<span class="string">"中国"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>还有个对象，叫做“医生”。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  Doctor = &#123;</span><br><span class="line">    career:<span class="string">"医生"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>请问增氧才能让“医生” 去继承“中国人”呢？也就是说，我怎样才能生成一个“中国医生”的对象呢？<br>这里要注意，这连个对象都是普通对象，不是构造函数，无法使用构造函数的方法实现“继承”。  </p>
+<p>请问怎样才能让“医生” 去继承“中国人”呢？也就是说，我怎样才能生成一个“中国医生”的对象呢？<br>这里要注意，这连个对象都是普通对象，不是构造函数，无法使用构造函数的方法实现“继承”。  </p>
 <h2 id="object方法">object方法</h2><p>json格式的发明人 Douglas Crockford，提出了一个object()函数，可以做到这一点。  </p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">object</span><span class="params">(o)</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">F</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    F.prototype = o;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> F();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个object()函数，其实只是做一件事，就是把子对象的prototype 属性，指向父对象，从而使得子对象与父对象连在一起使用的时候，第一步先在父对象的基础上，生成子对象：</p>
@@ -148,12 +148,13 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Doctor.birthPlaces.push(<span class="string">'厦门'</span>);</span><br></pre></td></tr></table></figure>
 <p>发生了什么事儿？Chinese的“出生地”也被改掉了！</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Doctor.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港，厦门</span></span><br><span class="line"><span class="built_in">console</span>.log(Chinese.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港，厦门</span></span><br></pre></td></tr></table></figure>
+<p>所以，extendCopy()只是拷贝基本类型的数据，我们把这种拷贝叫做”浅拷贝”。这是早期jQuery实现继承的方式。</p>
 <h2 id="深拷贝">深拷贝</h2><p>所谓“深拷贝”，就是能够实现真正意义上的数组和对象的拷贝。它的实现并不难，只要递归调用“浅拷贝”就行了。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span><span class="params">(p,c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> c = c || &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> p[i] == <span class="string">'object'</span>)&#123;</span><br><span class="line">            c[i] = (p[i].constructor === <span class="built_in">Array</span>) ? []:&#123;&#125;;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            c[i] = p[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span><span class="params">(p,c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> c = c || &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> p[i] == <span class="string">'object'</span>)&#123;</span><br><span class="line">            c[i] = (p[i].constructor === <span class="built_in">Array</span>) ? []:&#123;&#125;;</span><br><span class="line">            deepCopy(p[i],c[i])</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            c[i] = p[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用的时候这样写：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  Doctor = deepCopy(Chinese);</span><br></pre></td></tr></table></figure>
-<p>现在，给父对象加一个属性，值为数组。然后，再子对象上修改这个属性：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Chinese.birthPlaces = [<span class="string">'北京'</span>,<span class="string">'上海'</span>,<span class="string">'香港'</span>];</span><br><span class="line">Doctor.birthPlaces.push(<span class="string">'厦门'</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Chinese.birthPlaces = [<span class="string">'北京'</span>,<span class="string">'上海'</span>,<span class="string">'香港'</span>];<span class="comment">//给父对象加一个属性，值为数组。</span></span><br><span class="line"><span class="keyword">var</span>  Doctor = deepCopy(Chinese);</span><br></pre></td></tr></table></figure>
+<p>然后，再子对象上修改这个属性：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Doctor.birthPlaces.push(<span class="string">'厦门'</span>);</span><br></pre></td></tr></table></figure>
 <p>这时，父对象就不会受到影响了。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Doctor.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港，厦门</span></span><br><span class="line"><span class="built_in">console</span>.log(Chinese.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港</span></span><br></pre></td></tr></table></figure>
 <p>目前 我封装的<a href="http://jslite.io" target="_blank" rel="external">JSLite.io</a> 就是使用的这种继承方法。JQuery 也是用的这种方法哦。</p>
