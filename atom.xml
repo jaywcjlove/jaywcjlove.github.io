@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-29T08:50:50.000Z</updated>
+  <updated>2015-04-30T18:17:47.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -13,6 +13,159 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[js面向对象编程]]></title>
+    <link href="http://kacperwang.github.io/2015/04/30/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    <id>http://kacperwang.github.io/2015/04/30/js面向对象编程/</id>
+    <published>2015-04-30T02:47:55.000Z</published>
+    <updated>2015-04-30T18:17:47.000Z</updated>
+    <content type="html"><![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>
+<a id="more"></a> 
+<h1 id="转载原地址">转载原地址</h1><p>阮一峰  </p>
+<p><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html" target="_blank" rel="external">Javascript面向对象编程（一）：封装</a><br><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="external">Javascript面向对象编程（二）：构造函数的继承</a><br><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html" target="_blank" rel="external">Javascript面向对象编程（三）：非构造函数的继承</a>   </p>
+<h1 id="封装">封装</h1><p>Javascript 是一种基于对象（object-based）的语言，一切皆对象。虽然新版的ES6有class(类)，但是它只是个语法糖而已，所以它不是一种正真的面向对象（OOP）语言。  </p>
+<p>如果需要把<code>属性</code>（property）和<code>方法</code>（method）封装成一个对象，我们要重原型对象生成一个实例对象，应该怎么做呢？</p>
+<h2 id="生成对象的原始模式">生成对象的原始模式</h2><p>假设我们把猫看成一个对象，它有 <code>名字</code> 和 <code>颜色</code> 两个属性。  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Cat = &#123;</span><br><span class="line">    name:<span class="string">""</span>,</span><br><span class="line">    color:<span class="string">""</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在，我们需要根据这个原型对象的规格（schema），生成两个实例对象。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cat1=&#123;&#125;;<span class="comment">//创建一个空对象</span></span><br><span class="line">    cat1.name=<span class="string">"大毛"</span>;</span><br><span class="line">    cat1.color=<span class="string">"黄毛"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cat2 = &#123;&#125;;</span><br><span class="line">    cat2.name = <span class="string">"二毛"</span>;</span><br><span class="line">    cat2.color = <span class="string">"黑色"</span>;</span><br></pre></td></tr></table></figure>
+<p>进入简单的封装了，把连个属性封装到一个对象里面。但是这里面又俩缺点：</p>
+<ol>
+<li>如果多生成几个实例，写起来就非常麻烦</li>
+<li>实例与原型之间，没有任何办法，可以看出什么关联</li>
+</ol>
+<h2 id="原始模式的改进">原始模式的改进</h2><p>我们可以写一个函数，解决代码重复的问题。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span><span class="params">(name,color)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        name:name,</span><br><span class="line">        color:color</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后生成实例对象，对于是调用函数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cat1 = Cat(<span class="string">'大毛'</span>,<span class="string">'黄毛'</span>);</span><br><span class="line"><span class="keyword">var</span> cat2 = Cat(<span class="string">'二毛'</span>,<span class="string">'黑色'</span>);</span><br></pre></td></tr></table></figure>
+<p>这种方法的问题依然是，cat1和cat2之间没有内在的联系，不能反映出他们是统一个原型对象的实例。</p>
+<h2 id="构造函数模式">构造函数模式</h2><p>为了解决从圆形对象生成实例的问题，javascript 提供了一个构造函数（Constructor）模式。  </p>
+<p>所谓的<code>构造函数</code> ， 其实是一个普通的函数，但是内部使用了 <code>this</code> 变量。对构造函数使用<code>new</code> 运算符，就能生成实例，并且<code>this</code> 变量会绑定在实例对象上。  </p>
+<p>比如，猫的原型对象现在可以这样写：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span><span class="params">(name,color)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在可以生成实例对象了。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">'大毛'</span>,<span class="string">'黄色'</span>);</span><br><span class="line"><span class="keyword">var</span> cat2 = <span class="keyword">new</span> Cat(<span class="string">'二毛'</span>,<span class="string">'黑色'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(cat1.name); <span class="comment">//==&gt; 黄毛</span></span><br><span class="line"><span class="built_in">console</span>.log(cat1.color); <span class="comment">//==&gt; 大黄</span></span><br></pre></td></tr></table></figure>
+<p>这个时候 <code>cat1</code> 和 <code>cat2</code> 会自动含有一个 <code>constructor</code> 属性，指向它们的构造函数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(cat1.constructor == Cat); <span class="comment">//==&gt; true</span></span><br><span class="line"><span class="built_in">console</span>.log(cat2.constructor == Cat); <span class="comment">//==&gt; true</span></span><br></pre></td></tr></table></figure>
+<p>javascript 还提供了一个 <code>instanceof</code> 运算符，验证原型对象与实例对象之间的关系。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(cat1 <span class="keyword">instanceof</span> Cat); <span class="comment">//==&gt; true</span></span><br><span class="line"><span class="built_in">console</span>.log(cat2 <span class="keyword">instanceof</span> Cat); <span class="comment">//==&gt; true</span></span><br></pre></td></tr></table></figure>
+<h2 id="构造函数模式的问题">构造函数模式的问题</h2><p>构造函数方法很好用，但是存在一个浪费内存的问题。  </p>
+<p>请看，我们现在为<code>Cat</code>对象添加一个不变的属性 <code>type</code> (种类)，再添加一个方法 <code>eat</code> (吃老鼠)。那么，原型对象 <code>Cat</code> 就变成了下面这样：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span><span class="params">(name,color)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">    <span class="keyword">this</span>.type = <span class="string">"猫科动物"</span>;</span><br><span class="line">    <span class="keyword">this</span>.eat = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123; <span class="built_in">console</span>.log(<span class="string">'吃老鼠'</span>) &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还是采用相同的方法，生成实例：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cat1 =<span class="keyword">new</span> Cat(<span class="string">'大毛'</span>,<span class="string">'黄色'</span>);</span><br><span class="line"><span class="keyword">var</span> cat2 =<span class="keyword">new</span> Cat(<span class="string">'二毛'</span>,<span class="string">'黑色'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.type); <span class="comment">//==&gt;猫科动物</span></span><br><span class="line">cat1.eat(); <span class="comment">//==&gt; 吃老鼠</span></span><br></pre></td></tr></table></figure>
+<p>表面上好像没有什么问题，但是实际上这样做，又个很大的弊端。那就是对于每一个实例对象，type 属性和eat() 方法都是一模一样的内容，每一次生成一个实例，都必须为重复的内容，多占用一些内存。这样既不环保，也缺乏效率。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(cat1.eat == cat2.eat); <span class="comment">//=&gt; false</span></span><br></pre></td></tr></table></figure>
+<p>能补能让type 属性和eat()方法再内存中只生成一次，然后所有实例都指向那个内存地址呢？回答是可以的。（哈哈不是我回答的，阮一峰老师回答的）</p>
+<h2 id="Prototype模式">Prototype模式</h2><p>javascript 规定，每一个构造函数都有一个prototype属性，指向另一个对象。这个对象的所有属性和方法，，都会被构造函数的实体继承。  </p>
+<p>这就意味着，我们可以把那些不变的属性和方法，直接定义在 prototype 对象上。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span><span class="params">(name,color)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">&#125;</span><br><span class="line">Cat.prototype.type = <span class="string">"猫科动物"</span>; </span><br><span class="line">Cat.prototype.eat = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123; <span class="built_in">console</span>.log(<span class="string">"吃老鼠"</span>) &#125;</span><br></pre></td></tr></table></figure>
+<p>然后生成实例。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">'大毛'</span>,<span class="string">'黄色'</span>);</span><br><span class="line"><span class="keyword">var</span> cat2 = <span class="keyword">new</span> Cat(<span class="string">'二毛'</span>,<span class="string">'黑色'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.type); <span class="comment">//==&gt; 猫科动物</span></span><br><span class="line">cat1.eat(); <span class="comment">//==&gt; 吃老鼠</span></span><br></pre></td></tr></table></figure>
+<p>这样所有实例的 type 属性和 eat() 方法，其实都是同一个内存地址，指向prototype对象，因此就提高了运行效率。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(cat1.eat == cat2.eat); <span class="comment">//==&gt; true</span></span><br></pre></td></tr></table></figure>
+<h2 id="Prototype模式的验证方法">Prototype模式的验证方法</h2><p>未了配合prototype属性，javascript定义了一些辅助方法，帮助我们使用。</p>
+<h3 id="isPrototypeOf()">isPrototypeOf()</h3><p>这个方法来判断，某个prototype 对象和某个实例之间的关系。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Cat.prototype.isPrototypeOf(cat1)); <span class="comment">//==&gt; true</span></span><br><span class="line"><span class="built_in">console</span>.log(Cat.prototype.isPrototypeOf(cat2)); <span class="comment">//==&gt; true</span></span><br></pre></td></tr></table></figure>
+<h3 id="hasOwnProperty()">hasOwnProperty()</h3><p>每个实例对象都有一个 hasOwnProperty()方法，用来判断某一个属性到底是本地属性，还是继承自prototype 对象的属性。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(cat1.hasOwnProperty(<span class="string">'name'</span>)); <span class="comment">//==&gt; true</span></span><br><span class="line"><span class="built_in">console</span>.log(cat1.hasOwnProperty(<span class="string">'type'</span>)); <span class="comment">//==&gt; false</span></span><br></pre></td></tr></table></figure>
+<h3 id="in_运算符">in 运算符</h3><p>in运算符可以用来判断，某个实例是否含有某个属性，不管是不是本地属性。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'name'</span> <span class="keyword">in</span> cat1); <span class="comment">//==&gt; true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'type'</span> <span class="keyword">in</span> cat1); <span class="comment">//==&gt; true</span></span><br></pre></td></tr></table></figure>
+<p>in运算符黑可以用来遍历某个对象的所有属性。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> cat1)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"cat1["</span>+prop+<span class="string">"]="</span>+cat1[prop])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="构造函数的继承">构造函数的继承</h1><p>这一部分主要介绍的是，对象之间的 <code>继承</code> 的五种方法。比如，现在有一个 <code>动物</code> 对象的构造函数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.species = <span class="string">"动物"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还有个<code>猫</code> 对象的构造函数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span><span class="params">(name,color)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如何才能使 <code>猫</code> 继承 <code>动物</code> 呢？</p>
+<h2 id="构造函数绑定">构造函数绑定</h2><p>第一种方法也是最简单的方法，使用 <code>call</code> 或 <code>apply</code> 方法，将父对象的构造函数绑定在子对象上，即在子对象构造函数中加一行：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span><span class="params">(name,color)</span></span>&#123;</span><br><span class="line">    Animal.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">'大毛'</span>,<span class="string">'黄色'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.species); <span class="comment">//==&gt; 动物</span></span><br></pre></td></tr></table></figure>
+<h2 id="prototype模式">prototype模式</h2><p>第二种方法便常见，使用 prototype 属性。<br>如何“猫”的prototype 对象，指向一个 Animal 的实例，那么所有“猫”的实例，就能继承 Animal 了。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Cat.prototype = <span class="keyword">new</span> Animal(); </span><br><span class="line"><span class="comment">//代码第一行，我们将Cat的prototype对象指向一个Animal的实例。</span></span><br><span class="line">Cat.prototype.constructor = Cat;</span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">'大毛'</span>,<span class="string">'黄色'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.species); <span class="comment">//==&gt; 动物</span></span><br></pre></td></tr></table></figure>
+<p><code>Cat.prototype = new Animal();</code> 这行代码意思是：我们将Cat的prototype对象指向一个Animal的实例。它相当于完全删除了prototype对象原先的值，然后富裕一个新值。</p>
+<p><code>Cat.prototype.constructor = Cat;</code> 这行代码意思是：原来，任何一个 <code>prototype</code> 对象都有一个 <code>constructor</code> 属性，指向它的构造函数。如果没有<code>Cat.prototype = new Animal();</code> 这一行，<code>Cat.prototype.constructor</code> 是指向Cat的；加了这一行以后，<code>Cat.prototype.constructor</code> 指向 <code>Animal</code>。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Cat.prototype.constructor == Animal); <span class="comment">//==&gt; true</span></span><br></pre></td></tr></table></figure>
+<p>更重要的是，每一个实例也有一个 <code>constructor</code> 属性，默认调用 <code>prototype</code> 对象的 <code>constructor</code> 属性。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(cat1.constructor == Cat.prototype.constructor); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>因此，在运行 <code>Cat.prototype = new Animal();</code> 这一行之后，<code>cat1.constructor</code> 也指向  <code>Animal</code> !</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(cat1.constructor == Animal); <span class="comment">//==&gt;true</span></span><br></pre></td></tr></table></figure>
+<p>这显然会导致继承链的絮乱(cat1明明是用构造函数Cat生成的)，因此我们必须动手纠正，将 <code>Cat.prototype</code> 对象的 <code>constructor</code> 值改为Cat。这就是第二行的意思。  </p>
+<p>这个是很重要的一点，编程时务必要遵守。下文都遵循这一点，即如果替换了 <code>prototype</code> 对象，<code>o.prototype = {};</code> 那么，下一步必然是为新的 <code>prototype</code> 对象上加 <code>constructor</code> 属性，并将这个属性指回原来的构造函数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">o.prototype.constructor = o;</span><br></pre></td></tr></table></figure>
+<h2 id="直接继承prototype">直接继承prototype</h2><p>第三种方法是对第二种方法的改进。由于 <code>Animal</code> 对象中，不变的属性都可以直接写入 <code>Animal.prototype</code>。所以，我们也可以让Cat()跳过 Animal()，直接继承 Animal.prototype 。  </p>
+<p>现在，我们先将 Animal 对象改写。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">Animal.prototype.species = <span class="string">"动物"</span>;</span><br></pre></td></tr></table></figure>
+<p>然后，将Cat的 <code>prototype</code> 对象，然后指向 Animal 的 prototype 对象，这样就完成了继承。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Cat.prototype = Animal.prototype;</span><br><span class="line">Cat.prototype.constructor = Cat;</span><br><span class="line"><span class="keyword">var</span> cat1= <span class="keyword">new</span> Cat(<span class="string">"大毛"</span>,<span class="string">"黄色"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.species);<span class="comment">//==&gt;动物</span></span><br></pre></td></tr></table></figure>
+<p>与前一种方法相比，这样做的有点是效率比较高（不用执行和建立 Animal 的实例了），比较省内存。缺点是 Cat.prototype 和 Animal.prototype 现在只想了同一个对象，那么任何对象 Cat.prototype 的修改，都会反映到 Animal.prototype 。<br>所以，上面这一段代码其实是有问题的。请看第二行</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Cat.prototype.constructor =Cat;</span><br></pre></td></tr></table></figure>
+<p>这一句实际上把 Animal.prototype 对象 constructor 属性也改掉了！</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Animal.prototype.constructor); <span class="comment">//=&gt; Cat</span></span><br></pre></td></tr></table></figure>
+<h2 id="利用空对象作为中介">利用空对象作为中介</h2><p>由于“直接继承prototype”存在上述的缺点，所以就有第四种方法，利用一个空对象作为中介。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">F.prototype = Animal.prototype;</span><br><span class="line">Cat.prototype = <span class="keyword">new</span> F();</span><br><span class="line">Cat.prototype.constructor = Cat;</span><br></pre></td></tr></table></figure>
+<p>F是空对象，所以几乎占内存。这事，修改 Cat 的 prototype 对象，就不会影响到 Animal 的 prototype 对象。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Animal.prototype.constructor); <span class="comment">//==&gt; Animal</span></span><br></pre></td></tr></table></figure>
+<p>我们将上面的方法，封装成一个函数，方便于使用。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span><span class="params">(Child,Parent)</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    F.prototype = Parent.prototype;</span><br><span class="line">    Child.prototype = <span class="keyword">new</span> F();</span><br><span class="line">    Child.prototype.constructor = Child;</span><br><span class="line">    Child.uber = Parent.prototype;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用的时候，方法如下</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">extend(Cat,Animal);</span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">'大毛'</span>,<span class="string">'黄色'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.species); <span class="comment">//==&gt; 动物</span></span><br></pre></td></tr></table></figure>
+<p>这个 extend 函数，就是 YUI 库如何实现继承的方法。<br>另外，说明一点，函数体最后一行</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Child.uber = Parent.prototype;</span><br></pre></td></tr></table></figure>
+<p>意思是为子对象设一个uber 属性，这个属性直接指向父对象的prototype属性。（uber是一个德语词，意思是“向上”、“上一层”。）这等于在子对象上打开一条通道，可以直接调用父对象的方法。这一行放在这里，只是为了实现继承的完备性，纯属备用性质。</p>
+<h2 id="拷贝继承">拷贝继承</h2><p>上面采用 <code>prototype</code> 对象，实现继承。我们也可以换一种思路，纯粹采用“拷贝”方法实现继承。简单说，如果把父对象的所有属性和方法，拷贝进子对象，不也能够实现继承吗？这样我们有了第五种方法。<br>首先，还是把 Animal 的所有不变属性，都放到它的 prototype 对象上。  </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">Animal.prototype.species = <span class="string">"动物"</span>;</span><br></pre></td></tr></table></figure>
+<p>然后，再写一个函数，实现属性拷贝的目的。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend2</span><span class="params">(Child,Parent)</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> p = Parent.prototype;</span><br><span class="line">    <span class="keyword">var</span> c = Child.prototype;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">        c[i] = p[i]</span><br><span class="line">    &#125;</span><br><span class="line">    c.uber = p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个函数的作用，就是将父对象的prototype 对象中的属性，一一拷贝给 Child 对象的 prototype 对象。  </p>
+<p>使用的时候，这样写：  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">extend2(Cat,Animal);</span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">"大毛"</span>,<span class="string">"黄色"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.species); <span class="comment">//==&gt; 动物</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="非构造函数的继承">非构造函数的继承</h1><h2 id="什么是“非构造函数”的继承？">什么是“非构造函数”的继承？</h2><p>比如，现在有一个对象，叫做“中国人”。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Chinese = &#123;</span><br><span class="line">    nation:<span class="string">"中国"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还有个对象，叫做“医生”。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  Doctor = &#123;</span><br><span class="line">    career:<span class="string">"医生"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请问增氧才能让“医生” 去继承“中国人”呢？也就是说，我怎样才能生成一个“中国医生”的对象呢？<br>这里要注意，这连个对象都是普通对象，不是构造函数，无法使用构造函数的方法实现“继承”。  </p>
+<h2 id="object方法">object方法</h2><p>json格式的发明人 Douglas Crockford，提出了一个object()函数，可以做到这一点。  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">object</span><span class="params">(o)</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">F</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    F.prototype = o;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> F();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个object()函数，其实只是做一件事，就是把子对象的prototype 属性，指向父对象，从而使得子对象与父对象连在一起使用的时候，第一步先在父对象的基础上，生成子对象：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Doctor = object(Chinese);</span><br></pre></td></tr></table></figure>
+<p>然后，再加上子对象本身的属性：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Doctor.career = <span class="string">"医生"</span>;</span><br></pre></td></tr></table></figure>
+<p>这时，子对象已经继承了父对象的属性了。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Doctor.nation); <span class="comment">//==&gt;中国</span></span><br></pre></td></tr></table></figure>
+<h2 id="浅拷贝">浅拷贝</h2><p>除了使用“prototype链”以外，还有另一种思路：把父对象的属性，全部拷贝给子对象，也能实现继承。  </p>
+<p>下面这个函数，就是在做拷贝：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extendCopy</span><span class="params">(p)</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> c = &#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">        c[i] = p[i]</span><br><span class="line">    &#125;</span><br><span class="line">    c.uber = p;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用的时候，这样写：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Doctor = extendCopy(Chinese);</span><br><span class="line">Doctor.career = <span class="string">"医生"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(Doctor.nation) <span class="comment">//==&gt; 中国</span></span><br></pre></td></tr></table></figure>
+<p>但是，这样拷贝有一个问题。那就是，如果父对象的属性等于数组或者另一个对象，那么实际上，子对象获得的只有一个内存地址，而不是真正拷贝，因为存在父对象被篡改的可能。</p>
+<p>请看，现在给Chinese 添加一个“出生地”属性，它的值是一个数组。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Chinese.birthPlaces = [<span class="string">"北京"</span>,<span class="string">"上海"</span>,<span class="string">"香港"</span>];</span><br></pre></td></tr></table></figure>
+<p>通过 extendCopy() 函数，Doctor 继承了Chinese。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Doctor = extendCopy(Chinese)</span><br></pre></td></tr></table></figure>
+<p>然后，我们为 Doctor 的“出生地”添加一个城市：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Doctor.birthPlaces.push(<span class="string">'厦门'</span>);</span><br></pre></td></tr></table></figure>
+<p>发生了什么事儿？Chinese的“出生地”也被改掉了！</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Doctor.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港，厦门</span></span><br><span class="line"><span class="built_in">console</span>.log(Chinese.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港，厦门</span></span><br></pre></td></tr></table></figure>
+<h2 id="深拷贝">深拷贝</h2><p>所谓“深拷贝”，就是能够实现真正意义上的数组和对象的拷贝。它的实现并不难，只要递归调用“浅拷贝”就行了。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span><span class="params">(p,c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> c = c || &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> p[i] == <span class="string">'object'</span>)&#123;</span><br><span class="line">            c[i] = (p[i].constructor === <span class="built_in">Array</span>) ? []:&#123;&#125;;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            c[i] = p[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用的时候这样写：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  Doctor = deepCopy(Chinese);</span><br></pre></td></tr></table></figure>
+<p>现在，给父对象加一个属性，值为数组。然后，再子对象上修改这个属性：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Chinese.birthPlaces = [<span class="string">'北京'</span>,<span class="string">'上海'</span>,<span class="string">'香港'</span>];</span><br><span class="line">Doctor.birthPlaces.push(<span class="string">'厦门'</span>);</span><br></pre></td></tr></table></figure>
+<p>这时，父对象就不会受到影响了。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Doctor.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港，厦门</span></span><br><span class="line"><span class="built_in">console</span>.log(Chinese.birthPlaces); <span class="comment">//==&gt; 北京，上海，香港</span></span><br></pre></td></tr></table></figure>
+<p>目前 我封装的<a href="http://jslite.io" target="_blank" rel="external">JSLite.io</a> 就是使用的这种继承方法。JQuery 也是用的这种方法哦。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>]]>
+    
+    </summary>
+    
+      <category term="js" scheme="http://kacperwang.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[各种设备的CSS3MediaQuery整理及爽歪歪写法]]></title>
@@ -185,7 +338,7 @@
     <link href="http://kacperwang.github.io/2015/04/22/js%E8%8E%B7%E5%8F%96%E6%9D%A5%E6%BA%90%E7%9A%84URL%E4%BB%A3%E7%A0%81/"/>
     <id>http://kacperwang.github.io/2015/04/22/js获取来源的URL代码/</id>
     <published>2015-04-22T06:56:04.000Z</published>
-    <updated>2015-04-29T16:32:13.000Z</updated>
+    <updated>2015-04-29T16:35:42.000Z</updated>
     <content type="html"><![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.referrer</span><br></pre></td></tr></table></figure>
 <h2 id="opener">opener</h2><p>如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用</p>
@@ -194,7 +347,7 @@
 <h2 id="其它">其它</h2><h3 id="获取域名后面的">获取域名后面的</h3><p><code>window.location.pathname</code>  </p>
 <h3 id="获取URL">获取URL</h3><p><code>window.location.href</code>  </p>
 <h3 id="获取URL参数">获取URL参数</h3><p><code>location.search</code>               //=&gt;  “?hello=1&amp;wcj=2”<br><code>location.search.substr(1)</code>     //=&gt;  “hello=1&amp;wcj=2”<br><code>location.search.substr(1).split(&#39;&amp;&#39;)</code>   //=&gt;  [“hello=1”, “wcj=2”]</p>
-<h3 id="获取URL参数_返回JSON">获取URL参数 返回JSON</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> url=location.search.substr(<span class="number">1</span>).split(<span class="string">'&amp;'</span>),</span><br><span class="line">    i=url.length,</span><br><span class="line">    _url,</span><br><span class="line">    GET=&#123;&#125;;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">while</span>(i--)&#123;</span><br><span class="line">    _url = url[i].split(<span class="string">'='</span>);</span><br><span class="line">    GET[_url.shift()]=<span class="built_in">decodeURIComponent</span>(_url);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(GET)  <span class="comment">//=&gt; Object &#123;wcj: "2", hello: "1"&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="获取URL返回JSON">获取URL返回JSON</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> url=location.search.substr(<span class="number">1</span>).split(<span class="string">'&amp;'</span>),</span><br><span class="line">    i=url.length,</span><br><span class="line">    _url,</span><br><span class="line">    GET=&#123;&#125;;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">while</span>(i--)&#123;</span><br><span class="line">    _url = url[i].split(<span class="string">'='</span>);</span><br><span class="line">    GET[_url.shift()]=<span class="built_in">decodeURIComponent</span>(_url);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(GET)  <span class="comment">//=&gt; Object &#123;wcj: "2", hello: "1"&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="获取URL参数-1">获取URL参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 获取特定字段的查询字符串</span><br><span class="line"> * @param &#123;String&#125; name: 查询字符串的字段名</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQuerySrting</span><span class="params">(name)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> search = location.search.substring(<span class="number">1</span>).split(<span class="string">'&amp;'</span>);</span><br><span class="line">    <span class="keyword">var</span> value = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; search.length;i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> keyValue = search[i].split(<span class="string">'='</span>);</span><br><span class="line">        <span class="keyword">if</span> (keyValue[<span class="number">0</span>] == name) &#123;</span><br><span class="line">            value = keyValue[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
@@ -1432,43 +1585,6 @@
       <category term="js" scheme="http://kacperwang.github.io/tags/js/"/>
     
       <category term="正则" scheme="http://kacperwang.github.io/tags/%E6%AD%A3%E5%88%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[js 判断是否网络断了]]></title>
-    <link href="http://kacperwang.github.io/2015/02/17/JS-%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E7%BD%91%E7%BB%9C%E6%96%AD%E4%BA%86/"/>
-    <id>http://kacperwang.github.io/2015/02/17/JS-判断是否网络断了/</id>
-    <published>2015-02-17T02:15:58.000Z</published>
-    <updated>2015-04-19T04:51:12.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/onlinenetwork/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/onlinenetwork.svg" alt=""></a> <a href="https://github.com/jaywcjlove/onlinenetwork/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/onlinenetwork.svg" alt=""></a> <a href="https://github.com/jaywcjlove/onlinenetwork/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/onlinenetwork.svg" alt=""></a> <a href="https://raw.githubusercontent.com/jaywcjlove/onlinenetwork/master/MIT-LICENSE" target="_blank" rel="external"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt=""></a> </p>
-<h2 id="最佳方法：">最佳方法：</h2><blockquote>
-<p>结合下面的方法混合使用</p>
-<p>在<code>IE</code>和<code>Firefox</code>上使用Ajax轮询检查网络是否断了，其他浏览器上使用 <code>online</code> 和<code>offline</code>事件 侦听网络。</p>
-</blockquote>
-<p>下载地址：<a href="https://github.com/jaywcjlove/onlinenetwork" target="_blank" rel="external">onlinenetwork for github</a></p>
-<h3 id="引用">引用</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"online.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="侦听是否连上网络">侦听是否连上网络</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.onLineHandler = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"连上了！"</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="侦听是否断开网络">侦听是否断开网络</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.offLineHandler = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"断开网络！"</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="一般判断方法:">一般判断方法:</h2><h3 id="方法一：利用online和offline事件">方法一：利用online和offline事件</h3><blockquote>
-<p>此方法是通过 <code>online</code> 和 <code>offline</code> 事件来侦听是否断网，但是这个在 <code>IE</code> 和 <code>Firefox</code> 中，并非断网了就是真的断网了。（如火狐中在选择 <code>菜单&gt;&gt;文件&gt;&gt;脱机工作</code>才会触发 <code>online</code> 和 <code>offline</code> 事件）    </p>
-</blockquote>
-<p>总之在<code>IE</code>和<code>Firefox</code>中一般情况下不能触发这俩事件，只有在选择脱机状态下才能触发此事件。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> status = <span class="built_in">document</span>.getElementById(<span class="string">"status"</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">updateOnlineStatus</span><span class="params">(event)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> condition = navigator.onLine ? <span class="string">"online"</span> : <span class="string">"offline"</span>;</span><br><span class="line">        status.className = condition;</span><br><span class="line">        status.innerHTML = condition.toUpperCase();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'online'</span>,  updateOnlineStatus);</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'offline'</span>, updateOnlineStatus);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="方法二：Ajax轮询">方法二：Ajax轮询</h3><blockquote>
-<p>你懂的</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//Ajax...</span></span><br><span class="line">&#125;,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="方法三：利用IMG的onerror事件">方法三：利用IMG的onerror事件</h3><blockquote>
-<p>通过轮询生成  <code>IMG</code> 通过 <code>img</code> 的 <code>onerror</code> 事件判断是否断网<br>此方法弱点就是耗流量（一像素的空gif 轮询一次  <code>1.43KB</code> ）手机上用那就蛋疼了(这个样子就会偷偷跑流量…)。</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $img = $(<span class="string">'&lt;img src="http://jslite.io/blank.gif?'</span>+(<span class="keyword">new</span> <span class="built_in">Date</span>())+<span class="string">'"&gt;'</span>)</span><br><span class="line">    $img.appendTo(<span class="string">'body'</span>).css(<span class="string">"display"</span>,<span class="string">"none"</span>).load(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"连接成功！"</span>)</span><br><span class="line">        $(<span class="keyword">this</span>).remove()</span><br><span class="line">    &#125;).error(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"断网了！"</span>)</span><br><span class="line">        $(<span class="keyword">this</span>).remove()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,<span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="https://github.com/jaywcjlove/onlinenetwork/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issue]]>
-    </summary>
-    
-      <category term="js" scheme="http://kacperwang.github.io/tags/js/"/>
     
   </entry>
   
