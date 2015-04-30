@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kacperwang.github.io/"/>
-  <updated>2015-04-30T18:50:15.000Z</updated>
+  <updated>2015-04-30T19:01:16.000Z</updated>
   <id>http://kacperwang.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://kacperwang.github.io/2015/04/30/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     <id>http://kacperwang.github.io/2015/04/30/js面向对象编程/</id>
     <published>2015-04-30T02:47:55.000Z</published>
-    <updated>2015-04-30T18:50:15.000Z</updated>
-    <content type="html"><![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>
+    <updated>2015-04-30T19:01:16.000Z</updated>
+    <content type="html"><![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装<a href="http://jslite.io" target="_blank" rel="external">JSLite.io</a>就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>
 <a id="more"></a> 
 <h1 id="转载原地址">转载原地址</h1><p>阮一峰  </p>
 <p><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html" target="_blank" rel="external">Javascript面向对象编程（一）：封装</a><br><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="external">Javascript面向对象编程（二）：构造函数的继承</a><br><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html" target="_blank" rel="external">Javascript面向对象编程（三）：非构造函数的继承</a>   </p>
@@ -160,7 +160,7 @@
 <p>目前 我封装的<a href="http://jslite.io" target="_blank" rel="external">JSLite.io</a> 就是使用的这种继承方法。JQuery 也是用的这种方法哦。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>]]>
+    <![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装<a href="http://jslite.io">JSLite.io</a>就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>]]>
     
     </summary>
     

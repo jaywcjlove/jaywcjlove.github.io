@@ -515,7 +515,7 @@ header.hdpage {
   padding: 10px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  max-width: 180px;
+  max-width: 250px;
   display: block;
   overflow: hidden;
 }

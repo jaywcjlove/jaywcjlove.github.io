@@ -7,15 +7,15 @@
     <title>js面向对象编程 | JSLite.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="baidu-site-verification" content="1ZsVVOmjoT" />
-    <meta name="description" content="这个是学习阮一峰老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。">
+    <meta name="description" content="这个是学习阮一峰老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装JSLite.io就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js面向对象编程">
 <meta property="og:url" content="http://kacperwang.github.io/2015/04/30/js面向对象编程/index.html">
 <meta property="og:site_name" content="JSLite.io">
-<meta property="og:description" content="这个是学习阮一峰老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。">
+<meta property="og:description" content="这个是学习阮一峰老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装JSLite.io就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js面向对象编程">
-<meta name="twitter:description" content="这个是学习阮一峰老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。">
+<meta name="twitter:description" content="这个是学习阮一峰老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装JSLite.io就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。">
     
       <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
     
@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
                 <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#转载原地址"><span class="toc-number">1.</span> <span class="toc-text">转载原地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-number">2.</span> <span class="toc-text">封装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成对象的原始模式"><span class="toc-number">2.1.</span> <span class="toc-text">生成对象的原始模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原始模式的改进"><span class="toc-number">2.2.</span> <span class="toc-text">原始模式的改进</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数模式"><span class="toc-number">2.3.</span> <span class="toc-text">构造函数模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数模式的问题"><span class="toc-number">2.4.</span> <span class="toc-text">构造函数模式的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prototype模式"><span class="toc-number">2.5.</span> <span class="toc-text">Prototype模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prototype模式的验证方法"><span class="toc-number">2.6.</span> <span class="toc-text">Prototype模式的验证方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#isPrototypeOf()"><span class="toc-number">2.6.1.</span> <span class="toc-text">isPrototypeOf()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hasOwnProperty()"><span class="toc-number">2.6.2.</span> <span class="toc-text">hasOwnProperty()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#in_运算符"><span class="toc-number">2.6.3.</span> <span class="toc-text">in 运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#构造函数的继承"><span class="toc-number">3.</span> <span class="toc-text">构造函数的继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数绑定"><span class="toc-number">3.1.</span> <span class="toc-text">构造函数绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prototype模式"><span class="toc-number">3.2.</span> <span class="toc-text">prototype模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#直接继承prototype"><span class="toc-number">3.3.</span> <span class="toc-text">直接继承prototype</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用空对象作为中介"><span class="toc-number">3.4.</span> <span class="toc-text">利用空对象作为中介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拷贝继承"><span class="toc-number">3.5.</span> <span class="toc-text">拷贝继承</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#非构造函数的继承"><span class="toc-number">4.</span> <span class="toc-text">非构造函数的继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是“非构造函数”的继承？"><span class="toc-number">4.1.</span> <span class="toc-text">什么是“非构造函数”的继承？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#object方法"><span class="toc-number">4.2.</span> <span class="toc-text">object方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浅拷贝"><span class="toc-number">4.3.</span> <span class="toc-text">浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深拷贝"><span class="toc-number">4.4.</span> <span class="toc-text">深拷贝</span></a></li></ol></li></ol>
               </div>
               
-                <p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>
+                <p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装<a href="http://jslite.io" target="_blank" rel="external">JSLite.io</a>就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固一下。</p>
 <a id="more"></a> 
 <h1 id="转载原地址">转载原地址</h1><p>阮一峰  </p>
 <p><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html" target="_blank" rel="external">Javascript面向对象编程（一）：封装</a><br><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="external">Javascript面向对象编程（二）：构造函数的继承</a><br><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html" target="_blank" rel="external">Javascript面向对象编程（三）：非构造函数的继承</a>   </p>
@@ -309,7 +309,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/30/js面向对象编程/" class="article-date">
   <time datetime="2015-04-30T02:47:55.000Z" itemprop="datePublished">2015-04-30</time>
 </a>
-              <a data-url="http://kacperwang.github.io/2015/04/30/js面向对象编程/" data-id="ci94j7xhl001vz2glbbypocvh" class="article-share-link">Share</a>
+              <a data-url="http://kacperwang.github.io/2015/04/30/js面向对象编程/" data-id="ci94jhr99001v08glb97wcoxl" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
