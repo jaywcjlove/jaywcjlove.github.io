@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-05-02T19:07:44.000Z</updated>
+  <updated>2015-05-02T19:18:07.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[提交自己包到bower、npm中]]></title>
+    <title><![CDATA[提交自己的包到bower、npm中]]></title>
     <link href="http://jslite.io/2015/05/03/%E6%8F%90%E4%BA%A4%E8%87%AA%E5%B7%B1%E5%8C%85%E5%88%B0bower%E3%80%81npm%E4%B8%AD/"/>
     <id>http://jslite.io/2015/05/03/提交自己包到bower、npm中/</id>
     <published>2015-05-02T17:01:49.000Z</published>
-    <updated>2015-05-02T19:07:44.000Z</updated>
+    <updated>2015-05-02T19:18:07.000Z</updated>
     <content type="html"><![CDATA[<h1 id="bower">bower</h1><p>Bower 是 twitter 推出的一款包管理工具，基于nodejs的模块化思想，把功能分散到各个模块中，让模块和模块之间存在联系，通过 Bower 来管理模块间的这种联系。</p>
 <h2 id="安装Bower">安装Bower</h2><p>一旦你已经安装了上面所说的所有必要文件，键入以下命令安装Bower：</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> -g bower</span><br></pre></td></tr></table></figure>
@@ -47,7 +47,7 @@
 <p>注： <code>package.json</code> 中的<code>name</code>不要又特殊字符哦  </p>
 <h4 id="版本更新">版本更新</h4><p>修改package.json里的版本号，重新npm publish</p>
 <h4 id="取消发布">取消发布</h4><figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> unpublish</span><br></pre></td></tr></table></figure>
-<h2 id="其它命令">其它命令</h2><p><code>npm install storejs</code>  下载使用<br><code>npm config set registry https://registry.npm.taobao.org</code>  更换镜像地址<br><code>npm config get registry</code>  获取镜像地址  </p>
+<h2 id="其它命令">其它命令</h2><p><code>npm install storejs</code>  下载使用<br><code>npm config set registry https://registry.npm.taobao.org</code>  更换镜像地址<br><code>npm config get registry</code>  获取镜像地址<br><code>npm dist-tag ls jslite</code>  查看当前版本</p>
 <h2 id="国内优秀npm镜像">国内优秀npm镜像</h2><p>由于npm的源在国外，所以国内用户使用起来各种不方便。<br><a href="http://segmentfault.com/a/1190000000491162" target="_blank" rel="external">利用kappa搭建私有NPM仓库</a>  </p>
 <h3 id="淘宝npm镜像">淘宝npm镜像</h3><ol>
 <li>搜索地址：<a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></li>
@@ -618,10 +618,12 @@
     <link href="http://jslite.io/2015/04/17/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8cookie%E7%9A%84%E5%B0%81%E8%A3%85/"/>
     <id>http://jslite.io/2015/04/17/本地存储cookie的封装/</id>
     <published>2015-04-16T16:54:41.000Z</published>
-    <updated>2015-04-16T16:56:30.000Z</updated>
+    <updated>2015-05-02T20:55:28.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/cookie.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/cookie.js.svg" alt=""></a></p>
 <p>本地存储cookie的封装，提供简单的AIP，没有对IE做兼容处理，因为俺主要用于chrome，Safari，Firefox、<strong>移动端</strong>等先进浏览器里面跑。如果您有需求，可以自行解决，共享出来。目前俺用不上，所以不想兼容IE。。。</p>
 <p><strong><a href="https://github.com/jaywcjlove/cookie.js" target="_blank" rel="external">Github下载地址</a></strong></p>
+<h2 id="安装">安装</h2><h3 id="bower">bower</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ bower <span class="keyword">install</span> cookiejs</span><br></pre></td></tr></table></figure>
+<h3 id="npm">npm</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> cookiejs</span><br></pre></td></tr></table></figure>
 <h2 id="cookie_APIs">cookie APIs</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie(<span class="string">"test"</span>,<span class="string">"tank"</span>,<span class="number">1800</span>)  <span class="comment">//设置 cookie 的值，生存时间半个小时</span></span><br><span class="line">cookie(<span class="string">"test"</span>)              <span class="comment">//获取 cookie 的值，显示tank</span></span><br><span class="line">cookie(<span class="string">"test"</span>,<span class="literal">null</span>)         <span class="comment">//删除cookie test</span></span><br><span class="line">cookie()                    <span class="comment">//清空cookie</span></span><br><span class="line"></span><br><span class="line">cookie.set(<span class="string">"test"</span>,<span class="string">"tank"</span>,<span class="number">1800</span>)  <span class="comment">//====cookie("test","tank",1800)</span></span><br><span class="line">cookie.get(<span class="string">"test"</span>)              <span class="comment">//====cookie("test")</span></span><br><span class="line">cookie.remove(<span class="string">"test"</span>)           <span class="comment">//====cookie("test",null)</span></span><br><span class="line">cookie.clear()                  <span class="comment">//====cookie()</span></span><br><span class="line"></span><br><span class="line">cookie.all()                    <span class="comment">//获取所有 cookie</span></span><br></pre></td></tr></table></figure>
 <h3 id="批量设置cookie的值">批量设置cookie的值</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie.set(&#123;</span><br><span class="line">   name1: <span class="string">'value1'</span>,</span><br><span class="line">   name2: <span class="string">'value2'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h3 id="expires过期时间、_path路径、_domain域、以及_secure安全。">expires过期时间、 path路径、 domain域、以及 secure安全。</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cookie(<span class="string">"test"</span>,<span class="string">"123"</span>,&#123;</span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">"path"</span>: <span class="string">'/'</span>,</span><br><span class="line">    <span class="string">"domain"</span>:<span class="string">""</span></span><br><span class="line">&#125;);</span><br><span class="line">cookie(&#123;<span class="string">"test"</span>:<span class="string">"123"</span>&#125;,&#123;</span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">"path"</span>: <span class="string">'/'</span>,</span><br><span class="line">    <span class="string">"domain"</span>:<span class="string">""</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -1305,7 +1307,7 @@
     <link href="http://jslite.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://jslite.io/2015/04/01/git使用笔记/</id>
     <published>2015-03-31T17:42:45.000Z</published>
-    <updated>2015-04-11T17:19:22.000Z</updated>
+    <updated>2015-05-02T20:06:49.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。</p>
 <ul>
 <li><a href="http://git-scm.com/" target="_blank" rel="external">Git官网</a></li>
@@ -1351,7 +1353,7 @@
 <h3 id="更改pull">更改pull</h3><p>只需要更改config文件里，那三个url的顺序即可，fetch-url会直接对应排行第一的那个utl连接。    </p>
 <h2 id="新建仓库">新建仓库</h2><h3 id="init">init</h3><p><code>git init</code> #初始化  </p>
 <h3 id="status">status</h3><p><code>git status</code> #获取状态  </p>
-<h3 id="add">add</h3><p><code>git add file</code> #.或*代表全部添加</p>
+<h3 id="add">add</h3><p><code>git add file</code> #.或*代表全部添加<br><code>git rm --cached &lt;added_file_to_undo&gt;</code> 在commit之前撤销git add操作</p>
 <h3 id="commit">commit</h3><p><code>git commit -m &quot;message&quot;</code> #此处注意乱码</p>
 <h3 id="remote">remote</h3><p><code>git remote add origin git@github.com:JSLite/test.git</code> #添加源</p>
 <h3 id="push-1">push</h3><p><code>git push -u origin master</code> #push同事设置默认跟踪分支<br><code>git push origin master</code>   </p>
