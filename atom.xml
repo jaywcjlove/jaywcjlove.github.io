@@ -621,7 +621,7 @@
     <link href="http://jslite.io/2015/04/16/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8localStorage%E7%9A%84%E5%B0%81%E8%A3%85/"/>
     <id>http://jslite.io/2015/04/16/本地存储localStorage的封装/</id>
     <published>2015-04-16T04:24:58.000Z</published>
-    <updated>2015-04-16T11:35:16.000Z</updated>
+    <updated>2015-05-02T16:28:09.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/store.js.svg" alt=""></a>  </p>
 <p><a href="https://github.com/jaywcjlove/store.js" target="_blank" rel="external">store.js</a> 是一个实现了浏览器的本地存储的 JavaScript 封装 API，不是通过 Cookie 和 Flash 技术实现，而是使用 localStorage。小弟我主要是用于chrome，Safari，手机Web等先进浏览器里面跑。so….大家可以做兼容哦….</p>
 <p>比较诡异的是居然所有支持的浏览器目前都采用的5MB，尽管有一些浏览器可以让用户设置，但对于网页制作者来说，目前的形势就5MB来考虑是比较妥当的。</p>
@@ -677,6 +677,27 @@
 <td>url/uri</td>
 <td>String</td>
 <td>The page that called the method that triggered this change</td>
+</tr>
+</tbody>
+</table>
+<h2 id="兼容">兼容</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Chrome</th>
+<th>Firefox (Gecko)</th>
+<th>Internet Explorer</th>
+<th>Opera</th>
+<th>Safari (WebKit)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>localStorage</td>
+<td>4</td>
+<td>3.5 8</td>
+<td>10.50</td>
+<td>4</td>
 </tr>
 </tbody>
 </table>

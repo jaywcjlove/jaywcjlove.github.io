@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
             
             <div class="article-entry" itemprop="articleBody">
               <div class="page-toc">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地存储APIs"><span class="toc-number">1.</span> <span class="toc-text">本地存储APIs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#set"><span class="toc-number">1.1.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setAll"><span class="toc-number">1.2.</span> <span class="toc-text">setAll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get"><span class="toc-number">1.3.</span> <span class="toc-text">get</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getAll"><span class="toc-number">1.4.</span> <span class="toc-text">getAll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clear"><span class="toc-number">1.5.</span> <span class="toc-text">clear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#keys"><span class="toc-number">1.6.</span> <span class="toc-text">keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#has"><span class="toc-number">1.7.</span> <span class="toc-text">has</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#remove"><span class="toc-number">1.8.</span> <span class="toc-text">remove</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forEach"><span class="toc-number">1.9.</span> <span class="toc-text">forEach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定时清除"><span class="toc-number">1.10.</span> <span class="toc-text">定时清除</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#storage事件"><span class="toc-number">2.</span> <span class="toc-text">storage事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地存储大小"><span class="toc-number">3.</span> <span class="toc-text">本地存储大小</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地存储APIs"><span class="toc-number">1.</span> <span class="toc-text">本地存储APIs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#set"><span class="toc-number">1.1.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setAll"><span class="toc-number">1.2.</span> <span class="toc-text">setAll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get"><span class="toc-number">1.3.</span> <span class="toc-text">get</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getAll"><span class="toc-number">1.4.</span> <span class="toc-text">getAll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clear"><span class="toc-number">1.5.</span> <span class="toc-text">clear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#keys"><span class="toc-number">1.6.</span> <span class="toc-text">keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#has"><span class="toc-number">1.7.</span> <span class="toc-text">has</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#remove"><span class="toc-number">1.8.</span> <span class="toc-text">remove</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forEach"><span class="toc-number">1.9.</span> <span class="toc-text">forEach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定时清除"><span class="toc-number">1.10.</span> <span class="toc-text">定时清除</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#storage事件"><span class="toc-number">2.</span> <span class="toc-text">storage事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容"><span class="toc-number">3.</span> <span class="toc-text">兼容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地存储大小"><span class="toc-number">4.</span> <span class="toc-text">本地存储大小</span></a></li></ol>
               </div>
               
                 <p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/store.js.svg" alt=""></a>  </p>
@@ -229,6 +229,27 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
+<h2 id="兼容">兼容</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Chrome</th>
+<th>Firefox (Gecko)</th>
+<th>Internet Explorer</th>
+<th>Opera</th>
+<th>Safari (WebKit)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>localStorage</td>
+<td>4</td>
+<td>3.5 8</td>
+<td>10.50</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
 <h2 id="本地存储大小">本地存储大小</h2><p><code>JSON.stringify(localStorage).length</code> 当前占用多大容量  </p>
 <p><a href="https://arty.name/localstorage.html" target="_blank" rel="external">检测localstore容量上限</a>  </p>
 
@@ -238,7 +259,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/16/本地存储localStorage的封装/" class="article-date">
   <time datetime="2015-04-16T04:24:58.000Z" itemprop="datePublished">2015-04-16</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/16/本地存储localStorage的封装/" data-id="ci977bijw000ia4glcknemkyz" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/16/本地存储localStorage的封装/" data-id="ci978u4m2000izlgl8w3547us" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
