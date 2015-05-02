@@ -3,9 +3,9 @@
   <title><![CDATA[JSLite.io]]></title>
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://jaywcjlove.github.io/"/>
+  <link href="http://jslite.io/"/>
   <updated>2015-05-02T15:39:02.000Z</updated>
-  <id>http://jaywcjlove.github.io/</id>
+  <id>http://jslite.io/</id>
   
   <author>
     <name><![CDATA[kacper.wang]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[js面向对象编程]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/30/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
-    <id>http://jaywcjlove.github.io/2015/04/30/js面向对象编程/</id>
+    <link href="http://jslite.io/2015/04/30/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    <id>http://jslite.io/2015/04/30/js面向对象编程/</id>
     <published>2015-04-30T02:47:55.000Z</published>
     <updated>2015-05-02T15:39:02.000Z</updated>
     <content type="html"><![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装<a href="http://jslite.io" target="_blank" rel="external">JSLite.io</a>就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固系统的学习一下。</p>
@@ -164,14 +164,14 @@
     
     </summary>
     
-      <category term="js" scheme="http://jaywcjlove.github.io/tags/js/"/>
+      <category term="js" scheme="http://jslite.io/tags/js/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[各种设备的CSS3MediaQuery整理及爽歪歪写法]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/29/%E5%90%84%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%9A%84CSS3MediaQuery%E6%95%B4%E7%90%86%E5%8F%8A%E7%88%BD%E6%AD%AA%E6%AD%AA%E5%86%99%E6%B3%95/"/>
-    <id>http://jaywcjlove.github.io/2015/04/29/各种设备的CSS3MediaQuery整理及爽歪歪写法/</id>
+    <link href="http://jslite.io/2015/04/29/%E5%90%84%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%9A%84CSS3MediaQuery%E6%95%B4%E7%90%86%E5%8F%8A%E7%88%BD%E6%AD%AA%E6%AD%AA%E5%86%99%E6%B3%95/"/>
+    <id>http://jslite.io/2015/04/29/各种设备的CSS3MediaQuery整理及爽歪歪写法/</id>
     <published>2015-04-29T08:20:54.000Z</published>
     <updated>2015-04-29T08:50:50.000Z</updated>
     <content type="html"><![CDATA[<h2 id="响应式布局">响应式布局</h2><p>响应式布局麻烦之处就是每个尺寸的都要进行css定义，这个真的不是一般的蛋疼，下面有搜集到的各种尺寸css Media Query内容，搜集来源：<a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank" rel="external">media-queries-for-standard-devices</a>。  </p>
@@ -194,14 +194,14 @@
     <![CDATA[<h2 id="响应式布局">响应式布局</h2><p>响应式布局麻烦之处就是每个尺寸的都要进行css定义，这个真的不是一般的蛋疼，下面有搜集到的各种尺寸css Media Query内容，搜集来源：<a href="https://css-tricks.com/snippets]]>
     </summary>
     
-      <category term="css3" scheme="http://jaywcjlove.github.io/tags/css3/"/>
+      <category term="css3" scheme="http://jslite.io/tags/css3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[stylus入门使用方法]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>http://jaywcjlove.github.io/2015/04/27/stylus菜鸟入门使用方法/</id>
+    <link href="http://jslite.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>http://jslite.io/2015/04/27/stylus菜鸟入门使用方法/</id>
     <published>2015-04-26T17:17:02.000Z</published>
     <updated>2015-04-27T16:56:53.000Z</updated>
     <content type="html"><![CDATA[<h2 id="stylus介绍">stylus介绍</h2><p>是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，<code>LESS</code>， <code>SASS</code>都在这方面做了一些贡献。  </p>
@@ -328,16 +328,16 @@
 <p><cod]]>
     </summary>
     
-      <category term="css" scheme="http://jaywcjlove.github.io/tags/css/"/>
+      <category term="css" scheme="http://jslite.io/tags/css/"/>
     
-      <category term="stylus" scheme="http://jaywcjlove.github.io/tags/stylus/"/>
+      <category term="stylus" scheme="http://jslite.io/tags/stylus/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[js获取来源的URL代码]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/22/js%E8%8E%B7%E5%8F%96%E6%9D%A5%E6%BA%90%E7%9A%84URL%E4%BB%A3%E7%A0%81/"/>
-    <id>http://jaywcjlove.github.io/2015/04/22/js获取来源的URL代码/</id>
+    <link href="http://jslite.io/2015/04/22/js%E8%8E%B7%E5%8F%96%E6%9D%A5%E6%BA%90%E7%9A%84URL%E4%BB%A3%E7%A0%81/"/>
+    <id>http://jslite.io/2015/04/22/js获取来源的URL代码/</id>
     <published>2015-04-22T06:56:04.000Z</published>
     <updated>2015-04-29T16:35:42.000Z</updated>
     <content type="html"><![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
@@ -359,8 +359,8 @@
   
   <entry>
     <title><![CDATA[前端博客相关网站搜集]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/17/%E5%89%8D%E7%AB%AF%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E6%90%9C%E9%9B%86/"/>
-    <id>http://jaywcjlove.github.io/2015/04/17/前端博客相关网站搜集/</id>
+    <link href="http://jslite.io/2015/04/17/%E5%89%8D%E7%AB%AF%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E6%90%9C%E9%9B%86/"/>
+    <id>http://jslite.io/2015/04/17/前端博客相关网站搜集/</id>
     <published>2015-04-17T13:13:57.000Z</published>
     <updated>2015-04-23T09:57:47.000Z</updated>
     <content type="html"><![CDATA[<h1 id="中文前端开发博客网站列表">中文前端开发博客网站列表</h1><p>本博客网站列表会不断更新维护，如果有推荐的博客</p>
@@ -551,14 +551,14 @@
 <h2 id="组织团伙">组织团伙</h2><p><a href="http://www.w3.org/" target="_blank"]]>
     </summary>
     
-      <category term="网站导航" scheme="http://jaywcjlove.github.io/tags/%E7%BD%91%E7%AB%99%E5%AF%BC%E8%88%AA/"/>
+      <category term="网站导航" scheme="http://jslite.io/tags/%E7%BD%91%E7%AB%99%E5%AF%BC%E8%88%AA/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[本地存储cookie的封装]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/17/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8cookie%E7%9A%84%E5%B0%81%E8%A3%85/"/>
-    <id>http://jaywcjlove.github.io/2015/04/17/本地存储cookie的封装/</id>
+    <link href="http://jslite.io/2015/04/17/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8cookie%E7%9A%84%E5%B0%81%E8%A3%85/"/>
+    <id>http://jslite.io/2015/04/17/本地存储cookie的封装/</id>
     <published>2015-04-16T16:54:41.000Z</published>
     <updated>2015-04-16T16:56:30.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/cookie.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/cookie.js.svg" alt=""></a></p>
@@ -618,8 +618,8 @@
   
   <entry>
     <title><![CDATA[本地存储localStorage的封装]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/16/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8localStorage%E7%9A%84%E5%B0%81%E8%A3%85/"/>
-    <id>http://jaywcjlove.github.io/2015/04/16/本地存储localStorage的封装/</id>
+    <link href="http://jslite.io/2015/04/16/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8localStorage%E7%9A%84%E5%B0%81%E8%A3%85/"/>
+    <id>http://jslite.io/2015/04/16/本地存储localStorage的封装/</id>
     <published>2015-04-16T04:24:58.000Z</published>
     <updated>2015-04-16T11:35:16.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/store.js.svg" alt=""></a>  </p>
@@ -687,16 +687,16 @@
     <![CDATA[<p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jay]]>
     </summary>
     
-      <category term="js" scheme="http://jaywcjlove.github.io/tags/js/"/>
+      <category term="js" scheme="http://jslite.io/tags/js/"/>
     
-      <category term="localStorage" scheme="http://jaywcjlove.github.io/tags/localStorage/"/>
+      <category term="localStorage" scheme="http://jslite.io/tags/localStorage/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[在Mac下安装GraphicsMagick]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/16/%E5%9C%A8Mac%E4%B8%8B%E5%AE%89%E8%A3%85GraphicsMagick/"/>
-    <id>http://jaywcjlove.github.io/2015/04/16/在Mac下安装GraphicsMagick/</id>
+    <link href="http://jslite.io/2015/04/16/%E5%9C%A8Mac%E4%B8%8B%E5%AE%89%E8%A3%85GraphicsMagick/"/>
+    <id>http://jslite.io/2015/04/16/在Mac下安装GraphicsMagick/</id>
     <published>2015-04-16T02:47:53.000Z</published>
     <updated>2015-04-16T04:16:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="下载依赖">下载依赖</h2><p>GraphicsMagic根据使用功能的不同，依赖不同的组件，我需要的只是对jpeg和png进行简单的图片处理（缩放、裁剪啊什么的，不过它的功能可以更加强大），主要依赖了两个组件:</p>
@@ -718,16 +718,16 @@
 <h3 id="libjpeg">li]]>
     </summary>
     
-      <category term="Mac" scheme="http://jaywcjlove.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://jslite.io/tags/Mac/"/>
     
-      <category term="软件安装" scheme="http://jaywcjlove.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+      <category term="软件安装" scheme="http://jslite.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[date.js 对时间的操作]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/09/date-js-%E5%AF%B9%E6%97%B6%E9%97%B4%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
-    <id>http://jaywcjlove.github.io/2015/04/09/date-js-对时间的操作/</id>
+    <link href="http://jslite.io/2015/04/09/date-js-%E5%AF%B9%E6%97%B6%E9%97%B4%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
+    <id>http://jslite.io/2015/04/09/date-js-对时间的操作/</id>
     <published>2015-04-09T06:40:37.000Z</published>
     <updated>2015-04-16T06:04:21.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/date.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/date.js.svg" alt=""></a></p>
@@ -753,8 +753,8 @@
   
   <entry>
     <title><![CDATA[Grunt教程-前端自动化]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    <id>http://jaywcjlove.github.io/2015/04/09/Grunt教程-前端自动化/</id>
+    <link href="http://jslite.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    <id>http://jslite.io/2015/04/09/Grunt教程-前端自动化/</id>
     <published>2015-04-09T05:48:22.000Z</published>
     <updated>2015-04-15T15:24:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="为何选择Grunt?">为何选择Grunt?</h2><blockquote>
@@ -844,18 +844,18 @@
 <h2 id="准]]>
     </summary>
     
-      <category term="grunt" scheme="http://jaywcjlove.github.io/tags/grunt/"/>
+      <category term="grunt" scheme="http://jslite.io/tags/grunt/"/>
     
-      <category term="nodejs" scheme="http://jaywcjlove.github.io/tags/nodejs/"/>
+      <category term="nodejs" scheme="http://jslite.io/tags/nodejs/"/>
     
-      <category term="tools" scheme="http://jaywcjlove.github.io/tags/tools/"/>
+      <category term="tools" scheme="http://jslite.io/tags/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[JS获取时间并实现字符串和时间戳之间的转换]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/09/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E5%B9%B6%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/"/>
-    <id>http://jaywcjlove.github.io/2015/04/09/js获取时间并实现字符串和时间戳之间的转换/</id>
+    <link href="http://jslite.io/2015/04/09/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E5%B9%B6%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://jslite.io/2015/04/09/js获取时间并实现字符串和时间戳之间的转换/</id>
     <published>2015-04-08T17:31:27.000Z</published>
     <updated>2015-04-10T19:09:48.000Z</updated>
     <content type="html"><![CDATA[<h2 id="获取当前时间：">获取当前时间：</h2><h3 id="时间">时间</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDate = <span class="keyword">new</span> <span class="built_in">Date</span>();          <span class="comment">//当前时间</span></span><br></pre></td></tr></table></figure>
@@ -895,14 +895,14 @@
     <![CDATA[<h2 id="获取当前时间：">获取当前时间：</h2><h3 id="时间">时间</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class]]>
     </summary>
     
-      <category term="js" scheme="http://jaywcjlove.github.io/tags/js/"/>
+      <category term="js" scheme="http://jslite.io/tags/js/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSS 设置背景颜色透明度]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/09/CSS-%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E9%80%8F%E6%98%8E%E5%BA%A6/"/>
-    <id>http://jaywcjlove.github.io/2015/04/09/CSS-设置背景颜色透明度/</id>
+    <link href="http://jslite.io/2015/04/09/CSS-%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E9%80%8F%E6%98%8E%E5%BA%A6/"/>
+    <id>http://jslite.io/2015/04/09/CSS-设置背景颜色透明度/</id>
     <published>2015-04-08T17:05:26.000Z</published>
     <updated>2015-04-08T17:07:03.000Z</updated>
     <content type="html"><![CDATA[<h2 id="兼容IE">兼容IE</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4Bffffff,endColorstr=#4Bffffff);</span><br></pre></td></tr></table></figure>
@@ -911,14 +911,14 @@
     <![CDATA[<h2 id="兼容IE">兼容IE</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">filter:progid:DXImageTransform.Microsof]]>
     </summary>
     
-      <category term="css" scheme="http://jaywcjlove.github.io/tags/css/"/>
+      <category term="css" scheme="http://jslite.io/tags/css/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[bash快捷键]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/08/bash%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://jaywcjlove.github.io/2015/04/08/bash快捷键/</id>
+    <link href="http://jslite.io/2015/04/08/bash%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://jslite.io/2015/04/08/bash快捷键/</id>
     <published>2015-04-08T15:37:49.000Z</published>
     <updated>2015-04-08T16:41:02.000Z</updated>
     <content type="html"><![CDATA[<p><code>Ctrl + a</code> ：移到命令行首<br><code>Ctrl + e</code> ：移到命令行尾<br><code>Ctrl + f</code> ：按字符前移（右向）<br><code>Ctrl + b</code> ：按字符后移（左向）<br><code>Alt + f</code> ：按单词前移（右向）<br><code>Alt + b</code> ：按单词后移（左向）<br><code>Ctrl + xx</code>：在命令行首和光标之间移动<br><code>Ctrl + u</code> ：从光标处删除至命令行首<br><code>Ctrl + k</code> ：从光标处删除至命令行尾<br><code>Ctrl + w</code> ：从光标处删除至字首<br><code>Alt + d</code> ：从光标处删除至字尾<br><code>Ctrl + d</code> ：删除光标处的字符<br><code>Ctrl + h</code> ：删除光标前的字符<br><code>Ctrl + y</code> ：粘贴至光标后<br><code>Alt + c</code> ：从光标处更改为首字母大写的单词<br><code>Alt + u</code> ：从光标处更改为全部大写的单词<br><code>Alt + l</code> ：从光标处更改为全部小写的单词<br><code>Ctrl + t</code> ：交换光标处和之前的字符<br><code>Alt + t</code> ：交换光标处和之前的单词<br><code>Alt + Backspace</code>：与 <code>Ctrl + w</code> 相同  </p>
@@ -930,16 +930,16 @@
     <![CDATA[<p><code>Ctrl + a</code> ：移到命令行首<br><code>Ctrl + e</code> ：移到命令行尾<br><code>Ctrl + f</code> ：按字符前移（右向）<br><code>Ctrl + b</code> ：按字符后移（左向）<br]]>
     </summary>
     
-      <category term="bash" scheme="http://jaywcjlove.github.io/tags/bash/"/>
+      <category term="bash" scheme="http://jslite.io/tags/bash/"/>
     
-      <category term="快捷键" scheme="http://jaywcjlove.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <category term="快捷键" scheme="http://jslite.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[hexo模板制作小技巧]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/05/hexo%E6%A8%A1%E6%9D%BF%E5%88%B6%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <id>http://jaywcjlove.github.io/2015/04/05/hexo模板制作小技巧/</id>
+    <link href="http://jslite.io/2015/04/05/hexo%E6%A8%A1%E6%9D%BF%E5%88%B6%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>http://jslite.io/2015/04/05/hexo模板制作小技巧/</id>
     <published>2015-04-05T11:05:25.000Z</published>
     <updated>2015-04-16T05:01:31.000Z</updated>
     <content type="html"><![CDATA[<h2 id="读取config-yml配置文件">读取config.yml配置文件</h2><p>有两个 <code>config</code> 文件：  </p>
@@ -960,14 +960,14 @@
 <li>在 <code>themes/模板/_config.yml</code> ，模板中读取 <co]]>
     </summary>
     
-      <category term="hexo" scheme="http://jaywcjlove.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="http://jslite.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[chrome 使用技巧]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/05/chrome-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://jaywcjlove.github.io/2015/04/05/chrome-使用技巧/</id>
+    <link href="http://jslite.io/2015/04/05/chrome-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://jslite.io/2015/04/05/chrome-使用技巧/</id>
     <published>2015-04-05T10:04:11.000Z</published>
     <updated>2015-04-08T07:35:32.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Reference">Reference</h2><p><a href="https://plus.google.com/+AddyOsmani/posts/TanDFKEN9Kn" target="_blank" rel="external">Styled console logging in the Chrome DevTools (Canary)</a><br><a href="https://developer.chrome.com/devtools/docs/console-api" target="_blank" rel="external">Chrome Console API</a><br><a href="https://developer.chrome.com/devtools/docs/commandline-api" target="_blank" rel="external">Chrome Console Command Line API</a></p>
@@ -994,14 +994,14 @@
     <![CDATA[<h2 id="Reference">Reference</h2><p><a href="https://plus.google.com/+AddyOsmani/posts/TanDFKEN9Kn" target="_blank" rel="external">Styled co]]>
     </summary>
     
-      <category term="chrome" scheme="http://jaywcjlove.github.io/tags/chrome/"/>
+      <category term="chrome" scheme="http://jslite.io/tags/chrome/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSS编码规范]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/01/CSS%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
-    <id>http://jaywcjlove.github.io/2015/04/01/CSS编码规范/</id>
+    <link href="http://jslite.io/2015/04/01/CSS%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    <id>http://jslite.io/2015/04/01/CSS编码规范/</id>
     <published>2015-04-01T14:06:05.000Z</published>
     <updated>2015-04-08T17:07:13.000Z</updated>
     <content type="html"><![CDATA[<p>转载：<a href="https://github.com/ecomfe/spec" target="_blank" rel="external">原地址</a></p>
@@ -1211,20 +1211,20 @@
 <h2 id="1_前言">1 前言</h2><p>CSS作为网页样式的描述语言，在百度一直有着广泛]]>
     </summary>
     
-      <category term="css" scheme="http://jaywcjlove.github.io/tags/css/"/>
+      <category term="css" scheme="http://jslite.io/tags/css/"/>
     
-      <category term="编码规范" scheme="http://jaywcjlove.github.io/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+      <category term="编码规范" scheme="http://jslite.io/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
-      <category term="CSS" scheme="http://jaywcjlove.github.io/categories/CSS/"/>
+      <category term="CSS" scheme="http://jslite.io/categories/CSS/"/>
     
-      <category term="编码规范" scheme="http://jaywcjlove.github.io/categories/CSS/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+      <category term="编码规范" scheme="http://jslite.io/categories/CSS/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[git使用笔记]]></title>
-    <link href="http://jaywcjlove.github.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
-    <id>http://jaywcjlove.github.io/2015/04/01/git使用笔记/</id>
+    <link href="http://jslite.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://jslite.io/2015/04/01/git使用笔记/</id>
     <published>2015-03-31T17:42:45.000Z</published>
     <updated>2015-04-11T17:19:22.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。</p>
@@ -1376,16 +1376,16 @@
     <![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载]]>
     </summary>
     
-      <category term="git" scheme="http://jaywcjlove.github.io/tags/git/"/>
+      <category term="git" scheme="http://jslite.io/tags/git/"/>
     
-      <category term="shell" scheme="http://jaywcjlove.github.io/tags/shell/"/>
+      <category term="shell" scheme="http://jslite.io/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[hexo常用命令笔记]]></title>
-    <link href="http://jaywcjlove.github.io/2015/03/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://jaywcjlove.github.io/2015/03/30/hexo常用命令笔记/</id>
+    <link href="http://jslite.io/2015/03/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>http://jslite.io/2015/03/30/hexo常用命令笔记/</id>
     <published>2015-03-29T17:56:32.000Z</published>
     <updated>2015-04-23T17:46:45.000Z</updated>
     <content type="html"><![CDATA[<h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="comment">#安装  </span></span><br><span class="line">npm update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init blog <span class="comment">#初始化，生成文件夹为blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install <span class="comment">#安装依赖库</span></span><br><span class="line">hexo server <span class="comment">#运行测试</span></span><br></pre></td></tr></table></figure>
@@ -1513,16 +1513,16 @@
     <![CDATA[<h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="c]]>
     </summary>
     
-      <category term="hexo" scheme="http://jaywcjlove.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="http://jslite.io/tags/hexo/"/>
     
-      <category term="shell" scheme="http://jaywcjlove.github.io/tags/shell/"/>
+      <category term="shell" scheme="http://jslite.io/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[sublime快捷键]]></title>
-    <link href="http://jaywcjlove.github.io/2015/03/28/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://jaywcjlove.github.io/2015/03/28/sublime快捷键/</id>
+    <link href="http://jslite.io/2015/03/28/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://jslite.io/2015/03/28/sublime快捷键/</id>
     <published>2015-03-28T01:33:02.000Z</published>
     <updated>2015-04-08T15:40:41.000Z</updated>
     <content type="html"><![CDATA[<h3 id="基本编辑（Basic_Editing）">基本编辑（Basic Editing）</h3><p><code>⇣⇡⇠⇢</code> 就是 <code>⇣⇡⇠⇢</code>，不是 <code>KJHL</code>。</p>
@@ -1545,18 +1545,18 @@
 <p><code>⌘</code> C]]>
     </summary>
     
-      <category term="sublime" scheme="http://jaywcjlove.github.io/tags/sublime/"/>
+      <category term="sublime" scheme="http://jslite.io/tags/sublime/"/>
     
-      <category term="sublime" scheme="http://jaywcjlove.github.io/categories/sublime/"/>
+      <category term="sublime" scheme="http://jslite.io/categories/sublime/"/>
     
-      <category term="快捷键" scheme="http://jaywcjlove.github.io/categories/sublime/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <category term="快捷键" scheme="http://jslite.io/categories/sublime/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[各种常用js验证]]></title>
-    <link href="http://jaywcjlove.github.io/2015/03/22/%E5%90%84%E7%A7%8D%E5%B8%B8%E7%94%A8js%E9%AA%8C%E8%AF%81/"/>
-    <id>http://jaywcjlove.github.io/2015/03/22/各种常用js验证/</id>
+    <link href="http://jslite.io/2015/03/22/%E5%90%84%E7%A7%8D%E5%B8%B8%E7%94%A8js%E9%AA%8C%E8%AF%81/"/>
+    <id>http://jslite.io/2015/03/22/各种常用js验证/</id>
     <published>2015-03-22T01:48:52.000Z</published>
     <updated>2015-04-09T05:44:29.000Z</updated>
     <content type="html"><![CDATA[<p>js 正则验证相关以及其他</p>
@@ -1583,9 +1583,9 @@
 <p>转自 <a href="https://github.com/iamyang/hehongwei44/blob/master/all.js" target="_blank" rel="external">感谢 hehongwei44]]>
     </summary>
     
-      <category term="js" scheme="http://jaywcjlove.github.io/tags/js/"/>
+      <category term="js" scheme="http://jslite.io/tags/js/"/>
     
-      <category term="正则" scheme="http://jaywcjlove.github.io/tags/%E6%AD%A3%E5%88%99/"/>
+      <category term="正则" scheme="http://jslite.io/tags/%E6%AD%A3%E5%88%99/"/>
     
   </entry>
   
