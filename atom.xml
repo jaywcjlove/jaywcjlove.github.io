@@ -1321,7 +1321,7 @@
     <link href="http://jslite.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://jslite.io/2015/04/01/git使用笔记/</id>
     <published>2015-03-31T17:42:45.000Z</published>
-    <updated>2015-05-02T20:06:49.000Z</updated>
+    <updated>2015-05-05T12:10:46.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。</p>
 <ul>
 <li><a href="http://git-scm.com/" target="_blank" rel="external">Git官网</a></li>
@@ -1375,7 +1375,7 @@
 <h2 id="本地">本地</h2><h3 id="add-1">add</h3><p><code>git add *</code> #跟踪新文件<br><code>git add -u [path]</code> #添加[指定路径下]已跟踪文件  </p>
 <h3 id="rm">rm</h3><p><code>rm *&amp;git rm *</code> #移除文件<br><code>git rm -f *</code> #移除文件<br><code>git rm --cached *</code> #取消跟踪<br><code>git mv file_from file_to</code> #重命名跟踪文件<br><code>git log</code> #查看提交记录   </p>
 <h3 id="commit-1">commit</h3><p><code>git commit</code> #提交更新<br><code>git commit -m &#39;message&#39;</code> 提交说明<br><code>git commit -a</code> #跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交<br><code>git commit --amend</code> #修改最后一次提交   </p>
-<h4 id="commit关闭issue">commit关闭issue</h4><h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br>`git reset —mixed HEAD </em><code>#同上</code>git reset —soft HEAD <em><code>#重置到指定状态，不会修改索引区和工作树</code>git reset —hard HEAD </em><code>#重置到指定状态，会修改索引区和工作树</code>git reset — files` #重置index区文件   </p>
+<h4 id="commit关闭issue">commit关闭issue</h4><h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br>`git reset —mixed HEAD \</em><code>#同上</code>git reset —soft HEAD *<code>#重置到指定状态，不会修改索引区和工作树</code>git reset —hard HEAD *<code>#重置到指定状态，会修改索引区和工作树</code>git reset — files` #重置index区文件   </p>
 <h3 id="revert">revert</h3><p><code>git revert HEAD</code> #撤销前一次操作<br><code>git revert HEAD~</code> #撤销前前一次操作<br><code>git revert commit</code> ##撤销指定操作  </p>
 <h3 id="checkout">checkout</h3><p><code>git checkout -- file</code> #取消对文件的修改（从暂存区——覆盖worktree file）<br><code>git checkout branch|tag|commit -- file_name</code> #从仓库取出file覆盖当前分支<br><code>git checkout -- .</code> #从暂存区取出文件覆盖工作区  </p>
 <h3 id="diff">diff</h3><p><code>git diff file</code> #查看指定文件的差异<br><code>git diff --stat</code> #查看简单的diff结果<br><code>git diff</code> #比较Worktree和Index之间的差异<br><code>git diff --cached</code> #比较Index和HEAD之间的差异<br><code>git diff HEAD</code> #比较Worktree和HEAD之间的差异<br><code>git diff branch</code> #比较Worktree和branch之间的差异<br><code>git diff branch1 branch2</code> #比较两次分支之间的差异<br><code>git diff commit commit</code> #比较两次提交之间的差异   </p>
