@@ -510,11 +510,11 @@ header.hdpage {
 .page-toc {
   position: relative;
   float: right;
-  margin: 20px 0 0 20px;
+  margin: 0px 0 0 20px;
   background: #f4f4f4;
   padding: 10px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px;
   max-width: 250px;
   display: block;
   overflow: hidden;

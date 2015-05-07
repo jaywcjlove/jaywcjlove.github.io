@@ -257,7 +257,7 @@ var _hmt = _hmt || [];
 <h3 id="更改pull">更改pull</h3><p>只需要更改config文件里，那三个url的顺序即可，fetch-url会直接对应排行第一的那个utl连接。    </p>
 <h2 id="新建仓库">新建仓库</h2><h3 id="init">init</h3><p><code>git init</code> #初始化  </p>
 <h3 id="status">status</h3><p><code>git status</code> #获取状态  </p>
-<h3 id="add">add</h3><p><code>git add file</code> #.或*代表全部添加<br><code>git rm --cached &lt;added_file_to_undo&gt;</code> 在commit之前撤销git add操作</p>
+<h3 id="add">add</h3><p><code>git add file</code> #.或*代表全部添加<br><code>git rm --cached &lt;added_file_to_undo&gt;</code> 在commit之前撤销git add操作<br><code>git reset head</code> 好像比上面<code>git rm --cached</code>更方便  </p>
 <h3 id="commit">commit</h3><p><code>git commit -m &quot;message&quot;</code> #此处注意乱码</p>
 <h3 id="remote">remote</h3><p><code>git remote add origin git@github.com:JSLite/test.git</code> #添加源</p>
 <h3 id="push-1">push</h3><p><code>git push -u origin master</code> #push同事设置默认跟踪分支<br><code>git push origin master</code>   </p>
@@ -265,7 +265,7 @@ var _hmt = _hmt || [];
 <h2 id="本地">本地</h2><h3 id="add-1">add</h3><p><code>git add *</code> #跟踪新文件<br><code>git add -u [path]</code> #添加[指定路径下]已跟踪文件  </p>
 <h3 id="rm">rm</h3><p><code>rm *&amp;git rm *</code> #移除文件<br><code>git rm -f *</code> #移除文件<br><code>git rm --cached *</code> #取消跟踪<br><code>git mv file_from file_to</code> #重命名跟踪文件<br><code>git log</code> #查看提交记录   </p>
 <h3 id="commit-1">commit</h3><p><code>git commit</code> #提交更新<br><code>git commit -m &#39;message&#39;</code> 提交说明<br><code>git commit -a</code> #跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交<br><code>git commit --amend</code> #修改最后一次提交   </p>
-<h4 id="commit关闭issue">commit关闭issue</h4><h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br>`git reset —mixed HEAD \</em><code>#同上</code>git reset —soft HEAD *<code>#重置到指定状态，不会修改索引区和工作树</code>git reset —hard HEAD *<code>#重置到指定状态，会修改索引区和工作树</code>git reset — files` #重置index区文件   </p>
+<h4 id="commit关闭issue">commit关闭issue</h4><h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br><code>git reset --mixed HEAD</code> </em>#同上<br><code>git reset --soft HEAD</code> <em>#重置到指定状态，不会修改索引区和工作树<br><code>git reset --hard HEAD</code> </em>#重置到指定状态，会修改索引区和工作树<br><code>git reset -- files</code> *#重置index区文件   </p>
 <h3 id="revert">revert</h3><p><code>git revert HEAD</code> #撤销前一次操作<br><code>git revert HEAD~</code> #撤销前前一次操作<br><code>git revert commit</code> ##撤销指定操作  </p>
 <h3 id="checkout">checkout</h3><p><code>git checkout -- file</code> #取消对文件的修改（从暂存区——覆盖worktree file）<br><code>git checkout branch|tag|commit -- file_name</code> #从仓库取出file覆盖当前分支<br><code>git checkout -- .</code> #从暂存区取出文件覆盖工作区  </p>
 <h3 id="diff">diff</h3><p><code>git diff file</code> #查看指定文件的差异<br><code>git diff --stat</code> #查看简单的diff结果<br><code>git diff</code> #比较Worktree和Index之间的差异<br><code>git diff --cached</code> #比较Index和HEAD之间的差异<br><code>git diff HEAD</code> #比较Worktree和HEAD之间的差异<br><code>git diff branch</code> #比较Worktree和branch之间的差异<br><code>git diff branch1 branch2</code> #比较两次分支之间的差异<br><code>git diff commit commit</code> #比较两次提交之间的差异   </p>
@@ -363,7 +363,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="ci9b9zs16002f50gltkyns2bv" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="ci9dympgz002fjmgldpyuurrt" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               

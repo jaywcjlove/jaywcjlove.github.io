@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-05-03T09:36:09.000Z</updated>
+  <updated>2015-05-07T09:00:31.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -15,11 +15,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Gulp教程-前端自动管理工具]]></title>
+    <link href="http://jslite.io/2015/05/07/Gulp%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    <id>http://jslite.io/2015/05/07/Gulp教程-前端自动管理工具/</id>
+    <published>2015-05-07T07:08:20.000Z</published>
+    <updated>2015-05-07T09:00:31.000Z</updated>
+    <content type="html"><![CDATA[<p>Gulp与Grunt一样，也是一个自动任务运行器。它充分借鉴了Unix操作系统的管道（pipe）思想，很多人认为，在操作上，它要比Grunt简单。</p>
+<h1 id="安装">安装</h1><p>进入相关项目目录。</p>
+<p><code>npm install -g gulp</code> 全局安装  </p>
+<h1 id="gulpfile-js">gulpfile.js</h1><h2 id="gulp本地安装">gulp本地安装</h2><p><code>npm install --save-dev gulp</code> 本地模块安装  </p>
+<h2 id="js中添加任务">js中添加任务</h2><p>项目根目录中的 <code>gulpfile.js</code>，是Gulp的配置文件。它大概是下面的样子。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="gulp-uglify">gulp-uglify</h1><p>压缩源码，先安装 <code>gulp-uglify</code> 这个模块。</p>
+<figure class="highlight q"><table><tr><td class="code"><pre><span class="line">npm install --<span class="built_in">save</span>-<span class="built_in">dev</span> gulp-uglify</span><br></pre></td></tr></table></figure>
+<p>gulpfile.js加载gulp和gulp-uglify模块之后，使用gulp模块的task方法指定任务。task方法有两个参数，第一个是任务名，第二个是任务函数。在任务函数中，使用gulp模块的src方法，指定所要处理的文件，然后使用pipe方法，将上一步的输出转为当前的输入，进行链式处理。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gulp.src(<span class="string">'./src/*.js'</span>)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./build/'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>注意 必须有一个默认的 <code>default</code> 任务。src方法读入文件产生数据流，dest方法将数据流写入文件，中间是一些中间步骤，每一步都对数据流进行一些处理。  </p>
+<p><code>js/app.js</code>：指定确切的文件名。<br><code>js/*.js</code>：某个目录所有后缀名为js的文件。<br><code>js/**/*.js</code>：某个目录及其所有子目录中的所有后缀名为js的文件。<br><code>!js/app.js</code>：除了js/app.js以外的所有文件。<br><code>*.+(js|css)</code>：匹配项目根目录下，所有后缀名为js或css的文件。  </p>
+<h1 id="gulp-rename">gulp-rename</h1><p>重命名<a href="https://github.com/hparra/gulp-rename" target="_blank" rel="external">gulp-rename</a></p>
+<h2 id="安装-1">安装</h2><figure class="highlight q"><table><tr><td class="code"><pre><span class="line">npm install --<span class="built_in">save</span>-<span class="built_in">dev</span> gulp-rename</span><br></pre></td></tr></table></figure>
+<h2 id="修改_gulpfile_文件">修改 gulpfile 文件</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</span><br><span class="line">    rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>)</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gulp.src(<span class="string">'./src/iNotify.js'</span>)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(rename(&#123;</span><br><span class="line">            extname:<span class="string">'.min.js'</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./build/'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="gulp-watch">gulp-watch</h1><p>gulp模块的watch方法，用于指定需要监视的文件。一旦这些文件发生变动，就运行指定任务。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</span><br><span class="line">    rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>)</span><br><span class="line">    watch = <span class="built_in">require</span>(<span class="string">'gulp-watch'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//默认执行default任务，并执行监听任务</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watch'</span>], <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123; </span><br><span class="line">    <span class="comment">// gulp.start('styles', 'scripts', 'images');</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//watch任务：侦听js文件执行 build 任务</span></span><br><span class="line">gulp.task(<span class="string">'watch'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">   gulp.watch(<span class="string">'src/*.js'</span>, [<span class="string">'build'</span>]);<span class="comment">//侦听js文件执行 build 任务</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//build任务：压缩js | js重命名 | 压缩</span></span><br><span class="line">gulp.task(<span class="string">'build'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123; </span><br><span class="line">    gulp.src(<span class="string">'./src/iNotify.js'</span>)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(rename(&#123;</span><br><span class="line">            extname:<span class="string">'.min.js'</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./build/'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="gulp-load-plugins">gulp-load-plugins</h1><p>这种一一加载的写法，比较麻烦。使用gulp-load-plugins模块，可以加载package.json文件中所有的gulp模块。上面的代码用gulp-load-plugins模块改写，就是下面这样。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">    gulpLoadPlugins = <span class="built_in">require</span>(<span class="string">'gulp-load-plugins'</span>),</span><br><span class="line">    plugins = gulpLoadPlugins();</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'js'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> gulp.src(<span class="string">'js/*.js'</span>)</span><br><span class="line">      .pipe(plugins.jshint())</span><br><span class="line">      .pipe(plugins.jshint.reporter(<span class="string">'default'</span>))</span><br><span class="line">      .pipe(plugins.uglify())</span><br><span class="line">      .pipe(plugins.concat(<span class="string">'app.js'</span>))</span><br><span class="line">      .pipe(gulp.dest(<span class="string">'build'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>上面代码假设package.json文件包含以下内容。<br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   "<span class="attribute">devDependencies</span>": <span class="value">&#123;</span><br><span class="line">      "<span class="attribute">gulp-concat</span>": <span class="value"><span class="string">"~2.2.0"</span></span>,</span><br><span class="line">      "<span class="attribute">gulp-uglify</span>": <span class="value"><span class="string">"~0.2.1"</span></span>,</span><br><span class="line">      "<span class="attribute">gulp-jshint</span>": <span class="value"><span class="string">"~1.5.1"</span></span>,</span><br><span class="line">      "<span class="attribute">gulp</span>": <span class="value"><span class="string">"~3.5.6"</span></span><br><span class="line">   </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="参考地址">参考地址</h1><p><a href="http://gulpjs.com/" target="_blank" rel="external">gulpjs.com</a><br><a href="http://gulpjs.com/plugins/" target="_blank" rel="external">plugins</a>    </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Gulp与Grunt一样，也是一个自动任务运行器。它充分借鉴了Unix操作系统的管道（pipe）思想，很多人认为，在操作上，它要比Grunt简单。</p>
+<h1 id="安装">安装</h1><p>进入相关项目目录。</p>
+<p><code>npm install -g]]>
+    </summary>
+    
+      <category term="gulp" scheme="http://jslite.io/tags/gulp/"/>
+    
+      <category term="nodejs" scheme="http://jslite.io/tags/nodejs/"/>
+    
+      <category term="tools" scheme="http://jslite.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[提交自己的包到bower、npm中]]></title>
     <link href="http://jslite.io/2015/05/03/%E6%8F%90%E4%BA%A4%E8%87%AA%E5%B7%B1%E5%8C%85%E5%88%B0bower%E3%80%81npm%E4%B8%AD/"/>
     <id>http://jslite.io/2015/05/03/提交自己包到bower、npm中/</id>
     <published>2015-05-02T17:01:49.000Z</published>
-    <updated>2015-05-03T09:36:09.000Z</updated>
+    <updated>2015-05-06T15:09:17.000Z</updated>
     <content type="html"><![CDATA[<h1 id="bower">bower</h1><p>Bower 是 twitter 推出的一款包管理工具，基于nodejs的模块化思想，把功能分散到各个模块中，让模块和模块之间存在联系，通过 Bower 来管理模块间的这种联系。  </p>
 <p><a href="http://bower.io/" target="_blank" rel="external">bower官网</a>  </p>
 <h2 id="安装Bower">安装Bower</h2><p>一旦你已经安装了上面所说的所有必要文件，键入以下命令安装Bower：</p>
@@ -42,7 +84,7 @@
 <h2 id="发布到线上">发布到线上</h2><h3 id="添加用户">添加用户</h3><p>按照提示输入用户名，密码和邮箱</p>
 <figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> adduser</span><br></pre></td></tr></table></figure>
 <h3 id="登陆用户">登陆用户</h3><p>按照提示输入用户名，密码和邮箱</p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> adduser</span><br></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> login</span><br></pre></td></tr></table></figure>
 <h3 id="发布">发布</h3><figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> publish</span><br></pre></td></tr></table></figure>
 <p>如果不带参数，则会在当前目录下查找package.json文件，按照该文件描述信息发布；<br>如果指定目录，就会在指定目录下查找package.json文件<br>测试是否发布成功，在官网搜索一下<a href="https://www.npmjs.com/" target="_blank" rel="external">www.npmjs.com</a>  </p>
 <p>注： <code>package.json</code> 中的<code>name</code>不要又特殊字符哦  </p>
@@ -1321,7 +1363,7 @@
     <link href="http://jslite.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://jslite.io/2015/04/01/git使用笔记/</id>
     <published>2015-03-31T17:42:45.000Z</published>
-    <updated>2015-05-05T12:10:46.000Z</updated>
+    <updated>2015-05-07T06:47:12.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。</p>
 <ul>
 <li><a href="http://git-scm.com/" target="_blank" rel="external">Git官网</a></li>
@@ -1367,7 +1409,7 @@
 <h3 id="更改pull">更改pull</h3><p>只需要更改config文件里，那三个url的顺序即可，fetch-url会直接对应排行第一的那个utl连接。    </p>
 <h2 id="新建仓库">新建仓库</h2><h3 id="init">init</h3><p><code>git init</code> #初始化  </p>
 <h3 id="status">status</h3><p><code>git status</code> #获取状态  </p>
-<h3 id="add">add</h3><p><code>git add file</code> #.或*代表全部添加<br><code>git rm --cached &lt;added_file_to_undo&gt;</code> 在commit之前撤销git add操作</p>
+<h3 id="add">add</h3><p><code>git add file</code> #.或*代表全部添加<br><code>git rm --cached &lt;added_file_to_undo&gt;</code> 在commit之前撤销git add操作<br><code>git reset head</code> 好像比上面<code>git rm --cached</code>更方便  </p>
 <h3 id="commit">commit</h3><p><code>git commit -m &quot;message&quot;</code> #此处注意乱码</p>
 <h3 id="remote">remote</h3><p><code>git remote add origin git@github.com:JSLite/test.git</code> #添加源</p>
 <h3 id="push-1">push</h3><p><code>git push -u origin master</code> #push同事设置默认跟踪分支<br><code>git push origin master</code>   </p>
@@ -1375,7 +1417,7 @@
 <h2 id="本地">本地</h2><h3 id="add-1">add</h3><p><code>git add *</code> #跟踪新文件<br><code>git add -u [path]</code> #添加[指定路径下]已跟踪文件  </p>
 <h3 id="rm">rm</h3><p><code>rm *&amp;git rm *</code> #移除文件<br><code>git rm -f *</code> #移除文件<br><code>git rm --cached *</code> #取消跟踪<br><code>git mv file_from file_to</code> #重命名跟踪文件<br><code>git log</code> #查看提交记录   </p>
 <h3 id="commit-1">commit</h3><p><code>git commit</code> #提交更新<br><code>git commit -m &#39;message&#39;</code> 提交说明<br><code>git commit -a</code> #跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交<br><code>git commit --amend</code> #修改最后一次提交   </p>
-<h4 id="commit关闭issue">commit关闭issue</h4><h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br>`git reset —mixed HEAD \</em><code>#同上</code>git reset —soft HEAD *<code>#重置到指定状态，不会修改索引区和工作树</code>git reset —hard HEAD *<code>#重置到指定状态，会修改索引区和工作树</code>git reset — files` #重置index区文件   </p>
+<h4 id="commit关闭issue">commit关闭issue</h4><h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br><code>git reset --mixed HEAD</code> </em>#同上<br><code>git reset --soft HEAD</code> <em>#重置到指定状态，不会修改索引区和工作树<br><code>git reset --hard HEAD</code> </em>#重置到指定状态，会修改索引区和工作树<br><code>git reset -- files</code> *#重置index区文件   </p>
 <h3 id="revert">revert</h3><p><code>git revert HEAD</code> #撤销前一次操作<br><code>git revert HEAD~</code> #撤销前前一次操作<br><code>git revert commit</code> ##撤销指定操作  </p>
 <h3 id="checkout">checkout</h3><p><code>git checkout -- file</code> #取消对文件的修改（从暂存区——覆盖worktree file）<br><code>git checkout branch|tag|commit -- file_name</code> #从仓库取出file覆盖当前分支<br><code>git checkout -- .</code> #从暂存区取出文件覆盖工作区  </p>
 <h3 id="diff">diff</h3><p><code>git diff file</code> #查看指定文件的差异<br><code>git diff --stat</code> #查看简单的diff结果<br><code>git diff</code> #比较Worktree和Index之间的差异<br><code>git diff --cached</code> #比较Index和HEAD之间的差异<br><code>git diff HEAD</code> #比较Worktree和HEAD之间的差异<br><code>git diff branch</code> #比较Worktree和branch之间的差异<br><code>git diff branch1 branch2</code> #比较两次分支之间的差异<br><code>git diff commit commit</code> #比较两次提交之间的差异   </p>
@@ -1611,40 +1653,6 @@
       <category term="hexo" scheme="http://jslite.io/tags/hexo/"/>
     
       <category term="shell" scheme="http://jslite.io/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[sublime快捷键]]></title>
-    <link href="http://jslite.io/2015/03/28/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://jslite.io/2015/03/28/sublime快捷键/</id>
-    <published>2015-03-28T01:33:02.000Z</published>
-    <updated>2015-04-08T15:40:41.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="基本编辑（Basic_Editing）">基本编辑（Basic Editing）</h3><p><code>⇣⇡⇠⇢</code> 就是 <code>⇣⇡⇠⇢</code>，不是 <code>KJHL</code>。</p>
-<p><code>⌘</code> Command()<br><code>⌃</code> Control<br><code>⌥</code> Option(alt)<br><code>⇧</code> Shift<br><code>⇪</code> Caps Lock(大写)<br><code>fn</code> 功能键就是fn<br><code>↩︎</code> return/Enter</p>
-<p><code>⌃ + ↩︎</code> or <code>↩︎</code> 当前行下面新增一行然后跳至该行；<br><code>⌃ + ⇧ + ↩︎</code> 当前行上面增加一行并跳至该行；<br><code>⌥ + ⇠/⇢</code> 进行逐词移动，相应的；<br><code>⌥ + ⇧ + ⇠/⇢</code> 进行逐词选择；<br><code>⌘ + ⇣/⇡</code> 移动到首行/尾行；<br><code>⌘ + U</code> 返回到历史光标位置(撤销)；<br><code>⌃ + M</code> 可以快速的在起始括号和结尾括号间切换；<br><code>⌃ + ⇧ + M</code> 则可以快速选择括号间的内容；<br><code>⌃ + ⇧ + J</code> 对于缩进型语言(例如Python)则可以使用；<br><code>⌃ + ⌘ + D</code> 复制整行；</p>
-<h3 id="选择（Selecting）">选择（Selecting）</h3><p><code>⌘ + D</code> 选择当前光标所在的词并高亮该词出现的所有位置；<br>再次 <code>⌘ + D</code> 选择该词出现的下一个位置；<br>使用 <code>⌘ + U</code> 进行回退，使用Esc退；  </p>
-<p><code>⌘ + K + K</code> 从光标处删除到行末尾；<br><code>⌃ + K</code> 同上 <code>⌘ + KK</code>  </p>
-<p>进行同时编辑，<code>⌃ + ⇧ + L</code> 可以将光标移动到每行的结束  </p>
-<p><code>⌘ + ⇧ + ⇠</code> 选择光标到这一行第一个字符出现的位置<br><code>⌃ + ⇧ + A</code> 选择光标到这一行最前面的(包括缩进)位置  </p>
-<h3 id="代码展开">代码展开</h3><p><code>⌃ + K0</code> 代码展开</p>
-<h3 id="改为大写或者小写">改为大写或者小写</h3><p><code>⌃ + KL</code> 改为小写<br><code>⌃ + UK</code> 改为大写</p>
-<h3 id="合并">合并</h3><p><code>⌘ + J</code> 可以把当前选中区域合并为一行</p>
-<h3 id="跳转指定行">跳转指定行</h3><p><code>⌃ + G</code> 然后输入行号以跳转到指定行：</p>
-<h3 id="组合跳转">组合跳转</h3><p><code>⌘ + P</code> 我们可以进行后续输入以跳转到更精确的位置：<br><code>@</code> 符号跳转：输入 <code>@symbol</code> 跳转到symbol符号所在的位置<br><code>#</code> 关键字跳转：输入 <code>#keyword</code> 跳转到keyword所在的位置<br><code>:</code> 行号跳转：输入 <code>:12</code> 跳转到文件的第12行。  </p>
-<h3 id="启动终端(Terminal插件)">启动终端(Terminal插件)</h3><p><code>⌃ + ⌘ + T</code></p>
-<p>设置启动 <code>iTerm</code><br>打开配置文件 <code>preferences &gt; Package Setting &gt; Terminal &gt; Setting - Default</code><br>设置 <code>&quot;terminal&quot;: &quot;iTerm.sh&quot;</code>  </p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="基本编辑（Basic_Editing）">基本编辑（Basic Editing）</h3><p><code>⇣⇡⇠⇢</code> 就是 <code>⇣⇡⇠⇢</code>，不是 <code>KJHL</code>。</p>
-<p><code>⌘</code> C]]>
-    </summary>
-    
-      <category term="sublime" scheme="http://jslite.io/tags/sublime/"/>
-    
-      <category term="sublime" scheme="http://jslite.io/categories/sublime/"/>
-    
-      <category term="快捷键" scheme="http://jslite.io/categories/sublime/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
