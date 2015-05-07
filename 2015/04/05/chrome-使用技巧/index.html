@@ -192,7 +192,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/05/chrome-使用技巧/" class="article-date">
   <time datetime="2015-04-05T10:04:11.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/05/chrome-使用技巧/" data-id="ci9ehi0a2001qqdgl2tnu32yj" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/05/chrome-使用技巧/" data-id="ci9ehtqvo002kkgglp7igl58f" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -230,17 +230,12 @@ var _hmt = _hmt || [];
           var $toc = $('.page-toc'),
               $article = $('.article-entry')
               toc_top = $toc.offset().top
-              tocsub_height = $toc.children().height()
               tocsub_width = $toc.children().width()
               article_height = $article.children().height()
               scroll_top = document.body.scrollTop
               screen_h = $(window).height()
               footer_top = $('.article-footer').offset().top - $(window).height()
-
-              console.log("&&tocsub_height>screen_h",tocsub_height>screen_h-21);
-              console.log("&&tocsub_height>screen_h",tocsub_height,screen_h-21);
-
-              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top&&tocsub_height>screen_h-21){
+              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top){
                 $toc.children().css({
                   "position": "fixed",
                   "height": (screen_h -20)+'px',

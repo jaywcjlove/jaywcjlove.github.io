@@ -203,7 +203,7 @@ var _hmt = _hmt || [];
               <a href="/2015/05/07/Gulp教程-前端自动管理工具/" class="article-date">
   <time datetime="2015-05-07T07:08:20.000Z" itemprop="datePublished">2015-05-07</time>
 </a>
-              <a data-url="http://jslite.io/2015/05/07/Gulp教程-前端自动管理工具/" data-id="ci9ehi09j000pqdgl1p35os4l" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/05/07/Gulp教程-前端自动管理工具/" data-id="ci9ehtqwj003wkggltxac2q09" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -232,17 +232,12 @@ var _hmt = _hmt || [];
           var $toc = $('.page-toc'),
               $article = $('.article-entry')
               toc_top = $toc.offset().top
-              tocsub_height = $toc.children().height()
               tocsub_width = $toc.children().width()
               article_height = $article.children().height()
               scroll_top = document.body.scrollTop
               screen_h = $(window).height()
               footer_top = $('.article-footer').offset().top - $(window).height()
-
-              console.log("&&tocsub_height>screen_h",tocsub_height>screen_h-21);
-              console.log("&&tocsub_height>screen_h",tocsub_height,screen_h-21);
-
-              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top&&tocsub_height>screen_h-21){
+              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top){
                 $toc.children().css({
                   "position": "fixed",
                   "height": (screen_h -20)+'px',

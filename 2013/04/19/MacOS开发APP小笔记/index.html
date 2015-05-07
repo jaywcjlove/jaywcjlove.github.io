@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
               <a href="/2013/04/19/MacOS开发APP小笔记/" class="article-date">
   <time datetime="2013-04-19T07:41:30.000Z" itemprop="datePublished">2013-04-19</time>
 </a>
-              <a data-url="http://jslite.io/2013/04/19/MacOS开发APP小笔记/" data-id="ci9ehi0b6003oqdgl12ikzkhl" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2013/04/19/MacOS开发APP小笔记/" data-id="ci9ehtqvv002vkgglv3f8u1jj" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -271,17 +271,12 @@ var _hmt = _hmt || [];
           var $toc = $('.page-toc'),
               $article = $('.article-entry')
               toc_top = $toc.offset().top
-              tocsub_height = $toc.children().height()
               tocsub_width = $toc.children().width()
               article_height = $article.children().height()
               scroll_top = document.body.scrollTop
               screen_h = $(window).height()
               footer_top = $('.article-footer').offset().top - $(window).height()
-
-              console.log("&&tocsub_height>screen_h",tocsub_height>screen_h-21);
-              console.log("&&tocsub_height>screen_h",tocsub_height,screen_h-21);
-
-              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top&&tocsub_height>screen_h-21){
+              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top){
                 $toc.children().css({
                   "position": "fixed",
                   "height": (screen_h -20)+'px',
