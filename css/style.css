@@ -508,16 +508,7 @@ header.hdpage {
   color: #777;
 }
 .page-toc {
-  position: relative;
   float: right;
-  margin: 0px 0 0 20px;
-  background: #f4f4f4;
-  padding: 10px;
-  -webkit-border-radius: 0px 0px 5px 5px;
-  border-radius: 0px 0px 5px 5px;
-  max-width: 250px;
-  display: block;
-  overflow: hidden;
 }
 .page-toc .toc-number {
   color: rgba(51,51,51,0.34);
@@ -538,8 +529,19 @@ header.hdpage {
 .page-toc li {
   list-style: none;
 }
-ol.toc {
+.page-toc ol.toc {
   margin: 0;
+  position: relative;
+  margin: 0px 0 0 20px;
+  background: #f4f4f4;
+  padding: 10px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px;
+  max-width: 250px;
+  display: block;
+  overflow: hidden;
+  top: 0;
+  z-index: 999;
 }
 .article {
   margin: 20px 0;

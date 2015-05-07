@@ -54,8 +54,7 @@ var _hmt = _hmt || [];
 <!-- End Baidu Analytics -->
 
 
-
-
+    <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 </head>
 <body>
 <div id="container"> 
@@ -237,7 +236,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/17/本地存储cookie的封装/" class="article-date">
   <time datetime="2015-04-16T16:54:41.000Z" itemprop="datePublished">2015-04-17</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/17/本地存储cookie的封装/" data-id="ci9eed6oo000m1xgluyhiytb8" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/17/本地存储cookie的封装/" data-id="ci9efpvm8000m8yglyko4mkga" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -267,6 +266,29 @@ var _hmt = _hmt || [];
 
       
     </article>
+    <script type="text/javascript">
+      window.onscroll = function(){ 
+        $(function(){
+          var $toc = $('.page-toc'),
+              toc_top = $toc.offset().top
+              scroll_top = document.body.scrollTop
+              screen_h = $(window).height()
+              if(toc_top&&scroll_top&&scroll_top>toc_top){
+                $toc.children().css({
+                  "position": "fixed",
+                  "height": (screen_h -20)+'px',
+                  "overflow": "auto"
+                })
+              }else{
+                $toc.children().css({
+                  "position": "relative",
+                  "height":'inherit',
+                  "overflow": "auto"
+                })
+              }
+        })
+      } 
+    </script>
 
 
 
