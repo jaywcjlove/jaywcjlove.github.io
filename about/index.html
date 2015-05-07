@@ -194,7 +194,7 @@ var _hmt = _hmt || [];
               <a href="/about/index.html" class="article-date">
   <time datetime="2015-04-01T17:36:59.000Z" itemprop="datePublished">2015-04-02</time>
 </a>
-              <a data-url="http://jslite.io/about/index.html" data-id="ci9efpvg300038yglyo7ljjr5" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/about/index.html" data-id="ci9egq5vf0003q0glxokv246f" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -209,21 +209,32 @@ var _hmt = _hmt || [];
       window.onscroll = function(){ 
         $(function(){
           var $toc = $('.page-toc'),
+              $article = $('.article-entry')
               toc_top = $toc.offset().top
+              tocsub_height = $toc.children().height()
+              tocsub_width = $toc.children().width()
+              article_height = $article.children().height()
               scroll_top = document.body.scrollTop
               screen_h = $(window).height()
-              if(toc_top&&scroll_top&&scroll_top>toc_top){
+              footer_top = $('.article-footer').offset().top - $(window).height()
+
+              console.log("&&tocsub_height>screen_h",tocsub_height>screen_h-21);
+              console.log("&&tocsub_height>screen_h",tocsub_height,screen_h-21);
+
+              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top&&tocsub_height>screen_h-21){
                 $toc.children().css({
                   "position": "fixed",
                   "height": (screen_h -20)+'px',
                   "overflow": "auto"
                 })
+                $article.css('margin-right',tocsub_width+'px')
               }else{
                 $toc.children().css({
                   "position": "relative",
                   "height":'inherit',
                   "overflow": "auto"
                 })
+                $article.css('margin-right',0+'px')
               }
         })
       } 
