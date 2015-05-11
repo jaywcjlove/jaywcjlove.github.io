@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jslite.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2015-05-11T07:03:43.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jslite.io/API/index.html</loc>
     <lastmod>2015-05-07T16:37:05.000Z</lastmod>
   </url>
@@ -94,11 +99,6 @@
   <url>
     <loc>http://jslite.io/2015/04/16/%E5%9C%A8Mac%E4%B8%8B%E5%AE%89%E8%A3%85GraphicsMagick/</loc>
     <lastmod>2015-04-16T04:16:51.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jslite.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2015-04-15T15:24:41.000Z</lastmod>
   </url>
   
   <url>
