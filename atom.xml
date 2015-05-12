@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-05-07T09:00:31.000Z</updated>
+  <updated>2015-05-12T12:48:33.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -13,6 +13,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[JS 实现浏览器的 title 闪烁、滚动、声音提示]]></title>
+    <link href="http://jslite.io/2015/05/12/JS-%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84-title-%E9%97%AA%E7%83%81%E3%80%81%E6%BB%9A%E5%8A%A8%E3%80%81%E5%A3%B0%E9%9F%B3%E6%8F%90%E7%A4%BA/"/>
+    <id>http://jslite.io/2015/05/12/JS-实现浏览器的-title-闪烁、滚动、声音提示/</id>
+    <published>2015-05-12T12:48:10.000Z</published>
+    <updated>2015-05-12T12:48:33.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="标题通知">标题通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/iNotify.svg" alt=""></a></p>
+<p>这是重复造轮子…，标题闪烁、或者滚动提示，favicon数字显示。打开chrome浏览器调试工具，按照下面截图的方式放到调试里面调用一下，你就可以看到效果了。</p>
+<p><img src="https://github.com/jaywcjlove/iNotify/blob/master/iNotify.png?raw=true" alt="界面预览"></p>
+<h2 id="下载">下载</h2><h3 id="npm">npm</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> title-notify</span><br></pre></td></tr></table></figure>
+<h3 id="bower">bower</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ bower <span class="keyword">install</span> inotify</span><br></pre></td></tr></table></figure>
+<h2 id="init">init</h2><p>effect: flash | scroll | favicon  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.init(&#123;</span><br><span class="line">    message: <span class="string">'有消息了。'</span>,<span class="comment">//标题</span></span><br><span class="line">    effect: <span class="string">'flash'</span>, <span class="comment">// flash | scroll 闪烁还是滚动</span></span><br><span class="line">    <span class="comment">//可选播放声音</span></span><br><span class="line">    audio:&#123;</span><br><span class="line">        file: <span class="string">'msg.mp4'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//标题闪烁，或者滚动速度</span></span><br><span class="line">    interval: <span class="number">1000</span>,</span><br><span class="line">    <span class="comment">//可选，默认绿底白字的  Favicon</span></span><br><span class="line">    updateFavicon:&#123;</span><br><span class="line">        <span class="comment">// favicon 字体颜色</span></span><br><span class="line">        textColor: <span class="string">"#fff"</span>,</span><br><span class="line">        <span class="comment">//背景颜色，设置背景颜色透明，将值设置为“transparent”</span></span><br><span class="line">        backgroundColor: <span class="string">"#2F9A00"</span> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="声音设置">声音设置</h2><h3 id="player">player</h3><p>播放声音</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.player()</span><br></pre></td></tr></table></figure>
+<h3 id="loopPlay">loopPlay</h3><p>自动播放声音</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.loopPlay()</span><br></pre></td></tr></table></figure>
+<h3 id="stopPlay">stopPlay</h3><p>停止播放声音</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.stopPlay()</span><br></pre></td></tr></table></figure>
+<h3 id="setURL">setURL</h3><p>设置播放声音URL</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setURL()</span><br></pre></td></tr></table></figure>
+<h2 id="setTitle">setTitle</h2><p>设置标题  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setTitle(<span class="string">'新标题'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="setInterval">setInterval</h2><p>设置时间间隔  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setInterval(<span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="addTimer">addTimer</h2><p>添加计数器</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.addTimer()</span><br></pre></td></tr></table></figure>
+<h2 id="clearTimer">clearTimer</h2><p>清除计数器  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.clearTimer()</span><br></pre></td></tr></table></figure>
+<h2 id="setFavicon">setFavicon</h2><p>设置icon 显示数字</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setFavicon(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="faviconClear">faviconClear</h2><p>清除数字显示原来的icon</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.faviconClear()</span><br></pre></td></tr></table></figure>
+<h2 id="其它">其它</h2><p><code>iNotify.init().title;</code> 获取标题</p>
+<h2 id="例子">例子</h2><h3 id="实例一">实例一</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">iconNotify</span><span class="params">(num)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!notify) &#123;</span><br><span class="line">        <span class="keyword">var</span> notify = iNotify.init(&#123;</span><br><span class="line">            effect: <span class="string">'flash'</span>,</span><br><span class="line">            interval: <span class="number">500</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(num===<span class="number">0</span>)&#123;</span><br><span class="line">        notify.faviconClear()</span><br><span class="line">        notify.setTitle();</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num&lt;<span class="number">100</span>)&#123;</span><br><span class="line">        notify.setFavicon(num)</span><br><span class="line">        notify.setTitle(<span class="string">"有新消息！"</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num&gt;<span class="number">99</span>)&#123;</span><br><span class="line">        notify.setFavicon(<span class="string">'..'</span>)</span><br><span class="line">        notify.setTitle(<span class="string">"有新消息！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实例二">实例二</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> notify = iNotify.init(&#123;</span><br><span class="line">    effect: <span class="string">'flash'</span>,</span><br><span class="line">    interval: <span class="number">500</span></span><br><span class="line">&#125;);</span><br><span class="line">notify.setFavicon(<span class="string">"1"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="实例三">实例三</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> iN = iNotify.init(&#123;</span><br><span class="line">    effect: <span class="string">'flash'</span>,</span><br><span class="line">    interval: <span class="number">500</span>,</span><br><span class="line">    message:<span class="string">"有消息拉！"</span>,</span><br><span class="line">    updateFavicon:&#123;<span class="comment">//可选，默认绿底白字</span></span><br><span class="line">        textColor: <span class="string">"#fff"</span>,<span class="comment">// favicon 字体颜色</span></span><br><span class="line">        backgroundColor: <span class="string">"#2F9A00"</span> <span class="comment">//背景颜色</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;).setFavicon(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="实例四">实例四</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> iN = iNotify.init().setFavicon(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="实例五">实例五</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> iN = iNotify.init(&#123;</span><br><span class="line">    effect: <span class="string">'flash'</span>,</span><br><span class="line">    interval: <span class="number">500</span>,</span><br><span class="line">    message:<span class="string">"有消息拉！"</span>,</span><br><span class="line">    audio:&#123;</span><br><span class="line">        file: <span class="string">'msg.mp4'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;).setFavicon(<span class="number">10</span>).player();</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="标题通知">标题通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shield]]>
+    </summary>
+    
+      <category term="js" scheme="http://jslite.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Gulp教程-前端自动管理工具]]></title>
@@ -1524,143 +1572,6 @@
     </summary>
     
       <category term="git" scheme="http://jslite.io/tags/git/"/>
-    
-      <category term="shell" scheme="http://jslite.io/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[hexo常用命令笔记]]></title>
-    <link href="http://jslite.io/2015/03/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://jslite.io/2015/03/30/hexo常用命令笔记/</id>
-    <published>2015-03-29T17:56:32.000Z</published>
-    <updated>2015-04-23T17:46:45.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="comment">#安装  </span></span><br><span class="line">npm update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init blog <span class="comment">#初始化，生成文件夹为blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install <span class="comment">#安装依赖库</span></span><br><span class="line">hexo server <span class="comment">#运行测试</span></span><br></pre></td></tr></table></figure>
-<h2 id="简写">简写</h2><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署    </p>
-<h2 id="服务器">服务器</h2><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP  </p>
-<p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令<br><code>hexo g</code> #生成静态网页<br><code>hexo d</code> #开始部署  </p>
-<h3 id="监视文件变动">监视文件变动</h3><p><code>hexo generate</code> #使用 Hexo 生成静态文件快速而且简单<br><code>hexo generate --watch</code> #监视文件变动  </p>
-<h3 id="完成后部署">完成后部署</h3><blockquote>
-<p>两个命令的作用是相同的<br><code>hexo generate --deploy</code><br><code>hexo deploy --generate</code></p>
-</blockquote>
-<p><code>hexo deploy -g</code><br><code>hexo server -g</code>  </p>
-<h2 id="草稿">草稿</h2><p><code>hexo new draft &quot;new draft&quot;</code> 新建草稿<br><code>hexo publish [layout] &lt;title&gt;</code> 变成正式文章  </p>
-<h2 id="模版">模版</h2><p><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub</p>
-<p><code>hexo new [layout] &lt;title&gt;</code><br><code>hexo new photo &quot;My Gallery&quot;</code><br><code>hexo new &quot;Hello World&quot; --lang tw</code></p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>layout</td>
-<td>布局</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>date</td>
-<td>文件建立日期</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight http"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: <span class="string">使用Hexo搭建个人博客</span></span><br><span class="line"><span class="attribute">layout</span>: <span class="string">post</span></span><br><span class="line"><span class="attribute">date</span>: <span class="string">2014-03-03 19:07:43</span></span><br><span class="line"><span class="attribute">comments</span>: <span class="string">true</span></span><br><span class="line"><span class="attribute">categories</span>: <span class="string">Blog</span></span><br><span class="line"><span class="attribute">tags</span>: <span class="string">[Hexo]</span></span><br><span class="line"><span class="attribute">keywords</span>: <span class="string">Hexo, Blog</span></span><br><span class="line"><span class="attribute">description</span>: <span class="string">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span></span><br></pre></td></tr></table></figure>
-<h2 id="模版（Scaffold）">模版（Scaffold）</h2><p><code>hexo new photo &quot;My Gallery&quot;</code>  </p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>layout</td>
-<td>布局</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>date</td>
-<td>文件建立日期</td>
-</tr>
-</tbody>
-</table>
-<h2 id="设置文章摘要">设置文章摘要</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">以上是文章摘要 <span class="comment">&lt;!--more--&gt;</span> 以下是余下全文</span><br></pre></td></tr></table></figure>
-<h2 id="写作">写作</h2><p><code>hexo new page &lt;title&gt;</code><br><code>hexo new post &lt;title&gt;</code>  </p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>:title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>:year</td>
-<td>建立的年份（4 位数）</td>
-</tr>
-<tr>
-<td>:month</td>
-<td>建立的月份（2 位数）</td>
-</tr>
-<tr>
-<td>:i_month</td>
-<td>建立的月份（去掉开头的零）</td>
-</tr>
-<tr>
-<td>:day</td>
-<td>建立的日期（2 位数）</td>
-</tr>
-<tr>
-<td>:i_day</td>
-<td>建立的日期（去掉开头的零）</td>
-</tr>
-</tbody>
-</table>
-<h3 id="图片显示">图片显示</h3><p>把图片放到 source/images 目录下</p>
-<p><code>![](images/xxx.jpg)</code></p>
-<h3 id="添加小图标">添加小图标</h3><p>将 <code>favicon.ico</code> 文件放在 source 目录下<br>配置 hexoThemekacper 主题里的 <code>_config.yml</code></p>
-<p><code>favicon: /favicon.ico</code></p>
-<h3 id="推送到服务器上">推送到服务器上</h3><p><code>hexo n</code> #写文章<br><code>hexo g</code> #生成<br><code>hexo d</code> #部署 #可与<code>hexo g</code>合并为 <code>hexo d -g</code></p>
-<h2 id="报错">报错</h2><h3 id="1-找不到git部署">1.找不到git部署</h3><figure class="highlight monkey"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ERROR</span> Deployer <span class="keyword">not</span> found: git</span><br></pre></td></tr></table></figure>
-<p><strong>解决方法</strong>  </p>
-<p><code>npm install hexo-deployer-git --save</code>  </p>
-<h3 id="部署类型设置git">部署类型设置git</h3><p>hexo 3.0 部署类型不再是<code>github</code>，<code>_config.yml</code> 中修改</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@***.github.com:***/***.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h3 id="xcodebuild">xcodebuild</h3><p>xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance  </p>
-<p><code>sudo xcode-select --switch /Applications/Xcode\ 5.1.app/Contents/Developer/</code>  </p>
-<p><code>npm install bcrypt</code>  </p>
-<h3 id="RSS不显示">RSS不显示</h3><h4 id="安装RSS插件">安装RSS插件</h4><p><code>npm install hexo-generator-feed --save</code>  </p>
-<h4 id="开启RSS功能">开启RSS功能</h4><p>编辑hexo/_config.yml，添加如下代码：  </p>
-<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="label">rss:</span> /atom.xml <span class="preprocessor">#rss地址  默认即可</span></span><br></pre></td></tr></table></figure>
-<h4 id="开启评论">开启评论</h4><p>1.我使用多说代替自带的评论，在<a href="http://duoshuo.com" target="_blank" rel="external">多说</a> 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码  里面有 short_name  </p>
-<ol>
-<li><p>在根目录 <code>_config.yml</code> 添加一行  <code>disqus_shortname: jslite</code> 是在多说注册时产生的    </p>
-</li>
-<li><p>复制到 <code>themes\landscape\layout\_partial\article.ejs</code><br>把  </p>
-</li>
-</ol>
-<figure class="highlight erb"><table><tr><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; </span>%&gt;<span class="xml"></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure>
-<p>改为  </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= post.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%= page.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">'&lt;%= config.disqus_shortname %&gt;'</span>&#125;;</span><br><span class="line">      (<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">        ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">        ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span><br><span class="line">        ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] </span><br><span class="line">         || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="hexo">hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g <span class="c]]>
-    </summary>
-    
-      <category term="hexo" scheme="http://jslite.io/tags/hexo/"/>
     
       <category term="shell" scheme="http://jslite.io/tags/shell/"/>
     
