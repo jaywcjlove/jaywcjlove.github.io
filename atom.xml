@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-05-12T12:48:33.000Z</updated>
+  <updated>2015-05-13T17:24:41.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[JS 实现浏览器的 title 闪烁、滚动、声音提示]]></title>
-    <link href="http://jslite.io/2015/05/12/JS-%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84-title-%E9%97%AA%E7%83%81%E3%80%81%E6%BB%9A%E5%8A%A8%E3%80%81%E5%A3%B0%E9%9F%B3%E6%8F%90%E7%A4%BA/"/>
-    <id>http://jslite.io/2015/05/12/JS-实现浏览器的-title-闪烁、滚动、声音提示/</id>
+    <title><![CDATA[JS实现浏览器的title闪烁、滚动、声音提示、chrome通知]]></title>
+    <link href="http://jslite.io/2015/05/12/JS%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84title%E9%97%AA%E7%83%81%E3%80%81%E6%BB%9A%E5%8A%A8%E3%80%81%E5%A3%B0%E9%9F%B3%E6%8F%90%E7%A4%BA%E3%80%81chrome%E9%80%9A%E7%9F%A5/"/>
+    <id>http://jslite.io/2015/05/12/JS实现浏览器的title闪烁、滚动、声音提示、chrome通知/</id>
     <published>2015-05-12T12:48:10.000Z</published>
-    <updated>2015-05-12T12:48:33.000Z</updated>
+    <updated>2015-05-13T17:24:41.000Z</updated>
     <content type="html"><![CDATA[<h1 id="标题通知">标题通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/iNotify.svg" alt=""></a></p>
 <p>这是重复造轮子…，标题闪烁、或者滚动提示，favicon数字显示。打开chrome浏览器调试工具，按照下面截图的方式放到调试里面调用一下，你就可以看到效果了。</p>
 <p><img src="https://github.com/jaywcjlove/iNotify/blob/master/iNotify.png?raw=true" alt="界面预览"></p>
@@ -56,6 +56,58 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="标题通知">标题通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shield]]>
+    </summary>
+    
+      <category term="js" scheme="http://jslite.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JS实现浏览器的title闪烁、滚动、声音提示、chrome通知]]></title>
+    <link href="http://jslite.io/2015/05/12/JS-%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84-title-%E9%97%AA%E7%83%81%E3%80%81%E6%BB%9A%E5%8A%A8%E3%80%81%E5%A3%B0%E9%9F%B3%E6%8F%90%E7%A4%BA/"/>
+    <id>http://jslite.io/2015/05/12/JS-实现浏览器的-title-闪烁、滚动、声音提示/</id>
+    <published>2015-05-12T12:48:10.000Z</published>
+    <updated>2015-05-13T17:27:36.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="通知">通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/iNotify.svg" alt=""></a></p>
+<p>JS 实现浏览器的 title 闪烁、滚动、声音提示、chrome通知  </p>
+<p>这是重复造轮子…，标题闪烁、或者滚动提示，favicon数字显示。打开chrome浏览器调试工具，按照下面截图的方式放到调试里面调用一下，你就可以看到效果了。</p>
+<p><img src="https://github.com/jaywcjlove/iNotify/blob/master/iNotify.png?raw=true" alt="界面预览"></p>
+<h2 id="下载">下载</h2><h3 id="npm">npm</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> title-notify</span><br></pre></td></tr></table></figure>
+<h3 id="bower">bower</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ bower <span class="keyword">install</span> inotify</span><br></pre></td></tr></table></figure>
+<h2 id="init">init</h2><p>effect: flash | scroll | favicon  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.init(&#123;</span><br><span class="line">    message: <span class="string">'有消息了。'</span>,<span class="comment">//标题</span></span><br><span class="line">    effect: <span class="string">'flash'</span>, <span class="comment">// flash | scroll 闪烁还是滚动</span></span><br><span class="line">    <span class="comment">//可选播放声音</span></span><br><span class="line">    audio:&#123;</span><br><span class="line">        file: <span class="string">'msg.mp4'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//标题闪烁，或者滚动速度</span></span><br><span class="line">    interval: <span class="number">1000</span>,</span><br><span class="line">    <span class="comment">//可选，默认绿底白字的  Favicon</span></span><br><span class="line">    updateFavicon:&#123;</span><br><span class="line">        <span class="comment">// favicon 字体颜色</span></span><br><span class="line">        textColor: <span class="string">"#fff"</span>,</span><br><span class="line">        <span class="comment">//背景颜色，设置背景颜色透明，将值设置为“transparent”</span></span><br><span class="line">        backgroundColor: <span class="string">"#2F9A00"</span> </span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//可选chrome浏览器通知，默认不填写就是下面的内容</span></span><br><span class="line">    notification:&#123;</span><br><span class="line">        title:<span class="string">"通知！"</span>,<span class="comment">//设置标题</span></span><br><span class="line">        icon:<span class="string">""</span>,<span class="comment">//设置图标 icon 默认为 Favicon</span></span><br><span class="line">        body:<span class="string">'您来了一条新消息'</span><span class="comment">//设置消息内容</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="声音设置">声音设置</h2><h3 id="player">player</h3><p>播放声音</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.player()</span><br></pre></td></tr></table></figure>
+<h3 id="loopPlay">loopPlay</h3><p>自动播放声音</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.loopPlay()</span><br></pre></td></tr></table></figure>
+<h3 id="stopPlay">stopPlay</h3><p>停止播放声音</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.stopPlay()</span><br></pre></td></tr></table></figure>
+<h3 id="setURL">setURL</h3><p>设置播放声音URL</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setURL()</span><br></pre></td></tr></table></figure>
+<h2 id="title通知">title通知</h2><h3 id="setTitle">setTitle</h3><p>设置标题  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setTitle(<span class="string">'新标题'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="setInterval">setInterval</h3><p>设置时间间隔  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setInterval(<span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="addTimer">addTimer</h3><p>添加计数器</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.addTimer()</span><br></pre></td></tr></table></figure>
+<h3 id="clearTimer">clearTimer</h3><p>清除计数器  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.clearTimer()</span><br></pre></td></tr></table></figure>
+<h2 id="favicon通知">favicon通知</h2><h3 id="setFavicon">setFavicon</h3><p>设置icon 显示数字</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.setFavicon(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="faviconClear">faviconClear</h3><p>清除数字显示原来的icon</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.faviconClear()</span><br></pre></td></tr></table></figure>
+<h2 id="chrome通知">chrome通知</h2><h3 id="notify">notify</h3><p>弹出chrome通知，不传参数为预设值…</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">iNotify.notify(); </span><br><span class="line">iNotify.notify(&#123;</span><br><span class="line">    title:<span class="string">"新通知"</span></span><br><span class="line">    body:<span class="string">"打雷啦，下雨啦..."</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="其它">其它</h2><p><code>iNotify.init().title;</code> 获取标题</p>
+<h2 id="例子">例子</h2><h3 id="实例一">实例一</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">iconNotify</span><span class="params">(num)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!notify) &#123;</span><br><span class="line">        <span class="keyword">var</span> notify = iNotify.init(&#123;</span><br><span class="line">            effect: <span class="string">'flash'</span>,</span><br><span class="line">            interval: <span class="number">500</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(num===<span class="number">0</span>)&#123;</span><br><span class="line">        notify.faviconClear()</span><br><span class="line">        notify.setTitle();</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num&lt;<span class="number">100</span>)&#123;</span><br><span class="line">        notify.setFavicon(num)</span><br><span class="line">        notify.setTitle(<span class="string">"有新消息！"</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num&gt;<span class="number">99</span>)&#123;</span><br><span class="line">        notify.setFavicon(<span class="string">'..'</span>)</span><br><span class="line">        notify.setTitle(<span class="string">"有新消息！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实例二">实例二</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> notify = iNotify.init(&#123;</span><br><span class="line">    effect: <span class="string">'flash'</span>,</span><br><span class="line">    interval: <span class="number">500</span></span><br><span class="line">&#125;);</span><br><span class="line">notify.setFavicon(<span class="string">"1"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="实例三">实例三</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> iN = iNotify.init(&#123;</span><br><span class="line">    effect: <span class="string">'flash'</span>,</span><br><span class="line">    interval: <span class="number">500</span>,</span><br><span class="line">    message:<span class="string">"有消息拉！"</span>,</span><br><span class="line">    updateFavicon:&#123;<span class="comment">//可选，默认绿底白字</span></span><br><span class="line">        textColor: <span class="string">"#fff"</span>,<span class="comment">// favicon 字体颜色</span></span><br><span class="line">        backgroundColor: <span class="string">"#2F9A00"</span> <span class="comment">//背景颜色</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;).setFavicon(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="实例四">实例四</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> iN = iNotify.init().setFavicon(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="实例五">实例五</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> iN = iNotify.init(&#123;</span><br><span class="line">    effect: <span class="string">'flash'</span>,</span><br><span class="line">    interval: <span class="number">500</span>,</span><br><span class="line">    message:<span class="string">"有消息拉！"</span>,</span><br><span class="line">    audio:&#123;</span><br><span class="line">        file: <span class="string">'msg.mp4'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;).setFavicon(<span class="number">10</span>).player();</span><br></pre></td></tr></table></figure>
+<h3 id="实例五-1">实例五</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> iN = iNotify.init(&#123;</span><br><span class="line">    effect: <span class="string">'flash'</span>,</span><br><span class="line">    interval: <span class="number">500</span>,</span><br><span class="line">    message:<span class="string">"有消息拉！"</span>,</span><br><span class="line">    audio:&#123;</span><br><span class="line">        file: <span class="string">'msg.mp4'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    notification:&#123;</span><br><span class="line">        title:<span class="string">"通知！"</span>,</span><br><span class="line">        icon:<span class="string">""</span>,</span><br><span class="line">        body:<span class="string">'您来了一条新消息'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;).setFavicon(<span class="number">10</span>).player();</span><br><span class="line"></span><br><span class="line"><span class="comment">//弹出chrome通知，不传参数为预设值...</span></span><br><span class="line">iN.notify(); </span><br><span class="line"></span><br><span class="line">iN.notify(&#123;</span><br><span class="line">    title:<span class="string">"新通知"</span></span><br><span class="line">    body:<span class="string">"打雷啦，下雨啦..."</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="通知">通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shields.io]]>
     </summary>
     
       <category term="js" scheme="http://jslite.io/tags/js/"/>
@@ -1128,8 +1180,11 @@
     <link href="http://jslite.io/2015/04/05/hexo%E6%A8%A1%E6%9D%BF%E5%88%B6%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>http://jslite.io/2015/04/05/hexo模板制作小技巧/</id>
     <published>2015-04-05T11:05:25.000Z</published>
-    <updated>2015-04-16T05:01:31.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="读取config-yml配置文件">读取config.yml配置文件</h2><p>有两个 <code>config</code> 文件：  </p>
+    <updated>2015-05-13T05:50:24.000Z</updated>
+    <content type="html"><![CDATA[<p>这个是我做JSLite官网的笔记，顺便皮肤也共享了。</p>
+<a id="more"></a> 
+<h1 id="皮肤hexoThemeKacper">皮肤hexoThemeKacper</h1><p><a href="https://github.com/jaywcjlove/hexoThemeKacper/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/hexoThemeKacper.svg" alt=""></a> <a href="https://github.com/jaywcjlove/hexoThemeKacper/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/hexoThemeKacper.svg" alt=""></a> <a href="https://github.com/jaywcjlove/hexoThemeKacper/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/hexoThemeKacper.svg" alt=""></a> <a href="https://github.com/jaywcjlove/hexoThemeKacper/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/hexoThemeKacper.svg" alt=""></a></p>
+<h2 id="读取config-yml配置文件">读取config.yml配置文件</h2><p>有两个 <code>config</code> 文件：  </p>
 <ol>
 <li>在 <code>themes/模板/_config.yml</code> ，模板中读取 <code>theme.social</code></li>
 <li>在 <code>/_config.yml</code> 模板中读取 <code>config.title</code></li>
@@ -1142,9 +1197,8 @@
 <h2 id="图片显示">图片显示</h2><p>把图片放到 source/images 目录下</p>
 <figure class="highlight less"><table><tr><td class="code"><pre><span class="line">!<span class="attr_selector">[]</span>(images/xxx.jpg)</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="读取config-yml配置文件">读取config.yml配置文件</h2><p>有两个 <code>config</code> 文件：  </p>
-<ol>
-<li>在 <code>themes/模板/_config.yml</code> ，模板中读取 <co]]>
+    <![CDATA[<p>这个是我做JSLite官网的笔记，顺便皮肤也共享了。</p>]]>
+    
     </summary>
     
       <category term="hexo" scheme="http://jslite.io/tags/hexo/"/>
@@ -1405,175 +1459,6 @@
       <category term="CSS" scheme="http://jslite.io/categories/CSS/"/>
     
       <category term="编码规范" scheme="http://jslite.io/categories/CSS/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[git使用笔记]]></title>
-    <link href="http://jslite.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
-    <id>http://jslite.io/2015/04/01/git使用笔记/</id>
-    <published>2015-03-31T17:42:45.000Z</published>
-    <updated>2015-05-07T15:44:08.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。</p>
-<ul>
-<li><a href="http://git-scm.com/" target="_blank" rel="external">Git官网</a></li>
-<li><a href="https://try.github.io" target="_blank" rel="external"><strong>Github 15分钟学习Git</strong></a></li>
-</ul>
-<h2 id="参考资料">参考资料</h2><ul>
-<li><a href="http://gitref.org/zh/index.html" target="_blank" rel="external">Git参考手册</a></li>
-<li><a href="http://www.mceiba.com/tool/git-cheat-sheet.html" target="_blank" rel="external">Git简明手册</a></li>
-<li><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/" target="_blank" rel="external">Git Magic</a></li>
-<li><a href="http://gitbook.liuhui998.com/index.html" target="_blank" rel="external">Git Community Book 中文版</a></li>
-<li><a href="http://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a></li>
-<li><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解Git</a></li>
-<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git-简明指南</a></li>
-<li><a href="http://pcottle.github.io/learnGitBranching/" target="_blank" rel="external">learnGitBranching 在线学习工具</a></li>
-<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">初级教程</a> </li>
-<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰的Git教程</a></li>
-<li><a href="http://www.worldhello.net/gotgithub/" target="_blank" rel="external">蒋鑫老师将带你入github的大门</a></li>
-<li><a href="http://www.open-open.com/lib/view/open1328069609436.html" target="_blank" rel="external">git详解</a></li>
-<li><a href="http://git.oschina.net/progit/" target="_blank" rel="external">oschina教程</a></li>
-</ul>
-<h2 id="配置">配置</h2><p>首先是配置帐号信息<br><code>ssh -T git@github.com</code> #登陆github</p>
-<h2 id="修改项目中的个人信息">修改项目中的个人信息</h2><p><code>$ git config --global user.name &quot;wirelessqa&quot;</code><br><code>$ git config --global user.email wirelessqa.me@gmail.com</code>  </p>
-<h3 id="config">config</h3><p><code>git config --global user.name JSLite</code> #设置提交用户名<br><code>git config --global user.email JSLite@yeah.net</code> #设置提交邮箱<br><code>git config --list</code> #查看配置的信息<br><code>git remote remove origin</code> #删除该远程路径<br><code>git remote add origin git@jslite.github.com:JSLite/JSLite.git</code> #添加远程路径  </p>
-<h3 id="help">help</h3><p><code>git help config</code> #获取帮助信息  </p>
-<h3 id="配置自动换行（自动转换坑太大）">配置自动换行（自动转换坑太大）</h3><p><code>git config --global core.autocrlf input</code> #提交到git是自动将换行符转换为lf  </p>
-<h3 id="配置密钥">配置密钥</h3><p><code>ssh-keygen -t rsa -C JSLite@yeah.net</code> #生成密钥<br><code>ssh -T git@github.com</code> #测试是否成功  </p>
-<h2 id="多账号ssh配置">多账号ssh配置</h2><h3 id="1-生成指定名字的密钥">1.生成指定名字的密钥</h3><p><code>ssh-keygen -t rsa -C &quot;邮箱地址&quot; -f ~/.ssh/github_jslite</code><br>会生成 <code>github_jslite</code> 和 <code>github_jslite.pub</code> 这两个文件    </p>
-<h3 id="2-密钥复制到托管平台上">2.密钥复制到托管平台上</h3><p><code>vim ~/.ssh/github_jslite.pub</code><br>打开公钥文件 <code>github_jslite.pub</code> ，并把内容复制至代码托管平台上  </p>
-<h3 id="3-修改config文件">3.修改config文件</h3><p><code>vim ~/.ssh/config</code> #修改config文件，如果没有创建 <code>config</code>  </p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">Host jslite<span class="class">.github</span><span class="class">.com</span></span><br><span class="line">HostName github<span class="class">.com</span></span><br><span class="line">User git</span><br><span class="line">IdentityFile ~/.ssh/github_jslite</span><br><span class="line"></span><br><span class="line">Host abc<span class="class">.github</span><span class="class">.com</span></span><br><span class="line">HostName github<span class="class">.com</span></span><br><span class="line">User git</span><br><span class="line">IdentityFile ~/.ssh/github_abc</span><br></pre></td></tr></table></figure>
-<h3 id="4-测试">4.测试</h3><p><code>ssh -T git@jslite.github.com</code> # <code>@</code>后面跟上定义的Host  </p>
-<h2 id="Git推向3个库">Git推向3个库</h2><h3 id="增加3个远程库地址">增加3个远程库地址</h3><p><code>git remote add origin https://github.com/JSLite/JSLite.git</code><br><code>git remote set-url --add origin https://gitlab.com/wang/JSLite.js.git</code><br><code>git remote set-url --add origin https://oschina.net/wang/JSLite.js.git</code>  </p>
-<h3 id="删除其中一个_set-url_地址">删除其中一个 set-url 地址</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">usage: git remote set-url [--push] &#60;name&#62; &#60;newurl&#62; [&#60;oldurl&#62;]&#10;   or: git remote set-url --add &#60;name&#62; &#60;newurl&#62;&#10;   or: git remote set-url --delete &#60;name&#62; &#60;url&#62;</span><br></pre></td></tr></table></figure>
-<p><code>git remote set-url --delete origin https://oschina.net/wang/JSLite.js.git</code></p>
-<h3 id="push">push</h3><p><code>git push origin master</code><br><code>git push -f origin master</code>  #强制推送</p>
-<ol>
-<li>缩写 -f  </li>
-<li>全写—force  </li>
-<li>注：强制推送文件没有了哦</li>
-</ol>
-<h3 id="pull">pull</h3><p>只能拉取 <code>origin</code> 里的一个url地址，这个fetch-url<br>默认为你添加的到 <code>origin</code>的第一个地址  </p>
-<p><code>git pull origin master</code> </p>
-<h3 id="更改pull">更改pull</h3><p>只需要更改config文件里，那三个url的顺序即可，fetch-url会直接对应排行第一的那个utl连接。    </p>
-<h2 id="新建仓库">新建仓库</h2><h3 id="init">init</h3><p><code>git init</code> #初始化  </p>
-<h3 id="status">status</h3><p><code>git status</code> #获取状态  </p>
-<h3 id="add">add</h3><p><code>git add file</code> #.或*代表全部添加<br><code>git rm --cached &lt;added_file_to_undo&gt;</code> 在commit之前撤销git add操作<br><code>git reset head</code> 好像比上面<code>git rm --cached</code>更方便  </p>
-<h3 id="commit">commit</h3><p><code>git commit -m &quot;message&quot;</code> #此处注意乱码</p>
-<h3 id="remote">remote</h3><p><code>git remote add origin git@github.com:JSLite/test.git</code> #添加源</p>
-<h3 id="push-1">push</h3><p><code>git push -u origin master</code> #push同事设置默认跟踪分支<br><code>git push origin master</code>   </p>
-<h2 id="从现有仓库克隆">从现有仓库克隆</h2><p><code>git clone git://github.com/JSLite/JSLite.js.git</code><br><code>git clone git://github.com/JSLite/JSLite.js.git mypro</code> #克隆到自定义文件夹  </p>
-<h2 id="本地">本地</h2><h3 id="add-1">add</h3><p><code>git add *</code> #跟踪新文件<br><code>git add -u [path]</code> #添加[指定路径下]已跟踪文件  </p>
-<h3 id="rm">rm</h3><p><code>rm *&amp;git rm *</code> #移除文件<br><code>git rm -f *</code> #移除文件<br><code>git rm --cached *</code> #取消跟踪<br><code>git mv file_from file_to</code> #重命名跟踪文件<br><code>git log</code> #查看提交记录   </p>
-<h3 id="commit-1">commit</h3><p><code>git commit</code> #提交更新<br><code>git commit -m &#39;message&#39;</code> 提交说明<br><code>git commit -a</code> #跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交<br><code>git commit --amend</code> #修改最后一次提交<br><code>git commit log</code> #查看所有提交，包括没有push的commit<br><code>git commit -m &quot;#133&quot;</code> 关联issue 任意位置带上<code>#</code> 符号加上issue号码<br><code>git commit -m &quot;fix #133&quot;</code> commit关闭issue</p>
-<h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br><code>git reset --mixed HEAD</code> </em>#同上<br><code>git reset --soft HEAD</code> <em>#重置到指定状态，不会修改索引区和工作树<br><code>git reset --hard HEAD</code> </em>#重置到指定状态，会修改索引区和工作树<br><code>git reset -- files</code> *#重置index区文件<br>那么如何跟随着commit关闭一个issue呢? 在confirm merge的时候可以使用一下命令来关闭相关issue:</p>
-<ol>
-<li>fixes #xxx</li>
-<li>fixed #xxx</li>
-<li>fix #xxx</li>
-<li>closes #xxx</li>
-<li>close #xxx</li>
-<li>closed #xxx</li>
-</ol>
-<h3 id="revert">revert</h3><p><code>git revert HEAD</code> #撤销前一次操作<br><code>git revert HEAD~</code> #撤销前前一次操作<br><code>git revert commit</code> ##撤销指定操作  </p>
-<h3 id="checkout">checkout</h3><p><code>git checkout -- file</code> #取消对文件的修改（从暂存区——覆盖worktree file）<br><code>git checkout branch|tag|commit -- file_name</code> #从仓库取出file覆盖当前分支<br><code>git checkout -- .</code> #从暂存区取出文件覆盖工作区  </p>
-<h3 id="diff">diff</h3><p><code>git diff file</code> #查看指定文件的差异<br><code>git diff --stat</code> #查看简单的diff结果<br><code>git diff</code> #比较Worktree和Index之间的差异<br><code>git diff --cached</code> #比较Index和HEAD之间的差异<br><code>git diff HEAD</code> #比较Worktree和HEAD之间的差异<br><code>git diff branch</code> #比较Worktree和branch之间的差异<br><code>git diff branch1 branch2</code> #比较两次分支之间的差异<br><code>git diff commit commit</code> #比较两次提交之间的差异   </p>
-<h3 id="stash">stash</h3><p><code>git stash</code> #将工作区现场（已跟踪文件）储藏起来，等以后恢复后继续工作。<br><code>git stash list</code> #查看保存的工作现场<br><code>git stash apply</code> #恢复工作现场<br><code>git stash drop</code> #删除stash内容<br><code>git stash pop</code> #恢复的同时直接删除stash内容<br><code>git stash apply stash@{0}</code> #恢复指定的工作现场，当你保存了不只一份工作现场时。   </p>
-<h2 id="分支">分支</h2><h3 id="branch">branch</h3><p><code>git branch</code> #列出本地分支<br><code>git branch -r</code> #列出远端分支<br><code>git branch -a</code> #列出所有分支<br><code>git branch -v</code> #查看各个分支最后一个提交对象的信息<br><code>git branch --merge</code> #查看已经合并到当前分支的分支<br><code>git branch --no-merge</code> #查看为合并到当前分支的分支<br><code>git branch test</code> #新建test分支<br><code>git branch -m old new</code> #重命名分支<br><code>git branch -d test</code> #删除test分支<br><code>git branch -D test</code> #强制删除test分支<br><code>git branch --set-upstream dev origin/dev</code> #将本地dev分支与远程dev分支之间建立链接  </p>
-<h3 id="checkout-1">checkout</h3><p><code>git checkout test</code> #切换到test分支<br><code>git checkout -b test</code> #新建+切换到test分支<br><code>git checkout -b test dev</code> #基于dev新建test分支，并切换  </p>
-<h3 id="merge">merge</h3><p><code>git merge test</code> #将test分支合并到当前分支<br><code>git merge --squash test</code> ##合并压缩，将test上的commit压缩为一条  </p>
-<h3 id="cherry-pick">cherry-pick</h3><p><code>git cherry-pick commit</code> #拣选合并，将commit合并到当前分支<br><code>git cherry-pick -n commit</code> #拣选多个提交，合并完后可以继续拣选下一个提交  </p>
-<h3 id="rebase">rebase</h3><p><code>git rebase master</code> #将master分之上超前的提交，变基到当前分支<br><code>git rebase --onto master 169a6</code> #限制回滚范围，rebase当前分支从169a6以后的提交<br><code>git rebase --interactive</code> #交互模式<br><code>git rebase --continue</code> # 处理完冲突继续合并<br><code>git rebase --skip</code> # 跳过<br><code>git rebase --abort</code> # 取消合并   </p>
-<h2 id="远端">远端</h2><p><code>git fetch origin remotebranch[:localbranch]</code> # 从远端拉去分支[到本地指定分支]<br><code>git merge origin/branch</code> #合并远端上指定分支<br><code>git pull origin remotebranch:localbranch</code> # 拉去远端分支到本地分支<br><code>git push origin branch</code> #将当前分支，推送到远端上指定分支<br><code>git push origin localbranch:remotebranch</code> #推送本地指定分支，到远端上指定分支<br><code>git push origin :remotebranch</code> #删除远端指定分支<br><code>git checkout -b [--track] test origin/dev</code> 基于远端dev分支，新建本地test分支[同时设置跟踪]  </p>
-<h3 id="撤销远程记录">撤销远程记录</h3><p><code>git reset --hard HEAD~1</code><br><code>git push -f origin HEAD:master</code>  </p>
-<h2 id="忽略文件">忽略文件</h2><p><code>echo node_modules/ &gt;&gt; .gitignore</code>  </p>
-<h2 id="删除文件">删除文件</h2><p><code>git rm -rf node_modules/</code>  </p>
-<h2 id="源">源</h2><p>git是一个分布式代码管理工具，所以可以支持多个仓库，在git里，服务器上的仓库在本地称之为remote。<br>个人开发时，多源用的可能不多，但多源其实非常有用。<br><code>git remote add origin1 git@github.com:yanhaijing/data.js.git</code><br><code>git remote</code> #显示全部源<br><code>git remote -v</code> #显示全部源+详细信息<br><code>git remote rename origin1 origin2</code> #重命名<br><code>git remote rm origin</code> #删除<br><code>git remote show origin</code> #查看指定源的全部信息  </p>
-<h2 id="标签">标签</h2><p>当开发到一定阶段时，给程序打标签是非常棒的功能。<br><code>git tag</code> #列出现有标签<br><code>git tag v0.1</code> #新建标签<br><code>git tag -a v0.1 -m &#39;my version 1.4&#39;</code> #新建带注释标签<br><code>git checkout tagname</code> #切换到标签<br><code>git push origin v1.5</code> #推送分支到源上<br><code>git push origin --tags</code> #一次性推送所有分支<br><code>git tag -d v0.1</code> #删除标签<br><code>git push origin :refs/tags/v0.1</code> #删除远程标签<br><code>git pull --all</code> #获取远程所有内容包括tag  </p>
-<h3 id="log">log</h3><p><code>git log</code> #查看最近的提交日志<br><code>git log --pretty=oneline</code> #单行显示提交日志<br><code>git log --graph --pretty=oneline --abbrev-commit</code><br><code>git log -num</code> #显示第几条log（倒数）<br><code>git config format.pretty oneline</code>  #显示历史记录时，每个提交的信息只显示一行<br><code>git config color.ui true</code> #彩色的 git 输出<br><code>git log --since=1.day</code> #一天内的提交；你可以给出各种时间格式，比如说具体的某一天（“2008-01-15”），或者是多久以前（“2 years 1 day 3 minutes ago”）。<br><code>git log --pretty=&quot;%h - %s&quot; --author=自己的名字</code> #查看自己的日志<br><code>git log -p -2</code> #展开两次更新显示每次提交的内容差异<br><code>git log --stat</code> #要快速浏览其他协作者提交的更新都作了哪些改动<br><code>git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</code>#定制要显示的记录格式  </p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%H</td>
-<td>提交对象（commit）的完整哈希字串</td>
-</tr>
-<tr>
-<td>%h</td>
-<td>提交对象的简短哈希字串</td>
-</tr>
-<tr>
-<td>%T</td>
-<td>树对象（tree）的完整哈希字串</td>
-</tr>
-<tr>
-<td>%t</td>
-<td>树对象的简短哈希字串</td>
-</tr>
-<tr>
-<td>%P</td>
-<td>父对象（parent）的完整哈希字串</td>
-</tr>
-<tr>
-<td>%p</td>
-<td>父对象的简短哈希字串</td>
-</tr>
-<tr>
-<td>%an</td>
-<td>作者（author）的名字</td>
-</tr>
-<tr>
-<td>%ae</td>
-<td>作者的电子邮件地址</td>
-</tr>
-<tr>
-<td>%ad</td>
-<td>作者修订日期（可以用 -date= 选项定制格式）</td>
-</tr>
-<tr>
-<td>%ar</td>
-<td>作者修订日期，按多久以前的方式显示</td>
-</tr>
-<tr>
-<td>%cn</td>
-<td>提交者(committer)的名字</td>
-</tr>
-<tr>
-<td>%ce</td>
-<td>提交者的电子邮件地址</td>
-</tr>
-<tr>
-<td>%cd</td>
-<td>提交日期</td>
-</tr>
-<tr>
-<td>%cr</td>
-<td>提交日期，按多久以前的方式显示</td>
-</tr>
-<tr>
-<td>%s</td>
-<td>提交说明</td>
-</tr>
-</tbody>
-</table>
-<h2 id="总结">总结</h2><p><code>git help *</code> #获取命令的帮助信息<br><code>git status</code> #获取当前的状态，非常有用，因为git会提示接下来的能做的操作  </p>
-<h2 id="报错">报错</h2><ol>
-<li><code>git fatal: protocol error: bad line length character: No s</code><br> 解决办法：更换remote地址为 <code>http/https</code> 的</li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="http://yanhaijing.com/git/2014/11/01/my-git-note" target="_blank" rel="external">大部分转载颜海镜的文章</a><br>这篇文章记录个人常用的一些命令，和记不住的一些命令，转载]]>
-    </summary>
-    
-      <category term="git" scheme="http://jslite.io/tags/git/"/>
-    
-      <category term="shell" scheme="http://jslite.io/tags/shell/"/>
     
   </entry>
   
