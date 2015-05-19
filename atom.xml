@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-05-14T00:45:10.000Z</updated>
+  <updated>2015-05-14T08:39:45.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -15,13 +15,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[JS实现浏览器的title闪烁、滚动、声音提示、chrome通知]]></title>
+    <title><![CDATA[JS实现浏览器的title闪烁、滚动、声音提示、通知]]></title>
     <link href="http://jslite.io/2015/05/12/JS%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84title%E9%97%AA%E7%83%81%E3%80%81%E6%BB%9A%E5%8A%A8%E3%80%81%E5%A3%B0%E9%9F%B3%E3%80%81chrome%E9%80%9A%E7%9F%A5/"/>
     <id>http://jslite.io/2015/05/12/JS实现浏览器的title闪烁、滚动、声音、chrome通知/</id>
     <published>2015-05-12T12:48:10.000Z</published>
-    <updated>2015-05-14T00:45:10.000Z</updated>
+    <updated>2015-05-14T08:39:45.000Z</updated>
     <content type="html"><![CDATA[<h1 id="通知">通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/iNotify.svg" alt=""></a></p>
-<p>JS 实现浏览器的 title 闪烁、滚动、声音提示、chrome通知  </p>
+<p>JS 实现浏览器的 title 闪烁、滚动、声音提示、chrome、Firefox、Safari等系统通知</p>
 <p>这是重复造轮子…，标题闪烁、或者滚动提示，favicon数字显示。打开chrome浏览器调试工具，按照下面截图的方式放到调试里面调用一下，你就可以看到效果了。</p>
 <p><img src="https://github.com/jaywcjlove/iNotify/blob/master/iNotify.png?raw=true" alt="界面预览"></p>
 <h2 id="下载">下载</h2><h3 id="npm">npm</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> title-notify</span><br></pre></td></tr></table></figure>
