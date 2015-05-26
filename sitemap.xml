@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jslite.io/2015/03/22/%E5%90%84%E7%A7%8D%E5%B8%B8%E7%94%A8js%E9%AA%8C%E8%AF%81/</loc>
+    <lastmod>2015-05-25T06:05:30.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jslite.io/API/index.html</loc>
+    <lastmod>2015-05-22T20:07:38.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jslite.io/2015/04/01/CSS%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2015-05-22T18:26:09.000Z</lastmod>
   </url>
@@ -34,11 +44,6 @@
   <url>
     <loc>http://jslite.io/2015/01/07/JSLite-01-%E4%BB%8B%E7%BB%8D/</loc>
     <lastmod>2015-05-12T08:58:03.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jslite.io/API/index.html</loc>
-    <lastmod>2015-05-12T06:22:41.000Z</lastmod>
   </url>
   
   <url>
@@ -164,11 +169,6 @@
   <url>
     <loc>http://jslite.io/2015/01/03/JSLite-02-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2015-04-09T05:45:16.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jslite.io/2015/03/22/%E5%90%84%E7%A7%8D%E5%B8%B8%E7%94%A8js%E9%AA%8C%E8%AF%81/</loc>
-    <lastmod>2015-04-09T05:44:29.000Z</lastmod>
   </url>
   
   <url>
