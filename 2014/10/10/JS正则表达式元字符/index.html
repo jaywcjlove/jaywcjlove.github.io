@@ -7,7 +7,12 @@
     <title>JS正则表达式元字符 | JSLite.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="baidu-site-verification" content="1ZsVVOmjoT" />
-    <meta name="description" content="正则
+    <meta name="description" content="JS正则表达式元字符的使用教程
+
+
+
+
+正则
 描述
 正则
 描述
@@ -30,12 +35,17 @@
 \r
 匹配回车
 \s
-匹配单个空格，等同于|| `\S`  | &amp;#34920;&amp;#31034;&amp;#38750;&amp;#31354;&amp;#26684;&amp;#23383;&amp;#31526; | `\d`  | &amp;#22312;&amp;#27491;&amp;#21017;&amp;#20013;&amp;#34920;&amp;#3">
+匹配单个空格，等同于|| `\S`  | &amp;#34920;&amp;#31034;&amp;#38750;&amp;#31354;&amp;#26684;&amp;#23383;&amp;#31526; | `\d`  | &amp;#22312;&amp;#27491;&amp;#21017">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS正则表达式元字符">
 <meta property="og:url" content="http://jslite.io/2014/10/10/JS正则表达式元字符/index.html">
 <meta property="og:site_name" content="JSLite.io">
-<meta property="og:description" content="正则
+<meta property="og:description" content="JS正则表达式元字符的使用教程
+
+
+
+
+正则
 描述
 正则
 描述
@@ -58,10 +68,15 @@
 \r
 匹配回车
 \s
-匹配单个空格，等同于|| `\S`  | &amp;#34920;&amp;#31034;&amp;#38750;&amp;#31354;&amp;#26684;&amp;#23383;&amp;#31526; | `\d`  | &amp;#22312;&amp;#27491;&amp;#21017;&amp;#20013;&amp;#34920;&amp;#3">
+匹配单个空格，等同于|| `\S`  | &amp;#34920;&amp;#31034;&amp;#38750;&amp;#31354;&amp;#26684;&amp;#23383;&amp;#31526; | `\d`  | &amp;#22312;&amp;#27491;&amp;#21017">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS正则表达式元字符">
-<meta name="twitter:description" content="正则
+<meta name="twitter:description" content="JS正则表达式元字符的使用教程
+
+
+
+
+正则
 描述
 正则
 描述
@@ -84,7 +99,7 @@
 \r
 匹配回车
 \s
-匹配单个空格，等同于|| `\S`  | &amp;#34920;&amp;#31034;&amp;#38750;&amp;#31354;&amp;#26684;&amp;#23383;&amp;#31526; | `\d`  | &amp;#22312;&amp;#27491;&amp;#21017;&amp;#20013;&amp;#34920;&amp;#3">
+匹配单个空格，等同于|| `\S`  | &amp;#34920;&amp;#31034;&amp;#38750;&amp;#31354;&amp;#26684;&amp;#23383;&amp;#31526; | `\d`  | &amp;#22312;&amp;#27491;&amp;#21017">
     
       <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
     
@@ -229,10 +244,11 @@ var _hmt = _hmt || [];
             
             <div class="article-entry" itemprop="articleBody">
               <div class="page-toc">
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#空白\s（包括空格回车制表符等）"><span class="toc-number">1.</span> <span class="toc-text">空白\s（包括空格回车制表符等）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单字符\w"><span class="toc-number">2.</span> <span class="toc-text">单字符\w</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组和分组的引用"><span class="toc-number">3.</span> <span class="toc-text">分组和分组的引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不记录子正则表达式的匹配结果[匹配不捕获]"><span class="toc-number">4.</span> <span class="toc-text">不记录子正则表达式的匹配结果[匹配不捕获]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正向预查"><span class="toc-number">5.</span> <span class="toc-text">正向预查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配元字符"><span class="toc-number">6.</span> <span class="toc-text">匹配元字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式的修饰符"><span class="toc-number">7.</span> <span class="toc-text">正则表达式的修饰符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配固定的n个_c{n}"><span class="toc-number">8.</span> <span class="toc-text">匹配固定的n个 c{n}</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c{m,n}_匹配最少m个，最多n个"><span class="toc-number">9.</span> <span class="toc-text">c{m,n}   匹配最少m个，最多n个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c{n,}表示最少匹配n个c，最多不限制"><span class="toc-number">10.</span> <span class="toc-text">c{n,}表示最少匹配n个c，最多不限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贪心与非贪心【贪婪匹配和非贪婪匹配】"><span class="toc-number">11.</span> <span class="toc-text">贪心与非贪心【贪婪匹配和非贪婪匹配】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#/^开头,结尾$/_【表示位置】"><span class="toc-number">12.</span> <span class="toc-text">/^开头,结尾$/   【表示位置】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元字符点’-’的用法"><span class="toc-number">13.</span> <span class="toc-text">元字符点’.’的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#例1："><span class="toc-number">13.0.1.</span> <span class="toc-text">例1：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#例2："><span class="toc-number">13.0.2.</span> <span class="toc-text">例2：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“|“，正则表达式中的或，把“|”左右两边的一到多个字符当成一个整体对待"><span class="toc-number">14.</span> <span class="toc-text">“|“，正则表达式中的或，把“|”左右两边的一到多个字符当成一个整体对待</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#例1：-1"><span class="toc-number">14.0.1.</span> <span class="toc-text">例1：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#例2：-1"><span class="toc-number">14.0.2.</span> <span class="toc-text">例2：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#例3："><span class="toc-number">14.0.3.</span> <span class="toc-text">例3：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#例4："><span class="toc-number">14.0.4.</span> <span class="toc-text">例4：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#和括号结合使用"><span class="toc-number">15.</span> <span class="toc-text">和括号结合使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#方括号的作用:[]"><span class="toc-number">15.0.1.</span> <span class="toc-text">方括号的作用:[]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#关于正则中的连续字符"><span class="toc-number">15.0.2.</span> <span class="toc-text">关于正则中的连续字符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#请百度一下“ASCII码表”，参照里面字符出现的顺序和对应的16进制或10进制的编码。"><span class="toc-number">15.0.3.</span> <span class="toc-text">请百度一下“ASCII码表”，参照里面字符出现的顺序和对应的16进制或10进制的编码。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#反字符集合[^abc]"><span class="toc-number">15.0.4.</span> <span class="toc-text">反字符集合[^abc]</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#边界与非边界"><span class="toc-number">16.</span> <span class="toc-text">边界与非边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字与非数字"><span class="toc-number">17.</span> <span class="toc-text">数字与非数字</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#空白\s（包括空格回车制表符等）"><span class="toc-number">1.</span> <span class="toc-text">空白\s（包括空格回车制表符等）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单字符\w"><span class="toc-number">2.</span> <span class="toc-text">单字符\w</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组和分组的引用"><span class="toc-number">3.</span> <span class="toc-text">分组和分组的引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不记录子正则表达式的匹配结果[匹配不捕获]"><span class="toc-number">4.</span> <span class="toc-text">不记录子正则表达式的匹配结果[匹配不捕获]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正向预查"><span class="toc-number">5.</span> <span class="toc-text">正向预查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配元字符"><span class="toc-number">6.</span> <span class="toc-text">匹配元字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式的修饰符"><span class="toc-number">7.</span> <span class="toc-text">正则表达式的修饰符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配固定的n个_c{n}"><span class="toc-number">8.</span> <span class="toc-text">匹配固定的n个 c{n}</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c{m,n}_匹配最少m个，最多n个"><span class="toc-number">9.</span> <span class="toc-text">c{m,n}   匹配最少m个，最多n个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c{n,}表示最少匹配n个c，最多不限制"><span class="toc-number">10.</span> <span class="toc-text">c{n,}表示最少匹配n个c，最多不限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贪心与非贪心【贪婪匹配和非贪婪匹配】"><span class="toc-number">11.</span> <span class="toc-text">贪心与非贪心【贪婪匹配和非贪婪匹配】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#/^开头,结尾$/_【表示位置】"><span class="toc-number">12.</span> <span class="toc-text">/^开头,结尾$/   【表示位置】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元字符点’-’的用法"><span class="toc-number">13.</span> <span class="toc-text">元字符点’.’的用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“|“，正则表达式中的或，把“|”左右两边的一到多个字符当成一个整体对待"><span class="toc-number">14.</span> <span class="toc-text">“|“，正则表达式中的或，把“|”左右两边的一到多个字符当成一个整体对待</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#和括号结合使用"><span class="toc-number">15.</span> <span class="toc-text">和括号结合使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#方括号的作用:[]"><span class="toc-number">15.0.1.</span> <span class="toc-text">方括号的作用:[]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#关于正则中的连续字符"><span class="toc-number">15.0.2.</span> <span class="toc-text">关于正则中的连续字符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#请百度一下“ASCII码表”，参照里面字符出现的顺序和对应的16进制或10进制的编码。"><span class="toc-number">15.0.3.</span> <span class="toc-text">请百度一下“ASCII码表”，参照里面字符出现的顺序和对应的16进制或10进制的编码。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#反字符集合[^abc]"><span class="toc-number">15.0.4.</span> <span class="toc-text">反字符集合[^abc]</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#边界与非边界"><span class="toc-number">16.</span> <span class="toc-text">边界与非边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字与非数字"><span class="toc-number">17.</span> <span class="toc-text">数字与非数字</span></a></li></ol>
               </div>
               
-                <hr>
+                <p>JS正则表达式元字符的使用教程</p>
+<hr>
 <table>
 <thead>
 <tr>
@@ -263,7 +279,7 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
-<h3 id="空白\s（包括空格回车制表符等）">空白\s（包括空格回车制表符等）</h3><p><code>\f</code>匹配换页符，<code>\n</code>匹配换行符，<code>\r</code>匹配回车，<code>\t</code>匹配制表符，<code>\v</code>匹配垂直制表符。<br><code>\s</code>匹配单个空格，等同于<code>[\f\n\r\t\v]</code>。例如：<br>例1：</p>
+<h3 id="空白\s（包括空格回车制表符等）">空白<code>\s</code>（包括空格回车制表符等）</h3><p><code>\f</code>匹配换页符，<code>\n</code>匹配换行符，<code>\r</code>匹配回车，<code>\t</code>匹配制表符，<code>\v</code>匹配垂直制表符。<br><code>\s</code>匹配单个空格，等同于<code>[\f\n\r\t\v]</code>。例如：<br>例1：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\s.+/</span>;</span><br><span class="line"><span class="keyword">var</span> str=<span class="string">'This is a test String.'</span>;</span><br><span class="line">alert(reg.exec(str));</span><br></pre></td></tr></table></figure>
 <p>返回<code>“is a test String.”</code>，正则的意思是匹配第一个空格以及其后的所有非换行字符。</p>
 <p>同样，<code>\S</code>表示非空格字符。<br>例2：</p>
@@ -403,16 +419,22 @@ var _hmt = _hmt || [];
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">reg = <span class="regexp">/.+/</span>;</span><br><span class="line">str=<span class="string">'zhufengpeixun_  前端开发权威培训'</span>;</span><br><span class="line">alert(reg.exec(str));</span><br></pre></td></tr></table></figure>
 <p>结果是“zhufengpeixun_前端开发“也就是说所有的字符都被匹配掉了，包括一个空格，一个下滑线</p>
 <p>【贪婪匹配】。</p>
-<h5 id="例1：">例1：</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">reg = <span class="regexp">/.+/</span>;</span><br><span class="line">str=<span class="string">'online.zhufengpeixun.cn'</span>;  </span><br><span class="line">alert(reg.exec(str));;</span><br></pre></td></tr></table></figure>
+<p>例1：  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">reg = <span class="regexp">/.+/</span>;</span><br><span class="line">str=<span class="string">'online.zhufengpeixun.cn'</span>;  </span><br><span class="line">alert(reg.exec(str));;</span><br></pre></td></tr></table></figure>
 <p>同样，直接返回整个字符串——online.zhufengpeixun.cn，可见”.”也匹配”.”本身。</p>
-<h5 id="例2：">例2：</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">reg = <span class="regexp">/^./</span>; <span class="comment">//这样表示必须以非换行符开始。</span></span><br><span class="line">str=<span class="string">'\nzhufengpeixun'</span>;</span><br><span class="line">alert(reg.exec(str));</span><br></pre></td></tr></table></figure>
+<p>例2：  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">reg = <span class="regexp">/^./</span>; <span class="comment">//这样表示必须以非换行符开始。</span></span><br><span class="line">str=<span class="string">'\nzhufengpeixun'</span>;</span><br><span class="line">alert(reg.exec(str));</span><br></pre></td></tr></table></figure>
 <p>结果是<code>null</code>，终于失败了，正则要求字符串的第一个字符不是换行，但是恰恰字符是以\n开始的。</p>
 <hr>
 <h3 id="“|“，正则表达式中的或，把“|”左右两边的一到多个字符当成一个整体对待">“|“，正则表达式中的或，把“|”左右两边的一到多个字符当成一个整体对待</h3><p><code>b|c</code>表示，匹配<code>b</code>或者<code>c</code>（这里相当于<code>[bc]</code>）。<code>ab|ac</code>表示匹配<code>ab</code>或<code>ac</code>（但这里不相当于<code>[abc]</code>，<code>[]</code>表示在一组字符中任选一个）。</p>
-<h5 id="例1：-1">例1：</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">/z|o/.exec(<span class="string">'zhufengpeixun'</span>))</span><br><span class="line"><span class="comment">//结果是z。</span></span><br></pre></td></tr></table></figure>
-<h5 id="例2：-1">例2：</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">/z|o/.exec(<span class="string">'online'</span>);</span><br><span class="line"><span class="comment">//结果是o。</span></span><br></pre></td></tr></table></figure>
-<h5 id="例3：">例3：</h5><figure class="highlight"><table><tr><td class="code"><pre><span class="line">/^z|o.+/.exec('online');</span><br><span class="line">//匹配掉整个online。</span><br></pre></td></tr></table></figure>
-<h5 id="例4：">例4：</h5><figure class="highlight"><table><tr><td class="code"><pre><span class="line">/^z|o.+/.exec('zhufengpeixun.cn');</span><br><span class="line">//结果只有一个z，而不是整个字符串。因为上面正则表达式的意思是，匹配开头的z或者是o.+。</span><br></pre></td></tr></table></figure>
+<p>例1：  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">/z|o/.exec(<span class="string">'zhufengpeixun'</span>))</span><br><span class="line"><span class="comment">//结果是z。</span></span><br></pre></td></tr></table></figure>
+<p>例2：  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">/z|o/.exec(<span class="string">'online'</span>);</span><br><span class="line"><span class="comment">//结果是o。</span></span><br></pre></td></tr></table></figure>
+<p>例3：  </p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">/^z|o.+/.exec('online');</span><br><span class="line">//匹配掉整个online。</span><br></pre></td></tr></table></figure>
+<p>例4：  </p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">/^z|o.+/.exec('zhufengpeixun.cn');</span><br><span class="line">//结果只有一个z，而不是整个字符串。因为上面正则表达式的意思是，匹配开头的z或者是o.+。</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="和括号结合使用">和括号结合使用</h3><p>例：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">/^(z|o).+<span class="regexp">/.exec('zhufengpeixun');</span></span><br></pre></td></tr></table></figure>
@@ -459,7 +481,7 @@ var _hmt = _hmt || [];
               <a href="/2014/10/10/JS正则表达式元字符/" class="article-date">
   <time datetime="2014-10-09T17:22:42.000Z" itemprop="datePublished">2014-10-10</time>
 </a>
-              <a data-url="http://jslite.io/2014/10/10/JS正则表达式元字符/" data-id="ciaj8jfrq003aweglqsb7mryc" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2014/10/10/JS正则表达式元字符/" data-id="ciap2jg0d003aj2gla3c1utdn" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
