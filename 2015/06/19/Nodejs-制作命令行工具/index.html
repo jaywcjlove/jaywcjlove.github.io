@@ -8,21 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="baidu-site-verification" content="1ZsVVOmjoT" />
     <meta name="description" content="wcj   
-在使用 Nodejs 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。Node.js 中发现弄个命令行工具特别轻松，我来学习如何使用 node.js 生成自己的command命令，在未来的项目中方便自己。  
-
-先弄个小实例感受一下命令行的魅力
-再用命令行实现输出自己的简历（我觉得这个可能很有趣）
-常用的命令加入进">
+这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。
+# &amp;#20840;&amp;#23616;&amp;#23433;&amp;#35013;&amp;#10;$ npm install -g wcj &amp;#10;&amp;#10;# &amp;#36755;&amp;#20986;&amp;#24110;&amp;#21161;&amp;#10;$ wcj -h&amp;#10;  Usage: wcj &amp;#36825;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nodejs 制作命令行工具">
 <meta property="og:url" content="http://jslite.io/2015/06/19/Nodejs-制作命令行工具/index.html">
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="wcj   
-在使用 Nodejs 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。Node.js 中发现弄个命令行工具特别轻松，我来学习如何使用 node.js 生成自己的command命令，在未来的项目中方便自己。  
-
-先弄个小实例感受一下命令行的魅力
-再用命令行实现输出自己的简历（我觉得这个可能很有趣）
-常用的命令加入进">
+这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。
+# &amp;#20840;&amp;#23616;&amp;#23433;&amp;#35013;&amp;#10;$ npm install -g wcj &amp;#10;&amp;#10;# &amp;#36755;&amp;#20986;&amp;#24110;&amp;#21161;&amp;#10;$ wcj -h&amp;#10;  Usage: wcj &amp;#36825;&amp;">
 <meta property="og:image" content="https://img.shields.io/github/issues/jaywcjlove/wcj.svg">
 <meta property="og:image" content="https://img.shields.io/github/forks/jaywcjlove/wcj.svg">
 <meta property="og:image" content="https://img.shields.io/github/stars/jaywcjlove/wcj.svg">
@@ -30,11 +24,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nodejs 制作命令行工具">
 <meta name="twitter:description" content="wcj   
-在使用 Nodejs 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。Node.js 中发现弄个命令行工具特别轻松，我来学习如何使用 node.js 生成自己的command命令，在未来的项目中方便自己。  
-
-先弄个小实例感受一下命令行的魅力
-再用命令行实现输出自己的简历（我觉得这个可能很有趣）
-常用的命令加入进">
+这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。
+# &amp;#20840;&amp;#23616;&amp;#23433;&amp;#35013;&amp;#10;$ npm install -g wcj &amp;#10;&amp;#10;# &amp;#36755;&amp;#20986;&amp;#24110;&amp;#21161;&amp;#10;$ wcj -h&amp;#10;  Usage: wcj &amp;#36825;&amp;">
     
       <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
     
@@ -156,7 +147,7 @@ var _hmt = _hmt || [];
         
 
         <!--<a href="/2015/06/19/Nodejs-制作命令行工具/" class="article-date">
-  <time datetime="2015-06-19T06:15:01.000Z" itemprop="datePublished">2015-06-19</time>
+  <time datetime="2015-06-19T03:15:01.000Z" itemprop="datePublished">2015-06-19</time>
 </a>-->
         <!--  -->
       </div>
@@ -179,11 +170,13 @@ var _hmt = _hmt || [];
             
             <div class="article-entry" itemprop="articleBody">
               <div class="page-toc">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#wcj"><span class="toc-number">1.</span> <span class="toc-text">wcj</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#小实例"><span class="toc-number">2.</span> <span class="toc-text">小实例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建目录"><span class="toc-number">2.1.</span> <span class="toc-text">创建目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写命令行"><span class="toc-number">2.2.</span> <span class="toc-text">编写命令行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局运行命令调试"><span class="toc-number">2.3.</span> <span class="toc-text">全局运行命令调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误"><span class="toc-number">2.4.</span> <span class="toc-text">错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布安装"><span class="toc-number">2.5.</span> <span class="toc-text">发布安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#发布到npm中"><span class="toc-number">2.5.1.</span> <span class="toc-text">发布到npm中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">2.5.2.</span> <span class="toc-text">安装</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Commander"><span class="toc-number">3.</span> <span class="toc-text">Commander</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#特性"><span class="toc-number">3.1.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-number">3.2.</span> <span class="toc-text">API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-1"><span class="toc-number">3.3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Option"><span class="toc-number">3.4.</span> <span class="toc-text">Option</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Custom_option"><span class="toc-number">3.5.</span> <span class="toc-text">Custom option</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unknown_option"><span class="toc-number">3.6.</span> <span class="toc-text">Unknown option</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Option_types"><span class="toc-number">3.7.</span> <span class="toc-text">Option types</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#required_和_optional"><span class="toc-number">3.7.1.</span> <span class="toc-text">required 和 optional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bool"><span class="toc-number">3.7.2.</span> <span class="toc-text">bool</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Automated_—help"><span class="toc-number">3.8.</span> <span class="toc-text">Automated —help</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom_help"><span class="toc-number">3.8.1.</span> <span class="toc-text">Custom help</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#像git风格一样的命令"><span class="toc-number">3.9.</span> <span class="toc-text">像git风格一样的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件监听"><span class="toc-number">3.10.</span> <span class="toc-text">事件监听</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#阅读参考"><span class="toc-number">4.</span> <span class="toc-text">阅读参考</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#wcj"><span class="toc-number">1.</span> <span class="toc-text">wcj</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#小实例"><span class="toc-number">2.</span> <span class="toc-text">小实例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建目录"><span class="toc-number">2.1.</span> <span class="toc-text">创建目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写命令行"><span class="toc-number">2.2.</span> <span class="toc-text">编写命令行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局运行命令调试"><span class="toc-number">2.3.</span> <span class="toc-text">全局运行命令调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#install"><span class="toc-number">2.3.1.</span> <span class="toc-text">install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#link"><span class="toc-number">2.3.2.</span> <span class="toc-text">link</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#错误处理"><span class="toc-number">2.3.3.</span> <span class="toc-text">错误处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布安装"><span class="toc-number">2.4.</span> <span class="toc-text">发布安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#发布到npm中"><span class="toc-number">2.4.1.</span> <span class="toc-text">发布到npm中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">2.4.2.</span> <span class="toc-text">安装</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Commander"><span class="toc-number">3.</span> <span class="toc-text">Commander</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#特性"><span class="toc-number">3.1.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-number">3.2.</span> <span class="toc-text">API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-1"><span class="toc-number">3.3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Option"><span class="toc-number">3.4.</span> <span class="toc-text">Option</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Custom_option"><span class="toc-number">3.5.</span> <span class="toc-text">Custom option</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unknown_option"><span class="toc-number">3.6.</span> <span class="toc-text">Unknown option</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Option_types"><span class="toc-number">3.7.</span> <span class="toc-text">Option types</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#required_和_optional"><span class="toc-number">3.7.1.</span> <span class="toc-text">required 和 optional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bool"><span class="toc-number">3.7.2.</span> <span class="toc-text">bool</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Automated_—help"><span class="toc-number">3.8.</span> <span class="toc-text">Automated —help</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom_help"><span class="toc-number">3.8.1.</span> <span class="toc-text">Custom help</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#像git风格一样的命令"><span class="toc-number">3.9.</span> <span class="toc-text">像git风格一样的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件监听"><span class="toc-number">3.10.</span> <span class="toc-text">事件监听</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#阅读参考"><span class="toc-number">4.</span> <span class="toc-text">阅读参考</span></a></li></ol>
               </div>
               
                 <h1 id="wcj">wcj</h1><p><a href="https://github.com/jaywcjlove/wcj/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/wcj.svg" alt=""></a> <a href="https://github.com/jaywcjlove/wcj/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/wcj.svg" alt=""></a> <a href="https://github.com/jaywcjlove/wcj/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/wcj.svg" alt=""></a> <a href="https://github.com/jaywcjlove/wcj/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/wcj.svg" alt=""></a></p>
-<p>在使用 <code>Nodejs</code> 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。<code>Node.js</code> 中发现弄个命令行工具特别轻松，我来学习如何使用 <code>node.js</code> 生成自己的command命令，在未来的项目中方便自己。  </p>
+<p>这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"># &#20840;&#23616;&#23433;&#35013;&#10;$ npm install -g wcj &#10;&#10;# &#36755;&#20986;&#24110;&#21161;&#10;$ wcj -h&#10;  Usage: wcj &#36825;&#37324;&#26159;&#25105;&#31169;&#20154;&#29609;&#32781;&#30340;&#21629;&#20196;&#21734;&#65281;[options] &#60;package&#62;&#10;&#10;&#10;  Commands:&#10;&#10;    resume|rs [options] [cmd]    &#36825;&#37324;&#26159;&#25105;&#30340;&#31616;&#21382;&#35814;&#24773;&#65281;&#10;&#10;  Options:&#10;&#10;    -h, --help     output usage information&#10;    -V, --version  output the version number&#10;&#10;# &#36755;&#20986;&#23376;&#21629;&#20196;&#24110;&#21161;&#10;$ wcj rs -h&#10;  Usage: resume|rs [options] [cmd]&#10;&#10;    &#36825;&#37324;&#26159;&#25105;&#30340;&#31616;&#21382;&#35814;&#24773;&#65281;&#10;&#10;  Options:&#10;&#10;    -h, --help              output usage information&#10;    -b, --basicinfo [type]  &#22522;&#26412;&#20449;&#24687;&#10;    -e, --education [type]  &#25945;&#32946;&#32463;&#21382;&#10;&#10;  basicinfo &#35828;&#26126;:&#10;&#10;    preview -b  &#39044;&#35272;&#22522;&#26412;&#20449;&#24687;&#10;    preview -e  &#39044;&#35272;&#25945;&#32946;&#32463;&#21382;&#10;&#10;    -b, --basicinfo &#22522;&#26412;&#20449;&#24687;&#10;       name : &#21517;&#23383;&#10;       height : &#36523;&#39640;&#10;       dateOfBirth : &#20986;&#29983;&#26085;&#26399;&#10;       workExperience : &#24037;&#20316;&#32463;&#39564;&#10;       mobile : &#25163;&#26426;&#21495;&#30721;&#10;       telephone : &#30005;&#35805;&#21495;&#30721;&#10;       email : &#37038;&#31665;&#22320;&#22336;&#10;       residency : &#23621;&#20303;&#22320;&#28857;&#10;       currentSituation : &#29616;&#29366;&#10;       currentCity : &#24403;&#21069;&#22478;&#24066;&#10;       nation : &#22269;&#23478;&#10;       region : &#22320;&#21306;&#10;       postalCode : &#37038;&#32534;&#22320;&#22336;&#10;       ID : &#36523;&#20221;&#35777;ID&#10;       website : &#20010;&#20154;&#32593;&#36186;&#10;       maritalStatus : &#23130;&#23035;&#29366;&#20917;&#10;       politicalStatus : &#25919;&#27835;&#38754;&#35980;&#10;    -e, --education &#25945;&#32946;&#32463;&#21382;</span><br></pre></td></tr></table></figure>
+<p>在使用 <code>Nodejs</code> 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。在<code>Node.js</code> 中发现弄个命令行工具特别轻松，我来学习如何使用 <code>Node.js</code> 生成自己的command命令，在未来的项目中方便自己。  </p>
 <ul>
 <li>先弄个小实例感受一下命令行的魅力</li>
 <li>再用命令行实现输出自己的简历（我觉得这个可能很有趣）</li>
@@ -211,11 +204,11 @@ var _hmt = _hmt || [];
 <h2 id="全局运行命令调试">全局运行命令调试</h2><blockquote>
 <p>确保你在 <code>package.json</code> 文件中添加了 <code>bin</code> 节点。然后打开命令了工具进入 <code>wcj</code> 目录 </p>
 </blockquote>
-<p>如果在项目目录下运行没有问题，可以将当前目录模块安装到全局，也可以采用此方法来更新你的命令行工具</p>
+<h3 id="install">install</h3><p>如果在项目目录下运行没有问题，可以将当前目录模块安装到全局，也可以采用此方法来更新你的命令行工具</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">sudo npm <span class="keyword">install</span> . -g</span><br></pre></td></tr></table></figure>
-<p>或者目录输入 <code>npm link</code> 会自动添加全局的 <code>symbolic link</code> ，然后就可以使用自己的命令了。</p>
+<h3 id="link">link</h3><p>或者目录输入 <code>npm link</code> 会自动添加全局的 <code>symbolic link</code> ，然后就可以使用自己的命令了。</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">$ wcj&#10;#README.md&#10;#bin&#10;#package.json&#10;&#10;$ cmd -v&#10;# version is 1.0.0&#10;&#10;$ cmd -h &#10;#Useage:&#10;#  -v --version [show version]</span><br></pre></td></tr></table></figure>
-<h2 id="错误">错误</h2><p>在运行 <code>sudo npm install . -g</code> 会有一堆警告可以忽视</p>
+<h3 id="错误处理">错误处理</h3><p>在运行 <code>sudo npm install . -g</code> 会有一堆警告可以忽视</p>
 <p>如果你已经 <code>npm link</code> 搞了一遍你再 link 一遍，会报如下错误。即使你 <code>npm unlink</code> 也会报如下错误：</p>
 <figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> link</span><br><span class="line"><span class="built_in">npm</span> ERR! Darwin <span class="number">14.3</span>.<span class="number">0</span></span><br><span class="line"><span class="built_in">npm</span> ERR! argv <span class="string">"node"</span> <span class="string">"/usr/local/bin/npm"</span> <span class="string">"link"</span></span><br><span class="line"><span class="built_in">npm</span> ERR! node v0.<span class="number">10.36</span></span><br><span class="line"><span class="built_in">npm</span> ERR! <span class="built_in">npm</span>  v2.<span class="number">7.1</span></span><br><span class="line"><span class="built_in">npm</span> ERR! path /usr/local/bin/wcj</span><br><span class="line"><span class="built_in">npm</span> ERR! code EEXIST</span><br><span class="line"></span><br><span class="line"><span class="built_in">npm</span> ERR! Refusing <span class="keyword">to</span> <span class="attribute">delete</span>: /usr/local/bin/wcj <span class="keyword">not</span> <span class="keyword">in</span> /Applications/XAMPP/xamppfiles/htdocs/git/github.com/myJS/wcj</span><br><span class="line">File <span class="attribute">exists</span>: /usr/local/bin/wcj</span><br><span class="line">Move <span class="literal">it</span> away, <span class="keyword">and</span> <span class="keyword">try</span> again.</span><br></pre></td></tr></table></figure>
 <p>让你删除 <code>/usr/local/bin/wcj</code> 再 <code>npm link</code> ， 删除此目录运行 <code>rm -rf /usr/local/bin/wcj</code></p>
@@ -287,9 +280,9 @@ var _hmt = _hmt || [];
             </div>
             <footer class="article-footer">
               <a href="/2015/06/19/Nodejs-制作命令行工具/" class="article-date">
-  <time datetime="2015-06-19T06:15:01.000Z" itemprop="datePublished">2015-06-19</time>
+  <time datetime="2015-06-19T03:15:01.000Z" itemprop="datePublished">2015-06-19</time>
 </a>
-              <a data-url="http://jslite.io/2015/06/19/Nodejs-制作命令行工具/" data-id="cib2x8hvh002xx4glpw4xaucq" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/06/19/Nodejs-制作命令行工具/" data-id="cib7nd6jm002xo8glmldluwu0" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               

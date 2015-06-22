@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-06-19T03:16:41.000Z</updated>
+  <updated>2015-06-22T08:34:06.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -18,10 +18,12 @@
     <title><![CDATA[Nodejs 制作命令行工具]]></title>
     <link href="http://jslite.io/2015/06/19/Nodejs-%E5%88%B6%E4%BD%9C%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/"/>
     <id>http://jslite.io/2015/06/19/Nodejs-制作命令行工具/</id>
-    <published>2015-06-19T06:15:01.000Z</published>
-    <updated>2015-06-19T03:16:41.000Z</updated>
+    <published>2015-06-19T03:15:01.000Z</published>
+    <updated>2015-06-22T08:34:06.000Z</updated>
     <content type="html"><![CDATA[<h1 id="wcj">wcj</h1><p><a href="https://github.com/jaywcjlove/wcj/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/wcj.svg" alt=""></a> <a href="https://github.com/jaywcjlove/wcj/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/wcj.svg" alt=""></a> <a href="https://github.com/jaywcjlove/wcj/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/wcj.svg" alt=""></a> <a href="https://github.com/jaywcjlove/wcj/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/wcj.svg" alt=""></a></p>
-<p>在使用 <code>Nodejs</code> 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。<code>Node.js</code> 中发现弄个命令行工具特别轻松，我来学习如何使用 <code>node.js</code> 生成自己的command命令，在未来的项目中方便自己。  </p>
+<p>这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"># &#20840;&#23616;&#23433;&#35013;&#10;$ npm install -g wcj &#10;&#10;# &#36755;&#20986;&#24110;&#21161;&#10;$ wcj -h&#10;  Usage: wcj &#36825;&#37324;&#26159;&#25105;&#31169;&#20154;&#29609;&#32781;&#30340;&#21629;&#20196;&#21734;&#65281;[options] &#60;package&#62;&#10;&#10;&#10;  Commands:&#10;&#10;    resume|rs [options] [cmd]    &#36825;&#37324;&#26159;&#25105;&#30340;&#31616;&#21382;&#35814;&#24773;&#65281;&#10;&#10;  Options:&#10;&#10;    -h, --help     output usage information&#10;    -V, --version  output the version number&#10;&#10;# &#36755;&#20986;&#23376;&#21629;&#20196;&#24110;&#21161;&#10;$ wcj rs -h&#10;  Usage: resume|rs [options] [cmd]&#10;&#10;    &#36825;&#37324;&#26159;&#25105;&#30340;&#31616;&#21382;&#35814;&#24773;&#65281;&#10;&#10;  Options:&#10;&#10;    -h, --help              output usage information&#10;    -b, --basicinfo [type]  &#22522;&#26412;&#20449;&#24687;&#10;    -e, --education [type]  &#25945;&#32946;&#32463;&#21382;&#10;&#10;  basicinfo &#35828;&#26126;:&#10;&#10;    preview -b  &#39044;&#35272;&#22522;&#26412;&#20449;&#24687;&#10;    preview -e  &#39044;&#35272;&#25945;&#32946;&#32463;&#21382;&#10;&#10;    -b, --basicinfo &#22522;&#26412;&#20449;&#24687;&#10;       name : &#21517;&#23383;&#10;       height : &#36523;&#39640;&#10;       dateOfBirth : &#20986;&#29983;&#26085;&#26399;&#10;       workExperience : &#24037;&#20316;&#32463;&#39564;&#10;       mobile : &#25163;&#26426;&#21495;&#30721;&#10;       telephone : &#30005;&#35805;&#21495;&#30721;&#10;       email : &#37038;&#31665;&#22320;&#22336;&#10;       residency : &#23621;&#20303;&#22320;&#28857;&#10;       currentSituation : &#29616;&#29366;&#10;       currentCity : &#24403;&#21069;&#22478;&#24066;&#10;       nation : &#22269;&#23478;&#10;       region : &#22320;&#21306;&#10;       postalCode : &#37038;&#32534;&#22320;&#22336;&#10;       ID : &#36523;&#20221;&#35777;ID&#10;       website : &#20010;&#20154;&#32593;&#36186;&#10;       maritalStatus : &#23130;&#23035;&#29366;&#20917;&#10;       politicalStatus : &#25919;&#27835;&#38754;&#35980;&#10;    -e, --education &#25945;&#32946;&#32463;&#21382;</span><br></pre></td></tr></table></figure>
+<p>在使用 <code>Nodejs</code> 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。在<code>Node.js</code> 中发现弄个命令行工具特别轻松，我来学习如何使用 <code>Node.js</code> 生成自己的command命令，在未来的项目中方便自己。  </p>
 <ul>
 <li>先弄个小实例感受一下命令行的魅力</li>
 <li>再用命令行实现输出自己的简历（我觉得这个可能很有趣）</li>
@@ -49,11 +51,11 @@
 <h2 id="全局运行命令调试">全局运行命令调试</h2><blockquote>
 <p>确保你在 <code>package.json</code> 文件中添加了 <code>bin</code> 节点。然后打开命令了工具进入 <code>wcj</code> 目录 </p>
 </blockquote>
-<p>如果在项目目录下运行没有问题，可以将当前目录模块安装到全局，也可以采用此方法来更新你的命令行工具</p>
+<h3 id="install">install</h3><p>如果在项目目录下运行没有问题，可以将当前目录模块安装到全局，也可以采用此方法来更新你的命令行工具</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">sudo npm <span class="keyword">install</span> . -g</span><br></pre></td></tr></table></figure>
-<p>或者目录输入 <code>npm link</code> 会自动添加全局的 <code>symbolic link</code> ，然后就可以使用自己的命令了。</p>
+<h3 id="link">link</h3><p>或者目录输入 <code>npm link</code> 会自动添加全局的 <code>symbolic link</code> ，然后就可以使用自己的命令了。</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">$ wcj&#10;#README.md&#10;#bin&#10;#package.json&#10;&#10;$ cmd -v&#10;# version is 1.0.0&#10;&#10;$ cmd -h &#10;#Useage:&#10;#  -v --version [show version]</span><br></pre></td></tr></table></figure>
-<h2 id="错误">错误</h2><p>在运行 <code>sudo npm install . -g</code> 会有一堆警告可以忽视</p>
+<h3 id="错误处理">错误处理</h3><p>在运行 <code>sudo npm install . -g</code> 会有一堆警告可以忽视</p>
 <p>如果你已经 <code>npm link</code> 搞了一遍你再 link 一遍，会报如下错误。即使你 <code>npm unlink</code> 也会报如下错误：</p>
 <figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> link</span><br><span class="line"><span class="built_in">npm</span> ERR! Darwin <span class="number">14.3</span>.<span class="number">0</span></span><br><span class="line"><span class="built_in">npm</span> ERR! argv <span class="string">"node"</span> <span class="string">"/usr/local/bin/npm"</span> <span class="string">"link"</span></span><br><span class="line"><span class="built_in">npm</span> ERR! node v0.<span class="number">10.36</span></span><br><span class="line"><span class="built_in">npm</span> ERR! <span class="built_in">npm</span>  v2.<span class="number">7.1</span></span><br><span class="line"><span class="built_in">npm</span> ERR! path /usr/local/bin/wcj</span><br><span class="line"><span class="built_in">npm</span> ERR! code EEXIST</span><br><span class="line"></span><br><span class="line"><span class="built_in">npm</span> ERR! Refusing <span class="keyword">to</span> <span class="attribute">delete</span>: /usr/local/bin/wcj <span class="keyword">not</span> <span class="keyword">in</span> /Applications/XAMPP/xamppfiles/htdocs/git/github.com/myJS/wcj</span><br><span class="line">File <span class="attribute">exists</span>: /usr/local/bin/wcj</span><br><span class="line">Move <span class="literal">it</span> away, <span class="keyword">and</span> <span class="keyword">try</span> again.</span><br></pre></td></tr></table></figure>
 <p>让你删除 <code>/usr/local/bin/wcj</code> 再 <code>npm link</code> ， 删除此目录运行 <code>rm -rf /usr/local/bin/wcj</code></p>
@@ -135,8 +137,8 @@
     <title><![CDATA[强制转换时区显示时间]]></title>
     <link href="http://jslite.io/2015/06/19/%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2%E6%97%B6%E5%8C%BA/"/>
     <id>http://jslite.io/2015/06/19/强制转换时区/</id>
-    <published>2015-06-19T00:55:07.000Z</published>
-    <updated>2015-06-19T01:11:45.000Z</updated>
+    <published>2015-06-18T21:55:07.000Z</published>
+    <updated>2015-06-19T01:23:13.000Z</updated>
     <content type="html"><![CDATA[<p>强制转换时区显示时间</p>
 <figure class="highlight lasso"><table><tr><td class="code"><pre><span class="line"><span class="built_in">var</span> d <span class="subst">=</span> <span class="literal">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="built_in">var</span> <span class="built_in">date</span> <span class="subst">=</span> <span class="literal">new</span> <span class="built_in">Date</span>(<span class="number">1434701732</span><span class="subst">*</span><span class="number">1000</span> <span class="subst">+</span> d<span class="built_in">.</span>getTimezoneOffset() <span class="subst">*</span> <span class="number">60</span> <span class="subst">*</span> <span class="number">1000</span> <span class="subst">+</span> <span class="number">8</span> <span class="subst">*</span> <span class="number">60</span> <span class="subst">*</span> <span class="number">60</span> <span class="subst">*</span> <span class="number">1000</span> )</span><br><span class="line"></span><br><span class="line">console<span class="built_in">.</span><span class="keyword">log</span>(<span class="built_in">date</span>)</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
@@ -152,7 +154,7 @@
     <title><![CDATA[JS实现浏览器的title闪烁、滚动、声音提示、通知]]></title>
     <link href="http://jslite.io/2015/05/12/JS%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84title%E9%97%AA%E7%83%81%E3%80%81%E6%BB%9A%E5%8A%A8%E3%80%81%E5%A3%B0%E9%9F%B3%E3%80%81chrome%E9%80%9A%E7%9F%A5/"/>
     <id>http://jslite.io/2015/05/12/JS实现浏览器的title闪烁、滚动、声音、chrome通知/</id>
-    <published>2015-05-12T15:48:10.000Z</published>
+    <published>2015-05-12T12:48:10.000Z</published>
     <updated>2015-05-14T08:39:45.000Z</updated>
     <content type="html"><![CDATA[<h1 id="通知">通知</h1><p><a href="https://github.com/jaywcjlove/iNotify/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/iNotify.svg" alt=""></a> <a href="https://github.com/jaywcjlove/iNotify/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/iNotify.svg" alt=""></a></p>
 <p>JS 实现浏览器的 title 闪烁、滚动、声音提示、chrome、Firefox、Safari等系统通知</p>
@@ -204,7 +206,7 @@
     <title><![CDATA[Gulp教程-前端自动管理工具]]></title>
     <link href="http://jslite.io/2015/05/07/Gulp%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
     <id>http://jslite.io/2015/05/07/Gulp教程-前端自动管理工具/</id>
-    <published>2015-05-07T10:08:20.000Z</published>
+    <published>2015-05-07T07:08:20.000Z</published>
     <updated>2015-05-07T09:00:31.000Z</updated>
     <content type="html"><![CDATA[<p>Gulp与Grunt一样，也是一个自动任务运行器。它充分借鉴了Unix操作系统的管道（pipe）思想，很多人认为，在操作上，它要比Grunt简单。</p>
 <h1 id="安装">安装</h1><p>进入相关项目目录。</p>
@@ -246,7 +248,7 @@
     <title><![CDATA[提交自己的包到bower、npm中]]></title>
     <link href="http://jslite.io/2015/05/03/%E6%8F%90%E4%BA%A4%E8%87%AA%E5%B7%B1%E5%8C%85%E5%88%B0bower%E3%80%81npm%E4%B8%AD/"/>
     <id>http://jslite.io/2015/05/03/提交自己包到bower、npm中/</id>
-    <published>2015-05-02T20:01:49.000Z</published>
+    <published>2015-05-02T17:01:49.000Z</published>
     <updated>2015-05-06T15:09:17.000Z</updated>
     <content type="html"><![CDATA[<h1 id="bower">bower</h1><p>Bower 是 twitter 推出的一款包管理工具，基于nodejs的模块化思想，把功能分散到各个模块中，让模块和模块之间存在联系，通过 Bower 来管理模块间的这种联系。  </p>
 <p><a href="http://bower.io/" target="_blank" rel="external">bower官网</a>  </p>
@@ -307,7 +309,7 @@
     <title><![CDATA[js面向对象编程]]></title>
     <link href="http://jslite.io/2015/04/30/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     <id>http://jslite.io/2015/04/30/js面向对象编程/</id>
-    <published>2015-04-30T05:47:55.000Z</published>
+    <published>2015-04-30T02:47:55.000Z</published>
     <updated>2015-05-02T15:39:02.000Z</updated>
     <content type="html"><![CDATA[<p>这个是学习<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰</a>老师发的Javascript 面向对象编程教程，然后转载过来的文章，目的是为进入靠近大牛更近一点，对于一直面向过程写js偶尔用一下，当初封装<a href="http://jslite.io" target="_blank" rel="external">JSLite.io</a>就是学习的阮一峰这文章哦，用得一知半解，想升华一下，最近一直封装各种库重新温习巩固系统的学习一下。</p>
 <a id="more"></a> 
@@ -461,7 +463,7 @@
     <title><![CDATA[各种设备的CSS3MediaQuery整理及爽歪歪写法]]></title>
     <link href="http://jslite.io/2015/04/29/%E5%90%84%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%9A%84CSS3MediaQuery%E6%95%B4%E7%90%86%E5%8F%8A%E7%88%BD%E6%AD%AA%E6%AD%AA%E5%86%99%E6%B3%95/"/>
     <id>http://jslite.io/2015/04/29/各种设备的CSS3MediaQuery整理及爽歪歪写法/</id>
-    <published>2015-04-29T11:20:54.000Z</published>
+    <published>2015-04-29T08:20:54.000Z</published>
     <updated>2015-04-29T08:50:50.000Z</updated>
     <content type="html"><![CDATA[<h2 id="响应式布局">响应式布局</h2><p>响应式布局麻烦之处就是每个尺寸的都要进行css定义，这个真的不是一般的蛋疼，下面有搜集到的各种尺寸css Media Query内容，搜集来源：<a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank" rel="external">media-queries-for-standard-devices</a>。  </p>
 <p>看了之后是不是非常之蛋疼呢，那么只有使用工具来写这些玩意儿了，俺用得最爽的就是 <code>stylus</code> ，真的爽yy了，如果 <code>stylus</code> 不会玩耍请看这里 <a href="http://jslite.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_blank" rel="external">stylus入门使用方法</a></p>
@@ -491,7 +493,7 @@
     <title><![CDATA[stylus入门使用方法]]></title>
     <link href="http://jslite.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <id>http://jslite.io/2015/04/27/stylus菜鸟入门使用方法/</id>
-    <published>2015-04-26T20:17:02.000Z</published>
+    <published>2015-04-26T17:17:02.000Z</published>
     <updated>2015-04-27T16:56:53.000Z</updated>
     <content type="html"><![CDATA[<h2 id="stylus介绍">stylus介绍</h2><p>是个什么鬼？对于开发来说，CSS的弱点在于静态化。我们需要一个真正能提高开发效率的工具，<code>LESS</code>， <code>SASS</code>都在这方面做了一些贡献。  </p>
 <p><code>Stylus</code> 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 <code>Stylus</code> 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 <code>SASS</code>/<code>LESS</code> 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。  </p>
@@ -627,7 +629,7 @@
     <title><![CDATA[js获取来源的URL代码]]></title>
     <link href="http://jslite.io/2015/04/22/js%E8%8E%B7%E5%8F%96%E6%9D%A5%E6%BA%90%E7%9A%84URL%E4%BB%A3%E7%A0%81/"/>
     <id>http://jslite.io/2015/04/22/js获取来源的URL代码/</id>
-    <published>2015-04-22T09:56:04.000Z</published>
+    <published>2015-04-22T06:56:04.000Z</published>
     <updated>2015-05-07T16:29:23.000Z</updated>
     <content type="html"><![CDATA[<h2 id="referrer">referrer</h2><p>正常取来源网页的URL只要用</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.referrer</span><br></pre></td></tr></table></figure>
@@ -652,7 +654,7 @@
     <title><![CDATA[前端博客相关网站搜集]]></title>
     <link href="http://jslite.io/2015/04/17/%E5%89%8D%E7%AB%AF%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E6%90%9C%E9%9B%86/"/>
     <id>http://jslite.io/2015/04/17/前端博客相关网站搜集/</id>
-    <published>2015-04-17T16:13:57.000Z</published>
+    <published>2015-04-17T13:13:57.000Z</published>
     <updated>2015-04-23T09:57:47.000Z</updated>
     <content type="html"><![CDATA[<h1 id="中文前端开发博客网站列表">中文前端开发博客网站列表</h1><p>本博客网站列表会不断更新维护，如果有推荐的博客</p>
 <h2 id="组织团伙">组织团伙</h2><p><a href="http://www.w3.org/" target="_blank" rel="external">W3C</a><br><a href="http://www.chinaw3c.org/member-meetings.html#tpac" target="_blank" rel="external">TPAC</a><br><a href="http://w3ctech.com/" target="_blank" rel="external">w3ctech</a><br><a href="http://www.webrebuild.org/" target="_blank" rel="external">WebReBuild</a><br><a href="http://www.mhtml5.com/" target="_blank" rel="external">HTML5研究小组</a><br><a href="http://adc.alibabatech.org/" target="_blank" rel="external">阿里技术嘉年华</a><br><a href="http://jsconf.cn/" target="_blank" rel="external">京/沪JS</a><br><a href="http://fequan.com/" target="_blank" rel="external">前端圈</a><br><a href="http://www.html5dw.com/" target="_blank" rel="external">HTML5梦工场</a><br><a href="http://accessibilityunion.org/" target="_blank" rel="external">无障碍联盟</a>  </p>
@@ -850,7 +852,7 @@
     <title><![CDATA[本地存储cookie的封装]]></title>
     <link href="http://jslite.io/2015/04/17/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8cookie%E7%9A%84%E5%B0%81%E8%A3%85/"/>
     <id>http://jslite.io/2015/04/17/本地存储cookie的封装/</id>
-    <published>2015-04-16T19:54:41.000Z</published>
+    <published>2015-04-16T16:54:41.000Z</published>
     <updated>2015-05-03T13:27:35.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/cookie.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/cookie.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/cookie.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/cookie.js.svg" alt=""></a></p>
 <p>本地存储cookie的封装，提供简单的AIP，没有对IE做兼容处理，因为俺主要用于chrome，Safari，Firefox、<strong>移动端</strong>等先进浏览器里面跑。如果您有需求，可以自行解决，共享出来。目前俺用不上，所以不想兼容IE。。。</p>
@@ -913,7 +915,7 @@
     <title><![CDATA[本地存储localStorage的封装]]></title>
     <link href="http://jslite.io/2015/04/16/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8localStorage%E7%9A%84%E5%B0%81%E8%A3%85/"/>
     <id>http://jslite.io/2015/04/16/本地存储localStorage的封装/</id>
-    <published>2015-04-16T07:24:58.000Z</published>
+    <published>2015-04-16T04:24:58.000Z</published>
     <updated>2015-05-03T13:28:19.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/store.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/store.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/store.js.svg" alt=""></a>  </p>
 <p><a href="https://github.com/jaywcjlove/store.js" target="_blank" rel="external">store.js</a> 是一个实现了浏览器的本地存储的 JavaScript 封装 API，不是通过 Cookie 和 Flash 技术实现，而是使用 localStorage。小弟我主要是用于chrome，Safari，手机Web等先进浏览器里面跑。so….大家可以做兼容哦….</p>
@@ -1022,7 +1024,7 @@
     <title><![CDATA[在Mac下安装GraphicsMagick]]></title>
     <link href="http://jslite.io/2015/04/16/%E5%9C%A8Mac%E4%B8%8B%E5%AE%89%E8%A3%85GraphicsMagick/"/>
     <id>http://jslite.io/2015/04/16/在Mac下安装GraphicsMagick/</id>
-    <published>2015-04-16T05:47:53.000Z</published>
+    <published>2015-04-16T02:47:53.000Z</published>
     <updated>2015-04-16T04:16:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="下载依赖">下载依赖</h2><p>GraphicsMagic根据使用功能的不同，依赖不同的组件，我需要的只是对jpeg和png进行简单的图片处理（缩放、裁剪啊什么的，不过它的功能可以更加强大），主要依赖了两个组件:</p>
 <h3 id="libjpeg">libjpeg</h3><p><a href="ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/delegates/libjpeg-6b.tar.gz" target="_blank" rel="external">libjpeg-6b.tar.gz</a>  </p>
@@ -1053,7 +1055,7 @@
     <title><![CDATA[date.js 对时间的操作]]></title>
     <link href="http://jslite.io/2015/04/09/date-js-%E5%AF%B9%E6%97%B6%E9%97%B4%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
     <id>http://jslite.io/2015/04/09/date-js-对时间的操作/</id>
-    <published>2015-04-09T09:40:37.000Z</published>
+    <published>2015-04-09T06:40:37.000Z</published>
     <updated>2015-04-16T06:04:21.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/date.js/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/date.js/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/date.js.svg" alt=""></a> <a href="https://github.com/jaywcjlove/store.js/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/date.js.svg" alt=""></a></p>
 <p><a href="https://github.com/jaywcjlove/date.js" target="_blank" rel="external">Github date.js</a></p>
@@ -1080,7 +1082,7 @@
     <title><![CDATA[Grunt教程-前端自动化]]></title>
     <link href="http://jslite.io/2015/04/09/Grunt%E6%95%99%E7%A8%8B-%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     <id>http://jslite.io/2015/04/09/Grunt教程-前端自动化/</id>
-    <published>2015-04-09T08:48:22.000Z</published>
+    <published>2015-04-09T05:48:22.000Z</published>
     <updated>2015-05-11T07:03:43.000Z</updated>
     <content type="html"><![CDATA[<h2 id="为何选择Grunt?">为何选择Grunt?</h2><blockquote>
 <p>压缩、编译、单元测试、代码检查等 我们需要自动化，不必重复劳动，减小工作量。为何选择Grunt呢？好像是没有更好的选择了。</p>
@@ -1181,7 +1183,7 @@
     <title><![CDATA[JS获取时间并实现字符串和时间戳之间的转换]]></title>
     <link href="http://jslite.io/2015/04/09/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E5%B9%B6%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/"/>
     <id>http://jslite.io/2015/04/09/js获取时间并实现字符串和时间戳之间的转换/</id>
-    <published>2015-04-08T20:31:27.000Z</published>
+    <published>2015-04-08T17:31:27.000Z</published>
     <updated>2015-04-10T19:09:48.000Z</updated>
     <content type="html"><![CDATA[<h2 id="获取当前时间：">获取当前时间：</h2><h3 id="时间">时间</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDate = <span class="keyword">new</span> <span class="built_in">Date</span>();          <span class="comment">//当前时间</span></span><br></pre></td></tr></table></figure>
 <h3 id="年份">年份</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> year = myDate.getFullYear();</span><br></pre></td></tr></table></figure>
@@ -1228,7 +1230,7 @@
     <title><![CDATA[CSS 设置背景颜色透明度]]></title>
     <link href="http://jslite.io/2015/04/09/CSS-%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E9%80%8F%E6%98%8E%E5%BA%A6/"/>
     <id>http://jslite.io/2015/04/09/CSS-设置背景颜色透明度/</id>
-    <published>2015-04-08T20:05:26.000Z</published>
+    <published>2015-04-08T17:05:26.000Z</published>
     <updated>2015-04-08T17:07:03.000Z</updated>
     <content type="html"><![CDATA[<h2 id="兼容IE">兼容IE</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4Bffffff,endColorstr=#4Bffffff);</span><br></pre></td></tr></table></figure>
 <h2 id="标准">标准</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">background</span>: <span class="tag">rgba</span>(255, 255, 255, 0<span class="class">.6</span>);</span><br></pre></td></tr></table></figure>]]></content>
@@ -1244,7 +1246,7 @@
     <title><![CDATA[bash快捷键]]></title>
     <link href="http://jslite.io/2015/04/08/bash%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://jslite.io/2015/04/08/bash快捷键/</id>
-    <published>2015-04-08T18:37:49.000Z</published>
+    <published>2015-04-08T15:37:49.000Z</published>
     <updated>2015-04-08T16:41:02.000Z</updated>
     <content type="html"><![CDATA[<p><code>Ctrl + a</code> ：移到命令行首<br><code>Ctrl + e</code> ：移到命令行尾<br><code>Ctrl + f</code> ：按字符前移（右向）<br><code>Ctrl + b</code> ：按字符后移（左向）<br><code>Alt + f</code> ：按单词前移（右向）<br><code>Alt + b</code> ：按单词后移（左向）<br><code>Ctrl + xx</code>：在命令行首和光标之间移动<br><code>Ctrl + u</code> ：从光标处删除至命令行首<br><code>Ctrl + k</code> ：从光标处删除至命令行尾<br><code>Ctrl + w</code> ：从光标处删除至字首<br><code>Alt + d</code> ：从光标处删除至字尾<br><code>Ctrl + d</code> ：删除光标处的字符<br><code>Ctrl + h</code> ：删除光标前的字符<br><code>Ctrl + y</code> ：粘贴至光标后<br><code>Alt + c</code> ：从光标处更改为首字母大写的单词<br><code>Alt + u</code> ：从光标处更改为全部大写的单词<br><code>Alt + l</code> ：从光标处更改为全部小写的单词<br><code>Ctrl + t</code> ：交换光标处和之前的字符<br><code>Alt + t</code> ：交换光标处和之前的单词<br><code>Alt + Backspace</code>：与 <code>Ctrl + w</code> 相同  </p>
 <h2 id="重新执行命令">重新执行命令</h2><p><code>Ctrl + r</code>：逆向搜索命令历史<br><code>Ctrl + g</code>：从历史搜索模式退出<br><code>Ctrl + p</code>：历史中的上一条命令<br><code>Ctrl + n</code>：历史中的下一条命令<br><code>Alt + .</code>：使用上一条命令的最后一个参数  </p>
@@ -1265,7 +1267,7 @@
     <title><![CDATA[hexo模板制作小技巧]]></title>
     <link href="http://jslite.io/2015/04/05/hexo%E6%A8%A1%E6%9D%BF%E5%88%B6%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>http://jslite.io/2015/04/05/hexo模板制作小技巧/</id>
-    <published>2015-04-05T14:05:25.000Z</published>
+    <published>2015-04-05T11:05:25.000Z</published>
     <updated>2015-05-13T05:50:24.000Z</updated>
     <content type="html"><![CDATA[<p>这个是我做JSLite官网的笔记，顺便皮肤也共享了。</p>
 <a id="more"></a> 
@@ -1295,7 +1297,7 @@
     <title><![CDATA[chrome 使用技巧]]></title>
     <link href="http://jslite.io/2015/04/05/chrome-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://jslite.io/2015/04/05/chrome-使用技巧/</id>
-    <published>2015-04-05T13:04:11.000Z</published>
+    <published>2015-04-05T10:04:11.000Z</published>
     <updated>2015-04-08T07:35:32.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Reference">Reference</h2><p><a href="https://plus.google.com/+AddyOsmani/posts/TanDFKEN9Kn" target="_blank" rel="external">Styled console logging in the Chrome DevTools (Canary)</a><br><a href="https://developer.chrome.com/devtools/docs/console-api" target="_blank" rel="external">Chrome Console API</a><br><a href="https://developer.chrome.com/devtools/docs/commandline-api" target="_blank" rel="external">Chrome Console Command Line API</a></p>
 <h2 id="控制台">控制台</h2><h3 id="在控制台选择元素">在控制台选择元素</h3><h4 id="$()_&amp;_$$()">$() &amp; $$()</h4><p><code>$()</code> – <code>document.querySelector()</code>的缩写，返回第一个与之匹配的CSS选择器的元素(例如：<code>$(&#39;div&#39;)</code> 它将返回本页的第一个div元素)。<br><code>$$()</code> - <code>document.querySelectorAll()</code>的缩写，返回一个数组，里面是与之匹配的CSS选择器的元素。  </p>
