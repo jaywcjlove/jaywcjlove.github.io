@@ -262,6 +262,9 @@ var _hmt = _hmt || [];
 <h3 id="push-1">push</h3><p><code>git push -u origin master</code> #push同事设置默认跟踪分支<br><code>git push origin master</code>   </p>
 <h2 id="从现有仓库克隆">从现有仓库克隆</h2><p><code>git clone git://github.com/JSLite/JSLite.js.git</code><br><code>git clone git://github.com/JSLite/JSLite.js.git mypro</code> #克隆到自定义文件夹  </p>
 <h2 id="submodule">submodule</h2><p><code>git submodule add --force 仓库地址 路径</code><br>其中，仓库地址是指子模块仓库地址，路径指将子模块放置在当前工程下的路径。<br>注意：路径不能以 / 结尾（会造成修改不生效）、不能是现有工程已有的目录（不能順利 Clone）<br><code>git submodule init</code> 初始化submodule<br><code>git submodule update</code> 更新submodule(必须在根目录执行命令)</p>
+<p>当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：<br><code>git submodule update --init --recursive</code> 下载的工程带有submodule  </p>
+<p><code>git submodule foreach git pull</code> submodule 里有其他的 submodule 一次更新</p>
+<p><code>git submodule foreach --recursive git submodule init</code><br><code>git submodule foreach --recursive git submodule update</code>  </p>
 <h2 id="本地">本地</h2><h3 id="add-1">add</h3><p><code>git add *</code> #跟踪新文件<br><code>git add -u [path]</code> #添加[指定路径下]已跟踪文件  </p>
 <h3 id="rm">rm</h3><p><code>rm *&amp;git rm *</code> #移除文件<br><code>git rm -f *</code> #移除文件<br><code>git rm --cached *</code> #取消跟踪<br><code>git mv file_from file_to</code> #重命名跟踪文件<br><code>git log</code> #查看提交记录   </p>
 <h3 id="commit-1">commit</h3><p><code>git commit</code> #提交更新<br><code>git commit -m &#39;message&#39;</code> 提交说明<br><code>git commit -a</code> #跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交<br><code>git commit --amend</code> #修改最后一次提交<br><code>git commit log</code> #查看所有提交，包括没有push的commit<br><code>git commit -m &quot;#133&quot;</code> 关联issue 任意位置带上<code>#</code> 符号加上issue号码<br><code>git commit -m &quot;fix #133&quot;</code> commit关闭issue</p>
@@ -381,7 +384,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cibnzld9m002h82glfsbkv5x0" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cibop38hn002hshgl3fudfvtz" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
