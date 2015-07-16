@@ -1,0 +1,204 @@
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mdeditor {
+  position: relative;
+  font-size: 12px;
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.mdeditor .mde_textarea,
+.mdeditor .mde_preview {
+  min-height: 200px;
+  border-radius: 5px;
+}
+.mdeditor .mde_textarea {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  resize: none;
+}
+.mdeditor .mde_textarea:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+.mdeditor .mde_textarea::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.mdeditor .mde_textarea:-ms-input-placeholder {
+  color: #999;
+}
+.mdeditor .mde_textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.mdeditor .mde_preview {
+  margin: 0;
+  padding: 15px;
+  background-color: #fff;
+  position: relative;
+  overflow: auto;
+  border: 1px solid #e6e6e6;
+}
+.mdeditor .mde_tools {
+  position: absolute;
+  padding: 5px 5px 0 0;
+  right: 0;
+  top: 0;
+  z-index: 11;
+}
+.mdeditor .mde_tools i {
+  display: block;
+  background: #6e6e6e;
+  font-style: inherit;
+  cursor: pointer;
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: #fff;
+}
+.mdeditor .mde_tools i:hover {
+  background: #009eff;
+}
+.mdeditor .mde_tools i:active {
+  background: #f00;
+}
+.markdown_body {
+  background: #fff;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+.markdown_body>*:first-child {
+  margin-top: 0 !important;
+}
+.markdown_body h1,
+.markdown_body h2,
+.markdown_body h3,
+.markdown_body h4,
+.markdown_body h5,
+.markdown_body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.markdown_body h1,
+.markdown_body h2 {
+  border-bottom: 1px solid #eee;
+}
+.markdown_body h1 {
+  font-size: 2.25em;
+  line-height: 1.2;
+  padding-bottom: 0.3em;
+}
+.markdown_body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px dashed #eee;
+}
+.markdown_body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+  margin: 0;
+}
+.markdown_body blockquote>:last-child {
+  margin-bottom: 0;
+}
+.markdown_body blockquote>:first-child {
+  margin-top: 0;
+}
+.markdown_body p,
+.markdown_body blockquote,
+.markdown_body ul,
+.markdown_body ol,
+.markdown_body dl,
+.markdown_body table,
+.markdown_body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown_body ul,
+.markdown_body ol {
+  padding-left: 1.4em;
+  list-style: initial;
+}
+.markdown_body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #eee;
+  border-radius: 3px;
+}
+.markdown_body pre code {
+  background-color: transparent;
+  color: inherit;
+}
+.markdown_body pre code:before,
+.markdown_body pre code:after,
+.markdown_body pre tt:before,
+.markdown_body pre tt:after {
+  letter-spacing: 0;
+  content: "";
+}
+.markdown_body code,
+.markdown_body tt {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+  color: #c7254e;
+}
+.markdown_body code:before,
+.markdown_body code:after,
+.markdown_body tt:before,
+.markdown_body tt:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown_body table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  display: block;
+  background-color: transparent;
+}
+.markdown_body table th,
+.markdown_body table td {
+  border: 1px solid #ddd;
+  padding: 4px 10px;
+}
+.markdown_body table th {
+  font-weight: bold;
+  background: #f3f3f3;
+}
+.markdown_body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}

@@ -10,30 +10,48 @@
     <meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt;
 
 
-    404
+    
+    MDEditor
+    
+    
 
 
-找不到页面。">
+    
+# 简易Markdownd编辑器
+
+[![](https://img.shields.io/github/issues/jaywcjlove/MDEditor.svg)](https://github.com/jaywcjlove/MDEditor/issues) [![](https://i">
 <meta property="og:type" content="website">
 <meta property="og:title" content="JSLite.io">
-<meta property="og:url" content="http://jslite.io/404.html">
+<meta property="og:url" content="http://jslite.io/mdeditor/test.html">
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt;
 
 
-    404
+    
+    MDEditor
+    
+    
 
 
-找不到页面。">
+    
+# 简易Markdownd编辑器
+
+[![](https://img.shields.io/github/issues/jaywcjlove/MDEditor.svg)](https://github.com/jaywcjlove/MDEditor/issues) [![](https://i">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSLite.io">
 <meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt;
 
 
-    404
+    
+    MDEditor
+    
+    
 
 
-找不到页面。">
+    
+# 简易Markdownd编辑器
+
+[![](https://img.shields.io/github/issues/jaywcjlove/MDEditor.svg)](https://github.com/jaywcjlove/MDEditor/issues) [![](https://i">
     
       <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
     
@@ -140,8 +158,8 @@ var _hmt = _hmt || [];
       <div class="article-meta">
         
 
-        <!--<a href="/404.html" class="article-date">
-  <time datetime="2015-05-13T17:00:23.000Z" itemprop="datePublished">2015-05-14</time>
+        <!--<a href="/mdeditor/test.html" class="article-date">
+  <time datetime="2015-07-16T06:40:39.000Z" itemprop="datePublished">2015-07-16</time>
 </a>-->
         <!--  -->
       </div>
@@ -154,21 +172,95 @@ var _hmt = _hmt || [];
               </div>
               
                 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>404</title>
+    <meta charset="UTF-8">
+    <title>MDEditor</title>
+    <script type="text/javascript" src="MDEditor.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="MDEditor.min.css">
 </head>
 <body>
-找不到页面。
+    <div id="mdeditor" class="mdeditor">
+# 简易Markdownd编辑器
+
+[![](https://img.shields.io/github/issues/jaywcjlove/MDEditor.svg)](https://github.com/jaywcjlove/MDEditor/issues) [![](https://img.shields.io/github/forks/jaywcjlove/MDEditor.svg)](https://github.com/jaywcjlove/MDEditor/network) [![](https://img.shields.io/github/stars/jaywcjlove/MDEditor.svg)](https://github.com/jaywcjlove/MDEditor/stargazers) [![](https://img.shields.io/github/release/jaywcjlove/MDEditor.svg)](https://github.com/jaywcjlove/MDEditor/releases)
+
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mde.getMD()  <span class="comment">//=&gt;返回markdown字符串</span></span><br></pre></td></tr></table></figure>
+
+##使用
+
+html  
+- 添加 `MDEditor.min.css` 样式
+- 添加 `MDEditor.min.js` 并不是 ~~`lib/MDEditor.js`~~ 哦
+- 添加编辑器初始节点
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"../themes/default/css/MDEditor.min.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"../build/MDEditor.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"mdeditor"</span>&gt;</span></span><br><span class="line"># 这里放markdown初始值</span><br><span class="line">- id: 节点id</span><br><span class="line">- minheight: 初始化编辑器高度</span><br><span class="line">- maxheight: 编辑器随着输入内容增多而变高，这个值是它的最大值</span><br><span class="line">- value: 默认编辑器中显示markdown内容</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+js  
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> mde = <span class="keyword">new</span> MDEditor(&#123;</span><br><span class="line">    id:<span class="string">"#mdeditor"</span>,</span><br><span class="line">    minheight:<span class="number">300</span>,</span><br><span class="line">    maxheight:<span class="number">600</span>,</span><br><span class="line">    value:<span class="string">"#多多少少的"</span></span><br><span class="line">&#125;).load().input(<span class="function"><span class="keyword">function</span><span class="params">(evn,opts)</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"evn:"</span>,evn)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"opts:"</span>,opts)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+## MDEditor初始化
+
+- id: 节点id
+- minheight: 初始化编辑器高度
+- maxheight: 编辑器随着输入内容增多而变高，这个值是它的最大值
+- value: 默认编辑器中显示markdown内容
+
+## load
+加载编辑器
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mde.load()</span><br></pre></td></tr></table></figure>
+
+## input
+输入事件，在编辑器里面输入内容就会执行input方法
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mde.input(<span class="function"><span class="keyword">function</span><span class="params">(evn,opts)</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"evn:"</span>,evn)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"opts:"</span>,opts)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+## getMD
+获取markdown的字符串
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mde.getMD()  <span class="comment">//=&gt;返回markdown字符串</span></span><br></pre></td></tr></table></figure>
+
+## setMD
+设置markdown的字符串
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mde.setMD(val)</span><br></pre></td></tr></table></figure>
+
+## getHTML
+获取生成的HTML
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mde.getMD()  <span class="comment">//=&gt;返回HTML字符串</span></span><br></pre></td></tr></table></figure>
+
+## setHTML
+设置预览的HTML
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mde.setHTML(val)</span><br></pre></td></tr></table></figure>
+
+    </div>
+    <script type="text/javascript">
+    var mde = new MDEditor({
+        id:"#mdeditor",
+        minheight:300,
+        maxheight:600,
+        value:"#多多少少的"
+    }).load().input(function(evn,opts){
+        console.log("evn:",evn)
+        console.log("opts:",opts)
+    })
+
+
+    </script>
 </body>
 </html>
               
             </div>
             <footer class="article-footer">
-              <a href="/404.html" class="article-date">
-  <time datetime="2015-05-13T17:00:23.000Z" itemprop="datePublished">2015-05-14</time>
+              <a href="/mdeditor/test.html" class="article-date">
+  <time datetime="2015-07-16T06:40:39.000Z" itemprop="datePublished">2015-07-16</time>
 </a>
-              <a data-url="http://jslite.io/404.html" data-id="cic5twdvg0000e8gli5vrlc18" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/mdeditor/test.html" data-id="cic5twdx00002e8gl55ofhc1b" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -216,7 +308,7 @@ var _hmt = _hmt || [];
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="404.html" data-title="" data-url="http://jslite.io/404.html"></div>
+    <div class="ds-thread" data-thread-key="mdeditor/test.html" data-title="" data-url="http://jslite.io/mdeditor/test.html"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
