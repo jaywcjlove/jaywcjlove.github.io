@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-06-22T08:34:06.000Z</updated>
+  <updated>2015-07-28T06:16:30.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -13,6 +13,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Stylus：轻而易举实现 CSS 前缀和 reset CSS]]></title>
+    <link href="http://jslite.io/2015/07/28/Stylus%EF%BC%9A%E8%BD%BB%E8%80%8C%E6%98%93%E4%B8%BE%E5%AE%9E%E7%8E%B0-CSS-%E5%89%8D%E7%BC%80%E5%92%8C-reset-CSS/"/>
+    <id>http://jslite.io/2015/07/28/Stylus：轻而易举实现-CSS-前缀和-reset-CSS/</id>
+    <published>2015-07-28T06:15:33.000Z</published>
+    <updated>2015-07-28T06:16:30.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jaywcjlove/AutoPrefixCSS/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/jaywcjlove/AutoPrefixCSS.svg" alt=""></a> <a href="https://github.com/jaywcjlove/AutoPrefixCSS/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/jaywcjlove/AutoPrefixCSS.svg" alt=""></a> <a href="https://github.com/jaywcjlove/AutoPrefixCSS/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/jaywcjlove/AutoPrefixCSS.svg" alt=""></a> <a href="https://github.com/jaywcjlove/AutoPrefixCSS/releases" target="_blank" rel="external"><img src="https://img.shields.io/github/release/jaywcjlove/AutoPrefixCSS.svg" alt=""></a></p>
+<p>Break free from CSS prefix hell!<br>摆脱CSS前缀地狱！   </p>
+<p>CSS3 每个浏览器都有私有属性例如 <code>-moz</code> 代表firefox浏览器私有属性、<code>-ms</code> 代表IE浏览器私有属性、<code>-webkit</code> 代表chrome、safari私有属性，在 <code>CSS3</code> 标准还在没有定稿的时候，<code>CSS3</code> 中有很多属性都还处于实验性阶段，各个浏览器都针对暂行的规范草稿根据自己的理解做了 <code>CSS3</code> 新特性实现，但因为规范尚未成熟和定稿，某些描述的不清晰或是处理逻辑的不完整可能导致一些目前的实现在日后被修改。暂时使用带前缀的属性比如 <code>-webkit-transform</code> 的初衷，是为了以后即便 <code>transform</code> 的最终实现与目前不同，你原来写的 <code>-webkit-transform</code> 还是可以正常工作。所以浏览器现在开始越来越倾向于直接实现最终属性而抛弃前缀了。老的浏览器可能不支持 <code>transform</code> ，所以我们通常为了兼容各个版本的浏览器，<code>-webkit-transform</code> 和 <code>transform</code> 两个属性都加上了。   </p>
+<ul>
+<li>-webkit- (Google Chrome &amp; Safari)</li>
+<li>-khtml- (Konqueror)</li>
+<li>-moz- (Mozilla Firefox)</li>
+<li>-ms- (Internet Explorer)</li>
+<li>-o- (Opéra)</li>
+<li>syntaxe normale</li>
+</ul>
+<h1 id="下载">下载</h1><figure class="highlight"><table><tr><td class="code"><pre><span class="line">$ bower install AutoPrefixCss #&#19979;&#36733;&#10;$ bower info AutoPrefixCss #&#26597;&#30475;&#35814;&#24773;</span><br></pre></td></tr></table></figure>
+<h1 id="初衷">初衷</h1><p>网上有很多js实现的自动添加 CSS前缀的哦，例如<a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external">autoprefixer</a> 、<a href="http://leaverou.github.com/prefixfree/" target="_blank" rel="external">prefixfree</a>。  </p>
+<ul>
+<li><code>stylus</code> 的出现感觉添加这种前缀不用太麻烦了。</li>
+<li>只生成CSS，浏览器直接渲染CSS，不用通过js生成CSS在渲染。</li>
+</ul>
+<h1 id="使用必备条件">使用必备条件</h1><p>需要安装 <code>node.js</code> 和 <code>stylus</code> ，还得学会使用 <code>stylus</code>， <a href="https://github.com/stylus/stylus" target="_blank" rel="external">stylus github</a>， <a href="http://jslite.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_blank" rel="external">stylus教程</a></p>
+<h1 id="Usage">Usage</h1><h2 id="reset-styl">reset.styl</h2><p>只需要将 <code>reset.styl</code> 到您的项目，然后引用 <code>@import(&#39;reset.styl&#39;)</code> ，然后在你所引用的<code>.styl</code> 中调用下面任何一个方法：</p>
+<ul>
+<li>global-reset() # 所有标签重置不包括HTML5新标签重置</li>
+<li>nested-reset() # 嵌套标签重置</li>
+<li>reset-font()</li>
+<li>reset-box-model()</li>
+<li>reset-body()</li>
+<li>reset-table() # 表格重置</li>
+<li>reset-table-cell() # 表格单格重置</li>
+<li>reset-html5() # HTML5新标签重置</li>
+</ul>
+<p>例子：  </p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@import</span>(<span class="string">'reset.styl'</span>)</span><br><span class="line"><span class="function"><span class="title">global-reset</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="自动添加CSS后缀">自动添加CSS后缀</h2><p>只需要将 <code>vendor.styl</code> 到您的项目，然后引用 <code>@import(&#39;vendor.styl&#39;)</code> ，然后你在你的 <code>styl</code> 文件中正常使用 <code>stylus</code> 语法就好了。效果如下例子：</p>
+<h3 id="opacity">opacity</h3><p>adds opacity filter for IE</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@import</span>(<span class="string">'vendor.styl'</span>)</span><br><span class="line"><span class="tag">body</span></span><br><span class="line">    <span class="attribute">opacity</span>:<span class="number">0.5</span></span><br></pre></td></tr></table></figure>
+<p>生成：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-khtml-opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>; <span class="comment">/* old Mozilla */</span></span><br><span class="line">  <span class="rule"><span class="attribute">filter</span>:<span class="value"> progid:DXImageTransform.Microsoft.<span class="function">Alpha</span>(Opacity=<span class="number">50</span>)</span></span>; <span class="comment">/*old IE */</span></span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://github.com/jaywcjlove/AutoPrefixCSS/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issue]]>
+    </summary>
+    
+      <category term="css" scheme="http://jslite.io/tags/css/"/>
+    
+      <category term="stylus" scheme="http://jslite.io/tags/stylus/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Nodejs 制作命令行工具]]></title>
@@ -1290,40 +1342,6 @@
     </summary>
     
       <category term="hexo" scheme="http://jslite.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[chrome 使用技巧]]></title>
-    <link href="http://jslite.io/2015/04/05/chrome-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://jslite.io/2015/04/05/chrome-使用技巧/</id>
-    <published>2015-04-05T10:04:11.000Z</published>
-    <updated>2015-04-08T07:35:32.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Reference">Reference</h2><p><a href="https://plus.google.com/+AddyOsmani/posts/TanDFKEN9Kn" target="_blank" rel="external">Styled console logging in the Chrome DevTools (Canary)</a><br><a href="https://developer.chrome.com/devtools/docs/console-api" target="_blank" rel="external">Chrome Console API</a><br><a href="https://developer.chrome.com/devtools/docs/commandline-api" target="_blank" rel="external">Chrome Console Command Line API</a></p>
-<h2 id="控制台">控制台</h2><h3 id="在控制台选择元素">在控制台选择元素</h3><h4 id="$()_&amp;_$$()">$() &amp; $$()</h4><p><code>$()</code> – <code>document.querySelector()</code>的缩写，返回第一个与之匹配的CSS选择器的元素(例如：<code>$(&#39;div&#39;)</code> 它将返回本页的第一个div元素)。<br><code>$$()</code> - <code>document.querySelectorAll()</code>的缩写，返回一个数组，里面是与之匹配的CSS选择器的元素。  </p>
-<h4 id="$0_-_$4">$0 - $4</h4><p><code>$_</code>命令返回最近一次表达式执行的结果，功能跟按向上的方向键再回车是一样的，但它可以做为一个变量使用在你接下来的表达式中。<code>$_</code>需要领悟其奥义才能使用得当，而 <code>$0~$4</code> 则代表了最近5个你选择过的DOM节点。</p>
-<h3 id="console">console</h3><h4 id="console-time_&amp;_console-timeEnd">console.time &amp; console.timeEnd</h4><p>输出一些调试信息是控制台最常用的功能，当然，它的功能远不止于此。当做一些性能测试时，同样可以在这里很方便地进行。  </p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">"Array initialize"</span>);</span><br><span class="line"><span class="keyword">var</span> array= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1000000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = array.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    array[i] = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">"Array initialize"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//&gt;&gt;  Array initialize: 1195.575ms</span></span><br></pre></td></tr></table></figure>
-<h4 id="console-profile_&amp;_console-timeLime">console.profile &amp; console.timeLime</h4><p>当想要查看CPU使用相关的信息时，可以使用 <code>console.profile</code> 配合 <code>console.profileEnd</code> 来完成这个需求。<br>这一功能可以通过UI界面来完成，Chrome 开发者工具里面有个 <code>tab</code> 便是 <code>Profile</code> 。  </p>
-<p>与此类似的功能还有 <code>console.timeLine</code> 配合 <code>console.timeLineEnd</code> ,它的作用是开始记录一段时间轴，同样可以通过Chrome开发者工具里的Timeline标签来进行相应操作。  </p>
-<p>所以在我看来这两个方法有点鸡肋，因为都可以通过操作界面来完成。但至少他提供了一种命令行方式的交互，还是多了种姿势供选择吧。  </p>
-<h4 id="console-trace">console.trace</h4><p>堆栈跟踪相关的调试可以使用 <code>console.trace</code>。这个同样可以通过UI界面完成。当代码被打断点后，可以在Call Stack面板中查看相关堆栈信息。  </p>
-<h3 id="copy">copy</h3><p>通过此命令可以将在控制台获取到的内容复制到剪贴板。</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">copy</span><span class="params">(document.body)</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="keys_&amp;_values">keys &amp; values</h3><p>这是一对基友。前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组。具体请看下面的例子：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tboy=&#123;name:<span class="string">'wayou'</span>,gender:<span class="string">'unknown'</span>,hobby:<span class="string">'opposite to the gender'</span>&#125;;</span><br><span class="line">keys(tboy);</span><br><span class="line">values(tboy);</span><br></pre></td></tr></table></figure></p>
-<h2 id="DevTools">DevTools</h2><h3 id="快速文件转换">快速文件转换</h3><p><code>Ctrl + P</code> ( 在Mac上使用 <code>Cmd + P</code> )来快速的寻找和打开你工程中的任意文件。  </p>
-<h3 id="在源代码中搜索">在源代码中搜索</h3><p>按下 <code>Ctrl + Shift + F</code> (在Mac上使用 <code>Cmd + Opt + F</code>)，即可在所有已加载的文件中查找一个特定的字符串。这个搜索的方法也支持正则表达式。  </p>
-<h3 id="跳转到特定的行数">跳转到特定的行数</h3><p>DevTools能够允许你轻松地跳转到代码里的任意一行，Windows 和 Linux用户只需要按下<code>Ctrl + G</code> (在Mac上使用 <code>Cmd + L</code>),然后输入你想查阅的行数即可。<br>另一个跳转的方法是按下Ctrl + O ，输入:和行数，而不用去寻找一个文件。  </p>
-<h3 id="多个位置同时编辑">多个位置同时编辑</h3><p>编辑一个文件的时候你可以通过按住<code>Ctrl</code> (在Mac上为 Cmd) 同时点击你想让光标停留的位置，设置多个光标，这样你就可以同时在多个位置输入同一文本了。  </p>
-<h3 id="选择下一个匹配项">选择下一个匹配项</h3><p>当你在Sources 标签下编辑文件时，如果你按下<code>Ctrl + D</code> (在Mac上使用 <code>Cmd + D</code>)，下一个匹配项也会被选中，这能够帮助你同时编辑他们。  </p>
-<h3 id="改变颜色格式">改变颜色格式</h3><p>在颜色预览中使用<code>Shift + Click</code> ，可以在<code>rgba</code>, <code>hsl</code> 和 <code>hexadecimal</code> 这三种格式中改变。  </p>
-<h2 id="美化js">美化js</h2><p>很多js都被压缩了，在调试工具里面 <code>Sources</code> 选中js文件在下面有个 <code>{}</code> 自动美化  </p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="Reference">Reference</h2><p><a href="https://plus.google.com/+AddyOsmani/posts/TanDFKEN9Kn" target="_blank" rel="external">Styled co]]>
-    </summary>
-    
-      <category term="chrome" scheme="http://jslite.io/tags/chrome/"/>
     
   </entry>
   
