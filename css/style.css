@@ -594,6 +594,41 @@ header.hdpage {
 a.article-title:hover {
   color: #258fb8;
 }
+.article_api {
+  padding: 0 0px 0 270px;
+  background-color: #fff;
+}
+@media screen and (max-width: 479px) {
+  .article_api {
+    padding: 0 0px 0 0px;
+  }
+}
+.article_api .article-inner {
+  padding: 0 20px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.article_api .article-entry {
+  padding: 0 0 0 0;
+}
+.article_api .article-entry a img {
+  display: inline-block;
+}
+.article_api .page-toc {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  height: 100%;
+  background: #f4f4f4;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .article_api .page-toc {
+    display: block;
+  }
+}
+.article_api .page-toc ol.toc {
+  margin: 0;
+}
 .article-entry {
   color: #555;
   padding: 0 20px;
