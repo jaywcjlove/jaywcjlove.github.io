@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS兼容多种模块规范，使用require加载JSLite方法 | JSLite.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="baidu-site-verification" content="1ZsVVOmjoT" />
+    <meta name="description" content="使用require加载JSLite、zepto、jQuery方法，它们是同类型的库所以加载方式一样，下面是一个实例。
+requirejs 引用实例方法RequireJS的目标是鼓励代码的模块化，它使用了不同于传统&amp;lt;script&amp;gt;标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。
+
+requirejs f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS兼容多种模块规范，使用require加载JSLite方法">
+<meta property="og:url" content="http://jslite.io/2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/index.html">
+<meta property="og:site_name" content="JSLite.io">
+<meta property="og:description" content="使用require加载JSLite、zepto、jQuery方法，它们是同类型的库所以加载方式一样，下面是一个实例。
+requirejs 引用实例方法RequireJS的目标是鼓励代码的模块化，它使用了不同于传统&amp;lt;script&amp;gt;标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。
+
+requirejs f">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS兼容多种模块规范，使用require加载JSLite方法">
+<meta name="twitter:description" content="使用require加载JSLite、zepto、jQuery方法，它们是同类型的库所以加载方式一样，下面是一个实例。
+requirejs 引用实例方法RequireJS的目标是鼓励代码的模块化，它使用了不同于传统&amp;lt;script&amp;gt;标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。
+
+requirejs f">
+    
+      <link rel="alternative" href="/atom.xml" title="JSLite.io" type="application/atom+xml">
+    
+    
+      <link rel="icon" href="/css/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+<!-- Baidu Analytics -->
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?fe2c7555911b8560db5e56121c5d5960";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End Baidu Analytics -->
+
+
+    <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+<div id="container"> 
+
+    
+    <div id="wrap">
+	   
+
+<header id="header" class="hdpage">
+    
+    <div id="header-outer" class="outer">
+        
+        <div id="header-inner" class="inner">
+          <nav id="main-nav">
+            <a id="main-nav-toggle" class="nav-icon"></a>
+            
+              <a class="main-nav-link" href="/">
+                  
+                  
+
+                
+                  Home
+                </a>
+            
+              <a class="main-nav-link" href="/API">
+                  
+                  
+
+                
+                  API
+                </a>
+            
+              <a class="main-nav-link" href="/tags">
+                  
+                  
+
+                
+                  Tags
+                </a>
+            
+              <a class="main-nav-link" href="/archives">
+                  
+                  
+
+                
+                  Archives
+                </a>
+            
+              <a class="main-nav-link" href="/about">
+                  
+                  
+
+                
+                  About
+                </a>
+            
+              <a class="main-nav-link" href="https://github.com/JSLite/JSLite">
+                  
+                  
+
+                
+                  Github
+                </a>
+            
+          </nav>
+          <nav id="sub-nav">
+            
+              <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+            
+            <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          </nav>
+          <div id="search-form-wrap">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+          </div>
+        </div>
+    </div>
+</header>
+		<div class="outer">
+		
+    <article id="post-js兼容多种模块规范，使用require加载JSLite方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="article-meta">
+        
+          <header class="article-header">
+            
+  
+    <a href="/2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/">
+      <h1 class="article-title" itemprop="name">
+        JS兼容多种模块规范，使用require加载JSLite方法
+      </h1>
+    </a>
+  
+
+
+
+          </header>
+        
+
+        <!--<a href="/2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/" class="article-date">
+  <time datetime="2015-08-02T13:36:30.000Z" itemprop="datePublished">2015-08-02</time>
+</a>-->
+        <!--  -->
+      </div>
+      <div class="article-inner">
+            
+            
+              <!--<header class="article-header">
+                
+  
+    <a href="/2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/">
+      <h1 class="article-title" itemprop="name">
+        JS兼容多种模块规范，使用require加载JSLite方法
+      </h1>
+    </a>
+  
+
+
+
+              </header>-->
+            
+            <div class="article-entry" itemprop="articleBody">
+              <div class="page-toc">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#requirejs_引用实例方法"><span class="toc-number">1.</span> <span class="toc-text">requirejs 引用实例方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录结构"><span class="toc-number">1.1.</span> <span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件内容"><span class="toc-number">1.2.</span> <span class="toc-text">文件内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#竞争者"><span class="toc-number">2.</span> <span class="toc-text">竞争者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack"><span class="toc-number">2.1.</span> <span class="toc-text">webpack</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#名词解释"><span class="toc-number">3.</span> <span class="toc-text">名词解释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CommonJS"><span class="toc-number">3.1.</span> <span class="toc-text">CommonJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AMD"><span class="toc-number">3.2.</span> <span class="toc-text">AMD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMD"><span class="toc-number">3.3.</span> <span class="toc-text">CMD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UMD兼容多种模块规范"><span class="toc-number">3.4.</span> <span class="toc-text">UMD兼容多种模块规范</span></a></li></ol></li></ol>
+              </div>
+              
+                <p>使用require加载<a href="https://github.com/JSLite/JSLite" target="_blank" rel="external">JSLite</a>、zepto、jQuery方法，它们是同类型的库所以加载方式一样，下面是一个实例。</p>
+<h1 id="requirejs_引用实例方法">requirejs 引用实例方法</h1><p>RequireJS的目标是鼓励代码的模块化，它使用了不同于传统<code>&lt;script&gt;</code>标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。</p>
+<ol>
+<li><a href="https://github.com/jrburke/requirejs" target="_blank" rel="external">requirejs for github</a>  </li>
+<li><a href="http://requirejs.org/" target="_blank" rel="external">requirejs 官网</a></li>
+<li><a href="https://github.com/JSLite/JSLite/releases" target="_blank" rel="external">JSLite 1.1.5</a></li>
+</ol>
+<h2 id="目录结构">目录结构</h2><p>去<a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a>官网下载，将<a href="http://requirejs.org/" target="_blank" rel="external">require.js</a> 放入到lib目录；下载<a href="https://github.com/JSLite/JSLite/releases" target="_blank" rel="external">JSLite 1.1.5</a> 放到lib目录中。</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">├── app<span class="class">.js</span></span><br><span class="line">├── index<span class="class">.html</span></span><br><span class="line">└── lib</span><br><span class="line">    ├── JSLite<span class="class">.js</span></span><br><span class="line">    ├── extend-jslite<span class="class">.js</span></span><br><span class="line">    └── require.js</span><br></pre></td></tr></table></figure>
+<h2 id="文件内容">文件内容</h2><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">requirejs.config(&#123;</span><br><span class="line">  paths: &#123;</span><br><span class="line">      jslite:<span class="string">'lib/extend-jslite'</span>,</span><br><span class="line">      <span class="comment">// zepto:'lib/zepto'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">require</span>([<span class="string">'jslite'</span>], <span class="function"><span class="keyword">function</span><span class="params">(j)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"z,$:"</span>,j(<span class="string">'body'</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>index.html </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">data-main</span>=<span class="value">"app.js"</span> <span class="attribute">src</span>=<span class="value">"lib/require.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>extend-jslite.js<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">define([</span><br><span class="line">    <span class="string">'lib/JSLite'</span></span><br><span class="line">], <span class="function"><span class="keyword">function</span><span class="params">(a)</span> </span>&#123;</span><br><span class="line"><span class="pi">    "use strict"</span>;</span><br><span class="line">    <span class="built_in">window</span>.JSLite = JSLite</span><br><span class="line">    <span class="comment">// If `$` or `jQuery` is not yet defined, point them to `JSLite`</span></span><br><span class="line">    <span class="string">'$'</span> <span class="keyword">in</span> <span class="built_in">window</span> || (<span class="built_in">window</span>.$ = JSLite)</span><br><span class="line">    <span class="string">'jQuery'</span> <span class="keyword">in</span> <span class="built_in">window</span> || (<span class="built_in">window</span>.jQuery = JSLite)</span><br><span class="line">    <span class="keyword">return</span> JSLite;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h1 id="竞争者">竞争者</h1><ul>
+<li><a href="https://github.com/systemjs/systemjs" target="_blank" rel="external">systemjs</a></li>
+<li><a href="http://browserify.org/" target="_blank" rel="external">browserify</a></li>
+<li><a href="http://webpack.github.io/" target="_blank" rel="external">webpack</a> | <a href="https://github.com/webpack/webpack" target="_blank" rel="external">github</a> 我更喜欢这个玩意儿</li>
+</ul>
+<h2 id="webpack">webpack</h2><p>AMD 或者 CommonJS – 两个它都支持。构建配置比 RequireJS 更加易于理解，也更具访问性。通过它的热插拔特性和内置的本地静态服务器可以让发布更加便捷。</p>
+<h1 id="名词解释">名词解释</h1><h2 id="CommonJS">CommonJS</h2><p>CommonJs 是服务器端模块的规范，Node.js采用了这个规范。  </p>
+<p>根据CommonJS规范，一个单独的文件就是一个模块。加载模块使用require方法，该方法读取一个文件并执行，最后返回文件内部的exports对象。  </p>
+<p>模块文件foobar.js  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//私有变量</span></span><br><span class="line"><span class="keyword">var</span> test = <span class="number">123</span>;</span><br><span class="line"><span class="comment">//公有方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foobar</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.foo = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// do someing ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.bar = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//do someing ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//exports对象上的方法和变量是公有的</span></span><br><span class="line"><span class="keyword">var</span> foobar = <span class="keyword">new</span> foobar();</span><br><span class="line">exports.foobar = foobar;</span><br></pre></td></tr></table></figure>
+<p>require方法默认读取<code>foobar.js</code>文件，可以省略js后缀</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="built_in">require</span>(<span class="string">'./foobar'</span>).foobar;</span><br><span class="line">test.bar();</span><br></pre></td></tr></table></figure>
+<p>CommonJS 加载模块是同步的，所以只有加载完成才能执行后面的操作。像<code>Node.js</code>主要用于服务器的编程，<strong>加载的模块文件一般都已经存在本地硬盘</strong>，所以加载起来比较快，不用考虑异步加载的方式，所以CommonJS规范比较适用。但如果是<code>浏览器环境，要从服务器加载模块</code>，这是就必须采用异步模式。所以就有了 <code>AMD</code>  <code>CMD</code> 解决方案。<br><a href="http://ponyfoo.com/articles/a-gentle-browserify-walkthrough" target="_blank" rel="external">A Gentle Browserify Walkthrough</a>  </p>
+<h2 id="AMD">AMD</h2><p>AMD(Asynchromous Module Definition)是 <a href="https://github.com/jrburke/requirejs" target="_blank" rel="external">RequireJS</a> 在推广过程中对模块定义的规范化产出<br>AMD异步加载模块。它的模块支持对象 函数 构造器 字符串 JSON等各种类型的模块。<br>适用AMD规范适用define方法定义模块。  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通过数组引入依赖 ，回调函数通过形参传入依赖</span></span><br><span class="line">define([<span class="string">'someModule1'</span>, <span class="string">'someModule2'</span>], <span class="function"><span class="keyword">function</span> <span class="params">(someModule1, someModule2)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">foo</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">/// someing</span></span><br><span class="line">        someModule1.test();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> &#123;foo: foo&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>AMD规范允许输出模块兼容CommonJS规范，这时define方法如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span> <span class="params">(require, exports, module)</span> </span>&#123;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">var</span> reqModule = <span class="built_in">require</span>(<span class="string">"./someModule"</span>);</span><br><span class="line">    requModule.test();</span><br><span class="line">     </span><br><span class="line">    exports.asplode = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//someing</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> exports;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="CMD">CMD</h2><p>CMD是<a href="https://github.com/seajs/seajs" target="_blank" rel="external">SeaJS</a> 在推广过程中对模块定义的规范化产出</p>
+<p>CMD和AMD的区别有以下几点：</p>
+<p>1.对于依赖的模块AMD是提前执行，CMD是延迟执行。不过RequireJS从2.0开始，也改成可以延迟执行（根据写法不同，处理方式不通过）。</p>
+<p>2.CMD推崇依赖就近，AMD推崇依赖前置。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//AMD</span></span><br><span class="line">define([<span class="string">'./a'</span>,<span class="string">'./b'</span>], <span class="function"><span class="keyword">function</span> <span class="params">(a, b)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//依赖一开始就写好</span></span><br><span class="line">    a.test();</span><br><span class="line">    b.test();</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"><span class="comment">//CMD</span></span><br><span class="line">define(<span class="function"><span class="keyword">function</span> <span class="params">(requie, exports, module)</span> </span>&#123;</span><br><span class="line">     </span><br><span class="line">    <span class="comment">//依赖可以就近书写</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>);</span><br><span class="line">    a.test();</span><br><span class="line">     </span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">//软依赖</span></span><br><span class="line">    <span class="keyword">if</span> (status) &#123;</span><br><span class="line">     </span><br><span class="line">        <span class="keyword">var</span> b = requie(<span class="string">'./b'</span>);</span><br><span class="line">        b.test();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>虽然 AMD也支持CMD写法，但依赖前置是官方文档的默认模块定义写法。</p>
+<p>3.AMD的api默认是一个当多个用，CMD严格的区分推崇职责单一。例如：AMD里require分全局的和局部的。CMD里面没有全局的 require,提供 seajs.use()来实现模块系统的加载启动。CMD里每个API都简单纯粹。<br><a href="https://github.com/seajs/seajs/issues/277" target="_blank" rel="external">区别的详细解释</a></p>
+<h2 id="UMD兼容多种模块规范">UMD兼容多种模块规范</h2><p>umd是<code>AMD</code>和<code>CommonJS</code>的糅合<br>AMD 浏览器第一的原则发展 异步加载模块。<br>CommonJS 模块以服务器第一原则发展，选择同步加载，它的模块无需包装(unwrapped modules)。<br>这迫使人们又想出另一个更通用的模式UMD （Universal Module Definition）。希望解决跨平台的解决方案。  </p>
+<p>UMD先判断是否支持Node.js的模块（exports）是否存在，存在则使用Node.js模块模式。<br>在判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块。</p>
+<p>兼容多种模块规范  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> <span class="params">(root, factory)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> JSLite = factory(root);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> define === <span class="string">'function'</span> &amp;&amp; define.amd) &#123;</span><br><span class="line">        <span class="comment">// AMD</span></span><br><span class="line">        <span class="comment">// define([], factory);</span></span><br><span class="line">        define(<span class="string">'JSLite'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> JSLite; &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> exports === <span class="string">'object'</span>) &#123;</span><br><span class="line">        <span class="comment">// Node.js</span></span><br><span class="line">        <span class="built_in">module</span>.exports = JSLite;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Browser globals</span></span><br><span class="line">        root.JSLite = JSLite;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)(<span class="keyword">this</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">//module ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>兼容多种模块规范  </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">;(<span class="function"><span class="keyword">function</span><span class="params">(name,definition)</span></span>&#123;</span><br><span class="line">    <span class="comment">//检测上下文环境是否为AMD或CMD</span></span><br><span class="line">    <span class="keyword">var</span> hasDefine = <span class="keyword">typeof</span> define === <span class="string">'function'</span>,</span><br><span class="line">        <span class="comment">// 检测上下文环境是否为Node</span></span><br><span class="line">        hasExports = <span class="keyword">typeof</span> <span class="built_in">module</span> !== <span class="string">'function'</span> &amp;&amp; <span class="built_in">module</span>.exports;</span><br><span class="line">    <span class="keyword">if</span>(hasDefine)&#123;</span><br><span class="line">        <span class="comment">//AMD环境或CMD环境</span></span><br><span class="line">        define(definition);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(hasExports)&#123;</span><br><span class="line">        <span class="comment">//定义为普通Node模块</span></span><br><span class="line">        <span class="built_in">module</span>.exports = definition();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//将模块的执行结果挂在window变量中，在浏览器中this指向window对象</span></span><br><span class="line">        <span class="keyword">this</span>[name] = definition();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)(<span class="string">'hello'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> hello = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="keyword">return</span> hello</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+              
+            </div>
+            <footer class="article-footer">
+              <a href="/2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/" class="article-date">
+  <time datetime="2015-08-02T13:36:30.000Z" itemprop="datePublished">2015-08-02</time>
+</a>
+              <a data-url="http://jslite.io/2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/" data-id="cicuj963a0029vzgl76gitxgh" class="article-share-link">Share</a>
+              
+                <a href="#comments" class="article-comment-link">Comments</a>
+              
+              
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSLite/">JSLite</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/requirejs/">requirejs</a></li></ul>
+
+            </footer>
+      </div>
+      
+        
+<nav id="article-nav">
+  
+  
+    <a href="/2015/07/28/Stylus：轻而易举实现-CSS-前缀和-reset-CSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Stylus：轻而易举实现 CSS 前缀和 reset CSS</div>
+    </a>
+  
+</nav>
+
+      
+    </article>
+    <script type="text/javascript">
+      window.onscroll = function(){ 
+        $(function(){
+          var $toc = $('.page-toc'),
+              $article = $('.article-entry')
+              toc_top = $toc.offset().top
+              tocsub_width = $toc.children().width()
+              article_height = $article.children().height()
+              scroll_top = document.body.scrollTop
+              screen_h = $(window).height()
+              footer_top = $('.article-footer').offset().top - $(window).height()
+              if(toc_top&&scroll_top&&scroll_top>toc_top&&scroll_top<footer_top){
+                $toc.children().css({
+                  "position": "fixed",
+                  "height": (screen_h -20)+'px',
+                  "overflow": "auto"
+                })
+                $article.css('margin-right',tocsub_width+'px')
+              }else{
+                $toc.children().css({
+                  "position": "relative",
+                  "height":'inherit',
+                  "overflow": "auto"
+                })
+                $article.css('margin-right',0+'px')
+              }
+        })
+      } 
+    </script>
+
+
+
+
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/" data-title="JS兼容多种模块规范，使用require加载JSLite方法" data-url="http://jslite.io/2015/08/02/js兼容多种模块规范，使用require加载JSLite方法/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'pc175'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+		</div>
+		
+
+<footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+        <div class="left">
+            &copy; 2015 kacper.wang<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
+        </div>
+        <div class="right">
+            
+                <a href="https://github.com/jaywcjlove">GitHub</a>
+            
+                <a href="http://weibo.com/pc175">Weibo</a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+$(function(){
+  var $img = $('.article-entry img'),
+      $link = $img.css({
+        "display":"inline-block"
+      }).parent()
+
+  if($link.parent().is("a")){
+      $img.each(function(idx,item) {
+      $(this).parent().attr('href',$(this).parent().parent().attr('href'))
+    })
+  }
+})
+</script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  	</div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/API" class="mobile-nav-link">API</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="https://github.com/JSLite/JSLite" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+</div>
+</body>
+</html>
+
