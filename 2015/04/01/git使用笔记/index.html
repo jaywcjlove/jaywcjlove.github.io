@@ -392,10 +392,8 @@ var _hmt = _hmt || [];
 <h2 id="查看某个文件历史">查看某个文件历史</h2><p><code>git log --pretty=oneline 文件名</code> #列出文件的所有改动历史<br><code>git show c178bf49</code> #某次的改动的修改记录<br><code>git log -p c178bf49</code> #某次的改动的修改记录<br><code>git blame 文件名</code> #显示文件的每一行是在那个版本最后修改。<br><code>git whatchanged 文件名</code> #显示某个文件的每个版本提交信息：提交日期，提交人员，版本号，提交备注（没有修改细节）  </p>
 <h2 id="总结">总结</h2><p><code>git help *</code> #获取命令的帮助信息<br><code>git status</code> #获取当前的状态，非常有用，因为git会提示接下来的能做的操作  </p>
 <h2 id="报错">报错</h2><ol>
-<li><code>git fatal: protocol error: bad line length character: No s</code><br> 解决办法：更换remote地址为 <code>http/https</code> 的</li>
-</ol>
-<ol>
-<li><code>The requested URL returned error: 403 Forbidden while accessing</code><br> 解决github push错误的办法</li>
+<li><code>git fatal: protocol error: bad line length character: No s</code> 解决办法：更换remote地址为 <code>http/https</code> 的  </li>
+<li><code>The requested URL returned error: 403 Forbidden while accessing</code>解决github push错误的办法</li>
 </ol>
 <p>解决方案：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#vim 编辑器打开 当前项目中的config文件</span></span><br><span class="line">vim .git/config</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改</span></span><br><span class="line">[remote <span class="string">"origin"</span>]  </span><br><span class="line">    url = https://github.com/jaywcjlove/example.git  </span><br><span class="line"></span><br><span class="line"><span class="comment">#为下面代码</span></span><br><span class="line">[remote <span class="string">"origin"</span>]  </span><br><span class="line">    url = https://jaywcjlove@github.com/jaywcjlove/example.git</span><br></pre></td></tr></table></figure>
@@ -406,7 +404,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cidfsvbge002o1eglq1sy652x" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cidfsy6m5002o6tglhixepper" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
