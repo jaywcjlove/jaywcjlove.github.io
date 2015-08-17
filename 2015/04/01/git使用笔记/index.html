@@ -394,6 +394,11 @@ var _hmt = _hmt || [];
 <h2 id="报错">报错</h2><ol>
 <li><code>git fatal: protocol error: bad line length character: No s</code><br> 解决办法：更换remote地址为 <code>http/https</code> 的</li>
 </ol>
+<ol>
+<li><code>The requested URL returned error: 403 Forbidden while accessing</code><br> 解决github push错误的办法</li>
+</ol>
+<p>解决方案：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#vim 编辑器打开 当前项目中的config文件</span></span><br><span class="line">vim .git/config</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改</span></span><br><span class="line">[remote <span class="string">"origin"</span>]  </span><br><span class="line">    url = https://github.com/jaywcjlove/example.git  </span><br><span class="line"></span><br><span class="line"><span class="comment">#为下面代码</span></span><br><span class="line">[remote <span class="string">"origin"</span>]  </span><br><span class="line">    url = https://jaywcjlove@github.com/jaywcjlove/example.git</span><br></pre></td></tr></table></figure>
 
               
             </div>
@@ -401,7 +406,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cideq26jr002o1egl1aj5cmcp" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cidfsvbge002o1eglq1sy652x" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
