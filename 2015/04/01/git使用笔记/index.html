@@ -284,7 +284,7 @@ var _hmt = _hmt || [];
 <li>closed #xxx</li>
 </ol>
 <h3 id="revert">revert</h3><p><code>git revert HEAD</code> #撤销前一次操作<br><code>git revert HEAD~</code> #撤销前前一次操作<br><code>git revert commit</code> ##撤销指定操作  </p>
-<h3 id="checkout">checkout</h3><p><code>git checkout -- file</code> #取消对文件的修改（从暂存区——覆盖worktree file）<br><code>git checkout branch|tag|commit -- file_name</code> #从仓库取出file覆盖当前分支<br><code>git checkout -- .</code> #从暂存区取出文件覆盖工作区  </p>
+<h3 id="checkout">checkout</h3><p><code>git checkout -- file</code> #取消对文件的修改（从暂存区——覆盖worktree file）<br><code>git checkout branch|tag|commit -- file_name</code> #从仓库取出file覆盖当前分支<br><code>git checkout HEAD~1 [文件]</code> #将会更新 working directory 去匹配某次 commit<br><code>git checkout -- .</code> #从暂存区取出文件覆盖工作区  </p>
 <h3 id="diff">diff</h3><p><code>git diff file</code> #查看指定文件的差异<br><code>git diff --stat</code> #查看简单的diff结果<br><code>git diff</code> #比较Worktree和Index之间的差异<br><code>git diff --cached</code> #比较Index和HEAD之间的差异<br><code>git diff HEAD</code> #比较Worktree和HEAD之间的差异<br><code>git diff branch</code> #比较Worktree和branch之间的差异<br><code>git diff branch1 branch2</code> #比较两次分支之间的差异<br><code>git diff commit commit</code> #比较两次提交之间的差异<br><code>$ git diff master..test</code> #上面这条命令只显示两个分支间的差异<br><code>git diff master...test</code> #你想找出‘master’,‘test’的共有 父分支和’test’分支之间的差异，你用3个‘.’来取代前面的两个’.’  </p>
 <h3 id="stash">stash</h3><p><code>git stash</code> #将工作区现场（已跟踪文件）储藏起来，等以后恢复后继续工作。<br><code>git stash list</code> #查看保存的工作现场<br><code>git stash apply</code> #恢复工作现场<br><code>git stash drop</code> #删除stash内容<br><code>git stash pop</code> #恢复的同时直接删除stash内容<br><code>git stash apply stash@{0}</code> #恢复指定的工作现场，当你保存了不只一份工作现场时。   </p>
 <h3 id="merge">merge</h3><p><code>git merge --squash test</code> ##合并压缩，将test上的commit压缩为一条  </p>
@@ -404,7 +404,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cidfsy6m5002o6tglhixepper" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cidqx2fda002orhglkilhxvs7" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
