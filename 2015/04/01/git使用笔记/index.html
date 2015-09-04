@@ -273,7 +273,7 @@ var _hmt = _hmt || [];
 <p><code>git submodule foreach --recursive git submodule init</code><br><code>git submodule foreach --recursive git submodule update</code>  </p>
 <h2 id="本地">本地</h2><h3 id="add-1">add</h3><p><code>git add *</code> #跟踪新文件<br><code>git add -u [path]</code> #添加[指定路径下]已跟踪文件  </p>
 <h3 id="rm">rm</h3><p><code>rm *&amp;git rm *</code> #移除文件<br><code>git rm -f *</code> #移除文件<br><code>git rm --cached *</code> #取消跟踪<br><code>git mv file_from file_to</code> #重命名跟踪文件<br><code>git log</code> #查看提交记录   </p>
-<h3 id="commit-1">commit</h3><p><code>git commit</code> #提交更新<br><code>git commit -m &#39;message&#39;</code> 提交说明<br><code>git commit -a</code> #跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交<br><code>git commit --amend</code> #修改最后一次提交<br><code>git commit log</code> #查看所有提交，包括没有push的commit<br><code>git commit -m &quot;#133&quot;</code> 关联issue 任意位置带上<code>#</code> 符号加上issue号码<br><code>git commit -m &quot;fix #133&quot;</code> commit关闭issue</p>
+<h3 id="commit-1">commit</h3><p><code>git commit</code> #提交更新<br><code>git commit -m &#39;message&#39;</code> #提交说明<br><code>git commit -a</code> #跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交<br><code>git commit --amend</code> #修改最后一次提交<br><code>git commit log</code> #查看所有提交，包括没有push的commit<br><code>git commit -m &quot;#133&quot;</code> #关联issue 任意位置带上<code>#</code> 符号加上issue号码<br><code>git commit -m &quot;fix #133&quot;</code> commit关闭issue<br><code>git commit -m &#39;概要描述&#39;$&#39;\n\n&#39;&#39;1.详细描述&#39;$&#39;\n&#39;&#39;2.详细描述&#39;</code> #提交简要描述和详细描述</p>
 <h3 id="reset">reset</h3><p><code>git reset HEAD</code> <em>#取消已经暂存的文件<br><code>git reset --mixed HEAD</code> </em>#同上<br><code>git reset --soft HEAD</code> <em>#重置到指定状态，不会修改索引区和工作树<br><code>git reset --hard HEAD</code> </em>#重置到指定状态，会修改索引区和工作树<br><code>git reset -- files</code> *#重置index区文件<br>那么如何跟随着commit关闭一个issue呢? 在confirm merge的时候可以使用一下命令来关闭相关issue:</p>
 <ol>
 <li>fixes #xxx</li>
@@ -404,7 +404,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cie3sdoyb002o11glrcqhvype" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cie5z91id002o7agl0xsdew5v" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
