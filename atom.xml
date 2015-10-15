@@ -4,7 +4,7 @@
   <subtitle><![CDATA[让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。 推进前端开发标准对于攻城师来说，人人有责。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jslite.io/"/>
-  <updated>2015-08-02T13:37:31.000Z</updated>
+  <updated>2015-09-10T08:54:39.000Z</updated>
   <id>http://jslite.io/</id>
   
   <author>
@@ -13,6 +13,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[通过命令升级nodejs版本]]></title>
+    <link href="http://jslite.io/2015/09/10/%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E5%8D%87%E7%BA%A7nodejs%E7%89%88%E6%9C%AC/"/>
+    <id>http://jslite.io/2015/09/10/通过命令升级nodejs版本/</id>
+    <published>2015-09-10T08:46:43.000Z</published>
+    <updated>2015-09-10T08:54:39.000Z</updated>
+    <content type="html"><![CDATA[<p>转载：<a href="http://theholmesoffice.com/node-js-fundamentals-how-to-upgrade-the-node-js-version/" target="_blank" rel="external">node-js-fundamentals-how-to-upgrade-the-node-js-version</a></p>
+<p>Node.js 开发活跃，它的最新稳定版本也频繁变化，你不时会发现，一个模块不能在你当前的Node版本上使用，此时你需要升级Node</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. 检查 Node的当前版本，使用命令</span></span><br><span class="line">$ node -v  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 清除npm cache</span></span><br><span class="line">$ sudo npm cache clean <span class="operator">-f</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 安装n模块</span></span><br><span class="line">$ sudo npm install -g n    </span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 升级到最新版本</span></span><br><span class="line"><span class="comment"># 选择一个流行版本安装</span></span><br><span class="line">$ sudo n <span class="number">0.8</span>.<span class="number">11</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动安装最新的稳定版本</span></span><br><span class="line">$ sudo n stable  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有node版本</span></span><br><span class="line">$ sudo n ls</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 查看Node的版本，检查升级是否成功</span></span><br><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>转载：<a href="http://theholmesoffice.com/node-js-fundamentals-how-to-upgrade-the-node-js-version/" target="_blank" rel="external">node-js-f]]>
+    </summary>
+    
+      <category term="nodejs" scheme="http://jslite.io/tags/nodejs/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[JS兼容多种模块规范，使用require加载JSLite方法]]></title>
@@ -1358,27 +1376,6 @@
     </summary>
     
       <category term="css" scheme="http://jslite.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[bash快捷键]]></title>
-    <link href="http://jslite.io/2015/04/08/bash%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://jslite.io/2015/04/08/bash快捷键/</id>
-    <published>2015-04-08T15:37:49.000Z</published>
-    <updated>2015-04-08T16:41:02.000Z</updated>
-    <content type="html"><![CDATA[<p><code>Ctrl + a</code> ：移到命令行首<br><code>Ctrl + e</code> ：移到命令行尾<br><code>Ctrl + f</code> ：按字符前移（右向）<br><code>Ctrl + b</code> ：按字符后移（左向）<br><code>Alt + f</code> ：按单词前移（右向）<br><code>Alt + b</code> ：按单词后移（左向）<br><code>Ctrl + xx</code>：在命令行首和光标之间移动<br><code>Ctrl + u</code> ：从光标处删除至命令行首<br><code>Ctrl + k</code> ：从光标处删除至命令行尾<br><code>Ctrl + w</code> ：从光标处删除至字首<br><code>Alt + d</code> ：从光标处删除至字尾<br><code>Ctrl + d</code> ：删除光标处的字符<br><code>Ctrl + h</code> ：删除光标前的字符<br><code>Ctrl + y</code> ：粘贴至光标后<br><code>Alt + c</code> ：从光标处更改为首字母大写的单词<br><code>Alt + u</code> ：从光标处更改为全部大写的单词<br><code>Alt + l</code> ：从光标处更改为全部小写的单词<br><code>Ctrl + t</code> ：交换光标处和之前的字符<br><code>Alt + t</code> ：交换光标处和之前的单词<br><code>Alt + Backspace</code>：与 <code>Ctrl + w</code> 相同  </p>
-<h2 id="重新执行命令">重新执行命令</h2><p><code>Ctrl + r</code>：逆向搜索命令历史<br><code>Ctrl + g</code>：从历史搜索模式退出<br><code>Ctrl + p</code>：历史中的上一条命令<br><code>Ctrl + n</code>：历史中的下一条命令<br><code>Alt + .</code>：使用上一条命令的最后一个参数  </p>
-<h2 id="控制命令">控制命令</h2><p><code>Ctrl + l</code>：清屏<br><code>Ctrl + o</code>：执行当前命令，并选择上一条命令<br><code>Ctrl + s</code>：阻止屏幕输出<br><code>Ctrl + q</code>：允许屏幕输出<br><code>Ctrl + c</code>：终止命令<br><code>Ctrl + z</code>：挂起命令  </p>
-<h2 id="Bang_(!)_命令">Bang (!) 命令</h2><p><code>!!</code>：执行上一条命令<br><code>!blah</code>：执行最近的以 blah 开头的命令，如 <code>!ls</code><br><code>!blah:p</code>：仅打印输出，而不执行<br><code>!$</code>：上一条命令的最后一个参数，与 <code>Alt + .</code> 相同<br><code>!$:p</code>：打印输出 <code>!$</code> 的内容<br><code>!*</code>：上一条命令的所有参数<br><code>!*:p</code>：打印输出 <code>!*</code> 的内容<br><code>^blah</code>：删除上一条命令中的 <code>blah</code><br><code>^blah^foo</code>：将上一条命令中的 <code>blah</code> 替换为 <code>foo</code><br><code>^blah^foo^</code>：将上一条命令中所有的 <code>blah</code> 都替换为 <code>foo</code>  </p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><code>Ctrl + a</code> ：移到命令行首<br><code>Ctrl + e</code> ：移到命令行尾<br><code>Ctrl + f</code> ：按字符前移（右向）<br><code>Ctrl + b</code> ：按字符后移（左向）<br]]>
-    </summary>
-    
-      <category term="bash" scheme="http://jslite.io/tags/bash/"/>
-    
-      <category term="快捷键" scheme="http://jslite.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
