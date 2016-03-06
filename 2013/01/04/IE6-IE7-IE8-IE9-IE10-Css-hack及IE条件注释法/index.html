@@ -13,6 +13,7 @@
 <meta property="og:url" content="http://jslite.io/2013/01/04/IE6-IE7-IE8-IE9-IE10-Css-hack及IE条件注释法/index.html">
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="IE浏览器的csshack写法和IE条件注释语句">
+<meta property="og:updated_time" content="2015-06-04T11:17:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE6 IE7 IE8 IE9 IE10 Css hack及IE条件注释法">
 <meta name="twitter:description" content="IE浏览器的csshack写法和IE条件注释语句">
@@ -111,7 +112,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -165,7 +166,7 @@ var _hmt = _hmt || [];
               
                 <p>IE浏览器的csshack写法和IE条件注释语句</p>
 <a id="more"></a> 
-<h1 id="IE_css_hack">IE css hack</h1><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123; <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">243</span>,<span class="number">243</span>,<span class="number">243</span>) </span></span>; <span class="rule">&#125;</span></span> <span class="comment">/* 所有浏览器都支持这样的写法*/</span></span><br><span class="line"><span class="tag">body</span> <span class="rules">&#123; <span class="rule"><span class="attribute">_background</span>:<span class="value"> <span class="function">rgb</span>(<span class="number">243</span>,<span class="number">243</span>,<span class="number">243</span>) </span></span>; <span class="rule">&#125;</span></span> <span class="comment">/* 只有IE6才支持这样的写法*/</span></span><br><span class="line"><span class="tag">body</span> <span class="rules">&#123; <span class="rule">*<span class="attribute">background</span>:<span class="value"> <span class="function">rgb</span>(<span class="number">243</span>,<span class="number">243</span>,<span class="number">243</span>) </span></span>; <span class="rule">&#125;</span></span> <span class="comment">/* 所有IE浏览器都支持这样的写法*/</span></span><br><span class="line"><span class="tag">body</span> <span class="rules">&#123; <span class="rule">+<span class="attribute">background</span>:<span class="value"> <span class="function">rgb</span>(<span class="number">243</span>,<span class="number">243</span>,<span class="number">243</span>) </span></span>; <span class="rule">&#125;</span></span> <span class="comment">/* 只有IE6和IE7浏览器能支持这样的写法*/</span></span><br><span class="line"><span class="tag">body</span> <span class="rules">&#123; <span class="rule"><span class="attribute">-background</span>:<span class="value"> <span class="function">rgb</span>(<span class="number">243</span>,<span class="number">243</span>,<span class="number">243</span>) </span></span>; <span class="rule">&#125;</span></span> <span class="comment">/* 据说也只有IE6浏览器能支持，我没测试过*/</span></span><br><span class="line"><span class="tag">body</span> <span class="rules">&#123; <span class="rule">*+<span class="attribute">background</span>:<span class="value"> <span class="function">rgb</span>(<span class="number">243</span>,<span class="number">243</span>,<span class="number">243</span>) </span></span>; <span class="rule">&#125;</span></span> <span class="comment">/* IE7和IE10浏览器能支持*/</span></span><br><span class="line"><span class="tag">body</span> <span class="rules">&#123; <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">rgb</span>(<span class="number">243</span>,<span class="number">243</span>,<span class="number">243</span>) \<span class="number">0</span></span></span>; <span class="rule">&#125;</span></span> <span class="comment">/* \零 的写法只有IE8及以上浏览器可以支持*/</span></span><br></pre></td></tr></table></figure>
+<h1 id="IE_css_hack">IE css hack</h1><figure class="highlight"><table><tr><td class="code"><pre><span class="line">body &#123; background: rgba(243,243,243) ; &#125; /* 所有浏览器都支持这样的写法*/</span><br><span class="line">body &#123; _background: rgb(243,243,243) ; &#125; /* 只有IE6才支持这样的写法*/</span><br><span class="line">body &#123; *background: rgb(243,243,243) ; &#125; /* 所有IE浏览器都支持这样的写法*/</span><br><span class="line">body &#123; +background: rgb(243,243,243) ; &#125; /* 只有IE6和IE7浏览器能支持这样的写法*/</span><br><span class="line">body &#123; -background: rgb(243,243,243) ; &#125; /* 据说也只有IE6浏览器能支持，我没测试过*/</span><br><span class="line">body &#123; *+background: rgb(243,243,243) ; &#125; /* IE7和IE10浏览器能支持*/</span><br><span class="line">body &#123; background: rgb(243,243,243) \0; &#125; /* \零 的写法只有IE8及以上浏览器可以支持*/</span><br></pre></td></tr></table></figure>
 <h1 id="IE条件注释语句">IE条件注释语句</h1><h2 id="条件注释简介">条件注释简介</h2><ol>
 <li>IE中的条件注释（Conditional comments）对IE的版本和IE非IE有优秀的区分能力，是WEB设计中常用的hack方法。</li>
 <li>条件注释只能用于IE5以上。</li>
@@ -191,7 +192,7 @@ var _hmt = _hmt || [];
               <a href="/2013/01/04/IE6-IE7-IE8-IE9-IE10-Css-hack及IE条件注释法/" class="article-date">
   <time datetime="2013-01-04T10:18:18.000Z" itemprop="datePublished">2013-01-04</time>
 </a>
-              <a data-url="http://jslite.io/2013/01/04/IE6-IE7-IE8-IE9-IE10-Css-hack及IE条件注释法/" data-id="cifpkorb9004hj1gli83yuhb8" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2013/01/04/IE6-IE7-IE8-IE9-IE10-Css-hack及IE条件注释法/" data-id="cihhbywq5004h0xgllxmtl9ab" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -287,7 +288,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

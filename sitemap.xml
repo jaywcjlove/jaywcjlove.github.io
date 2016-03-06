@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jslite.io/2015/03/22/%E5%90%84%E7%A7%8D%E5%B8%B8%E7%94%A8js%E9%AA%8C%E8%AF%81/</loc>
-    <lastmod>2015-10-15T09:24:53.000Z</lastmod>
+    <loc>http://jslite.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-01-31T11:56:47.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://jslite.io/2015/04/01/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2015-09-20T16:55:06.000Z</lastmod>
+    <loc>http://jslite.io/2015/03/28/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2015-10-16T06:57:04.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jslite.io/2015/03/22/%E5%90%84%E7%A7%8D%E5%B8%B8%E7%94%A8js%E9%AA%8C%E8%AF%81/</loc>
+    <lastmod>2015-10-15T09:24:53.000Z</lastmod>
   </url>
   
   <url>
@@ -279,11 +284,6 @@
   <url>
     <loc>http://jslite.io/2015/04/08/bash%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2015-04-08T16:41:02.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jslite.io/2015/03/28/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2015-04-08T15:40:41.000Z</lastmod>
   </url>
   
   <url>

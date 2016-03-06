@@ -15,6 +15,7 @@
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="方法1function checkhHtml5()&amp;#123;    if (typeof(Worker) !== &quot;undefined&quot;)&amp;#123;        alert(&quot;支持HTML5&quot;);    &amp;#125; else&amp;#123;        alert(&quot;不支持HTML5&quot;);    &amp;#125;  &amp;#125;
 方法2&amp;lt;canvas id=&quot;Canvas&quot; &amp;gt;&amp;lt">
+<meta property="og:updated_time" content="2015-04-09T13:31:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="判断浏览器是否支持html5">
 <meta name="twitter:description" content="方法1function checkhHtml5()&amp;#123;    if (typeof(Worker) !== &quot;undefined&quot;)&amp;#123;        alert(&quot;支持HTML5&quot;);    &amp;#125; else&amp;#123;        alert(&quot;不支持HTML5&quot;);    &amp;#125;  &amp;#125;
@@ -114,7 +115,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -166,7 +167,7 @@ var _hmt = _hmt || [];
                 <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法1"><span class="toc-number">1.</span> <span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法2"><span class="toc-number">2.</span> <span class="toc-text">方法2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法3"><span class="toc-number">3.</span> <span class="toc-text">方法3</span></a></li></ol>
               </div>
               
-                <h3 id="方法1">方法1</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkhHtml5</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span>(Worker) !== <span class="string">"undefined"</span>)&#123;</span><br><span class="line">        alert(<span class="string">"支持HTML5"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        alert(<span class="string">"不支持HTML5"</span>);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <h3 id="方法1">方法1</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkhHtml5</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span>(Worker) !== <span class="string">"undefined"</span>)&#123;</span><br><span class="line">        alert(<span class="string">"支持HTML5"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        alert(<span class="string">"不支持HTML5"</span>);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="方法2">方法2</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">canvas</span> <span class="attribute">id</span>=<span class="value">"Canvas"</span> &gt;</span><span class="tag">&lt;/<span class="title">canvas</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">  </span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">document</span>.getElementById(<span class="string">"Canvas"</span>).getContext)&#123;</span><br><span class="line">        alert(<span class="string">"不支持html5"</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;  </span><br><span class="line">        alert(<span class="string">"支持html5"</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="方法3">方法3</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(! (<span class="string">'getContext'</span> <span class="keyword">in</span> <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>)))</span><br><span class="line">alert(<span class="string">"不支持HTML5"</span>)</span><br></pre></td></tr></table></figure>
 
@@ -176,7 +177,7 @@ var _hmt = _hmt || [];
               <a href="/2014/09/07/判断浏览器是否支持html5/" class="article-date">
   <time datetime="2014-09-06T17:17:08.000Z" itemprop="datePublished">2014-09-07</time>
 </a>
-              <a data-url="http://jslite.io/2014/09/07/判断浏览器是否支持html5/" data-id="cifpkor80001jj1gl9isp4le9" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2014/09/07/判断浏览器是否支持html5/" data-id="cihhbywlg001j0xglyq5d1aev" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -272,7 +273,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

@@ -15,6 +15,7 @@
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="已知两个经纬度，计算其夹角，距离
 /*==== 由A、B两点的经纬度计算AB夹角、距离 Start====*/function getAngle(mLong,mLat) &amp;#123;    //var dLong         = 114.104223;//已知点A经度香港    //var dLat        = 22.439718;//已知点A纬度   -144    var kRadi">
+<meta property="og:updated_time" content="2015-04-08T17:00:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS由A、B两点的经纬度计算AB夹角、距离">
 <meta name="twitter:description" content="已知两个经纬度，计算其夹角，距离
@@ -114,7 +115,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -167,7 +168,7 @@ var _hmt = _hmt || [];
               </div>
               
                 <p>已知两个经纬度，计算其夹角，距离</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*==== 由A、B两点的经纬度计算AB夹角、距离 Start====*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getAngle</span><span class="params">(mLong,mLat)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//var dLong         = 114.104223;//已知点A经度香港</span></span><br><span class="line">    <span class="comment">//var dLat        = 22.439718;//已知点A纬度   -144</span></span><br><span class="line">    <span class="keyword">var</span> kRadius = <span class="number">6378137</span>;<span class="comment">//地球半径</span></span><br><span class="line">    <span class="keyword">var</span> dx = (dLong*<span class="built_in">Math</span>.PI/<span class="number">180</span>  - mLong * <span class="built_in">Math</span>.PI/<span class="number">180</span>)*(kRadius*<span class="built_in">Math</span>.cos(mLat*<span class="built_in">Math</span>.PI/<span class="number">180</span>));</span><br><span class="line">    <span class="keyword">var</span> dy = (dLat*<span class="built_in">Math</span>.PI/<span class="number">180</span> - mLat * <span class="built_in">Math</span>.PI/<span class="number">180</span>)*kRadius</span><br><span class="line">    jiajiao=<span class="number">0</span>;</span><br><span class="line">    jiajiao = <span class="built_in">Math</span>.atan2(dx, dy)*<span class="number">180.0</span>/<span class="built_in">Math</span>.PI;</span><br><span class="line">    <span class="keyword">var</span> juli = <span class="built_in">Math</span>.sqrt(dx*dx + dy*dy)</span><br><span class="line">    <span class="keyword">return</span> [jiajiao,juli];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*==== 由A、B两点的经纬度计算AB夹角、距离 End====*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*==== 由A、B两点的经纬度计算AB夹角、距离 Start====*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getAngle</span>(<span class="params">mLong,mLat</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//var dLong         = 114.104223;//已知点A经度香港</span></span><br><span class="line">    <span class="comment">//var dLat        = 22.439718;//已知点A纬度   -144</span></span><br><span class="line">    <span class="keyword">var</span> kRadius = <span class="number">6378137</span>;<span class="comment">//地球半径</span></span><br><span class="line">    <span class="keyword">var</span> dx = (dLong*<span class="built_in">Math</span>.PI/<span class="number">180</span>  - mLong * <span class="built_in">Math</span>.PI/<span class="number">180</span>)*(kRadius*<span class="built_in">Math</span>.cos(mLat*<span class="built_in">Math</span>.PI/<span class="number">180</span>));</span><br><span class="line">    <span class="keyword">var</span> dy = (dLat*<span class="built_in">Math</span>.PI/<span class="number">180</span> - mLat * <span class="built_in">Math</span>.PI/<span class="number">180</span>)*kRadius</span><br><span class="line">    jiajiao=<span class="number">0</span>;</span><br><span class="line">    jiajiao = <span class="built_in">Math</span>.atan2(dx, dy)*<span class="number">180.0</span>/<span class="built_in">Math</span>.PI;</span><br><span class="line">    <span class="keyword">var</span> juli = <span class="built_in">Math</span>.sqrt(dx*dx + dy*dy)</span><br><span class="line">    <span class="keyword">return</span> [jiajiao,juli];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*==== 由A、B两点的经纬度计算AB夹角、距离 End====*/</span></span><br></pre></td></tr></table></figure>
 
               
             </div>
@@ -175,7 +176,7 @@ var _hmt = _hmt || [];
               <a href="/2013/08/16/JS由A、B两点的经纬度计算AB夹角、距离/" class="article-date">
   <time datetime="2013-08-15T16:58:39.000Z" itemprop="datePublished">2013-08-16</time>
 </a>
-              <a data-url="http://jslite.io/2013/08/16/JS由A、B两点的经纬度计算AB夹角、距离/" data-id="cifpkora9003pj1gl4l5kqopf" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2013/08/16/JS由A、B两点的经纬度计算AB夹角、距离/" data-id="cihhbywo7003p0xglwugkd33w" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -271,7 +272,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

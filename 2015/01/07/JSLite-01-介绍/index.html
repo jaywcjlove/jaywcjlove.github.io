@@ -32,6 +32,7 @@ JSLite">
 <meta property="og:image" content="https://img.shields.io/github/stars/JSLite/JSLite.svg">
 <meta property="og:image" content="https://img.shields.io/badge/license-MIT-blue.svg">
 <meta property="og:image" content="https://travis-ci.org/JSLite/JSLite.svg?branch=master">
+<meta property="og:updated_time" content="2015-05-12T08:58:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[教程] JSLite 01 介绍">
 <meta name="twitter:description" content="简介
@@ -137,7 +138,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -200,26 +201,26 @@ var _hmt = _hmt || [];
 <li>JSLite 希望尽可能的使用原生简单标准的函数方法实现，推进前端开发标准对于攻城师来说，人人有责。 </li>
 </ol>
 </blockquote>
-<h2 id="官方网站">官方网站</h2><p><a href="http://JSLite.io" target="_blank" rel="external">官方网站http://JSLite.io</a>  </p>
+<h2 id="官方网站">官方网站</h2><p><a href="http://JSLite.io">官方网站http://JSLite.io</a>  </p>
 <p><a href="https://github.com/JSLite/JSLite/issues" target="_blank" rel="external"><img src="https://img.shields.io/github/issues/JSLite/JSLite.svg" alt=""></a>  <a href="https://github.com/JSLite/JSLite/network" target="_blank" rel="external"><img src="https://img.shields.io/github/forks/JSLite/JSLite.svg" alt=""></a> <a href="https://github.com/JSLite/JSLite/stargazers" target="_blank" rel="external"><img src="https://img.shields.io/github/stars/JSLite/JSLite.svg" alt=""></a> <a href="https://raw.githubusercontent.com/JSLite/JSLite/master/MIT-LICENSE" target="_blank" rel="external"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt=""></a> <a href="https://travis-ci.org/JSLite/JSLite" target="_blank" rel="external"><img src="https://travis-ci.org/JSLite/JSLite.svg?branch=master" alt=""></a></p>
 <h2 id="JSLite_特性">JSLite 特性</h2><p>未来有更多特性，需要您的加入^_^!</p>
 <blockquote>
 <p>HTML 元素选取<br>HTML 元素操作<br>CSS 操作<br>HTML 事件函数<br>节点效果（展示隐藏）<br>HTML DOM 遍历和修改<br>AJAX  </p>
 </blockquote>
 <h2 id="页面添加_JSLite_库">页面添加 JSLite 库</h2><p>JSLite 库位于一个 JavaScript 文件中，其中包含了所有的 <code>JSLite</code> 函数。<br>可以通过下面的标记把 <code>JSLite</code> 添加到网页中：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"JSLite.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"JSLite.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>请注意，<code>&lt;script&gt;</code> 标签应该位于页面的 <code>&lt;head&gt;</code> 部分。</p>
 <h2 id="基础_JSLite_实例">基础 JSLite 实例</h2><p>下面的例子演示了 <code>JSLite</code> 的 <code>hide()</code> 函数，隐藏了 <code>HTML</code> 文档中所有的 <code>&lt;p&gt;</code> 元素。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"JSLite.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        $(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">            $(<span class="string">"p"</span>).hide();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>This is a heading<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="下载_JSLite">下载 JSLite</h2><p>可从从 <a href="http://JSLite.io" target="_blank" rel="external">JSLite.io</a> 跳转到github上下载，最新打包好的。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"JSLite.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        $(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            $(<span class="string">"p"</span>).hide();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>This is a heading<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="下载_JSLite">下载 JSLite</h2><p>可从从 <a href="http://JSLite.io">JSLite.io</a> 跳转到github上下载，最新打包好的。</p>
 <h2 id="安装_JSLite">安装 JSLite</h2><p>如需使用 JSLite，您需要下载 JSLite  库（会在下面为您讲解），然后把它包含在希望使用的网页中。<br>JSLite 库是一个 JavaScript 文件，您可以使用 HTML 的 <code>&lt;script&gt;</code> 标签引用它：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"JSLite.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"JSLite.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="您将学到什么">您将学到什么</h2><p>在本教程中，您将通过教程以及实例，学到如何通过使用 JSLite 应用 JavaScript 效果。<br>JSLite 是一个“写的更少，但做的更多”的轻量级 JavaScript 库。<br>基本上，您将学习到如何选取 HTML 元素，以及如何对它们执行类似隐藏、移动以及操作其内容等任务。  </p>
 <h2 id="您需要具备的基础知识">您需要具备的基础知识</h2><p>在您开始学习 JSLite 之前，您应该对以下知识有基本的了解：</p>
 <blockquote>
 <p>HTML<br>CSS<br>JavaScript</p>
 </blockquote>
-<p><a href="http://jslite.io/JSLite/doc/" target="_blank" rel="external">JSLite 参考手册</a></p>
+<p><a href="http://jslite.io/JSLite/doc/">JSLite 参考手册</a></p>
 
               
             </div>
@@ -227,7 +228,7 @@ var _hmt = _hmt || [];
               <a href="/2015/01/07/JSLite-01-介绍/" class="article-date">
   <time datetime="2015-01-06T17:29:28.000Z" itemprop="datePublished">2015-01-07</time>
 </a>
-              <a data-url="http://jslite.io/2015/01/07/JSLite-01-介绍/" data-id="cifpkoraw0049j1gl3z5vl7q2" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/01/07/JSLite-01-介绍/" data-id="cihhbywpb00490xgl227hbytt" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -323,7 +324,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

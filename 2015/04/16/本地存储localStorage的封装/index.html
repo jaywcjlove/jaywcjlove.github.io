@@ -19,6 +19,7 @@
 <meta property="og:image" content="https://img.shields.io/github/forks/jaywcjlove/store.js.svg">
 <meta property="og:image" content="https://img.shields.io/github/stars/jaywcjlove/store.js.svg">
 <meta property="og:image" content="https://img.shields.io/github/release/jaywcjlove/store.js.svg">
+<meta property="og:updated_time" content="2015-05-03T13:28:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本地存储localStorage的封装">
 <meta name="twitter:description" content="store.js 是一个实现了浏览器的本地存储的 JavaScript 封装 API，不是通过 Cookie 和 Flash 技术实现，而是使用 localStorage。小弟我主要是用于chrome，Safari，手机Web等先进浏览器里面跑。so….大家可以做兼容哦….
@@ -118,7 +119,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -174,8 +175,8 @@ var _hmt = _hmt || [];
 <p><a href="https://github.com/jaywcjlove/store.js" target="_blank" rel="external">store.js</a> 是一个实现了浏览器的本地存储的 JavaScript 封装 API，不是通过 Cookie 和 Flash 技术实现，而是使用 localStorage。小弟我主要是用于chrome，Safari，手机Web等先进浏览器里面跑。so….大家可以做兼容哦….</p>
 <p>比较诡异的是居然所有支持的浏览器目前都采用的5MB，尽管有一些浏览器可以让用户设置，但对于网页制作者来说，目前的形势就5MB来考虑是比较妥当的。</p>
 <p><a href="https://github.com/jaywcjlove/store.js" target="_blank" rel="external">Github地址</a></p>
-<h2 id="下载">下载</h2><h3 id="bower">bower</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ bower <span class="keyword">install</span> storejs</span><br></pre></td></tr></table></figure>
-<h3 id="npm">npm</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> storejs</span><br></pre></td></tr></table></figure>
+<h2 id="下载">下载</h2><h3 id="bower">bower</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ bower install storejs</span><br></pre></td></tr></table></figure>
+<h3 id="npm">npm</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install storejs</span><br></pre></td></tr></table></figure>
 <h2 id="本地存储APIs">本地存储APIs</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store(key, data);                 <span class="comment">//单个存储字符串数据</span></span><br><span class="line">store(&#123;key: data, key2: data2&#125;);  <span class="comment">//批量存储多个字符串数据</span></span><br><span class="line">store(key);                       <span class="comment">//获取key的字符串数据</span></span><br><span class="line">store();                          <span class="comment">//获取所有key/data</span></span><br><span class="line">store(<span class="literal">false</span>);                     <span class="comment">//清空所有key/data</span></span><br><span class="line">store(key,<span class="literal">false</span>);                 <span class="comment">//删除key包括key的字符串数据</span></span><br><span class="line"></span><br><span class="line">store.set(key, data[, overwrite]);<span class="comment">//=== store(key, data);</span></span><br><span class="line">store.setAll(data[, overwrite]);  <span class="comment">//=== store(&#123;key: data, key2: data&#125;);</span></span><br><span class="line">store.get(key[, alt]);            <span class="comment">//=== store(key);</span></span><br><span class="line">store.getAll();                   <span class="comment">//=== store();</span></span><br><span class="line">store.clear();                    <span class="comment">//=== store(false);</span></span><br><span class="line">store.remove(key);                <span class="comment">//===store(key,false)</span></span><br><span class="line">store.keys();                     <span class="comment">//返回所有key的数组</span></span><br><span class="line">store.forEach(callback);          <span class="comment">//循环遍历，返回false结束遍历</span></span><br><span class="line"></span><br><span class="line">store.has(key);         <span class="comment">//⇒判断是否存在返回true/false</span></span><br></pre></td></tr></table></figure>
 <h3 id="set">set</h3><p>单个存储或删除字符串数据<br><br><code>store.set(key, data[, overwrite]);</code><br><br>效果相同<code>store(key, data);</code><br></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.set(<span class="string">"wcj"</span>,<span class="string">"1"</span>)   <span class="comment">//⇒  1</span></span><br><span class="line">store.set(<span class="string">"wcj"</span>)       <span class="comment">//⇒  删除wcj及字符串数据</span></span><br></pre></td></tr></table></figure>
@@ -194,10 +195,10 @@ var _hmt = _hmt || [];
 <h3 id="remove">remove</h3><p>删除key包括key的字符串数据<br><code>store.remove(key)</code>  </p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.remove(<span class="string">"w1"</span>); <span class="comment">//删除w1 返回 w1的value</span></span><br><span class="line"></span><br><span class="line">store(<span class="string">"w1"</span>,<span class="literal">false</span>) <span class="comment">//这样也是 删除w1</span></span><br></pre></td></tr></table></figure>
 <h3 id="forEach">forEach</h3><p>循环遍历，返回false结束遍历</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.forEach(<span class="function"><span class="keyword">function</span><span class="params">(k,d)</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(k,d)</span><br><span class="line">    <span class="keyword">if</span> (k== <span class="number">3</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">store.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">k,d</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(k,d)</span><br><span class="line">    <span class="keyword">if</span> (k== <span class="number">3</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="定时清除">定时清除</h3><p>(做个笔记，未来将定时清除封装起来，有思路)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (+<span class="keyword">new</span> <span class="built_in">Date</span>() &gt; +<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2014</span>, <span class="number">11</span>, <span class="number">30</span>)) &#123;</span><br><span class="line">    localStorage.removeItem(<span class="string">"c"</span>);    <span class="comment">//清除c的值</span></span><br><span class="line">    <span class="comment">// or localStorage.clear();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="storage事件">storage事件</h2><p>HTML5的本地存储，还提供了一个storage事件，可以对键值对的改变进行监听，使用方法如下：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.addEventListener)&#123;</span><br><span class="line">     <span class="built_in">window</span>.addEventListener(<span class="string">"storage"</span>,handle_storage,<span class="literal">false</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.attachEvent)&#123;</span><br><span class="line">    <span class="built_in">window</span>.attachEvent(<span class="string">"onstorage"</span>,handle_storage);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle_storage</span><span class="params">(e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!e)&#123;e=<span class="built_in">window</span>.event;&#125;</span><br><span class="line">    <span class="comment">//showStorage();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.addEventListener)&#123;</span><br><span class="line">     <span class="built_in">window</span>.addEventListener(<span class="string">"storage"</span>,handle_storage,<span class="literal">false</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.attachEvent)&#123;</span><br><span class="line">    <span class="built_in">window</span>.attachEvent(<span class="string">"onstorage"</span>,handle_storage);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle_storage</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!e)&#123;e=<span class="built_in">window</span>.event;&#125;</span><br><span class="line">    <span class="comment">//showStorage();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>对于事件变量e，是一个StorageEvent对象，提供了一些实用的属性，可以很好的观察键值对的变化，如下表：</p>
 <table>
 <thead>
@@ -269,7 +270,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/16/本地存储localStorage的封装/" class="article-date">
   <time datetime="2015-04-16T04:24:58.000Z" itemprop="datePublished">2015-04-16</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/16/本地存储localStorage的封装/" data-id="cifpkor7d000nj1glqg3pmtw4" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/16/本地存储localStorage的封装/" data-id="cihhbywkt000n0xgljmuz0eg6" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -365,7 +366,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

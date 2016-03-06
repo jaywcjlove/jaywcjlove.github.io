@@ -15,6 +15,7 @@ function orientationIOS(event)&amp;#123;    var x = event.beta;  // In degree in
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="这里是通过JS获取三轴陀螺仪数据【IOS中试用】
 function orientationIOS(event)&amp;#123;    var x = event.beta;  // In degree in the range [-180,180]    var y = event.gamma; // In degree in the range [-90,90]    var z = event.w">
+<meta property="og:updated_time" content="2015-04-08T16:44:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS获取三轴陀螺仪三个数据">
 <meta name="twitter:description" content="这里是通过JS获取三轴陀螺仪数据【IOS中试用】
@@ -114,7 +115,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -167,7 +168,7 @@ var _hmt = _hmt || [];
               </div>
               
                 <p>这里是通过JS获取三轴陀螺仪数据【IOS中试用】</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">orientationIOS</span><span class="params">(event)</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = event.beta;  <span class="comment">// In degree in the range [-180,180]</span></span><br><span class="line">    <span class="keyword">var</span> y = event.gamma; <span class="comment">// In degree in the range [-90,90]</span></span><br><span class="line">    <span class="keyword">var</span> z = event.webkitCompassHeading;</span><br><span class="line">    <span class="keyword">if</span>(z)&#123;</span><br><span class="line">        angle =z - jiajiao - <span class="number">180</span>;</span><br><span class="line">        <span class="keyword">var</span> xd = <span class="number">30</span>*<span class="built_in">Math</span>.cos((angle)*<span class="built_in">Math</span>.PI/<span class="number">180</span>)+<span class="number">30</span>;</span><br><span class="line">        <span class="keyword">var</span> yd = <span class="number">30</span>*<span class="built_in">Math</span>.sin((angle)*<span class="built_in">Math</span>.PI/<span class="number">180</span>)+<span class="number">30</span>;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">"img"</span>).style.marginLeft=<span class="built_in">Math</span>.floor(xd)+<span class="string">"px"</span>;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">"img"</span>).style.marginTop=<span class="built_in">Math</span>.floor(yd)+<span class="string">"px"</span>;</span><br><span class="line">        angle+=<span class="number">3</span>;</span><br><span class="line">        <span class="keyword">if</span>(yd&lt;<span class="number">30</span>)&#123;</span><br><span class="line">            floatSubOrAddIOS(xd,y)  </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">orientationIOS</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = event.beta;  <span class="comment">// In degree in the range [-180,180]</span></span><br><span class="line">    <span class="keyword">var</span> y = event.gamma; <span class="comment">// In degree in the range [-90,90]</span></span><br><span class="line">    <span class="keyword">var</span> z = event.webkitCompassHeading;</span><br><span class="line">    <span class="keyword">if</span>(z)&#123;</span><br><span class="line">        angle =z - jiajiao - <span class="number">180</span>;</span><br><span class="line">        <span class="keyword">var</span> xd = <span class="number">30</span>*<span class="built_in">Math</span>.cos((angle)*<span class="built_in">Math</span>.PI/<span class="number">180</span>)+<span class="number">30</span>;</span><br><span class="line">        <span class="keyword">var</span> yd = <span class="number">30</span>*<span class="built_in">Math</span>.sin((angle)*<span class="built_in">Math</span>.PI/<span class="number">180</span>)+<span class="number">30</span>;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">"img"</span>).style.marginLeft=<span class="built_in">Math</span>.floor(xd)+<span class="string">"px"</span>;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">"img"</span>).style.marginTop=<span class="built_in">Math</span>.floor(yd)+<span class="string">"px"</span>;</span><br><span class="line">        angle+=<span class="number">3</span>;</span><br><span class="line">        <span class="keyword">if</span>(yd&lt;<span class="number">30</span>)&#123;</span><br><span class="line">            floatSubOrAddIOS(xd,y)  </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
               
             </div>
@@ -175,7 +176,7 @@ var _hmt = _hmt || [];
               <a href="/2013/06/03/JS获取三轴陀螺仪三个数据/" class="article-date">
   <time datetime="2013-06-02T16:43:14.000Z" itemprop="datePublished">2013-06-03</time>
 </a>
-              <a data-url="http://jslite.io/2013/06/03/JS获取三轴陀螺仪三个数据/" data-id="cifpkor9d003lj1glrwp4forv" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2013/06/03/JS获取三轴陀螺仪三个数据/" data-id="cihhbywo3003l0xgl3ksepim1" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -271,7 +272,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

@@ -19,6 +19,7 @@ CSS3 每个浏览器都有私有属性例如 -moz 代表firefox浏览器私有�
 <meta property="og:image" content="https://img.shields.io/github/forks/jaywcjlove/AutoPrefixCSS.svg">
 <meta property="og:image" content="https://img.shields.io/github/stars/jaywcjlove/AutoPrefixCSS.svg">
 <meta property="og:image" content="https://img.shields.io/github/release/jaywcjlove/AutoPrefixCSS.svg">
+<meta property="og:updated_time" content="2015-07-28T06:16:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Stylus：轻而易举实现 CSS 前缀和 reset CSS">
 <meta name="twitter:description" content="Break free from CSS prefix hell!摆脱CSS前缀地狱！   
@@ -118,7 +119,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -187,7 +188,7 @@ var _hmt = _hmt || [];
 <li><code>stylus</code> 的出现感觉添加这种前缀不用太麻烦了。</li>
 <li>只生成CSS，浏览器直接渲染CSS，不用通过js生成CSS在渲染。</li>
 </ul>
-<h1 id="使用必备条件">使用必备条件</h1><p>需要安装 <code>node.js</code> 和 <code>stylus</code> ，还得学会使用 <code>stylus</code>， <a href="https://github.com/stylus/stylus" target="_blank" rel="external">stylus github</a>， <a href="http://jslite.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_blank" rel="external">stylus教程</a></p>
+<h1 id="使用必备条件">使用必备条件</h1><p>需要安装 <code>node.js</code> 和 <code>stylus</code> ，还得学会使用 <code>stylus</code>， <a href="https://github.com/stylus/stylus" target="_blank" rel="external">stylus github</a>， <a href="http://jslite.io/2015/04/27/stylus%E8%8F%9C%E9%B8%9F%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">stylus教程</a></p>
 <h1 id="Usage">Usage</h1><h2 id="reset-styl">reset.styl</h2><p>只需要将 <code>reset.styl</code> 到您的项目，然后引用 <code>@import(&#39;reset.styl&#39;)</code> ，然后在你所引用的<code>.styl</code> 中调用下面任何一个方法：</p>
 <ul>
 <li>global-reset() # 所有标签重置不包括HTML5新标签重置</li>
@@ -200,19 +201,19 @@ var _hmt = _hmt || [];
 <li>reset-html5() # HTML5新标签重置</li>
 </ul>
 <p>例子：  </p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@import</span>(<span class="string">'reset.styl'</span>)</span><br><span class="line"><span class="function"><span class="title">global-reset</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@import(&#39;reset.styl&#39;)&#10;global-reset()</span><br></pre></td></tr></table></figure>
 <h2 id="自动添加CSS后缀">自动添加CSS后缀</h2><p>只需要将 <code>vendor.styl</code> 到您的项目，然后引用 <code>@import(&#39;vendor.styl&#39;)</code> ，然后你在你的 <code>styl</code> 文件中正常使用 <code>stylus</code> 语法就好了。效果如下例子：</p>
 <h3 id="opacity">opacity</h3><p>adds opacity filter for IE</p>
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@import</span>(<span class="string">'vendor.styl'</span>)</span><br><span class="line"><span class="tag">body</span></span><br><span class="line">    <span class="attribute">opacity</span>:<span class="number">0.5</span></span><br></pre></td></tr></table></figure>
 <p>生成：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-khtml-opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>; <span class="comment">/* old Mozilla */</span></span><br><span class="line">  <span class="rule"><span class="attribute">filter</span>:<span class="value"> progid:DXImageTransform.Microsoft.<span class="function">Alpha</span>(Opacity=<span class="number">50</span>)</span></span>; <span class="comment">/*old IE */</span></span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-khtml-opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>; <span class="comment">/* old Mozilla */</span></span><br><span class="line">  <span class="rule"><span class="attribute">filter</span>:<span class="value"> progid:DXImageTransform.Microsoft.<span class="function">Alpha</span>(Opacity=<span class="number">50</span>)</span></span>; <span class="comment">/*old IE */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
               
             </div>
             <footer class="article-footer">
               <a href="/2015/07/28/Stylus：轻而易举实现-CSS-前缀和-reset-CSS/" class="article-date">
   <time datetime="2015-07-28T06:15:33.000Z" itemprop="datePublished">2015-07-28</time>
 </a>
-              <a data-url="http://jslite.io/2015/07/28/Stylus：轻而易举实现-CSS-前缀和-reset-CSS/" data-id="cifpkor960037j1gloapm463m" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/07/28/Stylus：轻而易举实现-CSS-前缀和-reset-CSS/" data-id="cihhbywmm00370xgl1z89unqk" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -308,7 +309,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

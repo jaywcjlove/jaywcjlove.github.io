@@ -45,6 +45,7 @@ learnGitBranching 在线学习工具
 初级教程 
 廖雪峰的Git教程
 蒋鑫老师将带你入gi">
+<meta property="og:updated_time" content="2016-01-31T11:56:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用笔记">
 <meta name="twitter:description" content="大部分转载颜海镜的文章这篇文章记录个人常用的一些命令，和记不住的一些命令，转载了并不断更新。
@@ -159,7 +160,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -241,7 +242,7 @@ var _hmt = _hmt || [];
 <h2 id="多账号ssh配置">多账号ssh配置</h2><h3 id="1-生成指定名字的密钥">1.生成指定名字的密钥</h3><p><code>ssh-keygen -t rsa -C &quot;邮箱地址&quot; -f ~/.ssh/github_jslite</code><br>会生成 <code>github_jslite</code> 和 <code>github_jslite.pub</code> 这两个文件    </p>
 <h3 id="2-密钥复制到托管平台上">2.密钥复制到托管平台上</h3><p><code>vim ~/.ssh/github_jslite.pub</code><br>打开公钥文件 <code>github_jslite.pub</code> ，并把内容复制至代码托管平台上  </p>
 <h3 id="3-修改config文件">3.修改config文件</h3><p><code>vim ~/.ssh/config</code> #修改config文件，如果没有创建 <code>config</code>  </p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">Host jslite<span class="class">.github</span><span class="class">.com</span></span><br><span class="line">HostName github<span class="class">.com</span></span><br><span class="line">User git</span><br><span class="line">IdentityFile ~/.ssh/github_jslite</span><br><span class="line"></span><br><span class="line">Host abc<span class="class">.github</span><span class="class">.com</span></span><br><span class="line">HostName github<span class="class">.com</span></span><br><span class="line">User git</span><br><span class="line">IdentityFile ~/.ssh/github_abc</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Host jslite.github.com&#10;HostName github.com&#10;User git&#10;IdentityFile ~/.ssh/github_jslite&#10;&#10;Host abc.github.com&#10;HostName github.com&#10;User git&#10;IdentityFile ~/.ssh/github_abc</span><br></pre></td></tr></table></figure>
 <h3 id="4-测试">4.测试</h3><p><code>ssh -T git@jslite.github.com</code> # <code>@</code>后面跟上定义的Host  </p>
 <h2 id="Git推向3个库">Git推向3个库</h2><h3 id="增加3个远程库地址">增加3个远程库地址</h3><p><code>git remote add origin https://github.com/JSLite/JSLite.git</code><br><code>git remote set-url --add origin https://gitlab.com/wang/JSLite.js.git</code><br><code>git remote set-url --add origin https://oschina.net/wang/JSLite.js.git</code>  </p>
 <h3 id="删除其中一个_set-url_地址">删除其中一个 set-url 地址</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">usage: git remote set-url [--push] &#60;name&#62; &#60;newurl&#62; [&#60;oldurl&#62;]&#10;   or: git remote set-url --add &#60;name&#62; &#60;newurl&#62;&#10;   or: git remote set-url --delete &#60;name&#62; &#60;url&#62;</span><br></pre></td></tr></table></figure>
@@ -256,7 +257,7 @@ var _hmt = _hmt || [];
 <p><code>git pull origin master</code><br><code>git pull --all</code> #获取远程所有内容包括tag<br><code>git pull origin next:master</code> #取回origin主机的next分支，与本地的master分支合并<br><code>git pull origin next</code> #远程分支是与当前分支合并</p>
 <p>上面一条命令等同于下面两条命令<br><code>git fetch origin</code><br><code>git merge origin/next</code>  </p>
 <p>如果远程主机删除了某个分支，默认情况下，git pull 不会在拉取远程分支的时候，删除对应的本地分支。这是为了防止，由于其他人操作了远程主机，导致git pull不知不觉删除了本地分支。<br>但是，你可以改变这个行为，加上参数 -p 就会在本地删除远程已经删除的分支。  </p>
-<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git pull -p</span><br><span class="line"><span class="comment"># 等同于下面的命令</span></span><br><span class="line"><span class="variable">$ </span>git fetch --prune origin </span><br><span class="line"><span class="variable">$ </span>git fetch -p</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull -p&#10;# &#31561;&#21516;&#20110;&#19979;&#38754;&#30340;&#21629;&#20196;&#10;$ git fetch --prune origin &#10;$ git fetch -p</span><br></pre></td></tr></table></figure>
 <h3 id="更改pull">更改pull</h3><p>只需要更改config文件里，那三个url的顺序即可，fetch-url会直接对应排行第一的那个utl连接。    </p>
 <h2 id="新建仓库">新建仓库</h2><h3 id="init">init</h3><p><code>git init</code> #初始化  </p>
 <h3 id="status">status</h3><p><code>git status</code> #获取状态  </p>
@@ -266,7 +267,7 @@ var _hmt = _hmt || [];
 <h3 id="push-1">push</h3><p><code>git push -u origin master</code> #push同事设置默认跟踪分支<br><code>git push origin master</code>   </p>
 <h2 id="从现有仓库克隆">从现有仓库克隆</h2><p><code>git clone git://github.com/JSLite/JSLite.js.git</code><br><code>git clone git://github.com/JSLite/JSLite.js.git mypro</code> #克隆到自定义文件夹<br><code>git clone [user@]example.com:path/to/repo.git/</code> #SSH协议还有另一种写法。  </p>
 <p>git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git、本地文件协议等，下面是一些例子。<code>$ git clone &lt;版本库的网址&gt; &lt;本地目录名&gt;</code>  </p>
-<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git clone http[s]<span class="symbol">://example</span>.com/path/to/repo.git/</span><br><span class="line"><span class="variable">$ </span>git clone <span class="symbol">ssh:</span>/<span class="regexp">/example.com/path</span><span class="regexp">/to/repo</span>.git/</span><br><span class="line"><span class="variable">$ </span>git clone <span class="symbol">git:</span>/<span class="regexp">/example.com/path</span><span class="regexp">/to/repo</span>.git/</span><br><span class="line"><span class="variable">$ </span>git clone /opt/git/project.git </span><br><span class="line"><span class="variable">$ </span>git clone <span class="symbol">file:</span>/<span class="regexp">//opt</span><span class="regexp">/git/project</span>.git</span><br><span class="line"><span class="variable">$ </span>git clone ftp[s]<span class="symbol">://example</span>.com/path/to/repo.git/</span><br><span class="line"><span class="variable">$ </span>git clone <span class="symbol">rsync:</span>/<span class="regexp">/example.com/path</span><span class="regexp">/to/repo</span>.git/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone http[s]://example.com/path/to/repo.git/&#10;$ git clone ssh://example.com/path/to/repo.git/&#10;$ git clone git://example.com/path/to/repo.git/&#10;$ git clone /opt/git/project.git &#10;$ git clone file:///opt/git/project.git&#10;$ git clone ftp[s]://example.com/path/to/repo.git/&#10;$ git clone rsync://example.com/path/to/repo.git/</span><br></pre></td></tr></table></figure>
 <h2 id="submodule">submodule</h2><p><code>git submodule add --force 仓库地址 路径</code><br>其中，仓库地址是指子模块仓库地址，路径指将子模块放置在当前工程下的路径。<br>注意：路径不能以 / 结尾（会造成修改不生效）、不能是现有工程已有的目录（不能順利 Clone）<br><code>git submodule init</code> 初始化submodule<br><code>git submodule update</code> 更新submodule(必须在根目录执行命令)</p>
 <p>当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：<br><code>git submodule update --init --recursive</code> 下载的工程带有submodule  </p>
 <p><code>git submodule foreach git pull</code> submodule 里有其他的 submodule 一次更新<br><code>git submodule foreach git pull origin master</code> submodule更新</p>
@@ -315,7 +316,7 @@ var _hmt = _hmt || [];
 <p>合并来自 <code>upstream/master</code> 的更改到本地 master  分支上。  这使你的前 fork’s <code>master</code> 分支与上游资源库同步，而不会丢失你本地修改。  </p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">git merge upstream/master&#10;# Updating a422352..5fdff0f&#10;# Fast-forward&#10;#  README                    |    9 -------&#10;#  README.md                 |    7 ++++++&#10;#  2 files changed, 7 insertions(+), 9 deletions(-)&#10;#  delete mode 100644 README&#10;#  create mode 100644 README.md</span><br></pre></td></tr></table></figure>
 <h2 id="标签tag">标签tag</h2><p>当开发到一定阶段时，给程序打标签是非常棒的功能。<br><code>git tag</code> #列出现有标签<br><code>git tag v0gi.1</code> #新建标签<br><code>git tag -a v0.1 -m &#39;my version 1.4&#39;</code> #新建带注释标签<br><code>git checkout tagname</code> #切换到标签<br><code>git push origin v1.5</code> #推送分支到源上<br><code>git push origin --tags</code> #一次性推送所有分支<br><code>git tag -d v0.1</code> #删除标签<br><code>git push origin :refs/tags/v0.1</code> #删除远程标签<br><code>git pull --all</code> #获取远程所有内容包括tag<br><code>git --git-dir=&#39;&lt;绝对地址&gt;/.git&#39; describe --tags HEAD</code> #查看本地版本信息</p>
-<h2 id="日志log">日志log</h2><p><code>git config format.pretty oneline</code>  #显示历史记录时，每个提交的信息只显示一行<br><code>git config color.ui true</code> #彩色的 git 输出<br><code>git log</code> #查看最近的提交日志<br><code>git log --pretty=oneline</code> #单行显示提交日志<br><code>git log --graph --pretty=oneline --abbrev-commit</code><br><code>git log -num</code> #显示第几条log（倒数）<br><code>git reflog</code> #查看所有分支的所有操作记录<br><code>git log --since=1.day</code> #一天内的提交；你可以给出各种时间格式，比如说具体的某一天（“2008-01-15”），或者是多久以前（“2 years 1 day 3 minutes ago”）。<br><code>git log --pretty=&quot;%h - %s&quot; --author=自己的名字</code> #查看自己的日志<br><code>git log -p -2</code> #展开两次更新显示每次提交的内容差异<br><code>git log --stat</code> #要快速浏览其他协作者提交的更新都作了哪些改动<br><code>git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</code>#定制要显示的记录格式<br><code>git log --pretty=format:&#39;%h : %s&#39; --date-order --graph</code>#拓扑顺序展示<br><code>git log --pretty=format:&#39;%h : %s - %ad&#39; --date=short</code> #日期YYYY-MM-DD显示   </p>
+<h2 id="日志log">日志log</h2><p><code>git config format.pretty oneline</code>  #显示历史记录时，每个提交的信息只显示一行<br><code>git config color.ui true</code> #彩色的 git 输出<br><code>git log</code> #查看最近的提交日志<br><code>git log --pretty=oneline</code> #单行显示提交日志<br><code>git log --graph --pretty=oneline --abbrev-commit</code><br><code>git log -num</code> #显示第几条log（倒数）<br><code>git reflog</code> #查看所有分支的所有操作记录<br><code>git log --since=1.day</code> #一天内的提交；你可以给出各种时间格式，比如说具体的某一天（“2008-01-15”），或者是多久以前（“2 years 1 day 3 minutes ago”）。<br><code>git log --pretty=&quot;%h - %s&quot; --author=自己的名字</code> #查看自己的日志<br><code>git log -p -2</code> #展开两次更新显示每次提交的内容差异<br><code>git log --stat</code> #要快速浏览其他协作者提交的更新都作了哪些改动<br><code>git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</code>#定制要显示的记录格式<br><code>git log --pretty=format:&#39;%h : %s&#39; --date-order --graph</code>#拓扑顺序展示<br><code>git log --pretty=format:&#39;%h : %s - %ad&#39; --date=short</code> #日期YYYY-MM-DD显示<br><code>git log &lt;last tag&gt; HEAD --pretty=format:%s</code> 只显示commit </p>
 <table>
 <thead>
 <tr>
@@ -387,8 +388,8 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <h2 id="重写历史">重写历史</h2><p><code>git commit --amend</code> #改变最近一次提交<br><code>git rebase -i HEAD~3</code> #修改最近三次的提交说明，或者其中任意一次<br><code>git commit --amend</code> #保存好了，这些指示很明确地告诉了你该干什么<br><code>git rebase --continue</code> 修改提交说明，退出编辑器。  </p>
-<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">pick f7f3f6d changed <span class="keyword">my</span> <span class="property">name</span> a bit</span><br><span class="line">pick <span class="number">310154</span>e updated README formatting <span class="keyword">and</span> added blame</span><br><span class="line">pick a5f4a0d added cat-<span class="type">file</span></span><br></pre></td></tr></table></figure>
-<p>改成<br><figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">pick <span class="number">310154</span>e updated README formatting <span class="keyword">and</span> added blame</span><br><span class="line">pick f7f3f6d changed <span class="keyword">my</span> <span class="property">name</span> a bit</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pick f7f3f6d changed my name a bit&#10;pick 310154e updated README formatting and added blame&#10;pick a5f4a0d added cat-file</span><br></pre></td></tr></table></figure>
+<p>改成<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pick 310154e updated README formatting and added blame&#10;pick f7f3f6d changed my name a bit</span><br></pre></td></tr></table></figure></p>
 <h2 id="查看某个文件历史">查看某个文件历史</h2><p><code>git log --pretty=oneline 文件名</code> #列出文件的所有改动历史<br><code>git show c178bf49</code> #某次的改动的修改记录<br><code>git log -p c178bf49</code> #某次的改动的修改记录<br><code>git blame 文件名</code> #显示文件的每一行是在那个版本最后修改。<br><code>git whatchanged 文件名</code> #显示某个文件的每个版本提交信息：提交日期，提交人员，版本号，提交备注（没有修改细节）  </p>
 <h2 id="打造自己的git命令">打造自己的git命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git config --global alias.st status</span><br><span class="line">git config --global alias.br branch</span><br><span class="line">git config --global alias.co checkout</span><br><span class="line">git config --global alias.ci commit</span><br></pre></td></tr></table></figure>
 <p>配置好后再输入git命令的时候就不用再输入一大段了，例如我们要查看状态，只需：</p>
@@ -407,7 +408,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/01/git使用笔记/" class="article-date">
   <time datetime="2015-03-31T17:42:45.000Z" itemprop="datePublished">2015-04-01</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cifpkor8y002rj1glbtdbs1z2" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/01/git使用笔记/" data-id="cihhbywmd002r0xglpulsn8ik" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -503,7 +504,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

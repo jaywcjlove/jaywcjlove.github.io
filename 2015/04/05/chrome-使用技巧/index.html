@@ -15,6 +15,7 @@
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="ReferenceStyled console logging in the Chrome DevTools (Canary)Chrome Console APIChrome Console Command Line API
 控制台在控制台选择元素$() &amp;amp; $$()$() – document.querySelector()的缩写，返回第一个与之匹配的CSS选择器的元素(例如：$(&amp;#3">
+<meta property="og:updated_time" content="2015-04-08T07:35:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="chrome 使用技巧">
 <meta name="twitter:description" content="ReferenceStyled console logging in the Chrome DevTools (Canary)Chrome Console APIChrome Console Command Line API
@@ -114,7 +115,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -176,7 +177,7 @@ var _hmt = _hmt || [];
 <p>所以在我看来这两个方法有点鸡肋，因为都可以通过操作界面来完成。但至少他提供了一种命令行方式的交互，还是多了种姿势供选择吧。  </p>
 <h4 id="console-trace">console.trace</h4><p>堆栈跟踪相关的调试可以使用 <code>console.trace</code>。这个同样可以通过UI界面完成。当代码被打断点后，可以在Call Stack面板中查看相关堆栈信息。  </p>
 <h3 id="copy">copy</h3><p>通过此命令可以将在控制台获取到的内容复制到剪贴板。</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">copy</span><span class="params">(document.body)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy(document.body)</span><br></pre></td></tr></table></figure>
 <h3 id="keys_&amp;_values">keys &amp; values</h3><p>这是一对基友。前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组。具体请看下面的例子：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tboy=&#123;name:<span class="string">'wayou'</span>,gender:<span class="string">'unknown'</span>,hobby:<span class="string">'opposite to the gender'</span>&#125;;</span><br><span class="line">keys(tboy);</span><br><span class="line">values(tboy);</span><br></pre></td></tr></table></figure></p>
 <h2 id="DevTools">DevTools</h2><h3 id="快速文件转换">快速文件转换</h3><p><code>Ctrl + P</code> ( 在Mac上使用 <code>Cmd + P</code> )来快速的寻找和打开你工程中的任意文件。  </p>
 <h3 id="在源代码中搜索">在源代码中搜索</h3><p>按下 <code>Ctrl + Shift + F</code> (在Mac上使用 <code>Cmd + Opt + F</code>)，即可在所有已加载的文件中查找一个特定的字符串。这个搜索的方法也支持正则表达式。  </p>
@@ -192,7 +193,7 @@ var _hmt = _hmt || [];
               <a href="/2015/04/05/chrome-使用技巧/" class="article-date">
   <time datetime="2015-04-05T10:04:11.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/05/chrome-使用技巧/" data-id="cifpkor91002wj1gl14hp6diu" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/05/chrome-使用技巧/" data-id="cihhbywmh002w0xglofs1dij2" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -288,7 +289,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

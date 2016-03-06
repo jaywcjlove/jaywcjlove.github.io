@@ -13,6 +13,7 @@
 <meta property="og:url" content="http://jslite.io/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/index.html">
 <meta property="og:site_name" content="JSLite.io">
 <meta property="og:description" content="CSS srites(CSS图片精灵)已经存在很久了。CSS Sprites为一些大型的网站节约了带宽，让提高了用户的加载速度和用户体验，不需要加载更多的图片。">
+<meta property="og:updated_time" content="2015-04-09T10:49:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用css sprites来优化网页在Retina屏幕下显示清晰度">
 <meta name="twitter:description" content="CSS srites(CSS图片精灵)已经存在很久了。CSS Sprites为一些大型的网站节约了带宽，让提高了用户的加载速度和用户体验，不需要加载更多的图片。">
@@ -111,7 +112,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -164,7 +165,7 @@ var _hmt = _hmt || [];
               </div>
               
                 <p>CSS srites(CSS图片精灵)已经存在很久了。CSS Sprites为一些大型的网站节约了带宽，让提高了用户的加载速度和用户体验，不需要加载更多的图片。<br><a id="more"></a> </p>
-<h2 id="优化高分辨的屏幕">优化高分辨的屏幕</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">media</span> only screen and (-o-min-device-pixel-ratio: <span class="number">2</span>/<span class="number">1</span>),</span><br><span class="line">       only screen and (min--moz-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (min-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (-webkit-min-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (min-resolution: <span class="number">240dpi</span>),</span><br><span class="line">       only screen and (min-resolution: <span class="number">2dppx</span>)</span>&#123;</span><br><span class="line"><span class="class">.icon</span><span class="rules">&#123;<span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(../img/sprite@<span class="number">2</span>x.png)</span></span>;<span class="rule"><span class="attribute">background-size</span>:<span class="value"> <span class="number">144px</span> <span class="number">95px</span></span></span>;<span class="rule">&#125;</span></span></span><br><span class="line">  <span class="class">.UserInfo</span> <span class="class">.status</span> <span class="tag">span</span>,<span class="class">.notifyBox</span> <span class="tag">h1</span><span class="class">.tit</span> <span class="tag">span</span><span class="rules">&#123;<span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(../img/sprite@<span class="number">2</span>x.png)</span></span>;<span class="rule"><span class="attribute">background-size</span>:<span class="value"> <span class="number">71px</span> <span class="number">204px</span></span></span>;<span class="rule">&#125;</span></span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="优化高分辨的屏幕">优化高分辨的屏幕</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">media</span> only screen and (-o-min-device-pixel-ratio: <span class="number">2</span>/<span class="number">1</span>),</span><br><span class="line">       only screen and (min--moz-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (min-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (-webkit-min-device-pixel-ratio: <span class="number">2</span>),</span><br><span class="line">       only screen and (min-resolution: <span class="number">240dpi</span>),</span><br><span class="line">       only screen and (min-resolution: <span class="number">2dppx</span>)</span>&#123;</span><br><span class="line"><span class="class">.icon</span><span class="rules">&#123;<span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(../img/sprite@<span class="number">2</span>x.png)</span></span>;<span class="rule"><span class="attribute">background-size</span>:<span class="value"> <span class="number">144px</span> <span class="number">95px</span></span></span>;&#125;</span></span><br><span class="line">  <span class="class">.UserInfo</span> <span class="class">.status</span> <span class="tag">span</span>,<span class="class">.notifyBox</span> <span class="tag">h1</span><span class="class">.tit</span> <span class="tag">span</span><span class="rules">&#123;<span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(../img/sprite@<span class="number">2</span>x.png)</span></span>;<span class="rule"><span class="attribute">background-size</span>:<span class="value"> <span class="number">71px</span> <span class="number">204px</span></span></span>;&#125;</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>注：</strong>记住上面的这个例子仅适用于<code>Retina</code>屏幕下的设备，目前仅在<code>iOS</code>的移动设备<code>iPhone4s</code>、<code>iPhone5</code>、<code>iPad</code>、<code>iPod</code>和<code>Mackbook Pro</code>。对于Android系统下,要取决宇你的系统，采用不同的<code>min-device-pixel-ratio</code> 。</p>
 <h2 id="总结">总结</h2><ol>
 <li>图片应该使用CSS <code>sprite@2x.png</code> 来集成图片。</li>
@@ -179,7 +180,7 @@ var _hmt = _hmt || [];
               <a href="/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/" class="article-date">
   <time datetime="2013-05-28T07:01:04.000Z" itemprop="datePublished">2013-05-28</time>
 </a>
-              <a data-url="http://jslite.io/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/" data-id="cifpkor84001nj1gl1qi3gjo4" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2013/05/28/使用css-sprites来优化网页在Retina屏幕下显示清晰度/" data-id="cihhbywli001n0xglh9vahacx" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -275,7 +276,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

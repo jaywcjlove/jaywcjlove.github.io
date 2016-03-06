@@ -17,6 +17,7 @@
 <meta property="og:image" content="https://img.shields.io/github/forks/jaywcjlove/hexoThemeKacper.svg">
 <meta property="og:image" content="https://img.shields.io/github/stars/jaywcjlove/hexoThemeKacper.svg">
 <meta property="og:image" content="https://img.shields.io/github/release/jaywcjlove/hexoThemeKacper.svg">
+<meta property="og:updated_time" content="2015-05-13T05:50:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo常用命令笔记">
 <meta name="twitter:description" content="这个是我做JSLite官网的笔记，顺便皮肤也共享了。">
@@ -115,7 +116,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -204,7 +205,7 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
-<figure class="highlight http"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: <span class="string">使用Hexo搭建个人博客</span></span><br><span class="line"><span class="attribute">layout</span>: <span class="string">post</span></span><br><span class="line"><span class="attribute">date</span>: <span class="string">2014-03-03 19:07:43</span></span><br><span class="line"><span class="attribute">comments</span>: <span class="string">true</span></span><br><span class="line"><span class="attribute">categories</span>: <span class="string">Blog</span></span><br><span class="line"><span class="attribute">tags</span>: <span class="string">[Hexo]</span></span><br><span class="line"><span class="attribute">keywords</span>: <span class="string">Hexo, Blog</span></span><br><span class="line"><span class="attribute">description</span>: <span class="string">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: &#20351;&#29992;Hexo&#25645;&#24314;&#20010;&#20154;&#21338;&#23458;&#10;layout: post&#10;date: 2014-03-03 19:07:43&#10;comments: true&#10;categories: Blog&#10;tags: [Hexo]&#10;keywords: Hexo, Blog&#10;description: &#29983;&#21629;&#22312;&#20110;&#25240;&#33150;&#65292;&#21448;&#25226;&#21338;&#23458;&#25240;&#33150;&#21040;Hexo&#20102;&#12290;&#32473;Hexo&#28857;&#36190;&#12290;</span><br></pre></td></tr></table></figure>
 <h2 id="模版（Scaffold）">模版（Scaffold）</h2><p><code>hexo new photo &quot;My Gallery&quot;</code>  </p>
 <table>
 <thead>
@@ -228,7 +229,7 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
-<h2 id="设置文章摘要">设置文章摘要</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">以上是文章摘要 <span class="comment">&lt;!--more--&gt;</span> 以下是余下全文</span><br></pre></td></tr></table></figure>
+<h2 id="设置文章摘要">设置文章摘要</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#20197;&#19978;&#26159;&#25991;&#31456;&#25688;&#35201; &#60;!--more--&#62; &#20197;&#19979;&#26159;&#20313;&#19979;&#20840;&#25991;</span><br></pre></td></tr></table></figure>
 <h2 id="写作">写作</h2><p><code>hexo new page &lt;title&gt;</code><br><code>hexo new post &lt;title&gt;</code>  </p>
 <table>
 <thead>
@@ -269,7 +270,7 @@ var _hmt = _hmt || [];
 <h3 id="添加小图标">添加小图标</h3><p>将 <code>favicon.ico</code> 文件放在 source 目录下<br>配置 hexoThemekacper 主题里的 <code>_config.yml</code></p>
 <p><code>favicon: /favicon.ico</code></p>
 <h3 id="推送到服务器上">推送到服务器上</h3><p><code>hexo n</code> #写文章<br><code>hexo g</code> #生成<br><code>hexo d</code> #部署 #可与<code>hexo g</code>合并为 <code>hexo d -g</code></p>
-<h2 id="报错">报错</h2><h3 id="1-找不到git部署">1.找不到git部署</h3><figure class="highlight monkey"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ERROR</span> Deployer <span class="keyword">not</span> found: git</span><br></pre></td></tr></table></figure>
+<h2 id="报错">报错</h2><h3 id="1-找不到git部署">1.找不到git部署</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
 <p><strong>解决方法</strong>  </p>
 <p><code>npm install hexo-deployer-git --save</code>  </p>
 <h3 id="部署类型设置git">部署类型设置git</h3><p>hexo 3.0 部署类型不再是<code>github</code>，<code>_config.yml</code> 中修改</p>
@@ -279,7 +280,7 @@ var _hmt = _hmt || [];
 <p><code>npm install bcrypt</code>  </p>
 <h3 id="RSS不显示">RSS不显示</h3><h4 id="安装RSS插件">安装RSS插件</h4><p><code>npm install hexo-generator-feed --save</code>  </p>
 <h4 id="开启RSS功能">开启RSS功能</h4><p>编辑hexo/_config.yml，添加如下代码：  </p>
-<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="label">rss:</span> /atom.xml <span class="preprocessor">#rss地址  默认即可</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rss: /atom.xml #rss&#22320;&#22336;  &#40664;&#35748;&#21363;&#21487;</span><br></pre></td></tr></table></figure>
 <h4 id="开启评论">开启评论</h4><p>1.我使用多说代替自带的评论，在<a href="http://duoshuo.com" target="_blank" rel="external">多说</a> 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码  里面有 short_name  </p>
 <ol>
 <li><p>在根目录 <code>_config.yml</code> 添加一行  <code>disqus_shortname: jslite</code> 是在多说注册时产生的    </p>
@@ -287,9 +288,9 @@ var _hmt = _hmt || [];
 <li><p>复制到 <code>themes\landscape\layout\_partial\article.ejs</code><br>把  </p>
 </li>
 </ol>
-<figure class="highlight erb"><table><tr><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; </span>%&gt;<span class="xml"></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#60;% if (!index &#38;&#38; post.comments &#38;&#38; config.disqus_shortname)&#123; %&#62;&#10;&#60;section id=&#34;comments&#34;&#62;&#10;&#60;div id=&#34;disqus_thread&#34;&#62;&#10;  &#60;noscript&#62;Please enable JavaScript to view the &#60;a href=&#34;//disqus.com/?ref_noscript&#34;&#62;comments powered by Disqus.&#60;/a&#62;&#60;/noscript&#62;&#10;&#60;/div&#62;&#10;&#60;/section&#62;&#10;&#60;% &#125; %&#62;</span><br></pre></td></tr></table></figure>
 <p>改为  </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= post.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%= page.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">'&lt;%= config.disqus_shortname %&gt;'</span>&#125;;</span><br><span class="line">      (<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">        ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">        ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span><br><span class="line">        ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] </span><br><span class="line">         || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= post.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%= page.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">'&lt;%= config.disqus_shortname %&gt;'</span>&#125;;</span><br><span class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">        ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">        ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span><br><span class="line">        ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] </span><br><span class="line">         || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 
               
             </div>
@@ -297,7 +298,7 @@ var _hmt = _hmt || [];
               <a href="/2015/03/30/hexo常用命令笔记/" class="article-date">
   <time datetime="2015-03-29T17:56:32.000Z" itemprop="datePublished">2015-03-30</time>
 </a>
-              <a data-url="http://jslite.io/2015/03/30/hexo常用命令笔记/" data-id="cifpkor8v002oj1glsx7iekbl" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/03/30/hexo常用命令笔记/" data-id="cihhbywma002o0xglrgv7xkuh" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -393,7 +394,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

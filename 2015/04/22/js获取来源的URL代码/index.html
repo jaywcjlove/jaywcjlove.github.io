@@ -21,6 +21,7 @@ document.referrer
 opener如果来源页是Javascript跳转过来的，上边的方法就拿不到了！所以用
 opener.location.href
 合并var ref = &apos;&apos;; if (document.referrer.length &amp;gt; 0) &amp;#123;     ref = document.referrer; &amp;#125;">
+<meta property="og:updated_time" content="2015-05-07T16:29:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js获取来源的URL代码">
 <meta name="twitter:description" content="referrer正常取来源网页的URL只要用
@@ -123,7 +124,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -183,17 +184,17 @@ var _hmt = _hmt || [];
 <h2 id="其它">其它</h2><h3 id="获取域名后面的">获取域名后面的</h3><p><code>window.location.pathname</code>  </p>
 <h3 id="获取URL">获取URL</h3><p><code>window.location.href</code>  </p>
 <h3 id="获取域名">获取域名</h3><p><code>/[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+(:[0-9]{1,4})?/</code>  域名加端口号</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">var urlReg = /[<span class="link_label">a-zA-Z0-9</span>][<span class="link_reference">-a-zA-Z0-9</span>]&#123;0,62&#125;(\.[<span class="link_label">a-zA-Z0-9</span>][<span class="link_reference">-a-zA-Z0-9</span>]&#123;0,62&#125;)+\.?/;  </span><br><span class="line">var url=urlReg.exec("http://www.baidu.com/aaaa");  </span><br><span class="line">console.log(url[0]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var urlReg = /[a-zA-Z0-9][-a-zA-Z0-9]&#123;0,62&#125;(\.[a-zA-Z0-9][-a-zA-Z0-9]&#123;0,62&#125;)+\.?/;  &#10;var url=urlReg.exec(&#34;http://www.baidu.com/aaaa&#34;);  &#10;console.log(url[0]);</span><br></pre></td></tr></table></figure>
 <h3 id="获取URL参数">获取URL参数</h3><p><code>location.search</code>               //=&gt;  “?hello=1&amp;wcj=2”<br><code>location.search.substr(1)</code>     //=&gt;  “hello=1&amp;wcj=2”<br><code>location.search.substr(1).split(&#39;&amp;&#39;)</code>   //=&gt;  [“hello=1”, “wcj=2”]</p>
 <h3 id="获取URL返回JSON">获取URL返回JSON</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> url=location.search.substr(<span class="number">1</span>).split(<span class="string">'&amp;'</span>),</span><br><span class="line">    i=url.length,</span><br><span class="line">    _url,</span><br><span class="line">    GET=&#123;&#125;;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">while</span>(i--)&#123;</span><br><span class="line">    _url = url[i].split(<span class="string">'='</span>);</span><br><span class="line">    GET[_url.shift()]=<span class="built_in">decodeURIComponent</span>(_url);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(GET)  <span class="comment">//=&gt; Object &#123;wcj: "2", hello: "1"&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="获取URL参数-1">获取URL参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 获取特定字段的查询字符串</span><br><span class="line"> * @param &#123;String&#125; name: 查询字符串的字段名</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQuerySrting</span><span class="params">(name)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> search = location.search.substring(<span class="number">1</span>).split(<span class="string">'&amp;'</span>);</span><br><span class="line">    <span class="keyword">var</span> value = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; search.length;i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> keyValue = search[i].split(<span class="string">'='</span>);</span><br><span class="line">        <span class="keyword">if</span> (keyValue[<span class="number">0</span>] == name) &#123;</span><br><span class="line">            value = keyValue[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="获取URL参数-1">获取URL参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 获取特定字段的查询字符串</span><br><span class="line"> * @param &#123;String&#125; name: 查询字符串的字段名</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQuerySrting</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> search = location.search.substring(<span class="number">1</span>).split(<span class="string">'&amp;'</span>);</span><br><span class="line">    <span class="keyword">var</span> value = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; search.length;i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> keyValue = search[i].split(<span class="string">'='</span>);</span><br><span class="line">        <span class="keyword">if</span> (keyValue[<span class="number">0</span>] == name) &#123;</span><br><span class="line">            value = keyValue[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
               
             </div>
             <footer class="article-footer">
               <a href="/2015/04/22/js获取来源的URL代码/" class="article-date">
   <time datetime="2015-04-22T06:56:04.000Z" itemprop="datePublished">2015-04-22</time>
 </a>
-              <a data-url="http://jslite.io/2015/04/22/js获取来源的URL代码/" data-id="cifpkor8g0029j1glriffucmo" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/04/22/js获取来源的URL代码/" data-id="cihhbywlv00290xglb601m9rh" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -287,7 +288,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

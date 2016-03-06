@@ -29,6 +29,7 @@ JSLite 语法实例$(this).hide()
 演示 JSLite hide() 函数，隐藏当前的 HTML 元素。
 $(&quot;#test&quot;).hide()
 演示 JSLite hide() 函数，隐">
+<meta property="og:updated_time" content="2015-04-09T05:45:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSLite 02 基本语法">
 <meta name="twitter:description" content="学习 JSLite 之前需要你有下面几个方面的基本知识
@@ -135,7 +136,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -207,15 +208,15 @@ var _hmt = _hmt || [];
 <p>提示：JSLite 使用的语法是 XPath 与 CSS 选择器语法的组合。在本教程接下来的章节，您将学习到更多有关选择器的语法。</p>
 </blockquote>
 <h2 id="Ready事件处理">Ready事件处理</h2><p>JSLite 如下的代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;  </span><br><span class="line">  <span class="comment">// JSLite methods go here...   </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line"> <span class="comment">// JSLite methods go here...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">  <span class="comment">// JSLite methods go here...   </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="comment">// JSLite methods go here...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>这为Document  Ready事件处理器以防止JSLite在页面没有完成载入前就执行。从而可以避免下面类似情况发生：  </p>
 <blockquote>
 <p>试图隐藏尚未创建好的元素<br>试图获取尚未载入的图片的大小</p>
 </blockquote>
 <p>这个方法也可以使用下面简化的方法：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;  </span><br><span class="line">  <span class="comment">// JSLite methods go here...   </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line"> <span class="comment">// JSLite methods go here...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">  <span class="comment">// JSLite methods go here...   </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="comment">// JSLite methods go here...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>你可以选择你喜欢的方式，但通常还是采用$(document).ready(function(){}的方式以便于代码的阅读，但是不建议这样使用。</p>
 
               
@@ -224,7 +225,7 @@ var _hmt = _hmt || [];
               <a href="/2015/01/03/JSLite-02-基本语法/" class="article-date">
   <time datetime="2015-01-03T06:19:53.000Z" itemprop="datePublished">2015-01-03</time>
 </a>
-              <a data-url="http://jslite.io/2015/01/03/JSLite-02-基本语法/" data-id="cifpkorau0047j1glw2ibqk2k" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2015/01/03/JSLite-02-基本语法/" data-id="cihhbywox00470xglkj0m90et" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -320,7 +321,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

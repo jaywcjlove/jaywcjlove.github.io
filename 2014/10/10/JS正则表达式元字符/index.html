@@ -69,6 +69,7 @@
 匹配回车
 \s
 匹配单个空格，等同于|| `\S`  | &amp;#34920;&amp;#31034;&amp;#38750;&amp;#31354;&amp;#26684;&amp;#23383;&amp;#31526; | `\d`  | &amp;#22312;&amp;#27491;&amp;#21017">
+<meta property="og:updated_time" content="2015-06-09T08:34:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS正则表达式元字符">
 <meta name="twitter:description" content="JS正则表达式元字符的使用教程
@@ -195,7 +196,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -339,7 +340,7 @@ var _hmt = _hmt || [];
 <p>同样返回<code>null</code>。</p>
 <p><code>?!</code></p>
 <p>形式<code>(?!pattern)</code>和<code>?=</code>恰好相反，要求字符串的后面不能紧跟着某个pattern，还拿上面的例子：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/zhufeng(?!js)/</span>;</span><br><span class="line"><span class="keyword">var</span> str=`zhufengjs`;</span><br><span class="line">alert(reg.exec(str));</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/zhufeng(?!js)/</span>;</span><br><span class="line"><span class="keyword">var</span> str=<span class="string">`zhufengjs`</span>;</span><br><span class="line">alert(reg.exec(str));</span><br></pre></td></tr></table></figure>
 <p>返回<code>null</code>，因为正则要求，<code>zhufeng</code>的后面不能是<code>js</code>。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/zhufeng(?!js)/</span>;</span><br><span class="line"><span class="keyword">var</span>  str=<span class="string">'zhufengpeixun'</span>;</span><br><span class="line">alert(reg.exec(str));</span><br></pre></td></tr></table></figure>
 <p>则成功返回<code>zhufeng</code>。</p>
@@ -482,7 +483,7 @@ var _hmt = _hmt || [];
               <a href="/2014/10/10/JS正则表达式元字符/" class="article-date">
   <time datetime="2014-10-09T17:22:42.000Z" itemprop="datePublished">2014-10-10</time>
 </a>
-              <a data-url="http://jslite.io/2014/10/10/JS正则表达式元字符/" data-id="cifpkorac003tj1gl1rbfscq6" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2014/10/10/JS正则表达式元字符/" data-id="cihhbywoc003t0xglbeyqa797" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -578,7 +579,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">

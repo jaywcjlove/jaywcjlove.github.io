@@ -23,6 +23,7 @@
 此方法解决低版本Android输入的时候出现双输入框问题
 注意：会引起输入法问题（输入词组只显示一个字）
 能解决android上">
+<meta property="og:updated_time" content="2015-04-10T19:21:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS解决手机前端开发问题">
 <meta name="twitter:description" content="消除input白色外框但是这个方式有一个副作用，就是输入法不再能够输入多个字符，比如用中文输入法打“我们”，进入文本框的就只有“我”.
@@ -126,7 +127,7 @@ var _hmt = _hmt || [];
             <a id="nav-search-btn" class="nav-icon" title="Search"></a>
           </nav>
           <div id="search-form-wrap">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jslite.io"></form>
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jslite.io"></form>
           </div>
         </div>
     </div>
@@ -183,13 +184,13 @@ var _hmt = _hmt || [];
               </div>
               
                 <h2 id="消除input白色外框">消除input白色外框</h2><p>但是这个方式有一个副作用，就是输入法不再能够输入多个字符，比如用中文输入法打“我们”，进入文本框的就只有“我”.</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*<span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-user-modify</span>:<span class="value"> read-write-plaintext-only</span></span>;  </span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*<span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-user-modify</span>:<span class="value"> read-write-plaintext-only</span></span>;  </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="备注">备注</h3><ul>
 <li>此方法解决低版本Android输入的时候出现双输入框问题</li>
 <li>注意：会引起输入法问题（输入词组只显示一个字）</li>
 <li>能解决android上<code>input:focus</code>时input不随软键盘升起而抬高</li>
 </ul>
-<h2 id="ios上使用transform的时候的闪屏">ios上使用transform的时候的闪屏</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">-webkit-transform-style</span>:<span class="value"> preserve-<span class="number">3</span>d</span></span>; <span class="rule"><span class="attribute">-webkit-backface-visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="ios上使用transform的时候的闪屏">ios上使用transform的时候的闪屏</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;&#10;    -webkit-transform-style: preserve-3d; -webkit-backface-visibility: hidden;&#10;&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="android上的touch事件穿透">android上的touch事件穿透</h2><p>原生的浏览器基本上 e.preventDefault(); e.stopPropagation(); 结合一下可以解决大部分版本的浏览器。</p>
 
               
@@ -198,7 +199,7 @@ var _hmt = _hmt || [];
               <a href="/2013/05/10/CSS解决手机前端开发问题/" class="article-date">
   <time datetime="2013-05-10T14:06:05.000Z" itemprop="datePublished">2013-05-10</time>
 </a>
-              <a data-url="http://jslite.io/2013/05/10/CSS解决手机前端开发问题/" data-id="cifpkorc8004xj1glo6kdcvt7" class="article-share-link">Share</a>
+              <a data-url="http://jslite.io/2013/05/10/CSS解决手机前端开发问题/" data-id="cihhbywrx004x0xglqg4x7ndi" class="article-share-link">Share</a>
               
                 <a href="#comments" class="article-comment-link">Comments</a>
               
@@ -294,7 +295,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
         <div class="left">
-            &copy; 2015 kacper.wang<br>
+            &copy; 2016 kacper.wang<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/jaywcjlove/hexoThemeKacper">hexoThemeKacper </a>
         </div>
         <div class="right">
