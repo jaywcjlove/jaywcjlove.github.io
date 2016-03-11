@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jslite.io/about/index.html</loc>
+    <lastmod>2016-03-11T10:04:39.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jslite.io/API/index.html</loc>
     <lastmod>2016-03-08T15:59:03.000Z</lastmod>
   </url>
@@ -24,11 +29,6 @@
   <url>
     <loc>http://jslite.io/2015/09/10/%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E5%8D%87%E7%BA%A7nodejs%E7%89%88%E6%9C%AC/</loc>
     <lastmod>2015-09-10T08:54:39.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jslite.io/about/index.html</loc>
-    <lastmod>2015-08-09T13:42:04.000Z</lastmod>
   </url>
   
   <url>
