@@ -1,0 +1,24 @@
+{
+  "name": "jaywcjlove.github.io",
+  "version": "1.0.0",
+  "description": "About me ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaywcjlove/jaywcjlove.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaywcjlove/jaywcjlove.github.io/issues"
+  },
+  "homepage": "https://github.com/jaywcjlove/jaywcjlove.github.io#readme",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "fs-extra": "^7.0.0"
+  }
+}
