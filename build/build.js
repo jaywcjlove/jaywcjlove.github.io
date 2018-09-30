@@ -25,7 +25,7 @@ function createHTML(data) {
       data.items.forEach((item, idx) => {
         html.push(`
           <li>
-            <a target="_blank" href="${item.url}">${item.name}</a>
+            <a target="_blank" href="${item.html_url}">${item.name}</a>
             <span>${item.stargazers_count} <small>Star</small></span>
             <span>${item.forks_count} <small>Fork</small></span>
             <p>${item.description} ${item.homepage && `<a target="_blank" href="${item.homepage}">${item.homepage}</a>`}</p>
