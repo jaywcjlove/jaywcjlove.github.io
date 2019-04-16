@@ -5,7 +5,7 @@ const FS = require('fs-extra');
 const tempHTML = path.resolve(process.cwd(), 'build', 'index.html');
 const outputHTML = path.resolve(process.cwd(), 'index.html');
 
-axios.get('https://api.github.com/search/repositories?q=user:jaywcjlove')
+axios.get('https://api.github.com/search/repositories?q=user:jaywcjlove&per_page=100')
   .then((response) => createHTML(response.data))
   .then((html) => {
     let str = FS.readFileSync(tempHTML);
@@ -28,7 +28,7 @@ function createHTML(data) {
             <a target="_blank" href="${item.html_url}">${item.name}</a>
             <span>${item.stargazers_count} <small>Star</small></span>
             <span>${item.forks_count} <small>Fork</small></span>
-            <p>${item.description} ${item.homepage && `<a target="_blank" href="${item.homepage}">${item.homepage}</a>`}</p>
+            ${item.description ? `<p>${item.description} ${item.homepage ? `<a target="_blank" href="${item.homepage}">${item.homepage}</a>` : ''}</p>` : ''}
           </li>
         `);
       })
