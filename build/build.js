@@ -26,8 +26,9 @@ function createHTML(data) {
         html.push(`
           <li>
             <a target="_blank" href="${item.html_url}">${item.name}</a>
-            <span>${item.stargazers_count} <small>Star</small></span>
-            <span>${item.forks_count} <small>Fork</small></span>
+            <br />
+            <img src="https://img.shields.io/github/stars/jaywcjlove/${item.name}.svg?style=flat&label=Star"/>
+            <img src="https://img.shields.io/github/forks/jaywcjlove/${item.name}.svg?style=flat&label=Fork"/>
             ${item.description ? `<p>${item.description} ${item.homepage ? `<a target="_blank" href="${item.homepage}">${item.homepage}</a>` : ''}</p>` : ''}
           </li>
         `);

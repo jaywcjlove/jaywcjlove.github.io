@@ -25,12 +25,11 @@ table {
 
 
 .site-project{font-size: 1.2rem;padding: 0.6rem 1rem 2rem 1rem;margin: 0 auto;margin-bottom:5rem;max-width: 60rem;background: #f9f9f9;border-radius: 0.4rem;}
-.site-project li > a:first-child{margin-right: 0.8rem;color: #0080ff; text-decoration: none;} 
+.site-project li > a:first-child{margin-right: 0.8rem;vertical-align: middle;color: #0080ff; text-decoration: none; font-size: 18px;} 
 .site-project li > a:first-child:hover{text-decoration: underline;} 
+.site-project li img { height: 15px; vertical-align: middle;}
 .site-project a{margin-right: 0px;color: #777;}
 .site-project li{padding: 0.8rem 0 0.4rem 0;}
 .site-project hr{border-top:solid #d8d8d8;border-width: 0.1rem 0 0 0;}
 .site-project p{color: #777;padding: 0.3rem 0 0 0;}
-.site-project span{font-size: 1.0rem;}
-.site-project small{font-size: 1.0rem;color: #777;}
 
