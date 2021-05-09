@@ -20,6 +20,6 @@
   "homepage": "https://github.com/jaywcjlove/jaywcjlove.github.io#readme",
   "devDependencies": {
     "axios": "0.21.1",
-    "fs-extra": "9.0.0"
+    "fs-extra": "10.0.0"
   }
 }
