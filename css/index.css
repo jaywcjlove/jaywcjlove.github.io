@@ -1,4 +1,4 @@
-body,html,p,ul,li,h1,h2,h3{padding: 0;margin: 0;}
+body,html,p,ul,li,h1,h2,h3{ padding: 0;margin: 0; }
 body,html{
   height: 100%;
   font-size: 12px;
@@ -32,4 +32,5 @@ table {
 .site-project li{padding: 0.8rem 0 0.4rem 0;}
 .site-project hr{border-top:solid #d8d8d8;border-width: 0.1rem 0 0 0;}
 .site-project p{color: #777;padding: 0.3rem 0 0 0;}
+.site-project h3{ margin-top: 5px; }
 
