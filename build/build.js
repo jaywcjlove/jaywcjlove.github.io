@@ -26,9 +26,57 @@ const hotProjectData = [
   },
   {
     org: 'jaywcjlove',
+    name: 'colors-cli',
+    pgkName: 'colors-cli',
+    description: 'Terminal string styling done right.',
+  },
+  {
+    org: 'uiwjs',
+    name: 'react-markdown-preview',
+    pgkName: '@uiw/react-markdown-preview',
+    description: 'React component preview markdown text in web browser. The minimal amount of CSS to replicate the GitHub Markdown style.',
+  },
+  {
+    org: 'uiwjs',
+    name: 'react-md-editor',
+    pgkName: '@uiw/react-md-editor',
+    description: 'A simple markdown editor with preview, implemented with React.js and TypeScript.',
+  },
+  {
+    org: 'jaywcjlove',
     name: 'mocker-api',
     pgkName: 'mocker-api',
     description: 'mocker-api that creates mocks for REST APIs. It will be helpful when you try to test your application without the actual REST API server.',
+  },
+  {
+    org: 'uiwjs',
+    name: 'babel-plugin-transform-remove-imports',
+    pgkName: 'babel-plugin-transform-remove-imports',
+    description: `Remove the specified import declaration when you use the babel transform to build the package.`,
+  },
+  {
+    org: 'jaywcjlove',
+    name: 'react-hotkeys',
+    pgkName: 'react-hot-keys',
+    description: 'React component to listen to keydown and keyup keyboard events, defining and dispatching keyboard shortcuts.',
+  },
+  {
+    org: 'uiwjs',
+    name: 'react-codemirror',
+    pgkName: '@uiw/react-codemirror',
+    description: 'CodeMirror component for React.',
+  },
+  {
+    org: 'jaywcjlove',
+    name: 'rehype-rewrite',
+    pgkName: 'rehype-rewrite',
+    description: 'Rewrite element with rehype.',
+  },
+  {
+    org: 'jaywcjlove',
+    name: 'store.js',
+    pgkName: 'storejs',
+    description: 'A simple, lightweight JavaScript API for handling browser localStorage , it is easy to pick up and use, has a reasonable footprint 2.36kb(gzipped: 1.04kb), and has no dependencies.',
   },
   {
     org: 'jaywcjlove',
@@ -44,21 +92,9 @@ const hotProjectData = [
   },
   {
     org: 'jaywcjlove',
-    name: 'colors-cli',
-    pgkName: 'colors-cli',
-    description: 'Terminal string styling done right.',
-  },
-  {
-    org: 'jaywcjlove',
     name: 'iNotify',
     pgkName: '@wcjiang/notify',
     description: 'JS achieve the browser title flashing, scrolling, voice prompts, Chrome/Safari/FireFox/IE notice. has no dependencies. It not interfere with any JavaScript libraries or frameworks. has a reasonable footprint 5.05kb (gzipped: 1.75kb)',
-  },
-  {
-    org: 'jaywcjlove',
-    name: 'store.js',
-    pgkName: 'storejs',
-    description: 'A simple, lightweight JavaScript API for handling browser localStorage , it is easy to pick up and use, has a reasonable footprint 2.36kb(gzipped: 1.04kb), and has no dependencies.',
   },
   {
     org: 'jaywcjlove',
@@ -68,21 +104,9 @@ const hotProjectData = [
   },
   {
     org: 'uiwjs',
-    name: 'react-md-editor',
-    pgkName: '@uiw/react-md-editor',
-    description: 'A simple markdown editor with preview, implemented with React.js and TypeScript.',
-  },
-  {
-    org: 'uiwjs',
     name: 'react-markdown-editor',
     pgkName: '@uiw/react-markdown-editor',
     description: 'A markdown editor with preview, implemented with React.js and TypeScript.',
-  },
-  {
-    org: 'uiwjs',
-    name: 'react-markdown-preview',
-    pgkName: '@uiw/react-markdown-preview',
-    description: 'React component preview markdown text in web browser. The minimal amount of CSS to replicate the GitHub Markdown style.',
   },
   {
     org: 'uiwjs',
@@ -116,27 +140,9 @@ const hotProjectData = [
   },
   {
     org: 'uiwjs',
-    name: 'babel-plugin-transform-remove-imports',
-    pgkName: 'babel-plugin-transform-remove-imports',
-    description: `Remove the specified import declaration when you use the babel transform to build the package.`,
-  },
-  {
-    org: 'uiwjs',
     name: 'react-amap',
     pgkName: '@uiw/react-amap',
     description: '基于 React 封装的高德地图组件，帮助你轻松的接入地图到 React 项目中。',
-  },
-  {
-    org: 'uiwjs',
-    name: 'react-codemirror',
-    pgkName: '@uiw/react-codemirror',
-    description: 'CodeMirror component for React.',
-  },
-  {
-    org: 'jaywcjlove',
-    name: 'rehype-rewrite',
-    pgkName: 'rehype-rewrite',
-    description: 'Rewrite element with rehype.',
   },
   {
     org: 'jaywcjlove',
@@ -149,12 +155,6 @@ const hotProjectData = [
     name: 'react-monacoeditor',
     pgkName: '@uiw/react-monacoeditor',
     description: 'Monaco Editor component for React.',
-  },
-  {
-    org: 'jaywcjlove',
-    name: 'react-hotkeys',
-    pgkName: 'react-hot-keys',
-    description: 'React component to listen to keydown and keyup keyboard events, defining and dispatching keyboard shortcuts.',
   },
   {
     org: 'jaywcjlove',
