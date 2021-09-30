@@ -80,6 +80,12 @@ const hotProjectData = [
   },
   {
     org: 'jaywcjlove',
+    name: 'cookie.js',
+    pgkName: 'cookiejs',
+    description: 'A simple, lightweight JavaScript API for handling browser cookies, it is easy to pick up and use, has a reasonable footprint (~2kb) (gzipped: 0.84kb), and has no dependencies. It should not interfere with any JavaScript libraries or frameworks.',
+  },
+  {
+    org: 'jaywcjlove',
     name: 'svgtofont',
     pgkName: 'svgtofont',
     description: 'Read a set of SVG icons and ouput a TTF/EOT/WOFF/WOFF2/SVG font.',
