@@ -97,6 +97,12 @@ const hotProjectData = [
     description: 'All `.less` files are compiled into `.css` files.',
   },
   {
+    org: 'uiwjs',
+    name: 'reset-css',
+    pgkName: '@uiw/reset.css',
+    description: 'A tiny modern CSS reset.',
+  },
+  {
     org: 'jaywcjlove',
     name: 'iNotify',
     pgkName: '@wcjiang/notify',
