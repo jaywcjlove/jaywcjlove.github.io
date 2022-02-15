@@ -74,6 +74,18 @@ const hotProjectData = [
   },
   {
     org: 'jaywcjlove',
+    name: 'rehype-attr',
+    pgkName: 'rehype-attr',
+    description: 'New syntax to add attributes to Markdown.',
+  },
+  {
+    org: 'jaywcjlove',
+    name: 'rehype-video',
+    pgkName: 'rehype-video',
+    description: 'Add improved video syntax: links to `.mp4` and `.mov` turn into videos.',
+  },
+  {
+    org: 'jaywcjlove',
     name: 'store.js',
     pgkName: 'storejs',
     description: 'A simple, lightweight JavaScript API for handling browser localStorage , it is easy to pick up and use, has a reasonable footprint 2.36kb(gzipped: 1.04kb), and has no dependencies.',
@@ -167,12 +179,6 @@ const hotProjectData = [
     name: 'react-monacoeditor',
     pgkName: '@uiw/react-monacoeditor',
     description: 'Monaco Editor component for React.',
-  },
-  {
-    org: 'jaywcjlove',
-    name: 'rehype-attr',
-    pgkName: 'rehype-attr',
-    description: 'New syntax to add attributes to Markdown.',
   }
 ]
 
