@@ -49,10 +49,22 @@ const hotProjectData = [
     description: 'mocker-api that creates mocks for REST APIs. It will be helpful when you try to test your application without the actual REST API server.',
   },
   {
+    org: 'jaywcjlove',
+    name: 'idoc',
+    pgkName: 'idoc',
+    description: 'Simple document generation tool! Dependence Node.js run.',
+  },
+  {
     org: 'uiwjs',
     name: 'babel-plugin-transform-remove-imports',
     pgkName: 'babel-plugin-transform-remove-imports',
     description: `Remove the specified import declaration when you use the babel transform to build the package.`,
+  },
+  {
+    org: 'kktjs',
+    name: 'babel-plugin-transform-replace-export-default',
+    pgkName: 'babel-plugin-transform-replace-export-default',
+    description: 'Replace `export default` with `return`, or just remove `export default`.',
   },
   {
     org: 'jaywcjlove',
