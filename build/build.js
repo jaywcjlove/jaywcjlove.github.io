@@ -182,7 +182,7 @@ const hotProjectData = [
   }
 ]
 
-axios.get('https://api.github.com/search/repositories?q=user:jaywcjlove&per_page=100')
+axios.get('https://api.github.com/search/repositories?q=user:jaywcjlove&per_page=200')
   .then((response) => createHTML(response.data))
   .then((html) => {
     let str = FS.readFileSync(tempHTML);
