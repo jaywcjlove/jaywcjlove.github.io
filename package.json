@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/jaywcjlove/jaywcjlove.github.io#readme",
   "devDependencies": {
-    "axios": "0.26.0",
+    "axios": "0.27.2",
     "fs-extra": "10.0.0"
   }
 }
