@@ -2,24 +2,46 @@
   "name": "jaywcjlove.github.io",
   "version": "1.0.0",
   "description": "About me ===",
-  "main": "index.js",
+  "homepage": "https://jaywcjlove.github.io",
+  "author": "Wangchujiang <wowohoo@qq.com>",
+  "license": "MIT",
   "scripts": {
-    "start": "node build/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "kkt start",
+    "build": "kkt build",
+    "test": "kkt test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaywcjlove/jaywcjlove.github.io.git"
+  "dependencies": {
+    "@wcj/dark-mode": "^1.0.15",
+    "i18next": "^23.5.1",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "i18next-http-backend": "^2.2.2",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "react-i18next": "^13.3.0",
+    "react-router-dom": "^6.16.0",
+    "styled-components": "^6.1.0",
+    "web-vitals": "^2.1.4"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jaywcjlove/jaywcjlove.github.io/issues"
-  },
-  "homepage": "https://github.com/jaywcjlove/jaywcjlove.github.io#readme",
   "devDependencies": {
-    "axios": "0.26.0",
-    "fs-extra": "10.0.0"
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^16.18.58",
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.13",
+    "kkt": "^7.5.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
