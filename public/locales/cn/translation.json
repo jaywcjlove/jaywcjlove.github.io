@@ -2,8 +2,13 @@
   "home": {
     "info": "大家好，我是一名软件开发人员。"
   },
+  "projects": {
+    "title": "开源项目",
+    "info": "我维护着<projects>许多项目</projects>，其中还包含一些非常流行的项目"
+  },
   "menu": {
-    "app": "应用程序",
+    "projects": "项目",
+    "app": "应用",
     "sponsor": "赞助",
     "about": "关于",
     "contact": "联系我"

@@ -2,7 +2,12 @@
   "home": {
     "info": "Hi, I am a software developer."
   },
+  "projects": {
+    "title": "Open Source Projects",
+    "info": "I maintain <projects>many projects</projects>, including some very popular ones."
+  },
   "menu": {
+    "projects": "Projects",
     "app": "App",
     "sponsor": "Sponsor",
     "about": "About",

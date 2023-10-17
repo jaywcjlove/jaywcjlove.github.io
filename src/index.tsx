@@ -11,6 +11,7 @@ import { routes } from './router.data';
 
 export const GlobalStyle = createGlobalStyle`
 [data-color-mode*='dark'], [data-color-mode*='dark'] body {
+  --color-rgb: 210 222 239;
   --color-fg-default: #c9d1d9;
   --color-fg-muted: #8b949e;
   --color-fg-subtle: #484f58;
@@ -25,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   --color-danger-fg: #f85149;
 }
 [data-color-mode*='light'], [data-color-mode*='light'] body {
+  --color-rgb: 33 38 45;
   --color-fg-default: #24292f;
   --color-fg-muted: #57606a;
   --color-fg-subtle: #6e7781;
