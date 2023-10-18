@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, createContext, useContext, useReducer } from 'react';
+import { type FC, type PropsWithChildren, createContext, useContext, useReducer } from 'react';
 
 type InitialState = {
   background?: string;
@@ -7,6 +7,7 @@ type InitialState = {
   detail?: React.ReactNode;
   appStore?: React.ReactNode;
   openSource?: React.ReactNode;
+  giscus?: React.ReactNode;
 }
 
 const initialState: InitialState = {}

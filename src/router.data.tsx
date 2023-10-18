@@ -36,6 +36,7 @@ export const routes: RouteObject[] = [
   {
     path: "/",
     lazy: () => import('./pages/app/'),
+    ErrorBoundary: ErrorPage,
     children: [
       {
         path: "/npmd",

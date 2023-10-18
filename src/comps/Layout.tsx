@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import logoSrc from '../assets/avatar.png';
 import { ReactComponent as EMailIcon } from '../assets/mail.svg';
 import { ReactComponent as TranslateIcon } from '../assets/translate.svg';
+import { ReactComponent as TranslateCNIcon } from '../assets/translate-cn.svg';
 import { Footer } from './Footer';
 
 export const Wrapper = styled.div`
@@ -123,7 +124,8 @@ export const Component: FC<PropsWithChildren> = () => {
               <EMailIcon />
             </NavLink>
             <div onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'cn' : 'en')}>
-              <TranslateIcon />
+              {i18n.language === 'en' && <TranslateIcon />}
+              {i18n.language === 'cn' && <TranslateCNIcon />}
             </div>
           </Nav>
         </HeaderMain>

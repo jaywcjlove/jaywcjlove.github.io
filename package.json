@@ -11,6 +11,7 @@
     "test": "kkt test"
   },
   "dependencies": {
+    "@giscus/react": "^2.3.0",
     "@wcj/dark-mode": "^1.0.15",
     "i18next": "^23.5.1",
     "i18next-browser-languagedetector": "^7.1.0",

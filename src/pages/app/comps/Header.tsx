@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import { FC, PropsWithChildren } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import { Section, useStore } from './store';
 import { Title, AppStore, OpenSource, HeroWavesWrapper, Detail, Logo } from './Comps';
+import { Giscus, GiscusContent, } from './Giscus';
+import { Button } from './Language';
 
 interface HeaderProps {
   background?: string;
@@ -34,9 +36,11 @@ const InternalContent = styled.main`
 export const InternalHeader: FC<PropsWithChildren<HeaderProps>> = ({ children, background }) => {
   return (
     <Section initial={{ background }}>
+      <Button />
       <Internal />
       <InternalContent>
         {children}
+        <GiscusContent />
       </InternalContent>
     </Section>
   );
@@ -94,6 +98,7 @@ type HeaderComponent = typeof InternalHeader & {
   Detail: typeof Detail;
   AppStore: typeof AppStore;
   OpenSource: typeof OpenSource;
+  Giscus: typeof Giscus;
 };
 
 export const Header: HeaderComponent = InternalHeader as HeaderComponent;
@@ -103,3 +108,4 @@ Header.Logo = Logo;
 Header.Detail = Detail;
 Header.AppStore = AppStore;
 Header.OpenSource = OpenSource;
+Header.Giscus = Giscus;

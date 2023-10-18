@@ -2,6 +2,7 @@ import { FC, PropsWithChildren } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useTranslation, Trans } from 'react-i18next';
 import { Wrapper } from '../../comps/Layout';
+import { GiscusLayout } from '../../comps/Giscus';
 
 const textclip = keyframes`
   to {
@@ -60,6 +61,7 @@ export const Component: FC<PropsWithChildren> = () => {
           I value my time, so make it worth it, and <a href="https://www.google.com/search?q=succinct+emails" target="_blank">keep it succinct</a>.
         </Trans>
       </p>
+      <GiscusLayout />
     </Wrapper>
   );
 };

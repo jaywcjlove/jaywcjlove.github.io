@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, AnchorHTMLAttributes, useEffect } from 'react';
+import { type FC, type PropsWithChildren, type AnchorHTMLAttributes, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useDispatch } from './store';
 import { ReactComponent as HeroWaves } from '../../../assets/hero-waves.svg';

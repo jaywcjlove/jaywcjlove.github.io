@@ -15,6 +15,7 @@ export const Component: FC<PropsWithChildren> = () => {
       <Header.Detail>{t('detail')}</Header.Detail>
       <Header.AppStore href="https://github.com/jaywcjlove/npmd" />
       <Header.OpenSource href="https://github.com/jaywcjlove/npmd" />
+      <Header.Giscus />
       <img src={screenshots} />
       <p>{t('info')}</p>
     </Header>
