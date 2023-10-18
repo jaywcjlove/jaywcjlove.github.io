@@ -1,10 +1,8 @@
 import { type FC, useEffect, Fragment } from "react";
-import { useTranslation } from 'react-i18next';
-import { type GiscusProps, type AvailableLanguage } from '@giscus/react';
 import { GiscusLayout } from '../../../comps/Giscus';
 import { useDispatch, useStore } from './store';
 
-export const Giscus: FC<Partial<GiscusProps>> = (props) => {
+export const Giscus: FC<Partial<HTMLElementTagNameMap['giscus-widget']>> = (props) => {
   const dispatch = useDispatch();
   useEffect(() => dispatch({
     giscus: (
@@ -21,15 +19,6 @@ export const GiscusContent = () => {
   );
 }
 
-const GiscusLanguage: FC<Partial<GiscusProps>> = (props) => {
-  const { i18n } = useTranslation();
-  let language: AvailableLanguage = 'en';
-  switch (i18n.language) {
-    case 'cn': language = 'zh-CN'; break;
-    case 'en':
-    default: language = 'en'; break;
-  }
-  return (
-    <GiscusLayout lang={language} {...props} />
-  )
+const GiscusLanguage: FC<Partial<HTMLElementTagNameMap['giscus-widget']>> = (props) => {
+  return <GiscusLayout {...props} />;
 }

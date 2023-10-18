@@ -12,14 +12,16 @@ export const Wrapper = styled.div`
   max-width: 48rem;
   min-height: inherit;
   margin: 0 auto;
-  padding: 4rem 2rem 5rem 2rem;
+  padding: 4rem 2rem 10rem 2rem;
   @media (max-width: 590px) {
     padding-top: 1rem;
+    padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
   @media (max-width: 960px) {
     padding-top: 2rem;
+    padding-bottom: 4rem;
   }
   h1, h2 {
     font-weight: 900;

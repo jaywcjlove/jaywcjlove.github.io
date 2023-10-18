@@ -2,6 +2,7 @@
   "home": {
     "info": "Hi, I am a software developer."
   },
+  "loading": "Loading comments...",
   "projects": {
     "title": "Open Source Projects",
     "info": "I maintain <projects>many projects</projects>, including some very popular ones."
