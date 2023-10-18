@@ -1,4 +1,4 @@
-[About Me](https://wangchujiang.com)
+### [About Me](https://wangchujiang.com)
 
 I am a frontend development engineer, involved in backend development work for some Node.js projects. In 2014, I started to engage in open source work during my spare time.
 
