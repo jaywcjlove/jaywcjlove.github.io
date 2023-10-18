@@ -4,21 +4,18 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import logoSrc from '../assets/avatar.png';
 import { ReactComponent as EMailIcon } from '../assets/mail.svg';
-import { ReactComponent as GithubIcon } from '../assets/github.svg';
-import { ReactComponent as TwitterIcon } from '../assets/twitter.svg';
-import { ReactComponent as SinaIcon } from '../assets/sina.svg';
 import { ReactComponent as TranslateIcon } from '../assets/translate.svg';
+import { Footer } from './Footer';
 
 export const Wrapper = styled.div`
   max-width: 48rem;
   min-height: inherit;
   margin: 0 auto;
-  padding-top: 4rem;
-  padding-bottom: 5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 4rem 2rem 5rem 2rem;
   @media (max-width: 590px) {
     padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   @media (max-width: 960px) {
     padding-top: 2rem;
@@ -31,7 +28,10 @@ export const Wrapper = styled.div`
     letter-spacing: -.05em;
     font-size: 2.8em;
     @media (max-width: 590px) {
+      line-height: 1.05em;
       margin-bottom: 0rem;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
     }
     @media (max-width: 960px) {
       margin-bottom: 0rem;
@@ -75,7 +75,7 @@ const HeaderMain = styled.main`
   }
 `;
 
-const Content = styled.main`
+export const Content = styled.main`
   max-width: 72rem;
   margin: 0 auto;
   min-height: calc(100vh - 5.75rem);
@@ -86,6 +86,7 @@ const Nav = styled.nav`
   display: flex;
   gap: 1rem;
   a {
+    cursor: pointer;
     &.active {
       color: var(--color-fg-default);
     }
@@ -102,23 +103,6 @@ const Nav = styled.nav`
     &:hover {
       color: var(--color-fg-default);
     }
-  }
-`;
-
-const Footer = styled.footer`
-  border-top: 1px solid var(--color-border-default);
-`;
-const FooterMain = styled.main`
-  padding: 1.75rem 1rem 5rem 1rem;
-  max-width: 72rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  section {
-    display: flex;
-    gap: 0.5rem;
-    font-size: 1.125rem;
   }
 `;
 
@@ -147,25 +131,7 @@ export const Component: FC<PropsWithChildren> = () => {
       <Content>
         <Outlet />
       </Content>
-      <Footer>
-        <FooterMain>
-          <div>Hello World!</div>
-          <section>
-            <a href="https://weibo.com/pc175" target="_blank">
-              <SinaIcon />
-            </a>
-            <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwangchujiang.com&twgr=kettanaito&screen_name=jaywcjlove&twterm=follow" target="_blank">
-              <TwitterIcon />
-            </a>
-            <a href="https://github.com/jaywcjlove" target="_blank">
-              <GithubIcon />
-            </a>
-            <a href="mailto:wowohoo@qq.com">
-              <EMailIcon />
-            </a>
-          </section>
-        </FooterMain>
-      </Footer>
+      <Footer />
       <ScrollRestoration />
     </Fragment>
   );

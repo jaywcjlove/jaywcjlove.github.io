@@ -31,6 +31,7 @@ export const Mail = styled.a`
   line-height: 2.25rem;
   font-weight: 900;
   margin: 0;
+  margin-top: 1rem;
   &::after {
     display: none;
   }
