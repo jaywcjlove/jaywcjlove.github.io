@@ -2,6 +2,7 @@ import { FC, Fragment, PropsWithChildren } from 'react';
 import { Outlet, ScrollRestoration, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import Head from '@uiw/react-head';
 import logoSrc from '../assets/avatar.png';
 import { ReactComponent as EMailIcon } from '../assets/mail.svg';
 import { ReactComponent as TranslateIcon } from '../assets/translate.svg';
@@ -113,6 +114,7 @@ export const Component: FC<PropsWithChildren> = () => {
   const { t, i18n } = useTranslation();
   return (
     <Fragment>
+      <Head.Link rel="icon" href="/favicon.ico" />
       <Header>
         <HeaderMain>
           <NavLink to="/">

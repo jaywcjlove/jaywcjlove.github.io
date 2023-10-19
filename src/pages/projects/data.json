@@ -242,6 +242,11 @@
         "title": "react-keywords",
         "repos": "uiwjs/react-keywords",
         "children": "Highlight a keyword in a piece of text and return a React element."
+      },
+      {
+        "title": "react-head",
+        "repos": "uiwjs/react-head",
+        "children": "React components will manage your changes to the document head"
       }
     ]
   },
