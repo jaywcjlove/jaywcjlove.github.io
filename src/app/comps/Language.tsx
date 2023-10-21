@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
-import { ReactComponent as TranslateIcon } from '../../../assets/translate.svg';
-import { ReactComponent as TranslateCNIcon } from '../../../assets/translate-cn.svg';
+import { ReactComponent as TranslateIcon } from '../../assets/translate.svg';
+import { ReactComponent as TranslateCNIcon } from '../../assets/translate-cn.svg';
 
 const Wrapper = styled.div`
   position: absolute;

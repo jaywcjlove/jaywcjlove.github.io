@@ -80,7 +80,6 @@ const HeaderMain = styled.main`
 `;
 
 export const Content = styled.main`
-  max-width: 72rem;
   margin: 0 auto;
   min-height: calc(100vh - 5.75rem);
 `;

@@ -1,5 +1,5 @@
 import { type FC, useEffect, Fragment } from "react";
-import { GiscusLayout } from '../../../comps/Giscus';
+import { GiscusLayout } from '../../comps/Giscus';
 import { useDispatch, useStore } from './store';
 
 export const Giscus: FC<Partial<HTMLElementTagNameMap['giscus-widget']>> = (props) => {

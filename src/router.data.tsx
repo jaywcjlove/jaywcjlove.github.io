@@ -31,17 +31,10 @@ export const routes: RouteObject[] = [
         path: '/projects',
         lazy: () => import('./pages/projects'),
       },
-    ],
-  },
-  {
-    path: "/",
-    lazy: () => import('./pages/app/'),
-    ErrorBoundary: ErrorPage,
-    children: [
       {
         path: "/npmd",
-        lazy: () => import('./pages/app/npmd'),
+        lazy: () => import('./app/npmd'),
       }
-    ]
+    ],
   },
 ];

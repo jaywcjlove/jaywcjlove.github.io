@@ -3,7 +3,6 @@ import type { FC, PropsWithChildren } from 'react';
 import { Section, useStore } from './store';
 import { Title, AppStore, OpenSource, HeroWavesWrapper, Detail, Logo } from './Comps';
 import { Giscus, GiscusContent, } from './Giscus';
-import { Button } from './Language';
 
 interface HeaderProps {
   background?: string;
@@ -36,7 +35,6 @@ const InternalContent = styled.main`
 export const InternalHeader: FC<PropsWithChildren<HeaderProps>> = ({ children, background }) => {
   return (
     <Section initial={{ background }}>
-      <Button />
       <Internal />
       <InternalContent>
         {children}

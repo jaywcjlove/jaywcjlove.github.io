@@ -5,6 +5,10 @@
   "homepage": "https://jaywcjlove.github.io",
   "author": "Wangchujiang <wowohoo@qq.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaywcjlove/jaywcjlove.github.io"
+  },
   "scripts": {
     "start": "kkt start",
     "build": "kkt build",

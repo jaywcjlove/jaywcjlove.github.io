@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Symbol Scribe",
+    "icon": "/appicon/symbol-scribe.png",
+    "path": "/symbol-scribe"
+  },
+  {
+    "name": "NPMD",
+    "icon": "/appicon/npmd.png",
+    "path": "/npmd"
+  }
+]

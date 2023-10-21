@@ -53,7 +53,7 @@ export const GlobalStyle = createGlobalStyle`
   a {
     color: var(--color-fg-muted);
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:hover {
       color: var(--color-fg-default);
     }

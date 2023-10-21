@@ -1,9 +1,9 @@
 import { type FC, type PropsWithChildren, type AnchorHTMLAttributes, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useDispatch } from './store';
-import { ReactComponent as HeroWaves } from '../../../assets/hero-waves.svg';
-import { ReactComponent as AppStoreIcon } from '../../../assets/appstore.svg';
-import { ReactComponent as OpenSourceIcon } from '../../../assets/open-source.svg';
+import { ReactComponent as HeroWaves } from '../../assets/hero-waves.svg';
+import { ReactComponent as AppStoreIcon } from '../../assets/appstore.svg';
+import { ReactComponent as OpenSourceIcon } from '../../assets/open-source.svg';
 
 const TitleWrapper = styled.h3`
   font-size: 3.75rem;
