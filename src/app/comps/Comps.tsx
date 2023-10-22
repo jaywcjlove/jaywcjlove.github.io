@@ -1,4 +1,5 @@
 import { type FC, type PropsWithChildren, type AnchorHTMLAttributes, useEffect } from 'react';
+import { LinkProps, Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { useDispatch } from './store';
 import { ReactComponent as HeroWaves } from '../../assets/hero-waves.svg';
@@ -59,28 +60,34 @@ export const Logo: FC<PropsWithChildren> = ({ children }) => {
   return null;
 }
 
-export const AppStore: FC<PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>> = ({ children, ...reset }) => {
+interface AppStoreProps extends Partial<LinkProps>, AnchorHTMLAttributes<HTMLAnchorElement> {
+  keyName?: string;
+}
+export const AppStore: FC<PropsWithChildren<AppStoreProps>> = (props) => {
+  const { children = <AppStoreIcon />, keyName = 'appStore', to, ...reset } = props;
+  let Comp: React.ReactNode;
+  if (to) {
+    Comp = (
+      <Link to={to} {...reset}>{children}</Link>
+    );
+  } else {
+    Comp = (
+      <a target="_blank" {...reset}>{children}</a>
+    );
+  }
   const dispatch = useDispatch();
   useEffect(() => dispatch({
-    appStore: (
-      <a target="_blank" {...reset}>
-        <AppStoreIcon />
-      </a>
-    )
-  }), [children]);
+    [keyName]: Comp
+  }), [props]);
   return null;
 }
 
-export const OpenSource: FC<PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>> = ({ children, ...reset }) => {
-  const dispatch = useDispatch();
-  useEffect(() => dispatch({
-    openSource: (
-      <a target="_blank" {...reset}>
-        <OpenSourceIcon />
-      </a>
-    )
-  }), [children]);
-  return null;
+export const OpenSource: FC<PropsWithChildren<AppStoreProps>> = (props) => {
+  return (
+    <AppStore {...props} keyName="openSource">
+      <OpenSourceIcon />
+    </AppStore>
+  );
 }
 
 const moveForever = keyframes`

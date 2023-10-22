@@ -34,6 +34,10 @@ export const routes: RouteObject[] = [
       {
         path: "/npmd",
         lazy: () => import('./app/npmd'),
+      },
+      {
+        path: "/symbol-scribe",
+        lazy: () => import('./app/symbol-scribe'),
       }
     ],
   },
