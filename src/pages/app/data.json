@@ -1,5 +1,10 @@
 [
   {
+    "name": "HostsEditor",
+    "icon": "/appicon/hosts-editor.png",
+    "path": "/hosts-editor"
+  },
+  {
     "name": "Symbol Scribe",
     "icon": "/appicon/symbol-scribe.png",
     "path": "/symbol-scribe"

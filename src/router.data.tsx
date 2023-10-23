@@ -38,6 +38,10 @@ export const routes: RouteObject[] = [
       {
         path: "/symbol-scribe",
         lazy: () => import('./app/symbol-scribe'),
+      },
+      {
+        path: "/hosts-editor",
+        lazy: () => import('./app/hosts-editor'),
       }
     ],
   },

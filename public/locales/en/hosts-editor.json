@@ -1,0 +1,4 @@
+{
+  "detail": "A simple hosts file manager.",
+  "info": "A simple way to modify the /etc/hosts file for easy addition of mapping IP addresses and hostnames."
+}

@@ -29,7 +29,7 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://github.com/jaywcjlove" target="_blank">Github</a>
         </li>
         <li>
-          <a href="https://github.com/jaywcjlove" target="_blank">微博</a>
+          <a href="https://weibo.com/pc175" target="_blank">微博</a>
         </li>
         <li>
           <a href="https://www.npmjs.com/~wcjiang" target="_blank">npm</a>
