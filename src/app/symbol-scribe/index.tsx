@@ -21,7 +21,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <Logo width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
-      <Header.AppStore to="/contact" />
+      <Header.AppStore to="https://apps.apple.com/app/symbolscribe/id6470879005" />
       <Header.OpenSource to="/contact" />
       <Header.Giscus />
       <img src={screenshots1} />
