@@ -50,7 +50,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-const Header = styled.header`
+export const Header = styled.header`
   backdrop-filter: blur(0.4rem);
   margin: 0 auto;
   position: sticky;
@@ -58,13 +58,13 @@ const Header = styled.header`
   z-index: 10;
 `;
 
-const Logo = styled.img`
+export const Logo = styled.img`
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 0.725rem;
 `;
 
-const HeaderMain = styled.main`
+export const HeaderMain = styled.main`
   max-width: 72rem;
   margin: 0 auto;
   display: flex;
@@ -84,7 +84,7 @@ export const Content = styled.main`
   min-height: calc(100vh - 5.75rem);
 `;
 
-const Nav = styled.nav`
+export const Nav = styled.nav`
   user-select: none;
   display: flex;
   gap: 1rem;

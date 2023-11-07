@@ -24,12 +24,19 @@ export const routes: RouteObject[] = [
         lazy: () => import('./pages/sponsor'),
       },
       {
-        path: '/app',
-        lazy: () => import('./pages/app'),
-      },
-      {
         path: '/projects',
         lazy: () => import('./pages/projects'),
+      },
+    ],
+  },
+  {
+    path: '/',
+    lazy: () => import('./comps/LayoutApp'),
+    ErrorBoundary: ErrorPage,
+    children: [
+      {
+        path: '/app',
+        lazy: () => import('./pages/app'),
       },
       {
         path: "/npmd",
