@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { Wrapper } from '../../comps/Layout';
 import { ReactComponent as PaypalIcon} from './paypal-color.svg';
+import { ReactComponent as BuyMeACoffeeIcon} from './bmc-full-logo.svg';
 
 const SponsorWrapper = styled(Wrapper)`
   display: flex;
@@ -26,6 +27,9 @@ export const Component: FC<PropsWithChildren> = () => {
       <p>{t('sponsor.info')}</p>
       <a href="https://www.paypal.com/paypalme/kennyiseeyou" target="_blank">
         <PaypalIcon height={54} />
+      </a>
+      <a href="https://www.buymeacoffee.com/jaywcjlove" target="_blank">
+        <BuyMeACoffeeIcon height={54} />
       </a>
       <p>
         <img src="/sponsor-alipay.jpg" width="250" />
