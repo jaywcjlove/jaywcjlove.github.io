@@ -13,7 +13,7 @@ import screenshots5 from './5.png'
 export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation('symbol-scribe');
   return (
-    <Header background="#292929">
+    <Header background="#397037">
       <Head.Title>Symbol Scribe {t('info')}</Head.Title>
       <Head.Link rel="icon" type="image/svg+xml" href={favicon} />
       <Header.Title>Symbol Scribe</Header.Title>

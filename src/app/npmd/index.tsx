@@ -9,7 +9,7 @@ import screenshots from './screenshots.png'
 export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation('npmd');
   return (
-    <Header background="#292929">
+    <Header background="#642f2f">
       <Head.Title>NPMD {t('info')}</Head.Title>
       <Head.Link rel="icon" type="image/svg+xml" href={favicon} />
       <Header.Title>NPMD</Header.Title>

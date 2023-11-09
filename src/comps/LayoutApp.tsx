@@ -22,6 +22,7 @@ export const Component: FC<PropsWithChildren> = () => {
             <Logo src={logoSrc} alt="Wang Chujiang(王楚江) 小弟调调™" />
           </NavLink>
           <Nav>
+            <NavLink to="/App">{t('menu.app')}</NavLink>
             <NavLink to="/projects">{t('menu.projects')}</NavLink>
             <NavLink to="/about">{t('menu.about')}</NavLink>
             <NavLink to="/contact">
