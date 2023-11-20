@@ -7,7 +7,8 @@
   {
     "name": "HostsEditor",
     "icon": "/appicon/hosts-editor.png",
-    "path": "/hosts-editor"
+    "path": "/hosts-editor",
+    "enabled": false
   },
   {
     "name": "Symbol Scribe",
@@ -17,6 +18,7 @@
   {
     "name": "NPMD",
     "icon": "/appicon/npmd.png",
-    "path": "/npmd"
+    "path": "/npmd",
+    "enabled": false
   }
 ]

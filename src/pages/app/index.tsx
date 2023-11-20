@@ -28,7 +28,6 @@ const App = styled(Link)`
   > section {
     display: flex;
     flex-direction: column;
-    gap: 0.52rem;
   }
   h3, p {
     margin: 0;
@@ -36,18 +35,20 @@ const App = styled(Link)`
   h3 {
     line-height: 1.34rem;
     padding-top: 0.45rem;
+    margin-bottom: 0.52rem;
   }
   p {
     font-size: 14px;
     opacity: 0.5;
     line-height: 1.04rem;
   }
+  div {
+    line-height: initial;
+  }
 `;
 
 export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation('app');
-
-  console.log(t(`NPMD`))
   return (
     <AppWrapper>
       <h1>{t('title')}</h1>
@@ -59,6 +60,9 @@ export const Component: FC<PropsWithChildren> = () => {
               <section>
                 <h3>{item.name}</h3>
                 <p>{t(`${item.name}`)}</p>
+                <div>
+                  {item.enabled === false && <TagName>{t("enabled")}</TagName>}
+                </div>
               </section>
             </App>
           );
@@ -67,3 +71,13 @@ export const Component: FC<PropsWithChildren> = () => {
     </AppWrapper>
   );
 };
+
+
+const TagName = styled.span`
+  font-size: 12px;
+  background: var(--color-danger-fg);
+  border-radius: 3px;
+  color: var(--color-fg-default);
+  padding: 1px 2px 2px 2px;
+  line-height: 12px;
+`;
