@@ -20,8 +20,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <img src={paletteGenius} width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
-      {/* <Header.AppStore to="/contact" />
-      <Header.OpenSource to="/contact" /> */}
+      <Header.AppStore target="_blank" to="https://apps.apple.com/app/symbolscribe/id6472593276" />
       <Header.Giscus />
       <img src={screenshots1} />
       <img src={screenshots2} />
