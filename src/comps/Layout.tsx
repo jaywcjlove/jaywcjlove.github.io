@@ -7,6 +7,7 @@ import logoSrc from '../assets/avatar.png';
 import { ReactComponent as EMailIcon } from '../assets/mail.svg';
 import { ReactComponent as TranslateIcon } from '../assets/translate.svg';
 import { ReactComponent as TranslateCNIcon } from '../assets/translate-cn.svg';
+import { ReactComponent as GithubIcon } from '../assets/github.svg';
 import { Footer } from './Footer';
 
 export const Wrapper = styled.div`
@@ -127,6 +128,9 @@ export const Component: FC<PropsWithChildren> = () => {
             <NavLink to="/contact">
               <EMailIcon />
             </NavLink>
+            <a href="https://github.com/jaywcjlove" target="_blank">
+              <GithubIcon />
+            </a>
             <div onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'cn' : 'en')}>
               {i18n.language === 'en' && <TranslateIcon />}
               {i18n.language === 'cn' && <TranslateCNIcon />}
