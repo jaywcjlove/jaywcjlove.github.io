@@ -1,8 +1,9 @@
 import { FC, Fragment, PropsWithChildren } from 'react';
-import { Outlet, ScrollRestoration, NavLink } from 'react-router-dom';
+import { Outlet, ScrollRestoration, NavLink, useNavigation } from 'react-router-dom';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import Head from '@uiw/react-head';
+import Progress from '@uiw/react-progress';
 import logoSrc from '../assets/avatar.png';
 import { ReactComponent as EMailIcon } from '../assets/mail.svg';
 import { ReactComponent as TranslateIcon } from '../assets/translate.svg';
@@ -112,8 +113,12 @@ export const Nav = styled.nav`
 
 export const Component: FC<PropsWithChildren> = () => {
   const { t, i18n } = useTranslation();
+  const navigation = useNavigation();
   return (
     <Fragment>
+      <div style={{ lineHeight: 0, opacity: navigation.state === 'loading' ? 1 : 0, transition: 'all', transitionDuration: '3s' }}>
+        <Progress.Line percent={99.99} status="active" showText={false} style={{ lineHeight: 0 }} />
+      </div>
       <Head.Link rel="icon" href="/favicon.ico" />
       <Header>
         <HeaderMain>
