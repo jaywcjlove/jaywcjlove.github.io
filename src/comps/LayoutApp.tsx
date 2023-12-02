@@ -9,18 +9,16 @@ import { ReactComponent as TranslateIcon } from '../assets/translate.svg';
 import { ReactComponent as TranslateCNIcon } from '../assets/translate-cn.svg';
 import { ReactComponent as GithubIcon } from '../assets/github.svg';
 import { Footer } from './Footer';
-import { HeaderMain, Header, Logo, Nav, Content } from './Layout';
-
+import { HeaderMain, Header, Logo, Nav, Content, ProgressWrapper } from './Layout';
 
 export const Component: FC<PropsWithChildren> = () => {
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
-  console.log("navigation", navigation)
   return (
     <Fragment>
-      <div style={{ lineHeight: 0, opacity: navigation.state === 'loading' ? 1 : 0, transition: 'all', transitionDuration: '0.1s' }}>
+      <ProgressWrapper $opacity={navigation.state === 'loading' ? 1 : 0}>
         <Progress.Line percent={99.99} status="active" showText={false} style={{ lineHeight: 0 }} />
-      </div>
+      </ProgressWrapper>
       <Head.Link rel="icon" href="/favicon.ico" />
       <Header>
         <HeaderMain>

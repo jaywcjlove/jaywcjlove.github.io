@@ -111,14 +111,25 @@ export const Nav = styled.nav`
   }
 `;
 
+export const ProgressWrapper = styled.div<{ $opacity: number; }>`
+  line-height: 0;
+  opacity: ${({ $opacity }) => $opacity || 0};
+  transition: all;
+  transition-duration: 0.2s;
+  position: absolute;
+  z-index: 11;
+  left: -2px;
+  right: -2px;
+`;
+
 export const Component: FC<PropsWithChildren> = () => {
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   return (
     <Fragment>
-      <div style={{ lineHeight: 0, opacity: navigation.state === 'loading' ? 1 : 0, transition: 'all', transitionDuration: '0.1s' }}>
+      <ProgressWrapper $opacity={navigation.state === 'loading' ? 1 : 0}>
         <Progress.Line percent={99.99} status="active" showText={false} style={{ lineHeight: 0 }} />
-      </div>
+      </ProgressWrapper>
       <Head.Link rel="icon" href="/favicon.ico" />
       <Header>
         <HeaderMain>
