@@ -1,6 +1,6 @@
 import { FC, Fragment, PropsWithChildren } from 'react';
 import { Outlet, ScrollRestoration, NavLink, useNavigation } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import Head from '@uiw/react-head';
 import Progress from '@uiw/react-progress';
@@ -120,6 +120,13 @@ export const ProgressWrapper = styled.div<{ $opacity: number; }>`
   z-index: 11;
   left: -2px;
   right: -2px;
+  .w-progress-bg {
+    background-color: #0f0f0ff0;
+    &:before {
+      background-color: transparent !important;
+      display: none !important;
+    }
+  }
 `;
 
 export const Component: FC<PropsWithChildren> = () => {
