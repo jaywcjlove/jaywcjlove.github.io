@@ -139,6 +139,11 @@
         "children": "A React component for displaying and editing javascript arrays and JSON objects."
       },
       {
+        "title": "react-signature",
+        "repos": "uiwjs/react-signature",
+        "children": "A signature board component for react"
+      },
+      {
         "title": "react-textarea-code-editor",
         "repos": "uiwjs/react-textarea-code-editor",
         "children": "A simple code editor with syntax highlighting."
