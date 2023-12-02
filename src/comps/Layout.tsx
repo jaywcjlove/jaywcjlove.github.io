@@ -116,7 +116,7 @@ export const Component: FC<PropsWithChildren> = () => {
   const navigation = useNavigation();
   return (
     <Fragment>
-      <div style={{ lineHeight: 0, opacity: navigation.state === 'loading' ? 1 : 0, transition: 'all', transitionDuration: '0.3s' }}>
+      <div style={{ lineHeight: 0, opacity: navigation.state === 'loading' ? 1 : 0, transition: 'all', transitionDuration: '0.1s' }}>
         <Progress.Line percent={99.99} status="active" showText={false} style={{ lineHeight: 0 }} />
       </div>
       <Head.Link rel="icon" href="/favicon.ico" />
