@@ -89,7 +89,7 @@ export const Content = styled.main`
 export const Nav = styled.nav`
   user-select: none;
   display: flex;
-  gap: 1rem;
+  gap: 0.65rem;
   a {
     cursor: pointer;
     &.active {

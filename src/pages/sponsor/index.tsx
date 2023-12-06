@@ -19,6 +19,16 @@ const SponsorWrapper = styled(Wrapper)`
   }
 `;
 
+const SubTitle = styled.li`
+  list-style: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-left: -16px;
+  padding: 5px 0;
+  color: var(--color-fg-subtle);
+`;
+
 export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation();
   return (
@@ -36,6 +46,24 @@ export const Component: FC<PropsWithChildren> = () => {
         <img src="/sponsor-weixin.jpg" width="250" />
       </p>
       <p>{t('sponsor.info2')}</p>
+      <h2>{t('sponsor.supporters')}</h2>
+      <p>{t('sponsor.thankful')}</p>
+      <ul>
+        <SubTitle>{t('sponsor.alipay')}</SubTitle>
+        <li>**南</li>
+        <li>*港</li>
+        <li>*杰</li>
+        <li>**明</li>
+        <SubTitle>{t('sponsor.paypal')}</SubTitle>
+        <li>Chao Yi</li>
+        <SubTitle>{t('sponsor.wechatpay')}</SubTitle>
+        <li>梦轩</li>
+        <li>鱼先森是个...</li>
+        <li>Kevin®</li>
+        <SubTitle>{t('sponsor.buymeacoffee')}</SubTitle>
+        <li>VolFervor</li>
+        <li>Observed Observer</li>
+      </ul>
     </SponsorWrapper>
   );
 };

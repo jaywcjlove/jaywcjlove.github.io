@@ -25,7 +25,13 @@
   "sponsor": {
     "title": "Thanks! 🙏",
     "info": "I sincerely thank the wonderful people who support my open source work.",
-    "info2": "I forgot the donations from two kind individuals. In fact, there were hardly any donations, but if there were, I would record them here."
+    "info2": "I forgot the donations from two kind individuals. In fact, there were hardly any donations, but if there were, I would record them here.",
+    "paypal": "PayPal",
+    "alipay": "AliPay",
+    "wechatpay": "WechatPay",
+    "supporters": "Supporters",
+    "buymeacoffee": "Buy Me a Coffee",
+    "thankful": "I’m forever thankful to these people"
   },
   "contact": {
     "title": "Contact",
