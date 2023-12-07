@@ -5,6 +5,8 @@ import { Wrapper } from '../../comps/Layout';
 import { ReactComponent as PaypalIcon} from './paypal-color.svg';
 import { ReactComponent as BuyMeACoffeeIcon} from './bmc-full-logo.svg';
 
+import afdian from './afdian.png'
+
 const SponsorWrapper = styled(Wrapper)`
   display: flex;
   flex-direction: column;
@@ -45,11 +47,15 @@ export const Component: FC<PropsWithChildren> = () => {
         <img src="/sponsor-alipay.jpg" width="250" />
         <img src="/sponsor-weixin.jpg" width="250" />
       </p>
+      <a href="https://afdian.net/a/jaywcjlove" target="_blank">
+        <img src={afdian} height={54} />
+      </a>
       <p>{t('sponsor.info2')}</p>
       <h2>{t('sponsor.supporters')}</h2>
       <p>{t('sponsor.thankful')}</p>
       <ul>
         <SubTitle>{t('sponsor.alipay')}</SubTitle>
+        <li>*睿</li>
         <li>**南</li>
         <li>*港</li>
         <li>*杰</li>
