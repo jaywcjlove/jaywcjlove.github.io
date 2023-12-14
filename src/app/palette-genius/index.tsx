@@ -14,7 +14,7 @@ export const Component: FC<PropsWithChildren> = () => {
   return (
     <Header background="#741D71">
       <Head.Title>PaletteGenius {t('detail')}</Head.Title>
-      <Head.Link rel="icon" type="image/svg+xml" href={paletteGenius} />
+      <Head.Link rel="icon" type="image/png" href={paletteGenius} />
       <Header.Title>PaletteGenius</Header.Title>
       <Header.Logo>
         <img src={paletteGenius} width={224} />

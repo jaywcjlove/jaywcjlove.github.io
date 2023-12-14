@@ -19,7 +19,6 @@ export const Component: FC<PropsWithChildren> = () => {
       <ProgressWrapper $opacity={navigation.state === 'loading' ? 1 : 0}>
         <Progress.Line percent={99.99} status="active" showText={false} style={{ lineHeight: 0 }} />
       </ProgressWrapper>
-      <Head.Link rel="icon" href="/favicon.ico" />
       <Header>
         <HeaderMain>
           <NavLink to="/">
