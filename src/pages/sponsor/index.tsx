@@ -64,6 +64,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <SubTitle>{t('sponsor.paypal')}</SubTitle>
         <li>Chao Yi</li>
         <SubTitle>{t('sponsor.wechatpay')}</SubTitle>
+        <li>懒猫 - 谢谢，新年快乐</li>
         <li>Innei</li>
         <li>梦轩</li>
         <li>鱼先森是个...</li>
