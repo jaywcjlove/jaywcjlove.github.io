@@ -55,8 +55,8 @@ export const routes: RouteObject[] = [
         lazy: () => import('./app/palette-genius'),
       },
       {
-        path: "/resume-maker",
-        lazy: () => import('./app/resume-maker'),
+        path: "/resume-revise",
+        lazy: () => import('./app/resume-revise'),
       }
     ],
   },

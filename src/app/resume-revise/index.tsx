@@ -2,21 +2,21 @@ import { FC, PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from '@uiw/react-head';
 import { Header } from '../comps/Header';
-import resumeMaker from './resume-maker.png'
+import resumeRevise from './resume-revise.png'
 import screenshots1 from './screenshots-1.png'
 import screenshots2 from './screenshots-2.png'
 import screenshots3 from './screenshots-3.png'
 import screenshots4 from './screenshots-4.png'
 
 export const Component: FC<PropsWithChildren> = () => {
-  const { t } = useTranslation('resume-maker');
+  const { t } = useTranslation('resume-revise');
   return (
     <Header background="#31467b">
-      <Head.Title>Resume Maker {t('detail')}</Head.Title>
-      <Head.Link rel="icon" type="image/png" href={resumeMaker} />
-      <Header.Title>Resume Maker</Header.Title>
+      <Head.Title>Resume Revise {t('detail')}</Head.Title>
+      <Head.Link rel="icon" type="image/png" href={resumeRevise} />
+      <Header.Title>Resume Revise</Header.Title>
       <Header.Logo>
-        <img src={resumeMaker} width={224} />
+        <img src={resumeRevise} width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
       <Header.AppStore to="/contact" />
