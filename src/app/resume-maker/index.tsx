@@ -2,34 +2,33 @@ import { FC, PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from '@uiw/react-head';
 import { Header } from '../comps/Header';
-import paletteGenius from './palette-genius.png'
+import resumeMaker from './resume-maker.png'
 import screenshots1 from './screenshots-1.png'
 import screenshots2 from './screenshots-2.png'
 import screenshots3 from './screenshots-3.png'
 import screenshots4 from './screenshots-4.png'
-import screenshots5 from './screenshots-5.png'
 
 export const Component: FC<PropsWithChildren> = () => {
-  const { t } = useTranslation('palette-genius');
+  const { t } = useTranslation('resume-maker');
   return (
-    <Header background="#741D71">
-      <Head.Title>PaletteGenius {t('detail')}</Head.Title>
-      <Head.Link rel="icon" type="image/png" href={paletteGenius} />
-      <Header.Title>PaletteGenius</Header.Title>
+    <Header background="#31467b">
+      <Head.Title>Resume Maker {t('detail')}</Head.Title>
+      <Head.Link rel="icon" type="image/png" href={resumeMaker} />
+      <Header.Title>Resume Maker</Header.Title>
       <Header.Logo>
-        <img src={paletteGenius} width={224} />
+        <img src={resumeMaker} width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
+      <Header.AppStore to="/contact" />
+      {/* <Header.AppStore target="_blank" to="https://apps.apple.com/app/symbolscribe/id6472593276" /> */}
       <Header.Giscus />
       <img src={screenshots1} />
       <img src={screenshots2} />
       <img src={screenshots3} />
       <img src={screenshots4} />
-      <img src={screenshots5} />
-      <p>{t('info')}</p>
-      <p>{t('info1')}</p>
+      <h2># {t('info1')}</h2>
       <p>{t('info2')}</p>
-      <p>{t('info3')}</p>
+      <h2># {t('info3')}</h2>
       <p>{t('info4')}</p>
     </Header>
   );

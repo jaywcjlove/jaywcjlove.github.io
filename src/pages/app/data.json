@@ -1,5 +1,10 @@
 [
   {
+    "name": "Resume Maker",
+    "icon": "/appicon/resume-maker.png",
+    "path": "/resume-maker"
+  },
+  {
     "name": "PaletteGenius",
     "icon": "/appicon/palette-genius.png",
     "path": "/palette-genius"
