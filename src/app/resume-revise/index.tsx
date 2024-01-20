@@ -19,6 +19,13 @@ export const Component: FC<PropsWithChildren> = () => {
       <Head.Meta name="twitter:title" content="Resume Revise" />
       <Head.Meta name="twitter:description" content={t('detail')} />
       <Head.Meta name="twitter:image" content={screenshots4} />
+      <Head.Meta name="twitter:image:src" content={screenshots4} />
+
+      <Head.Meta property="og:image" content={screenshots4} />
+      <Head.Meta property="og:image:alt" content={screenshots4} />
+      <Head.Meta property="og:title" content="Resume Revise" />
+      <Head.Meta property="og:description" content={t('detail')} />
+
       <Header.Title>Resume Revise</Header.Title>
       <Header.Logo>
         <img src={resumeRevise} width={224} />
