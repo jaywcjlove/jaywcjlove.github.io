@@ -14,6 +14,10 @@ export const Component: FC<PropsWithChildren> = () => {
     <Header background="#31467b">
       <Head.Title>Resume Revise {t('detail')}</Head.Title>
       <Head.Link rel="icon" type="image/png" href={resumeRevise} />
+      <Head.Meta name="twitter:creator" content="@jaywcjlove" />
+      <Head.Meta name="twitter:title" content="Resume Revise" />
+      <Head.Meta name="twitter:description" content={t('detail')} />
+      <Head.Meta name="twitter:image" content={screenshots4} />
       <Header.Title>Resume Revise</Header.Title>
       <Header.Logo>
         <img src={resumeRevise} width={224} />
