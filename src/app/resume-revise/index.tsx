@@ -19,8 +19,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <img src={resumeRevise} width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
-      <Header.AppStore to="/contact" />
-      {/* <Header.AppStore target="_blank" to="https://apps.apple.com/app/symbolscribe/id6472593276" /> */}
+      <Header.AppStore target="_blank" to="https://apps.apple.com/app/symbolscribe/id6476400184" />
       <Header.Giscus />
       <img src={screenshots1} />
       <img src={screenshots2} />
