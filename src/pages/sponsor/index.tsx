@@ -14,6 +14,9 @@ const SponsorWrapper = styled(Wrapper)`
   img + img {
     margin-left: 1rem;
   }
+  ul {
+    padding-left: 0.85em;
+  }
   @media (max-width: 590px) {
     img + img {
       margin-left: 0;
@@ -53,6 +56,11 @@ export const Component: FC<PropsWithChildren> = () => {
       <p>{t('sponsor.info2')}</p>
       <h2>{t('sponsor.supporters')}</h2>
       <p>{t('sponsor.thankful')}</p>
+      <div>
+        <a href="https://www.swifdoo.com/" data-sponsor="**怡" target="_blank">
+          <img src="/sponsor/SwifDooPDF.png" height={45} />
+        </a>
+      </div>
       <ul>
         <SubTitle>{t('sponsor.alipay')}</SubTitle>
         <li>*岩</li>
