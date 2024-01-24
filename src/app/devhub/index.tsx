@@ -30,7 +30,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <img src={devhub} width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
-      <Header.AppStore target="_blank" to="https://apps.apple.com/app/symbolscribe/id6476452351" />
+      <Header.AppStore target="_blank" to="https://apps.apple.com/app/devhub/id6476452351" />
       <Header.Giscus />
       <img src={screenshots1} />
       <img src={screenshots2} />
