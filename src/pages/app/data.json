@@ -1,5 +1,10 @@
 [
   {
+    "name": "DevHub",
+    "icon": "/appicon/devhub.png",
+    "path": "/devhub"
+  },
+  {
     "name": "Resume Revise",
     "icon": "/appicon/resume-revise.png",
     "path": "/resume-revise"
@@ -10,15 +15,15 @@
     "path": "/palette-genius"
   },
   {
+    "name": "Symbol Scribe",
+    "icon": "/appicon/symbol-scribe.png",
+    "path": "/symbol-scribe"
+  },
+  {
     "name": "HostsEditor",
     "icon": "/appicon/hosts-editor.png",
     "path": "/hosts-editor",
     "enabled": false
-  },
-  {
-    "name": "Symbol Scribe",
-    "icon": "/appicon/symbol-scribe.png",
-    "path": "/symbol-scribe"
   },
   {
     "name": "NPMD",

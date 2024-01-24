@@ -57,6 +57,10 @@ export const routes: RouteObject[] = [
       {
         path: "/resume-revise",
         lazy: () => import('./app/resume-revise'),
+      },
+      {
+        path: "/devhub",
+        lazy: () => import('./app/devhub'),
       }
     ],
   },
