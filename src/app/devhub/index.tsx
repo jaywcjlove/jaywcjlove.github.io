@@ -6,6 +6,9 @@ import devhub from './devhub.png'
 import screenshots1 from './screenshots-1.png'
 import screenshots2 from './screenshots-2.png'
 import screenshots3 from './screenshots-3.png'
+import screenshots4 from './screenshots-4.png'
+import screenshots5 from './screenshots-5.png'
+import screenshots6 from './screenshots-6.png'
 
 export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation('devhub');
@@ -37,6 +40,9 @@ export const Component: FC<PropsWithChildren> = () => {
       <p>{t('info1')}</p>
       <img src={screenshots3} />
       <p>{t('info2')}</p>
+      <img src={screenshots4} />
+      <img src={screenshots5} />
+      <img src={screenshots6} />
     </Header>
   );
 }
