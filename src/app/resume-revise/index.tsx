@@ -31,7 +31,8 @@ export const Component: FC<PropsWithChildren> = () => {
         <img src={resumeRevise} width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
-      <Header.AppStore target="_blank" to="https://apps.apple.com/app/symbolscribe/id6476400184" />
+      <Header.AppStore target="_blank" to="https://apps.apple.com/app/resumerevise/id6476400184" />
+      <Header.ProductHunt target="_blank" postId="436395" href="https://www.producthunt.com/posts/resume-revise?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-resume&#0045;revise" />
       <Header.Giscus />
       <img src={screenshots1} />
       <img src={screenshots2} />

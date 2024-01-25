@@ -63,6 +63,7 @@ export const Logo: FC<PropsWithChildren> = ({ children }) => {
 interface AppStoreProps extends Partial<LinkProps>, AnchorHTMLAttributes<HTMLAnchorElement> {
   keyName?: string;
 }
+
 export const AppStore: FC<PropsWithChildren<AppStoreProps>> = (props) => {
   const { children = <AppStoreIcon />, keyName = 'appStore', to, ...reset } = props;
   let Comp: React.ReactNode;
@@ -86,6 +87,19 @@ export const OpenSource: FC<PropsWithChildren<AppStoreProps>> = (props) => {
   return (
     <AppStore {...props} keyName="openSource">
       <OpenSourceIcon />
+    </AppStore>
+  );
+}
+
+interface ProductHuntProps extends Partial<LinkProps>, AnchorHTMLAttributes<HTMLAnchorElement> {
+  keyName?: string;
+  postId: string;
+}
+
+export const ProductHunt: FC<PropsWithChildren<ProductHuntProps>> = ({ postId, ...props}) => {
+  return (
+    <AppStore {...props} keyName="openSource">
+      <img src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${postId}&theme=dark`} height={51} />
     </AppStore>
   );
 }

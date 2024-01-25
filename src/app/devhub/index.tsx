@@ -14,11 +14,11 @@ export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation('devhub');
   return (
     <Header background="#31467b">
-      <Head.Title>Resume Revise</Head.Title>
+      <Head.Title>DevHub</Head.Title>
       <Head.Meta name="description" content={t('detail')} />
       <Head.Link rel="icon" type="image/png" href={devhub} />
       <Head.Meta name="twitter:creator" content="@jaywcjlove" />
-      <Head.Meta name="twitter:title" content="Resume Revise" />
+      <Head.Meta name="twitter:title" content="DevHub" />
       <Head.Meta name="twitter:description" content={t('detail')} />
       <Head.Meta name="twitter:image" content={screenshots1} />
       <Head.Meta name="twitter:image:src" content={screenshots1} />
@@ -34,6 +34,7 @@ export const Component: FC<PropsWithChildren> = () => {
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
       <Header.AppStore target="_blank" to="https://apps.apple.com/app/devhub/id6476452351" />
+      <Header.ProductHunt target="_blank" postId="436362" href="https://www.producthunt.com/posts/devhub-6?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-devhub&#0045;6" />
       <Header.Giscus />
       <img src={screenshots1} />
       <img src={screenshots2} />

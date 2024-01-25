@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import type { FC, PropsWithChildren } from 'react';
 import { Section, useStore } from './store';
-import { Title, AppStore, OpenSource, HeroWavesWrapper, Detail, Logo } from './Comps';
+import { Title, AppStore, ProductHunt, OpenSource, HeroWavesWrapper, Detail, Logo } from './Comps';
 import { Giscus, GiscusContent, } from './Giscus';
 
 interface HeaderProps {
@@ -95,6 +95,7 @@ type HeaderComponent = typeof InternalHeader & {
   Title: typeof Title;
   Detail: typeof Detail;
   AppStore: typeof AppStore;
+  ProductHunt: typeof ProductHunt;
   OpenSource: typeof OpenSource;
   Giscus: typeof Giscus;
 };
@@ -105,5 +106,6 @@ Header.Title = Title;
 Header.Logo = Logo;
 Header.Detail = Detail;
 Header.AppStore = AppStore;
+Header.ProductHunt = ProductHunt;
 Header.OpenSource = OpenSource;
 Header.Giscus = Giscus;
