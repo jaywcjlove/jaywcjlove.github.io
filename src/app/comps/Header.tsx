@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import type { FC, PropsWithChildren } from 'react';
 import { Section, useStore } from './store';
 import { Title, AppStore, ProductHunt, OpenSource, HeroWavesWrapper, Detail, Logo } from './Comps';
-import { Giscus, GiscusContent, } from './Giscus';
+import { Giscus, GiscusContent } from './Giscus';
 
 interface HeaderProps {
   background?: string;

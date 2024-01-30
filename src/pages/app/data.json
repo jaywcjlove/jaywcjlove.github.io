@@ -1,5 +1,10 @@
 [
   {
+    "name": "Create Custom Symbols",
+    "icon": "/appicon/create-custom-symbols.png",
+    "path": "/create-custom-symbols"
+  },
+  {
     "name": "DevHub",
     "icon": "/appicon/devhub.png",
     "path": "/devhub"

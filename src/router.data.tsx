@@ -61,6 +61,10 @@ export const routes: RouteObject[] = [
       {
         path: "/devhub",
         lazy: () => import('./app/devhub'),
+      },
+      {
+        path: "/create-custom-symbols",
+        lazy: () => import('./app/create-custom-symbols'),
       }
     ],
   },
