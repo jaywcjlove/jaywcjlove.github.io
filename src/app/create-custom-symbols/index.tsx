@@ -17,8 +17,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <img src={logo} width={224} />
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
-      {/* <Header.AppStore target="_blank" to="https://apps.apple.com/app/palettegenius/id6472593276" />
-      <Header.ProductHunt target="_blank" postId="430074" href="https://www.producthunt.com/posts/palettegenius?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-palettegenius" /> */}
+      <Header.AppStore target="_blank" to="https://apps.apple.com/app/create-custom-symbols/id6476924627" />
       <Header.Giscus />
       <img src={screenshots1} />
       <p>{t('info1')}</p>
