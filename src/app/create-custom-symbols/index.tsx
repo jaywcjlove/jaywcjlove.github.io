@@ -5,6 +5,7 @@ import { Header } from '../comps/Header';
 import logo from './logo.png'
 import screenshots1 from './screenshots-1.png'
 import screenshots2 from './screenshots-2.png'
+import screenshots3 from './screenshots-3.png'
 
 export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation('create-custom-symbols');
@@ -22,6 +23,7 @@ export const Component: FC<PropsWithChildren> = () => {
       <img src={screenshots1} />
       <p>{t('info1')}</p>
       <img src={screenshots2} />
+      <img src={screenshots3} />
     </Header>
   );
 }
