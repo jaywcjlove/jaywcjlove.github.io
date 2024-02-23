@@ -7,6 +7,7 @@ type InitialState = {
   detail?: React.ReactNode;
   appStore?: React.ReactNode;
   openSource?: React.ReactNode;
+  productHunt?: React.ReactNode;
   giscus?: React.ReactNode;
 }
 

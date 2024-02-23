@@ -74,7 +74,7 @@ const Box = styled.div`
 `;
 
 const Internal: FC<PropsWithChildren> = () => {
-  const { title, logo, detail, background, appStore, openSource } = useStore();
+  const { title, logo, detail, background, appStore, openSource, productHunt } = useStore();
   return (
     <Wrapper $bg={background}>
       <Content>
@@ -82,7 +82,7 @@ const Internal: FC<PropsWithChildren> = () => {
         {title}
         {detail}
         <Box>
-        {openSource}{appStore}
+        {openSource}{appStore}{productHunt}
         </Box>
       </Content>
       <HeroWavesWrapper />

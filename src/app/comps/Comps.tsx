@@ -98,7 +98,7 @@ interface ProductHuntProps extends Partial<LinkProps>, AnchorHTMLAttributes<HTML
 
 export const ProductHunt: FC<PropsWithChildren<ProductHuntProps>> = ({ postId, ...props}) => {
   return (
-    <AppStore {...props} keyName="openSource">
+    <AppStore {...props} keyName="productHunt">
       <img src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${postId}&theme=dark`} height={51} />
     </AppStore>
   );
