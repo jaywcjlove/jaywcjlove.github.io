@@ -34,6 +34,7 @@ export const Component: FC<PropsWithChildren> = () => {
       </Header.Logo>
       <Header.Detail>{t('detail')}</Header.Detail>
       <Header.AppStore target="_blank" to="https://apps.apple.com/app/devhub/id6476452351" />
+      <Header.OpenSource target="_blank" to="https://github.com/jaywcjlove/DevHub" />
       <Header.ProductHunt target="_blank" postId="436362" href="https://www.producthunt.com/posts/devhub-6?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-devhub&#0045;6" />
       <Header.Giscus />
       <img src={screenshots1} />
