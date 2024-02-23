@@ -118,6 +118,7 @@ export const ProgressWrapper = styled.div<{ $opacity: number; }>`
   transition-duration: 0.2s;
   position: absolute;
   z-index: 11;
+  width: 100%;
   left: -2px;
   right: -2px;
   .w-progress-bg {
