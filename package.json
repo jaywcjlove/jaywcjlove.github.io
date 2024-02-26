@@ -15,7 +15,7 @@
     "test": "kkt test"
   },
   "dependencies": {
-    "@giscus/react": "^2.3.0",
+    "@giscus/react": "^3.0.0",
     "@uiw/react-head": "^1.0.4",
     "@uiw/react-progress": "^4.22.3",
     "@wcj/dark-mode": "^1.0.15",
