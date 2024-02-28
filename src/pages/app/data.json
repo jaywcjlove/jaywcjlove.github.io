@@ -1,5 +1,10 @@
 [
   {
+    "name": "TextSound Saver",
+    "icon": "/appicon/textsound-saver.png",
+    "path": "/textsound-saver"
+  },
+  {
     "name": "Create Custom Symbols",
     "icon": "/appicon/create-custom-symbols.png",
     "path": "/create-custom-symbols"

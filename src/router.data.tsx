@@ -47,6 +47,10 @@ export const routes: RouteObject[] = [
         lazy: () => import('./app/symbol-scribe'),
       },
       {
+        path: "/textsound-saver",
+        lazy: () => import('./app/textsound-saver'),
+      },
+      {
         path: "/hosts-editor",
         lazy: () => import('./app/hosts-editor'),
       },
