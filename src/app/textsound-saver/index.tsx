@@ -12,6 +12,7 @@ export const Component: FC<PropsWithChildren> = () => {
     <Header background="#31467b">
       <Head.Title>TextSound Saver</Head.Title>
       <Head.Meta name="description" content={t('detail')} />
+      <Head.Meta name="123" http-equiv="refresh" content="0;url=https://wangchujiang.com/TextSoundSaver/" />
       <Head.Link rel="icon" type="image/png" href={logo} />
       <Head.Meta name="twitter:creator" content="@jaywcjlove" />
       <Head.Meta name="twitter:title" content="TextSound Saver" />
