@@ -1,5 +1,10 @@
 [
   {
+    "name": "Iconize Folder",
+    "icon": "/appicon/iconize-folder.png",
+    "path": "/iconize-folder"
+  },
+  {
     "name": "TextSound Saver",
     "icon": "/appicon/textsound-saver.png",
     "path": "/textsound-saver"
