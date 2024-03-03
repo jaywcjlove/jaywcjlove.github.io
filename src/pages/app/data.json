@@ -2,12 +2,12 @@
   {
     "name": "Iconize Folder",
     "icon": "/appicon/iconize-folder.png",
-    "path": "/iconize-folder"
+    "path": "https://wangchujiang.com/IconizeFolder/"
   },
   {
     "name": "TextSound Saver",
     "icon": "/appicon/textsound-saver.png",
-    "path": "/textsound-saver"
+    "path": "https://wangchujiang.com/TextSoundSaver/"
   },
   {
     "name": "Create Custom Symbols",
@@ -17,7 +17,7 @@
   {
     "name": "DevHub",
     "icon": "/appicon/devhub.png",
-    "path": "/devhub"
+    "path": "https://wangchujiang.com/DevHub/"
   },
   {
     "name": "Resume Revise",

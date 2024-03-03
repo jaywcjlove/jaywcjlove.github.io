@@ -1,6 +1,6 @@
-import { FC, PropsWithChildren } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Wrapper } from '../../comps/Layout';
 import data from './data.json';
@@ -12,7 +12,8 @@ const Content = styled.main`
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 1rem;
 `;
-const App = styled(Link)`
+
+const link = css`
   display: flex;
   gap: 0.54rem;
   padding: 0.65rem;
@@ -45,6 +46,10 @@ const App = styled(Link)`
   div {
     line-height: initial;
   }
+`
+
+const App = styled(Link)`
+  ${link}
 `;
 
 export const Component: FC<PropsWithChildren> = () => {
@@ -54,8 +59,12 @@ export const Component: FC<PropsWithChildren> = () => {
       <h1>{t('title')}</h1>
       <Content>
         {data.map((item, idx) => {
+          const isHttp = /^(https?:\/\/)?([\w.]+)\.([a-z]{2,})(\/\S*)?$/i.test(item.path)
+          const props = {
+            ...(isHttp ? { target: "_blank" } : {}),
+          }
           return (
-            <App key={idx} to={item.path}>
+            <App key={idx} to={item.path} {...props}>
               <img src={item.icon} />
               <section>
                 <h3>{item.name}</h3>
@@ -71,7 +80,6 @@ export const Component: FC<PropsWithChildren> = () => {
     </AppWrapper>
   );
 };
-
 
 const TagName = styled.span`
   font-size: 12px;
