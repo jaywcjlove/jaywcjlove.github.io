@@ -1,5 +1,10 @@
 [
   {
+    "name": "Life Countdown Time",
+    "icon": "/appicon/life-countdown-time.png",
+    "path": "https://wangchujiang.com/life-countdown-time/"
+  },
+  {
     "name": "Iconize Folder",
     "icon": "/appicon/iconize-folder.png",
     "path": "https://wangchujiang.com/IconizeFolder/"
