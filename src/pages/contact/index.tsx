@@ -53,8 +53,8 @@ export const Component: FC<PropsWithChildren> = () => {
   return (
     <Wrapper>
       <h1>{t('contact.title')}</h1>
-      <Mail href="mailto:wowohoo@qq.com">
-        wowohoo@qq.com
+      <Mail href="mailto:kennyiseeyou@gmail.com">
+        kennyiseeyou@gmail.com
       </Mail>
       <p>
         <Trans i18nKey="contact.info">
