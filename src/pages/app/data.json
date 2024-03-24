@@ -1,5 +1,10 @@
 [
   {
+    "name": "Regex Mate",
+    "icon": "/appicon/regex-mate.png",
+    "path": "https://wangchujiang.com/regex-mate/"
+  },
+  {
     "name": "Time Passage",
     "icon": "/appicon/time-passage.png",
     "path": "https://wangchujiang.com/time-passage/"
