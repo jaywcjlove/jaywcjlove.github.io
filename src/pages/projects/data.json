@@ -627,6 +627,11 @@
         "title": "swiftui-searchfield",
         "repos": "jaywcjlove/swiftui-searchfield",
         "children": "The search input box component can be placed in a non-specific location and is consistent with the default search input box style."
+      },
+      {
+        "title": "swiftui-texteditor",
+        "repos": "jaywcjlove/swiftui-texteditor",
+        "children": "An enhanced version similar to `TextEditor`, aimed at maintaining consistency in its usage across iOS and macOS platforms."
       }
     ]
   },
