@@ -502,6 +502,11 @@
         "title": "rehype-ignore",
         "repos": "jaywcjlove/rehype-ignore",
         "children": "Ignore content display via HTML comments, Shown in GitHub readme, excluded in HTML."
+      },
+      {
+        "title": "remark-github-blockquote-alert",
+        "repos": "jaywcjlove/remark-github-blockquote-alert",
+        "children": "Alerts are a Markdown extension based on the blockquote syntax that you can use to emphasize critical information."
       }
     ]
   },
