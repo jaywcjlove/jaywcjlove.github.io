@@ -69,9 +69,6 @@ export const Component: FC<PropsWithChildren> = () => {
               <section>
                 <h3>{item.name}</h3>
                 <p>{t(`${item.name}`)}</p>
-                <div>
-                  {item.enabled === false && <TagName>{t("enabled")}</TagName>}
-                </div>
               </section>
             </App>
           );
@@ -80,12 +77,3 @@ export const Component: FC<PropsWithChildren> = () => {
     </AppWrapper>
   );
 };
-
-const TagName = styled.span`
-  font-size: 12px;
-  background: var(--color-danger-fg);
-  border-radius: 3px;
-  color: var(--color-fg-default);
-  padding: 1px 2px 2px 2px;
-  line-height: 12px;
-`;

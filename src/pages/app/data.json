@@ -42,18 +42,6 @@
   {
     "name": "Symbol Scribe",
     "icon": "/appicon/symbol-scribe.png",
-    "path": "/symbol-scribe"
-  },
-  {
-    "name": "HostsEditor",
-    "icon": "/appicon/hosts-editor.png",
-    "path": "/hosts-editor",
-    "enabled": false
-  },
-  {
-    "name": "NPMD",
-    "icon": "/appicon/npmd.png",
-    "path": "/npmd",
-    "enabled": false
+    "path": "https://wangchujiang.com/symbol-scribe/"
   }
 ]
