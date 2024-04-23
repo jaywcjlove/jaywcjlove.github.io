@@ -1,5 +1,10 @@
 [
   {
+    "name": "DevTutor for SwiftUI",
+    "icon": "/appicon/devtutor.png",
+    "path": "https://wangchujiang.com/devtutor/"
+  },
+  {
     "name": "Regex Mate",
     "icon": "/appicon/regex-mate.png",
     "path": "https://wangchujiang.com/regex-mate/"
