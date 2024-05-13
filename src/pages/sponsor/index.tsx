@@ -46,6 +46,9 @@ export const Component: FC<PropsWithChildren> = () => {
       <a href="https://www.paypal.com/paypalme/kennyiseeyou" target="_blank">
         <PaypalIcon height={54} />
       </a>
+      <a target="_blank" href="https://ko-fi.com/N4N45BF3C">
+        <img src="https://ko-fi.com/img/githubbutton_sm.svg" />
+      </a>
       <a href="https://www.buymeacoffee.com/jaywcjlove" target="_blank">
         <BuyMeACoffeeIcon height={54} />
       </a>
