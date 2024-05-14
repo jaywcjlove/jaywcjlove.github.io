@@ -69,6 +69,8 @@ export const Component: FC<PropsWithChildren> = () => {
       </div>
       <ul>
         <SubTitle>{t('sponsor.alipay')}</SubTitle>
+        <li>**宣</li>
+        <li>**博</li>
         <li>*杰</li>
         <li>**龙</li>
         <li>**豪</li>
