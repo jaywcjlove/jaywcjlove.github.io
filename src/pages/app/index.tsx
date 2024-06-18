@@ -67,8 +67,8 @@ export const Component: FC<PropsWithChildren> = () => {
             <App key={idx} to={item.path} {...props}>
               <img src={item.icon} />
               <section>
-                <h3>{item.name}</h3>
-                <p>{t(`${item.name}`)}</p>
+                <h3>{t(`${item.name}`)}</h3>
+                <p>{t(`${item.name}_`)}</p>
               </section>
             </App>
           );

@@ -1,5 +1,10 @@
 [
   {
+    "name": "Copybook Generator",
+    "icon": "/appicon/copybook-generator.png",
+    "path": "https://wangchujiang.com/copybook-generator/"
+  },
+  {
     "name": "DevTutor for SwiftUI",
     "icon": "/appicon/devtutor.png",
     "path": "https://wangchujiang.com/devtutor/"
