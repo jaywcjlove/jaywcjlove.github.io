@@ -45,7 +45,7 @@ export const Component = () => {
         <a href="https://github.com/jaywcjlove" target="_blank">
           <GithubIcon />
         </a>
-        <a href="mailto:wowohoo@qq.com">
+        <a href="mailto:kennyiseeyou@gmail.com">
           <EMailIcon />
         </a>
       </section>
