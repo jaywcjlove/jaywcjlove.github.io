@@ -1,5 +1,10 @@
 [
   {
+    "name": "Quick RSS",
+    "icon": "/appicon/quick-rss.png",
+    "path": "https://wangchujiang.com/quick-rss/"
+  },
+  {
     "name": "Web Serve",
     "icon": "/appicon/web-serve.png",
     "path": "https://wangchujiang.com/web-serve/"
