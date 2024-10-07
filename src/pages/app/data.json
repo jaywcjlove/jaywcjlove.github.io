@@ -1,5 +1,10 @@
 [
   {
+    "name": "Paste Quick",
+    "icon": "/appicon/paste-quick.png",
+    "path": "https://wangchujiang.com/paste-quick/"
+  },
+  {
     "name": "Quick RSS",
     "icon": "/appicon/quick-rss.png",
     "path": "https://wangchujiang.com/quick-rss/"
