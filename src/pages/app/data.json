@@ -1,5 +1,10 @@
 [
   {
+    "name": "RightMenu Master",
+    "icon": "/appicon/rightmenu-master.png",
+    "path": "https://wangchujiang.com/rightmenu-master/"
+  },
+  {
     "name": "Paste Quick",
     "icon": "/appicon/paste-quick.png",
     "path": "https://wangchujiang.com/paste-quick/"
