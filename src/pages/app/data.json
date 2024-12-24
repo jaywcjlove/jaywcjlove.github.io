@@ -1,5 +1,10 @@
 [
   {
+    "name": "Iconed",
+    "icon": "/appicon/iconed.png",
+    "path": "https://wangchujiang.com/iconed/"
+  },
+  {
     "name": "RightMenu Master",
     "icon": "/appicon/rightmenu-master.png",
     "path": "https://wangchujiang.com/rightmenu-master/"
