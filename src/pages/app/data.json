@@ -1,5 +1,10 @@
 [
   {
+    "name": "DayBar",
+    "icon": "/appicon/daybar.png",
+    "path": "https://wangchujiang.com/daybar/"
+  },
+  {
     "name": "Iconed",
     "icon": "/appicon/iconed.png",
     "path": "https://wangchujiang.com/iconed/"
