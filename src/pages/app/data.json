@@ -1,5 +1,10 @@
 [
   {
+    "name": "KeyClicker",
+    "icon": "/appicon/key-clicker.png",
+    "path": "https://wangchujiang.com/key-clicker/"
+  },
+  {
     "name": "DayBar",
     "icon": "/appicon/daybar.png",
     "path": "https://wangchujiang.com/daybar/"
