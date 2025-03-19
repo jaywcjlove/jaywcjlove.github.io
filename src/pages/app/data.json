@@ -1,5 +1,10 @@
 [
   {
+    "name": "Videoer",
+    "icon": "/appicon/videoer.png",
+    "path": "https://wangchujiang.com/videoer/"
+  },
+  {
     "name": "KeyClicker",
     "icon": "/appicon/key-clicker.png",
     "path": "https://wangchujiang.com/key-clicker/"
