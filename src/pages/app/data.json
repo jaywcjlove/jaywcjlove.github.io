@@ -1,5 +1,10 @@
 [
   {
+    "name": "Focus Cursor",
+    "icon": "/appicon/focus-cursor.png",
+    "path": "https://wangchujiang.com/focus-cursor/"
+  },
+  {
     "name": "Videoer",
     "icon": "/appicon/videoer.png",
     "path": "https://wangchujiang.com/videoer/"
