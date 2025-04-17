@@ -1,5 +1,10 @@
 [
   {
+    "name": "File Sentinel",
+    "icon": "/appicon/file-sentinel.png",
+    "path": "https://wangchujiang.com/file-sentinel/"
+  },
+  {
     "name": "Focus Cursor",
     "icon": "/appicon/focus-cursor.png",
     "path": "https://wangchujiang.com/focus-cursor/"
