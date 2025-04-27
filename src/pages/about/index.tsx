@@ -26,6 +26,9 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwangchujiang.com&twgr=kettanaito&screen_name=jaywcjlove&twterm=follow" target="_blank">Twitter</a>
         </li>
         <li>
+          <a href="https://www.reddit.com/user/wcjiang/submitted/" target="_blank">Reddit</a>
+        </li>
+        <li>
           <a href="https://github.com/jaywcjlove" target="_blank">Github</a>
         </li>
         <li>
