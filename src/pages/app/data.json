@@ -1,5 +1,10 @@
 [
   {
+    "name": "Audioer",
+    "icon": "/appicon/audioer.png",
+    "path": "https://wangchujiang.com/audioer/"
+  },
+  {
     "name": "File Sentinel",
     "icon": "/appicon/file-sentinel.png",
     "path": "https://wangchujiang.com/file-sentinel/"
