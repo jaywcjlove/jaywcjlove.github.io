@@ -63,6 +63,20 @@ export const Component: FC<PropsWithChildren> = () => {
       <h2># {t('sponsor.supporters')}</h2>
       <p>{t('sponsor.thankful')}</p>
       <div>
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
+            <a href="https://www.warp.dev/awesome-mac" target="_blank">
+              <img src="/sponsor/warp-banner.png" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://warp.dev/awesome-mac"><b>Warp, the intelligent terminal for developers!</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://warp.dev/awesome-mac" style={{ fontSize: 12 }}>Available for MacOS, Linux, & Windows</a>
+          </div>
+        </div>
+        <br />
         <a href="https://www.swifdoo.com/" data-sponsor="**怡" target="_blank">
           <img src="/sponsor/SwifDooPDF.png" height={45} />
         </a>
