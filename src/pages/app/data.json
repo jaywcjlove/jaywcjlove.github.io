@@ -1,5 +1,10 @@
 [
   {
+    "name": "Musicer",
+    "icon": "/appicon/musicer.png",
+    "path": "https://wangchujiang.com/musicer/"
+  },
+  {
     "name": "Audioer",
     "icon": "/appicon/audioer.png",
     "path": "https://wangchujiang.com/audioer/"

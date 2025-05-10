@@ -23,5 +23,6 @@
   "Focus Cursor_": "Clearly highlight the cursor’s position, making its movement and clicks easy to follow.",
   "File Sentinel_": "Your terminal command history, monitored and searchable.",
   "Audioer_": "Batch conversion between over 20 types of audio files",
+  "Musicer_": "Mini local music player, lightweight and designed for local audio playback",
   "enabled": "not on App Store"
 }
