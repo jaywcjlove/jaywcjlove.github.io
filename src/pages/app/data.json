@@ -1,5 +1,10 @@
 [
   {
+    "name": "Mousio",
+    "icon": "/appicon/mousio.png",
+    "path": "https://wangchujiang.com/mousio/"
+  },
+  {
     "name": "Musicer",
     "icon": "/appicon/musicer.png",
     "path": "https://wangchujiang.com/musicer/"
