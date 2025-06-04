@@ -52,6 +52,12 @@ export const Component: FC<PropsWithChildren> = () => {
         <li>
           <a href="https://www.producthunt.com/@jaywcjlove" target="_blank">Product Hunt</a>
         </li>
+        <li>
+          <a href="https://www.instagram.com/wangchujiang/" target="_blank">Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.threads.com/@wangchujiang" target="_blank">Threads</a>
+        </li>
       </ul>
     </Wrapper>
   );
