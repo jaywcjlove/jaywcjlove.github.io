@@ -32,7 +32,7 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://peerlist.io/jiang" target="_blank">Peerlist</a>
         </li>
         <li>
-          <a href="https://bsky.app/profile/kennyiseeyou.bsky.social" target="_blank">Bluesky</a>
+          <a href="https://bsky.app/profile/wangchujiang.com" target="_blank">Bluesky</a>
         </li>
         <li>
           <a href="https://github.com/jaywcjlove" target="_blank">Github</a>
