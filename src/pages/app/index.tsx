@@ -36,7 +36,8 @@ const link = css`
   h3 {
     line-height: 1.34rem;
     padding-top: 0.45rem;
-    margin-bottom: 0.52rem;
+    margin-bottom: 0.22rem;
+    font-size: 1.17rem;
   }
   p {
     font-size: 14px;
@@ -50,6 +51,20 @@ const link = css`
 
 const App = styled(Link)`
   ${link}
+  section {
+    position: relative;
+    width: 100%;
+  }
+  sup {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: 10px;
+    line-height: 1;
+    background-color: rgba(var(--color-rgb) / 12%);
+    border-radius: 3px;
+    padding: 1px 3px;
+  }
 `;
 
 export const Component: FC<PropsWithChildren> = () => {
@@ -67,6 +82,7 @@ export const Component: FC<PropsWithChildren> = () => {
             <App key={idx} to={item.path} {...props}>
               <img src={item.icon} />
               <section>
+                <sup>{item.platform}</sup>
                 <h3>{t(`${item.name}`)}</h3>
                 <p>{t(`${item.name}_`)}</p>
               </section>

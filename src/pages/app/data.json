@@ -1,121 +1,151 @@
 [
   {
+    "name": "Mousio Hint",
+    "platform": "macOS",
+    "icon": "/appicon/mousio-hint.png",
+    "path": "https://wangchujiang.com/mousio-hint/"
+  },
+  {
     "name": "Mousio",
+    "platform": "macOS",
     "icon": "/appicon/mousio.png",
     "path": "https://wangchujiang.com/mousio/"
   },
   {
     "name": "Musicer",
+    "platform": "macOS",
     "icon": "/appicon/musicer.png",
     "path": "https://wangchujiang.com/musicer/"
   },
   {
     "name": "Audioer",
+    "platform": "macOS",
     "icon": "/appicon/audioer.png",
     "path": "https://wangchujiang.com/audioer/"
   },
   {
     "name": "File Sentinel",
+    "platform": "macOS",
     "icon": "/appicon/file-sentinel.png",
     "path": "https://wangchujiang.com/file-sentinel/"
   },
   {
     "name": "Focus Cursor",
+    "platform": "macOS",
     "icon": "/appicon/focus-cursor.png",
     "path": "https://wangchujiang.com/focus-cursor/"
   },
   {
     "name": "Videoer",
+    "platform": "macOS",
     "icon": "/appicon/videoer.png",
     "path": "https://wangchujiang.com/videoer/"
   },
   {
     "name": "KeyClicker",
+    "platform": "macOS",
     "icon": "/appicon/key-clicker.png",
     "path": "https://wangchujiang.com/key-clicker/"
   },
   {
     "name": "DayBar",
+    "platform": "macOS",
     "icon": "/appicon/daybar.png",
     "path": "https://wangchujiang.com/daybar/"
   },
   {
     "name": "Iconed",
+    "platform": "macOS",
     "icon": "/appicon/iconed.png",
     "path": "https://wangchujiang.com/iconed/"
   },
   {
     "name": "RightMenu Master",
+    "platform": "macOS",
     "icon": "/appicon/rightmenu-master.png",
     "path": "https://wangchujiang.com/rightmenu-master/"
   },
   {
     "name": "Paste Quick",
+    "platform": "macOS",
     "icon": "/appicon/paste-quick.png",
     "path": "https://wangchujiang.com/paste-quick/"
   },
   {
     "name": "Quick RSS",
+    "platform": "macOS",
     "icon": "/appicon/quick-rss.png",
     "path": "https://wangchujiang.com/quick-rss/"
   },
   {
     "name": "Web Serve",
+    "platform": "macOS",
     "icon": "/appicon/web-serve.png",
     "path": "https://wangchujiang.com/web-serve/"
   },
   {
     "name": "Copybook Generator",
+    "platform": "macOS",
     "icon": "/appicon/copybook-generator.png",
     "path": "https://wangchujiang.com/copybook-generator/"
   },
   {
     "name": "DevTutor for SwiftUI",
     "icon": "/appicon/devtutor.png",
+    "platform": "macOS/iOS",
     "path": "https://wangchujiang.com/devtutor/"
   },
   {
     "name": "Regex Mate",
+    "platform": "macOS/iOS",
     "icon": "/appicon/regex-mate.png",
     "path": "https://wangchujiang.com/regex-mate/"
   },
   {
     "name": "Time Passage",
+    "platform": "macOS/iOS",
     "icon": "/appicon/time-passage.png",
     "path": "https://wangchujiang.com/time-passage/"
   },
   {
     "name": "Iconize Folder",
+    "platform": "macOS",
     "icon": "/appicon/iconize-folder.png",
     "path": "https://wangchujiang.com/IconizeFolder/"
   },
   {
     "name": "TextSound Saver",
+    "platform": "macOS/iOS",
     "icon": "/appicon/textsound-saver.png",
     "path": "https://wangchujiang.com/TextSoundSaver/"
   },
   {
     "name": "Create Custom Symbols",
+    "platform": "macOS",
     "icon": "/appicon/create-custom-symbols.png",
     "path": "https://wangchujiang.com/create-custom-symbols/"
   },
   {
     "name": "DevHub",
+    "platform": "macOS",
     "icon": "/appicon/devhub.png",
     "path": "https://wangchujiang.com/DevHub/"
   },
   {
     "name": "Resume Revise",
+    "platform": "macOS",
     "icon": "/appicon/resume-revise.png",
     "path": "https://wangchujiang.com/ResumeRevise/"
   },
   {
     "name": "PaletteGenius",
+    "platform": "macOS",
     "icon": "/appicon/palette-genius.png",
     "path": "https://wangchujiang.com/palette-genius/"
   },
   {
     "name": "Symbol Scribe",
+    "platform": "macOS",
     "icon": "/appicon/symbol-scribe.png",
     "path": "https://wangchujiang.com/symbol-scribe/"
   }
