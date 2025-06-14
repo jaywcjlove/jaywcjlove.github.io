@@ -58,6 +58,9 @@ export const Component: FC<PropsWithChildren> = () => {
         <li>
           <a href="https://www.threads.com/@wangchujiang" target="_blank">Threads</a>
         </li>
+        <li>
+          <a href="https://mastodon.social/@jaywcjlove" target="_blank">Mastodon</a>
+        </li>
       </ul>
     </Wrapper>
   );
