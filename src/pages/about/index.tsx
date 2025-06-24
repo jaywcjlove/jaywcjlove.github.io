@@ -14,6 +14,7 @@ import { ReactComponent as ProducthuntIcon } from '../../assets/producthunt.svg'
 import { ReactComponent as InstagramIcon } from '../../assets/instagram.svg';
 import { ReactComponent as ThreadsIcon } from '../../assets/threads.svg';
 import { ReactComponent as MastodonIcon } from '../../assets/mastodon.svg';
+import { ReactComponent as SubstackIcon } from '../../assets/substack.svg';
 import styled, { css } from 'styled-components';
 
 
@@ -71,15 +72,33 @@ export const Component: FC<PropsWithChildren> = () => {
           </a>
         </li>
         <li>
+          <a href="https://peerlist.io/jiang" target="_blank">
+            <PeerlistIcon />
+            Peerlist
+          </a>
+        </li>
+        <li>
           <a href="https://bsky.app/profile/wangchujiang.com" target="_blank">
             <BlueskyIcon />
             Bluesky
           </a>
         </li>
         <li>
-          <a href="https://peerlist.io/jiang" target="_blank">
-            <PeerlistIcon />
-            Peerlist
+          <a href="https://jaywcjlove.substack.com" target="_blank">
+            <SubstackIcon />
+            Substack
+          </a>
+        </li>
+        <li>
+          <a href="https://www.threads.com/@wangchujiang" target="_blank">
+            <ThreadsIcon />
+            Threads
+          </a>
+        </li>
+        <li>
+          <a href="https://mastodon.social/@jaywcjlove" target="_blank">
+            <MastodonIcon />
+            Mastodon
           </a>
         </li>
         <li>
@@ -116,18 +135,6 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://www.instagram.com/wangchujiang/" target="_blank">
             <InstagramIcon />
             Instagram
-          </a>
-        </li>
-        <li>
-          <a href="https://www.threads.com/@wangchujiang" target="_blank">
-            <ThreadsIcon />
-            Threads
-          </a>
-        </li>
-        <li>
-          <a href="https://mastodon.social/@jaywcjlove" target="_blank">
-            <MastodonIcon />
-            Mastodon
           </a>
         </li>
       </List>
