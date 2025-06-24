@@ -1,5 +1,11 @@
 [
   {
+    "name": "Vidwall",
+    "platform": "macOS",
+    "icon": "/appicon/vidwall.png",
+    "path": "https://wangchujiang.com/vidwall/"
+  },
+  {
     "name": "Mousio Hint",
     "platform": "macOS",
     "icon": "/appicon/mousio-hint.png",
