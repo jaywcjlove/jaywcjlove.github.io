@@ -15,6 +15,7 @@ import { ReactComponent as InstagramIcon } from '../../assets/instagram.svg';
 import { ReactComponent as ThreadsIcon } from '../../assets/threads.svg';
 import { ReactComponent as MastodonIcon } from '../../assets/mastodon.svg';
 import { ReactComponent as SubstackIcon } from '../../assets/substack.svg';
+import { ReactComponent as LaunchigniterIcon } from '../../assets/launchigniter.svg';
 import styled, { css } from 'styled-components';
 
 
@@ -123,6 +124,12 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://hub.docker.com/u/wcjiang" target="_blank">
             <DockerIcon />
             Docker Hub
+          </a>
+        </li>
+        <li>
+          <a href="https://launchigniter.com/user/kennyiseeyou" target="_blank">
+            <LaunchigniterIcon />
+            LaunchIgniter
           </a>
         </li>
         <li>
