@@ -133,7 +133,7 @@ export const Component: FC<PropsWithChildren> = () => {
           </a>
         </li>
         <li>
-          <a href="https://www.producthunt.com/@jaywcjlove" target="_blank">
+          <a href="https://www.producthunt.com/@jaywcjlove/submitted" target="_blank">
             <ProducthuntIcon />
             Product Hunt
           </a>
