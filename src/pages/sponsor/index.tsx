@@ -84,7 +84,10 @@ export const Component: FC<PropsWithChildren> = () => {
             </a>
           </div>
           <div>
-            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank"><b>ZenQuery: Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</b></a>
+            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank"><b>ZenQuery</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank" style={{ fontSize: 12 }}>Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
           </div>
         </div>
         <br />
