@@ -65,7 +65,7 @@ export const Component: FC<PropsWithChildren> = () => {
       <div>
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
-            <a href="https://www.warp.dev/awesome-mac" target="_blank">
+            <a href="https://warp.dev/awesome-mac" target="_blank">
               <img src="/sponsor/warp-banner.png" width="250" />
             </a>
           </div>
@@ -73,14 +73,26 @@ export const Component: FC<PropsWithChildren> = () => {
             <a href="https://warp.dev/awesome-mac"><b>Warp, the intelligent terminal for developers!</b></a>
           </div>
           <div style={{ lineHeight: '1rem' }}>
-            <a href="https://warp.dev/awesome-mac" style={{ fontSize: 12 }}>Available for MacOS, Linux, & Windows</a>
+            <a href="https://warp.dev/awesome-mac" target="_blank" style={{ fontSize: 12 }}>Available for MacOS, Linux, & Windows</a>
+          </div>
+        </div>
+
+        <div style={{ lineHeight: '1.5rem', padding: '1rem 0' }}>
+          <div>
+            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank">
+              <img src="/sponsor/zenquery.png" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank"><b>ZenQuery: Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</b></a>
           </div>
         </div>
         <br />
-        <a href="https://www.swifdoo.com/" data-sponsor="**怡" target="_blank">
+        <a href="https://www.swifdoo.com/" target="_blank">
           <img src="/sponsor/SwifDooPDF.png" height={45} />
         </a>
       </div>
+
       <ul>
         <SubTitle>{t('sponsor.alipay')}</SubTitle>
         <li>*源</li>
