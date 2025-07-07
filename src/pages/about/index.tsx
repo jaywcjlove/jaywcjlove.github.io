@@ -16,6 +16,7 @@ import { ReactComponent as ThreadsIcon } from '../../assets/threads.svg';
 import { ReactComponent as MastodonIcon } from '../../assets/mastodon.svg';
 import { ReactComponent as SubstackIcon } from '../../assets/substack.svg';
 import { ReactComponent as LaunchigniterIcon } from '../../assets/launchigniter.svg';
+import { ReactComponent as DevhuntIcon } from '../../assets/devhunt.svg';
 import styled, { css } from 'styled-components';
 
 
@@ -142,6 +143,12 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://www.instagram.com/wangchujiang/" target="_blank">
             <InstagramIcon />
             Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://devhunt.org/@jaywcjlove" target="_blank">
+            <DevhuntIcon />
+            DevHunt
           </a>
         </li>
       </List>
