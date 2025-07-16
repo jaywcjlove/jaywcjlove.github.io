@@ -17,6 +17,7 @@ import { ReactComponent as MastodonIcon } from '../../assets/mastodon.svg';
 import { ReactComponent as SubstackIcon } from '../../assets/substack.svg';
 import { ReactComponent as LaunchigniterIcon } from '../../assets/launchigniter.svg';
 import { ReactComponent as DevhuntIcon } from '../../assets/devhunt.svg';
+import { ReactComponent as UneedIcon } from '../../assets/uneed.svg';
 import styled, { css } from 'styled-components';
 
 
@@ -80,9 +81,9 @@ export const Component: FC<PropsWithChildren> = () => {
           </a>
         </li>
         <li>
-          <a href="https://bsky.app/profile/wangchujiang.com" target="_blank">
-            <BlueskyIcon />
-            Bluesky
+          <a href="https://www.threads.com/@wangchujiang" target="_blank">
+            <ThreadsIcon />
+            Threads
           </a>
         </li>
         <li>
@@ -92,9 +93,9 @@ export const Component: FC<PropsWithChildren> = () => {
           </a>
         </li>
         <li>
-          <a href="https://www.threads.com/@wangchujiang" target="_blank">
-            <ThreadsIcon />
-            Threads
+          <a href="https://bsky.app/profile/wangchujiang.com" target="_blank">
+            <BlueskyIcon />
+            Bluesky
           </a>
         </li>
         <li>
@@ -107,6 +108,12 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://weibo.com/pc175" target="_blank">
             <WeiboIcon />
             微博
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/wangchujiang/" target="_blank">
+            <InstagramIcon />
+            Instagram
           </a>
         </li>
         <li>
@@ -128,21 +135,21 @@ export const Component: FC<PropsWithChildren> = () => {
           </a>
         </li>
         <li>
-          <a href="https://launchigniter.com/user/kennyiseeyou" target="_blank">
-            <LaunchigniterIcon />
-            LaunchIgniter
-          </a>
-        </li>
-        <li>
           <a href="https://www.producthunt.com/@jaywcjlove/submitted" target="_blank">
             <ProducthuntIcon />
             Product Hunt
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/wangchujiang/" target="_blank">
-            <InstagramIcon />
-            Instagram
+          <a href="https://launchigniter.com/user/kennyiseeyou/products" target="_blank">
+            <LaunchigniterIcon />
+            LaunchIgniter
+          </a>
+        </li>
+        <li>
+          <a href="https://www.uneed.best/profile/kenny-wang" target="_blank">
+            <UneedIcon />
+            Uneed
           </a>
         </li>
         <li>
