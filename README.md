@@ -32,4 +32,8 @@ October 2023
     <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac"><b>ZenQuery</b></a><br/>
     <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac">Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
     <br/><br/>
+    <a href="https://www.swifdoo.com/" target="_blank">
+        <img src="https://jaywcjlove.github.io/sponsor/SwifDooPDF.png" height="45">
+    </a>
+    <br/><br/>
 </div>
