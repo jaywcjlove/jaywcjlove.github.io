@@ -9,3 +9,29 @@ For nearly 10 years, I have been contributing to the open source community, with
 I love open source and still have a passion for the work I do. Keep going!
 
 October 2023
+
+<br/><br/>
+<br/><br/>
+<div align="center" markdown="1">
+    <h3><a href="https://wangchujiang.com/#/sponsor">Supporters</a></h3>
+    <p>I’m forever thankful to these people</p>
+    <br>
+    <sup>Special thanks to:</sup>
+    <br>
+    <br>
+    <a href="https://www.warp.dev/awesome-mac">
+        <img alt="Warp sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/warp-banner.png">
+    </a>
+    <br>
+    <a href="https://warp.dev/awesome-mac"><b>Warp, the intelligent terminal for developers!</b></a><br>
+    <a href="https://warp.dev/awesome-mac">Available for MacOS, Linux, & Windows</a><br><br>
+
+    <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac">
+        <img alt="Zenquery sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/zenquery.png">
+    </a>
+    <br>
+    <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac"><b>ZenQuery</b></a><br>
+    <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac">Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
+    
+    <br><br>
+</div>
