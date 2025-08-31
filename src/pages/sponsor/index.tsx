@@ -77,7 +77,7 @@ export const Component: FC<PropsWithChildren> = () => {
           </div>
         </div>
 
-        <div style={{ lineHeight: '1.5rem', padding: '1rem 0' }}>
+        <div style={{ lineHeight: '1.5rem', paddingTop: "1rem" }}>
           <div>
             <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank">
               <img src="/sponsor/zenquery.png" width="250" />
@@ -90,6 +90,21 @@ export const Component: FC<PropsWithChildren> = () => {
             <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank" style={{ fontSize: 12 }}>Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
           </div>
         </div>
+
+        <div style={{ lineHeight: '1.5rem', paddingTop: "1rem" }}>
+          <div>
+            <a href="https://tuple.app/awesome-mac" target="_blank">
+              <img src="/sponsor/tuple.app.png" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://tuple.app/awesome-mac" target="_blank"><b>Tuple</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://tuple.app/awesome-mac" target="_blank" style={{ fontSize: 12 }}>Tuple, the premier screen sharing app for developers on macOS and Windows.</a>
+          </div>
+        </div>
+
         <br />
         <a href="https://www.swifdoo.com/" target="_blank">
           <img src="/sponsor/SwifDooPDF.png" height={45} />
