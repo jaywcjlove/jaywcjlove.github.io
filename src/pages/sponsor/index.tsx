@@ -164,6 +164,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <li>鱼先森是个...</li>
         <li>Kevin®</li>
         <SubTitle>{t('sponsor.buymeacoffee')}</SubTitle>
+        <li>Caine Brian</li>
         <li>Tyler Eason</li>
         <li>@basketball_gm</li>
         <li>Observed Observer</li>
