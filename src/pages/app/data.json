@@ -1,5 +1,11 @@
 [
   {
+    "name": "Vidwall Hub",
+    "platform": "macOS",
+    "icon": "/appicon/vidwall-hub.png",
+    "path": "https://wangchujiang.com/vidwall-hub/"
+  },
+  {
     "name": "VidCrop",
     "platform": "macOS",
     "icon": "/appicon/vidcrop.png",
