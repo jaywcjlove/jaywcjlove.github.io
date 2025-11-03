@@ -1,5 +1,11 @@
 [
   {
+    "name": "Keyzer",
+    "platform": "macOS",
+    "icon": "/appicon/keyzer.png",
+    "path": "https://wangchujiang.com/keyzer/"
+  },
+  {
     "name": "Vidwall Hub",
     "platform": "macOS",
     "icon": "/appicon/vidwall-hub.png",
