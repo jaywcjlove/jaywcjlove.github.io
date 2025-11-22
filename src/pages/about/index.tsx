@@ -18,6 +18,7 @@ import { ReactComponent as SubstackIcon } from '../../assets/substack.svg';
 import { ReactComponent as LaunchigniterIcon } from '../../assets/launchigniter.svg';
 import { ReactComponent as DevhuntIcon } from '../../assets/devhunt.svg';
 import { ReactComponent as UneedIcon } from '../../assets/uneed.svg';
+import { ReactComponent as YoutubeIcon } from '../../assets/youtube.svg';
 import OpenhuntsIcon from '../../assets/openhunts.png';
 import styled, { css } from 'styled-components';
 
@@ -163,6 +164,12 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://devhunt.org/@jaywcjlove" target="_blank">
             <DevhuntIcon />
             DevHunt
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@jaywcjlove" target="_blank">
+            <YoutubeIcon />
+            YouTube
           </a>
         </li>
       </List>
