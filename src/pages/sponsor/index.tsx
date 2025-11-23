@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Wrapper } from '../../comps/Layout';
 import { ReactComponent as PaypalIcon} from './paypal-color.svg';
 import { ReactComponent as BuyMeACoffeeIcon} from './bmc-full-logo.svg';
+import { ReactComponent as KoFiIcon} from './ko-fi.svg';
 
 import afdian from './afdian.png'
 
@@ -47,10 +48,10 @@ export const Component: FC<PropsWithChildren> = () => {
         <PaypalIcon height={54} />
       </a>
       <a target="_blank" href="https://ko-fi.com/N4N45BF3C">
-        <img src="https://ko-fi.com/img/githubbutton_sm.svg" />
+        <KoFiIcon height={34} />
       </a>
       <a href="https://www.buymeacoffee.com/jaywcjlove" target="_blank">
-        <BuyMeACoffeeIcon height={54} />
+        <BuyMeACoffeeIcon height={32} />
       </a>
       <p>
         <img src="/sponsor-alipay.jpg" width="250" />
