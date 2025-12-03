@@ -1,5 +1,11 @@
 [
   {
+    "name": "Deskmark",
+    "platform": "macOS",
+    "icon": "/appicon/deskmark.png",
+    "path": "https://wangchujiang.com/deskmark/"
+  },
+  {
     "name": "Keyzer",
     "platform": "macOS",
     "icon": "/appicon/keyzer.png",
