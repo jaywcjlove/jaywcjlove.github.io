@@ -1,5 +1,11 @@
 [
   {
+    "name": "Screen Test",
+    "platform": "macOS",
+    "icon": "/appicon/screen-test.png",
+    "path": "https://wangchujiang.com/screen-test/"
+  },
+  {
     "name": "Deskmark",
     "platform": "macOS",
     "icon": "/appicon/deskmark.png",
