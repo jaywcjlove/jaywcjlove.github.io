@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import { Wrapper } from '../../comps/Layout';
 import data from './data.json';
 
-const AppWrapper = styled(Wrapper)``;
+export const AppWrapper = styled(Wrapper)`
+  padding: 5rem 0 8rem 0;
+`;
 
-const Content = styled.main`
+export const AppContent = styled.main`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
@@ -49,7 +51,7 @@ const link = css`
   }
 `
 
-const App = styled(Link)`
+export const App = styled(Link)`
   ${link}
   section {
     position: relative;
@@ -72,7 +74,7 @@ export const Component: FC<PropsWithChildren> = () => {
   return (
     <AppWrapper>
       <h1>{t('title')}</h1>
-      <Content>
+      <AppContent>
         {data.map((item, idx) => {
           const isHttp = /^(https?:\/\/)?([\w.]+)\.([a-z]{2,})(\/\S*)?$/i.test(item.path)
           const props = {
@@ -89,7 +91,7 @@ export const Component: FC<PropsWithChildren> = () => {
             </App>
           );
         })}
-      </Content>
+      </AppContent>
     </AppWrapper>
   );
 };

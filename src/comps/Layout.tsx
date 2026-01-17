@@ -13,9 +13,7 @@ import { Footer } from './Footer';
 
 export const Wrapper = styled.div`
   max-width: 68rem;
-  min-height: inherit;
   margin: 0 auto;
-  padding: 4rem 2rem 10rem 2rem;
   @media (max-width: 590px) {
     padding-top: 1rem;
     padding-bottom: 1rem;
