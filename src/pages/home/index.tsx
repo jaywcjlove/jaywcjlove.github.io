@@ -37,6 +37,7 @@ const HomeHeaderWrapper = styled(Wrapper)`
 
 export const Component = () => {
   const { t } = useTranslation();
+  const { t: tapp } = useTranslation('app');
   return (
     <>
       <HomeHeaderWrapper>
@@ -72,8 +73,8 @@ export const Component = () => {
                 <img src={item.icon} />
                 <section>
                   <sup>{item.platform}</sup>
-                  <h3>{t(`${item.name}`)}</h3>
-                  <p>{t(`${item.name}_`)}</p>
+                  <h3>{tapp(`${item.name}`)}</h3>
+                  <p>{tapp(`${item.name}_`)}</p>
                 </section>
               </App>
             );
