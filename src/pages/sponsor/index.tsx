@@ -9,6 +9,8 @@ import { ReactComponent as KoFiIcon} from './ko-fi.svg';
 import afdian from './afdian.png'
 
 const SponsorWrapper = styled(Wrapper)`
+  padding: 5rem 0 8rem 0;
+  max-width: 45rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

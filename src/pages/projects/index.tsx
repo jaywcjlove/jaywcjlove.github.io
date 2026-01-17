@@ -6,6 +6,7 @@ import {  ArticleCard } from './Card';
 import data from './data.json';
 
 const BoxWrapper = styled(Wrapper)`
+  padding: 5rem 0 8rem 0;
   h2, > p {
     padding-left: 0.53rem;
   }

@@ -38,10 +38,15 @@ const List = styled.ul`
   }
 `;
 
+export const WrapperAbout = styled(Wrapper)`
+  padding: 5rem 0 8rem 0;
+  max-width: 45rem;
+`;
+
 export const Component: FC<PropsWithChildren> = () => {
   const { t } = useTranslation();
   return (
-    <Wrapper>
+    <WrapperAbout>
       <h1>{t('about.title')}</h1>
       <p>{t('about.info')}</p>
       <p>
@@ -107,15 +112,15 @@ export const Component: FC<PropsWithChildren> = () => {
           </a>
         </li>
         <li>
-          <a href="https://weibo.com/pc175" target="_blank">
-            <WeiboIcon />
-            微博
-          </a>
-        </li>
-        <li>
           <a href="https://www.instagram.com/wangchujiang/" target="_blank">
             <InstagramIcon />
             Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://weibo.com/pc175" target="_blank">
+            <WeiboIcon />
+            微博
           </a>
         </li>
         <li>
@@ -173,6 +178,6 @@ export const Component: FC<PropsWithChildren> = () => {
           </a>
         </li>
       </List>
-    </Wrapper>
+    </WrapperAbout>
   );
 };
