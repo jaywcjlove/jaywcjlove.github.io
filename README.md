@@ -19,24 +19,38 @@ October 2023
     <sup>Special thanks to:</sup>
     <br/>
     <br/>
-    <a href="https://www.warp.dev/awesome-mac">
-        <img alt="Warp sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/warp-banner.png">
-    </a>
-    <br/>
-    <a href="https://warp.dev/awesome-mac"><b>Warp, the intelligent terminal for developers!</b></a><br/>
-    <a href="https://warp.dev/awesome-mac">Available for MacOS, Linux, & Windows</a><br/><br/>
-    <a href="https://tuple.app/awesome-mac">
-        <img alt="Zenquery sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/tuple.app.png">
-    </a>
-    <br/>
-    <a href="https://tuple.app/awesome-mac">Tuple, the premier screen sharing app for developers on macOS and Windows.</a><br/><br/>
-    <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac">
-        <img alt="Zenquery sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/zenquery.png">
-    </a>
-    <br/>
-    <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac"><b>ZenQuery</b></a><br/>
-    <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac">Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
-    <br/><br/>
+    <div>
+        <a href="https://www.warp.dev/awesome-mac">
+            <img alt="Warp sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/warp-banner.png">
+        </a>
+        <br/>
+        <a href="https://warp.dev/awesome-mac"><b>Warp, the intelligent terminal for developers!</b></a><br/>
+        <a href="https://warp.dev/awesome-mac">Available for MacOS, Linux, & Windows</a><br/><br/>
+    </div>
+    <div>
+        <a href="https://tuple.app/awesome-mac">
+            <img alt="Zenquery sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/tuple.app.png">
+        </a>
+        <br/>
+        <a href="https://tuple.app/awesome-mac">Tuple, the premier screen sharing app for developers on macOS and Windows.</a><br/><br/>
+    </div>
+    <div>
+        <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac">
+            <img alt="Zenquery sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/zenquery.png">
+        </a>
+        <br/>
+        <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac"><b>ZenQuery</b>, Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
+        <br/><br/>
+    </div>
+    <div>
+        <a href="https://pawakalabs.com/products/fakey/">
+            <img alt="Zenquery sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/fakey.png">
+        </a>
+        <br/>
+        <a href="https://pawakalabs.com/products/fakey/"><b>Fakey - Manga Translator</b></a><br/>
+        <a href="https://pawakalabs.com/products/fakey/">Available for Android, iOS and browser extension</a>
+        <br/><br/>
+    </div>
     <a href="https://www.swifdoo.com/" target="_blank">
         <img src="https://jaywcjlove.github.io/sponsor/SwifDooPDF.png" height="45">
     </a>
