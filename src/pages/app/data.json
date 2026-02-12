@@ -1,5 +1,11 @@
 [
   {
+    "name": "Scap",
+    "platform": "macOS",
+    "icon": "/appicon/scap.png",
+    "path": "https://wangchujiang.com/scap/"
+  },
+  {
     "name": "Screen Test",
     "platform": "macOS",
     "icon": "/appicon/screen-test.png",
