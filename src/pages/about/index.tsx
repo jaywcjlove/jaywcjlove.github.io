@@ -20,6 +20,7 @@ import { ReactComponent as DevhuntIcon } from '../../assets/devhunt.svg';
 import { ReactComponent as UneedIcon } from '../../assets/uneed.svg';
 import { ReactComponent as YoutubeIcon } from '../../assets/youtube.svg';
 import OpenhuntsIcon from '../../assets/openhunts.png';
+import GreenrocketIcon from '../../assets/greenrocket.png';
 import styled, { css } from 'styled-components';
 
 
@@ -151,6 +152,12 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://openhunts.com/profile/kenny-wang" target="_blank">
             <img src={OpenhuntsIcon} alt="Open Hunts" style={{ width: '1.1rem' }} />
             Open Hunts
+          </a>
+        </li>
+        <li>
+          <a href="https://greenrocket.app/@kennyiseeyou" target="_blank">
+            <img src={GreenrocketIcon} alt="Green Rocket" style={{ width: '1.1rem' }} />
+            GreenRocket
           </a>
         </li>
         <li>
