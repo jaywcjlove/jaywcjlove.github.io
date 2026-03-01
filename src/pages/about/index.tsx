@@ -21,6 +21,7 @@ import { ReactComponent as UneedIcon } from '../../assets/uneed.svg';
 import { ReactComponent as YoutubeIcon } from '../../assets/youtube.svg';
 import OpenhuntsIcon from '../../assets/openhunts.png';
 import GreenrocketIcon from '../../assets/greenrocket.png';
+import NxgntoolsIcon from '../../assets/nxgntools.jpg';
 import styled, { css } from 'styled-components';
 
 
@@ -158,6 +159,12 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://greenrocket.app/@kennyiseeyou" target="_blank">
             <img src={GreenrocketIcon} alt="Green Rocket" style={{ width: '1.1rem' }} />
             GreenRocket
+          </a>
+        </li>
+        <li>
+          <a href="https://www.nxgntools.com/users/kenny" target="_blank">
+            <img src={NxgntoolsIcon} alt="Nxgn Tools" style={{ width: '1.1rem' }} />
+            Nxgn Tools
           </a>
         </li>
         <li>
