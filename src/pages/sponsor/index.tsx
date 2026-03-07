@@ -129,6 +129,13 @@ export const Component: FC<PropsWithChildren> = () => {
 
       <ul>
         <SubTitle>{t('sponsor.alipay')}</SubTitle>
+        <li>**兰</li>
+        <li>*祥</li>
+        <li>**成</li>
+        <li>**臣</li>
+        <li>**伟</li>
+        <li>**鹏</li>
+        <li>*臣</li>
         <li>*宣</li>
         <li>*祥</li>
         <li>*源</li>
@@ -153,6 +160,10 @@ export const Component: FC<PropsWithChildren> = () => {
         <li>*杰</li>
         <li>**明</li>
         <SubTitle>{t('sponsor.paypal')}</SubTitle>
+        <li>Pawaka Empire</li>
+        <li>Caine Brian</li>
+        <li>Bansal Nitin</li>
+        <li>Schönmann Peter</li>
         <li>Marmitt Fabrizio</li>
         <li>Seaton Eric</li>
         <li><a href="https://x.com/samzong_" target="_blank">Mjano Chin</a></li>
@@ -161,6 +172,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <li>Wagenknecht Eiko</li>
         <li>Chao Yi</li>
         <SubTitle>{t('sponsor.wechatpay')}</SubTitle>
+        <li>*心</li>
         <li>陈昌永</li>
         <li>苏awa</li>
         <li>Limichange(cm)</li>
