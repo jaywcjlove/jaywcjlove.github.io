@@ -122,6 +122,20 @@ export const Component: FC<PropsWithChildren> = () => {
           </div>
         </div>
 
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
+            <a href="https://screensage.pro/" target="_blank">
+              <img src="/sponsor/screensage.jpeg" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://screensage.pro/" target="_blank"><b>ScreenSage Pro</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://pawakalabs.com/products/fakey/" target="_blank" style={{ fontSize: 12 }}>Record beautiful screen recordings in minutes on macOS</a>
+          </div>
+        </div>
+
         <a href="https://www.swifdoo.com/" target="_blank">
           <img src="/sponsor/SwifDooPDF.png" height={45} />
         </a>
