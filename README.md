@@ -20,6 +20,13 @@ October 2023
     <br/>
     <br/>
     <div>
+        <a href="https://screensage.pro/">
+            <img alt="Warp sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/warp-banner.png">
+        </a>
+        <br/>
+        <a href="https://screensage.pro/">ScreenSage Pro, record beautiful screen recordings in minutes on macOS</a><br/><br/>
+    </div>
+    <div>
         <a href="https://www.warp.dev/awesome-mac">
             <img alt="Warp sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/warp-banner.png">
         </a>
