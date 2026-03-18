@@ -20,8 +20,15 @@ October 2023
     <br/>
     <br/>
     <div>
+        <a href="https://ip.im/">
+            <img alt="IP.IM" width="400" src="https://jaywcjlove.github.io/sponsor/screensage.png">
+        </a>
+        <br/>
+        <a href="https://ip.im/">IP.IM, Free IP address information query website</a><br/><br/>
+    </div>
+    <div>
         <a href="https://screensage.pro/">
-            <img alt="Warp sponsorship" width="400" src="https://jaywcjlove.github.io/sponsor/warp-banner.png">
+            <img alt="ScreenSage Pro" width="400" src="https://jaywcjlove.github.io/sponsor/screensage.png">
         </a>
         <br/>
         <a href="https://screensage.pro/">ScreenSage Pro, record beautiful screen recordings in minutes on macOS</a><br/><br/>
