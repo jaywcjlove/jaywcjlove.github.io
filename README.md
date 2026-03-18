@@ -21,7 +21,7 @@ October 2023
     <br/>
     <div>
         <a href="https://ip.im/">
-            <img alt="IP.IM" width="400" src="https://jaywcjlove.github.io/sponsor/screensage.png">
+            <img alt="IP.IM" width="400" src="https://jaywcjlove.github.io/sponsor/ip.im.png">
         </a>
         <br/>
         <a href="https://ip.im/">IP.IM, Free IP address information query website</a><br/><br/>
