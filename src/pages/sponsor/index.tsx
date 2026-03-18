@@ -66,45 +66,32 @@ export const Component: FC<PropsWithChildren> = () => {
       <h2># {t('sponsor.supporters')}</h2>
       <p>{t('sponsor.thankful')}</p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: 16 }}>
+
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
-            <a href="https://warp.dev/awesome-mac" target="_blank">
-              <img src="/sponsor/warp-banner.png" width="250" />
+            <a href="https://ip.im/" target="_blank">
+              <img src="/sponsor/ip.im.png" width="250" />
             </a>
           </div>
           <div>
-            <a href="https://warp.dev/awesome-mac"><b>Warp, the intelligent terminal for developers!</b></a>
+            <a href="https://ip.im/" target="_blank"><b>IP.IM</b></a>
           </div>
           <div style={{ lineHeight: '1rem' }}>
-            <a href="https://warp.dev/awesome-mac" target="_blank" style={{ fontSize: 12 }}>Available for MacOS, Linux, & Windows</a>
-          </div>
-        </div>
-        
-        <div style={{ lineHeight: '1.5rem' }}>
-          <div>
-            <a href="https://tuple.app/awesome-mac" target="_blank">
-              <img src="/sponsor/tuple.app.png" width="250" />
-            </a>
-          </div>
-          <div>
-            <a href="https://tuple.app/awesome-mac" target="_blank"><b>Tuple</b></a>
-          </div>
-          <div style={{ lineHeight: '1rem' }}>
-            <a href="https://tuple.app/awesome-mac" target="_blank" style={{ fontSize: 12 }}>Tuple, the premier screen sharing app for developers on macOS and Windows.</a>
+            <a href="https://pawakalabs.com/products/fakey/" target="_blank" style={{ fontSize: 12 }}>Free IP address information query website</a>
           </div>
         </div>
 
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
-            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank">
-              <img src="/sponsor/zenquery.png" width="250" />
+            <a href="https://screensage.pro/" target="_blank">
+              <img src="/sponsor/screensage.png" width="250" />
             </a>
           </div>
           <div>
-            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank"><b>ZenQuery</b></a>
+            <a href="https://screensage.pro/" target="_blank"><b>ScreenSage Pro</b></a>
           </div>
           <div style={{ lineHeight: '1rem' }}>
-            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank" style={{ fontSize: 12 }}>Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
+            <a href="https://pawakalabs.com/products/fakey/" target="_blank" style={{ fontSize: 12 }}>Record beautiful screen recordings in minutes on macOS</a>
           </div>
         </div>
 
@@ -124,15 +111,43 @@ export const Component: FC<PropsWithChildren> = () => {
 
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
-            <a href="https://screensage.pro/" target="_blank">
-              <img src="/sponsor/screensage.jpeg" width="250" />
+            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank">
+              <img src="/sponsor/zenquery.png" width="250" />
             </a>
           </div>
           <div>
-            <a href="https://screensage.pro/" target="_blank"><b>ScreenSage Pro</b></a>
+            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank"><b>ZenQuery</b></a>
           </div>
           <div style={{ lineHeight: '1rem' }}>
-            <a href="https://pawakalabs.com/products/fakey/" target="_blank" style={{ fontSize: 12 }}>Record beautiful screen recordings in minutes on macOS</a>
+            <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank" style={{ fontSize: 12 }}>Instant Q/A on your data files (CSV, JSON, Excel, Parquet)</a>
+          </div>
+        </div>
+        
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
+            <a href="https://tuple.app/awesome-mac" target="_blank">
+              <img src="/sponsor/tuple.app.png" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://tuple.app/awesome-mac" target="_blank"><b>Tuple</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://tuple.app/awesome-mac" target="_blank" style={{ fontSize: 12 }}>Tuple, the premier screen sharing app for developers on macOS and Windows.</a>
+          </div>
+        </div>
+
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
+            <a href="https://warp.dev/awesome-mac" target="_blank">
+              <img src="/sponsor/warp-banner.png" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://warp.dev/awesome-mac"><b>Warp, the intelligent terminal for developers!</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://warp.dev/awesome-mac" target="_blank" style={{ fontSize: 12 }}>Available for MacOS, Linux, & Windows</a>
           </div>
         </div>
 
