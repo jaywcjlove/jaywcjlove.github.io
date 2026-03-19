@@ -4,6 +4,7 @@
   "description": "About me ===",
   "homepage": "https://jaywcjlove.github.io",
   "author": "Wangchujiang <wowohoo@qq.com>",
+  "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
