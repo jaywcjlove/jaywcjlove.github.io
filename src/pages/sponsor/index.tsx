@@ -69,6 +69,20 @@ export const Component: FC<PropsWithChildren> = () => {
 
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
+            <a href="https://hipixel.5km.tech/" target="_blank">
+              <img src="/sponsor/HiPixel.jpeg" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://hipixel.5km.tech/" target="_blank"><b>HiPixel</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://hipixel.5km.tech/" target="_blank" style={{ fontSize: 12 }}>An AI image super-resolution (upscaling and enhancement) tool designed specifically for macOS</a>
+          </div>
+        </div>
+
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
             <a href="https://ip.im/" target="_blank">
               <img src="/sponsor/ip.im.png" width="250" />
             </a>

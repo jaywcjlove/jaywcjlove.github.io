@@ -20,6 +20,13 @@ October 2023
     <br/>
     <br/>
     <div>
+        <a href="https://hipixel.5km.tech/">
+            <img alt="IP.IM" width="400" src="https://jaywcjlove.github.io/sponsor/ip.im.png">
+        </a>
+        <br/>
+        <a href="https://hipixel.5km.tech/">An AI image super-resolution (upscaling and enhancement) tool designed specifically for macOS</a><br/><br/>
+    </div>
+    <div>
         <a href="https://ip.im/">
             <img alt="IP.IM" width="400" src="https://jaywcjlove.github.io/sponsor/ip.im.png">
         </a>
