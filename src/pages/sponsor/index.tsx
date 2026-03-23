@@ -70,7 +70,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
             <a href="https://hipixel.5km.tech/" target="_blank">
-              <img src="/sponsor/HiPixel.jpeg" width="250" />
+              <img src="/sponsor/HiPixel.jpeg" width="250" alt="HiPixel" />
             </a>
           </div>
           <div>
@@ -84,14 +84,14 @@ export const Component: FC<PropsWithChildren> = () => {
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
             <a href="https://ip.im/" target="_blank">
-              <img src="/sponsor/ip.im.png" width="250" />
+              <img src="/sponsor/ip.im.png" width="250" alt="IP.IM" />
             </a>
           </div>
           <div>
             <a href="https://ip.im/" target="_blank"><b>IP.IM</b></a>
           </div>
           <div style={{ lineHeight: '1rem' }}>
-            <a href="https://pawakalabs.com/products/fakey/" target="_blank" style={{ fontSize: 12 }}>Free IP address information query website</a>
+            <a href="https://ip.im/" target="_blank" style={{ fontSize: 12 }}>Free IP address information query website</a>
           </div>
         </div>
 
@@ -105,14 +105,14 @@ export const Component: FC<PropsWithChildren> = () => {
             <a href="https://screensage.pro/" target="_blank"><b>ScreenSage Pro</b></a>
           </div>
           <div style={{ lineHeight: '1rem' }}>
-            <a href="https://pawakalabs.com/products/fakey/" target="_blank" style={{ fontSize: 12 }}>Record beautiful screen recordings in minutes on macOS</a>
+            <a href="https://screensage.pro/" target="_blank" style={{ fontSize: 12 }}>Record beautiful screen recordings in minutes on macOS</a>
           </div>
         </div>
 
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
             <a href="https://pawakalabs.com/products/fakey/" target="_blank">
-              <img src="/sponsor/fakey.png" width="250" />
+              <img src="/sponsor/fakey.png" width="250" alt="Fakey - Manga Translator" />
             </a>
           </div>
           <div>
@@ -126,7 +126,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
             <a href="https://zenquery.app/?utm_source=github&utm_medium=referral&utm_campaign=awesome-mac" target="_blank">
-              <img src="/sponsor/zenquery.png" width="250" />
+              <img src="/sponsor/zenquery.png" width="250" alt="ZenQuery" />
             </a>
           </div>
           <div>
@@ -140,7 +140,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
             <a href="https://tuple.app/awesome-mac" target="_blank">
-              <img src="/sponsor/tuple.app.png" width="250" />
+              <img src="/sponsor/tuple.app.png" width="250" alt="Tuple" />
             </a>
           </div>
           <div>
@@ -154,7 +154,7 @@ export const Component: FC<PropsWithChildren> = () => {
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
             <a href="https://warp.dev/awesome-mac" target="_blank">
-              <img src="/sponsor/warp-banner.png" width="250" />
+              <img src="/sponsor/warp-banner.png" width="250" alt="Warp" />
             </a>
           </div>
           <div>
@@ -166,7 +166,7 @@ export const Component: FC<PropsWithChildren> = () => {
         </div>
 
         <a href="https://www.swifdoo.com/" target="_blank">
-          <img src="/sponsor/SwifDooPDF.png" height={45} />
+          <img src="/sponsor/SwifDooPDF.png" height={45} alt="SwifDoo PDF" />
         </a>
       </div>
 
