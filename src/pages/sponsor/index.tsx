@@ -45,6 +45,7 @@ export const Component: FC<PropsWithChildren> = () => {
   return (
     <SponsorWrapper>
       <h1>{t('sponsor.title')}</h1>
+      <iframe src="https://github.com/sponsors/jaywcjlove/button" title="Sponsor jaywcjlove" height="32" width="114" frameBorder={0}></iframe>
       <p>{t('sponsor.info')}</p>
       <a href="https://www.paypal.com/paypalme/kennyiseeyou" target="_blank">
         <PaypalIcon height={54} />
