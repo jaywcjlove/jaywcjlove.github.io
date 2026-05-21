@@ -68,6 +68,21 @@ export const Component: FC<PropsWithChildren> = () => {
       <p>{t('sponsor.thankful')}</p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: 16 }}>
 
+
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
+            <a href="https://doloffer.com" target="_blank">
+              <img src="/sponsor/doloffer.jpg" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://doloffer.com" target="_blank"><b>DolOffer - 一站式数字订阅充值平台</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://doloffer.com" target="_blank" style={{ fontSize: 12 }}>主营 GPT、Claude 等 AI 多类数字服务会员正版订阅，9 折优惠码 AI8888，极速发货，售后无忧</a>
+          </div>
+        </div>
+
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
             <a href="https://hipixel.5km.tech/" target="_blank">
