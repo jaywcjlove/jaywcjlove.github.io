@@ -76,7 +76,10 @@ export const Component: FC<PropsWithChildren> = () => {
             </a>
           </div>
           <div>
-            <a href="https://apps.apple.com/app/apple-store/id6757860829?pt=80185800&ct=jay&mt=8" target="_blank"><b>SubList</b> - Bill Reminder & Renewal Alerts</a>
+            <a href="https://apps.apple.com/app/apple-store/id6757860829?pt=80185800&ct=jay&mt=8" target="_blank"><b>SubList</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://apps.apple.com/app/apple-store/id6757860829?pt=80185800&ct=jay&mt=8" target="_blank" style={{ fontSize: 12 }}>Bill Reminder & Renewal Alerts</a>
           </div>
         </div>
 
