@@ -1,5 +1,11 @@
 [
   {
+    "name": "DockLift",
+    "platform": "macOS",
+    "icon": "/appicon/dock-lift.png",
+    "path": "https://wangchujiang.com/dock-lift/"
+  },
+  {
     "name": "Zipora",
     "platform": "macOS",
     "icon": "/appicon/zipora.png",
