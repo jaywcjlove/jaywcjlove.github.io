@@ -71,6 +71,21 @@ export const Component: FC<PropsWithChildren> = () => {
 
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
+            <a href="https://getapps.cafe/" target="_blank">
+              <img src="/sponsor/getapps.cafe.png" alt="getapps.cafe" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://getapps.cafe/" target="_blank"><b>getapps.cafe</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://getapps.cafe/" target="_blank" style={{ fontSize: 12 }}>60+ native Mac apps across utilities, office, creative, and productivity categories, all running locally so your data never leaves your machine.</a>
+          </div>
+        </div>
+
+
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
             <a href="https://apps.apple.com/app/apple-store/id6757860829?pt=80185800&ct=jay&mt=8" target="_blank">
               <img src="/sponsor/SubList.jpg" width="250" />
             </a>
