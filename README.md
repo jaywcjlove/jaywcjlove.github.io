@@ -20,6 +20,15 @@ October 2023
     <br/>
     <br/>
     <div>
+        <a href="https://getapps.cafe/">
+            <img alt="SubList" width="400" src="https://jaywcjlove.github.io/sponsor/SubList.jpg">
+        </a>
+        <br/>
+        <a href="https://getapps.cafe/"><b>getapps.cafe</b></a><br/>
+        <a href="https://getapps.cafe/">60+ native Mac apps across utilities, office, creative, and productivity categories, all running locally so your data never leaves your machine.</a>
+    </div>
+    <br/><br/>
+    <div>
         <a href="https://apps.apple.com/app/apple-store/id6757860829?pt=80185800&ct=jay&mt=8">
             <img alt="SubList" width="400" src="https://jaywcjlove.github.io/sponsor/SubList.jpg">
         </a>
