@@ -16,6 +16,12 @@ jobs:
       
       - run: npm install
       - run: npm run build
+
+      - name: Create ory verify file
+        run: |
+          mkdir -p build/.well-known
+          echo "ory-verify=orynth-ec94066d75ee4b34b33e3a9a1e5cac18" > build/.well-known/ory-verify.txt
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
