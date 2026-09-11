@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="224" height="224" viewBox="0 0 512 512">
+<defs>
+  <filter id="b" width="124.3%" height="124.3%" x="-12.1%" y="-9.7%" filterUnits="objectBoundingBox">
+    <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"/>
+    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="15"/>
+    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.164963942 0"/>
+  </filter>
+  <filter id="e" width="201.4%" height="201.4%" x="-50.7%" y="-32.3%" filterUnits="objectBoundingBox">
+    <feOffset dy="40" in="SourceAlpha" result="shadowOffsetOuter1"/>
+    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="30"/>
+    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.243362107 0"/>
+  </filter>
+  <linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="100%">
+    <stop offset="0%" stop-color="#FF7E7D" stop-opacity=".736"/>
+    <stop offset="54.872%" stop-color="#EA5C5B" stop-opacity=".747"/>
+    <stop offset="100%" stop-color="#CA3736"/>
+  </linearGradient>
+  <rect id="a" width="412" height="412" x="49" y="52" rx="86"/>
+  <path id="d" d="M178,369 L226.5,369 C243.068542,369 256.5,355.568542 256.5,339 L256.5,206.25 L256.5,206.25 L310.75,206.25 L310.75,341.875 C310.75,356.855724 322.894276,369 337.875,369 C352.855724,369 365,356.855724 365,341.875 L365,192 C365,169.90861 347.09139,152 325,152 L188,152 C165.90861,152 148,169.90861 148,192 L148,339 C148,355.568542 161.431458,369 178,369 Z"/>
+</defs>
+<g fill="none" fill-rule="evenodd">
+  <rect width="512" height="512"/>
+  <use xlink:href="#a" fill="#000" filter="url(#b)"/>
+  <use xlink:href="#a" fill="#CB3837"/>
+  <use xlink:href="#a" fill="url(#c)"/>
+  <g fill-rule="nonzero">
+    <use xlink:href="#d" fill="#000" filter="url(#e)"/>
+    <use xlink:href="#d" fill="#FFF"/>
+  </g>
+</g>
+</svg>
