@@ -71,6 +71,21 @@ export const Component: FC<PropsWithChildren> = () => {
 
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
+            <a href="https://www.enconvo.com/" target="_blank">
+              <img src="/sponsor/enconvo.com.png" alt="enconvo" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.enconvo.com/" target="_blank"><b>Enconvo</b> - 遍布整个 Mac 的 AI 智能体</a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://www.enconvo.com/" target="_blank" style={{ fontSize: 12 }}>它能看到您的屏幕，在您的应用中工作，并真正把事情做完。</a>
+          </div>
+        </div>
+
+
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
             <a href="https://getapps.cafe/" target="_blank">
               <img src="/sponsor/getapps.cafe.png" alt="getapps.cafe" width="250" />
             </a>
