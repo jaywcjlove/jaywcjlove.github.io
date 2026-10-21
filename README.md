@@ -20,6 +20,15 @@ October 2023
     <br/>
     <br/>
     <div>
+        <a href="https://enconvo.com/">
+            <img alt="SubList" width="400" src="https://jaywcjlove.github.io/sponsor/enconvo.com.png">
+        </a>
+        <br/>
+        <a href="https://enconvo.com/"><b>Enconvo</b> - 遍布整个 Mac 的 AI 智能体</a><br/>
+        <a href="https://enconvo.com/">它能看到您的屏幕，在您的应用中工作，并真正把事情做完。</a>
+    </div>
+    <br/><br/>
+    <div>
         <a href="https://getapps.cafe/">
             <img alt="SubList" width="400" src="https://jaywcjlove.github.io/sponsor/getapps.cafe.png">
         </a>
