@@ -7,6 +7,7 @@ import { ReactComponent as XIcon } from '../../assets/x.svg';
 import { ReactComponent as BlueskyIcon } from '../../assets/bluesky.svg';
 import { ReactComponent as GithubIcon } from '../../assets/github2.svg';
 import { ReactComponent as WeiboIcon } from '../../assets/weibo.svg';
+import { ReactComponent as TelegramIcon } from '../../assets/telegram.svg';
 import { ReactComponent as NpmIcon } from '../../assets/npm.svg';
 import { ReactComponent as SwiftpackageIcon } from '../../assets/swiftpackageindex.svg';
 import { ReactComponent as DockerIcon } from '../../assets/docker.svg';
@@ -81,6 +82,12 @@ export const Component: FC<PropsWithChildren> = () => {
           <a href="https://www.reddit.com/user/wcjiang/submitted/" target="_blank">
             <RedditIcon />
             Reddit
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/s/AwesomeMacApps" target="_blank">
+            <TelegramIcon />
+            Telegram
           </a>
         </li>
         <li>
