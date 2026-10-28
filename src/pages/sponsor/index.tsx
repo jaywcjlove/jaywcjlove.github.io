@@ -71,6 +71,21 @@ export const Component: FC<PropsWithChildren> = () => {
 
         <div style={{ lineHeight: '1.5rem' }}>
           <div>
+            <a href="https://amical.ai/?utm_source=awesome-mac" target="_blank">
+              <img src="/sponsor/amical.ai.jpg" alt="amical" width="250" />
+            </a>
+          </div>
+          <div>
+            <a href="https://amical.ai/?utm_source=awesome-mac" target="_blank"><b>Amical</b></a>
+          </div>
+          <div style={{ lineHeight: '1rem' }}>
+            <a href="https://amical.ai/?utm_source=awesome-mac" target="_blank" style={{ fontSize: 12 }}>Type with your voice. Press a key and speak naturally. It comes out formatted for whatever app you're in. Local AI models, works offline, free and open source.</a>
+          </div>
+        </div>
+
+
+        <div style={{ lineHeight: '1.5rem' }}>
+          <div>
             <a href="https://www.enconvo.com/" target="_blank">
               <img src="/sponsor/enconvo.com.png" alt="enconvo" width="250" />
             </a>
