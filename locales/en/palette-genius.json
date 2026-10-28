@@ -1,0 +1,8 @@
+{
+  "detail": "PaletteGenius is a screen color picker tool designed to improve efficiency for designers and developers.",
+  "info": "Why do I need to develop this application?",
+  "info1": "I have always been using the built-in color picker in my system. It is compact and fast, but it has noticeable drawbacks. It cannot display hexadecimal values and it is not easy to copy and convert to other color formats.",
+  "info2": "# Collect popular colors, including colors from popular component libraries and standard color values.",
+  "info3": "# Rich color code formats: covering mainstream platforms and programming languages (iOS, Android, Swift, Objc, CSS, etc.), with keyboard shortcuts for quick code copying.",
+  "info4": "# Appearance: supporting light and dark modes."
+}

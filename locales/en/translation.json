@@ -1,0 +1,40 @@
+{
+  "home": {
+    "info": "Hi, I am a software developer."
+  },
+  "loading": "Loading comments...",
+  "projects": {
+    "title": "Open Source Projects",
+    "info": "I maintain <projects>many projects</projects>, including some very popular ones."
+  },
+  "menu": {
+    "projects": "Projects",
+    "app": "App",
+    "sponsor": "Sponsor",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "info": "I am a frontend development engineer, involved in backend development work for some Node.js projects. In 2014, I started to engage in open source work during my spare time.",
+    "info2": "For nearly 10 years, I have been contributing to the open source community, with close to <repo>300 code repositories</repo> and publishing over <npm>500 packages</npm> through npm. In the past year, these packages have been downloaded nearly 60 million times on npm. Currently, I am on the verge of unemployment, having received almost no donations in the open source field. Nevertheless, I continue to dedicate my time and energy to contribute. Therefore, I plan to explore a career change within 1 to 2 years, but I will still actively participate in open source sharing. To me, it has become a habit as natural as brushing my teeth every morning. Open source sharing is an integral part of my life, and I am enthusiastic about giving back my knowledge and experience to the open source community.",
+    "info3": "I love open source and still have a passion for the work I do. Keep going!",
+    "info4": "October 2023",
+    "subtitle": "Links"
+  },
+  "sponsor": {
+    "title": "Thanks! 🙏",
+    "info": "I sincerely thank the wonderful people who support my open source work.",
+    "info2": "I forgot the donations from two kind individuals. In fact, there were hardly any donations, but if there were, I would record them here.",
+    "paypal": "PayPal",
+    "alipay": "AliPay",
+    "wechatpay": "WechatPay",
+    "supporters": "Supporters",
+    "buymeacoffee": "Buy Me a Coffee",
+    "thankful": "I’m forever thankful to these people"
+  },
+  "contact": {
+    "title": "Contact",
+    "info": "I value my time, so make it worth it, and <1>keep it succinct</1>."
+  }
+}

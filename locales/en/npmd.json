@@ -1,0 +1,4 @@
+{
+  "detail": "View npm global commands and versions",
+  "info": "This is a small Mac application for viewing global npm commands. It can display command versions, uninstall global packages, and more."
+}
