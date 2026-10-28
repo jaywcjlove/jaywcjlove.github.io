@@ -21,7 +21,7 @@ October 2023
     <br/>
     <div>
         <a href="https://amical.ai/?utm_source=awesome-mac">
-            <img alt="SubList" width="400" src="https://jaywcjlove.github.io/sponsor/enconvo.com.png">
+            <img alt="SubList" width="400" src="https://jaywcjlove.github.io/sponsor/amical.ai.jpg">
         </a>
         <br/>
         <a href="https://amical.ai/?utm_source=awesome-mac"><b>Amical</b></a><br/>
